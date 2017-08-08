@@ -1,0 +1,13 @@
+.wpaw-thumbnail-field__set-image-btn {
+  width: 100%;
+}
+
+.wpaw-thumbnail-field__thumbnail {
+  display: block;
+}
+
+.wpaw-thumbnail-field__thumbnail img {
+  margin-bottom: 5px;
+  height: auto;
+  max-width: 100%;
+}

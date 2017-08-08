@@ -1,0 +1,26 @@
+.wpaw-slider {
+  &__canvas {
+    visibility: hidden;
+
+    &.slick-initialized {
+      visibility: visible;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    max-height: 100vh;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 56.25%;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.wpaw-showcase {
+  $root: &;
+
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &__mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background-color: rgba(#000, .2);
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media (min-width: 64em) {
+      flex-wrap: nowrap;
+    }
+
+    &--align-left {
+      #{$root}__title,
+      #{$root}__lead,
+      #{$root}__action {
+        text-align: left;
+      }
+    }
+
+    &--align-center {
+      #{$root}__title,
+      #{$root}__lead,
+      #{$root}__action {
+        text-align: center;
+      }
+    }
+
+    &--align-right {
+      #{$root}__title,
+      #{$root}__lead,
+      #{$root}__action {
+        text-align: right;
+      }
+    }
+
+    &--thumbnail-align-left {
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+    }
+
+    &--thumbnail-align-right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__figure {
+    flex: 1 1 auto;
+    text-align: center;
+
+    @media (min-width: 64em) {
+      flex: 1 0 auto;
+      max-width: 50%;
+    }
+  }
+
+  &__body {
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    color: #fff;
+  }
+
+  &__lead {
+    color: #fff;
+  }
+
+  &__action {
+    text-align: center;
+
+    @media (min-width: 64em) {
+      text-align: left;
+    }
+  }
+
+  &__more {
+    display: inline-block;
+    background-color: #fff;
+    line-height: 1;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+  }
+}

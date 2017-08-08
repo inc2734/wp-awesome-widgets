@@ -1,0 +1,86 @@
+.wpaw-pr-box {
+  $root: &;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__lead {
+    text-align: center;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 (1.5rem / 2 * -1) (1.5rem * -1);
+    overflow: hidden;
+
+    @for $i from 1 through 5 {
+      &--#{$i} {
+        #{$root}__item {
+          width: calc(100% / #{$i});
+          max-width: calc(100% / #{$i});
+        }
+      }
+
+      &--md-#{$i} {
+        @media (min-width: 40em) {
+          #{$root}__item {
+            width: calc(100% / #{$i});
+            max-width: calc(100% / #{$i});
+          }
+        }
+      }
+
+      &--lg-#{$i} {
+        @media (min-width: 64em) {
+          #{$root}__item {
+            width: calc(100% / #{$i});
+            max-width: calc(100% / #{$i});
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    flex: none;
+    padding: 0 (1.5rem / 2) (1.5rem);
+  }
+
+  &__item-figure {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-color: #eee;
+
+    &::before {
+      content: '';
+      display: block;
+    }
+
+    &--4to3 {
+      &::before {
+        padding-top: 75%;
+      }
+    }
+
+    &--16to9 {
+      &::before {
+        padding-top: 56.25%;
+      }
+    }
+  }
+
+  &__item-title {
+    font-weight: bold;
+  }
+
+  &__item-summary {
+  }
+
+  &__action {
+    text-align: center;
+  }
+}
