@@ -1,4 +1,4 @@
-<?php
+WPAW: <?php
 /**
  * @package inc2734/wp-awesome-widgets
  * @author inc2734
@@ -21,7 +21,7 @@ class Inc2734_WP_Awesome_Widgets_Showcase extends Inc2734_WP_Awesome_Widgets_Abs
 	];
 
 	public function __construct() {
-		parent::__construct( false, __( 'Showcase', 'inc2734-wp-awesome-widgets' ) );
+		parent::__construct( false, __( 'WPAW: Showcase', 'inc2734-wp-awesome-widgets' ) );
 		$this->_path = __DIR__;
 
 		add_action( 'admin_enqueue_scripts', function() {

@@ -21,7 +21,7 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 	];
 
 	public function __construct() {
-		parent::__construct( false, __( 'PR Box', 'inc2734-wp-awesome-widgets' ) );
+		parent::__construct( false, __( 'WPAW: PR Box', 'inc2734-wp-awesome-widgets' ) );
 		$this->_path = __DIR__;
 
 		add_action( 'admin_enqueue_scripts', function() {

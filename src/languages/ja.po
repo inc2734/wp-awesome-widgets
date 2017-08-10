@@ -1,0 +1,179 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: inc2734-wp-awesome-widgets\n"
+"Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
+"POT-Creation-Date: 2017-08-10 19:41+0900\n"
+"PO-Revision-Date: 2017-08-10 19:41+0900\n"
+"Last-Translator: inc2734 <inc@2inc.org>\n"
+"Language-Team: Takashi Kitajima <inc@2inc.org>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: widget/pr-box/_form.php:26 widget/pr-box/_form.php:63
+#: widget/recent-posts/_form.php:11 widget/showcase/_form.php:11
+msgid "Title"
+msgstr "タイトル"
+
+#: widget/pr-box/_form.php:36 widget/showcase/_form.php:21
+msgid "Lead"
+msgstr "リード文"
+
+#: widget/pr-box/_form.php:50 widget/showcase/_form.php:53
+#: widget/showcase/_form.php:92 widget/slider/_form.php:30
+msgid "Set image"
+msgstr "画像を設定"
+
+#: widget/pr-box/_form.php:74
+msgid "Summary"
+msgstr "概要"
+
+#: widget/pr-box/_form.php:83 widget/slider/_form.php:43
+msgid "Delete"
+msgstr "削除"
+
+#: widget/pr-box/_form.php:90
+msgid "Add Item"
+msgstr "項目を追加"
+
+#: widget/pr-box/_form.php:94
+msgid "Size of image to use"
+msgstr "使用する画像のサイズ"
+
+#: widget/pr-box/_form.php:111
+msgid "Thumbnail aspect ratio"
+msgstr "サムネイルのアスペクト比"
+
+#: widget/pr-box/_form.php:129
+msgid "Column size for mobile"
+msgstr "モバイルのカラムサイズ"
+
+#: widget/pr-box/_form.php:136 widget/pr-box/_form.php:157
+#: widget/pr-box/_form.php:178
+msgid "1 column"
+msgstr "1カラム"
+
+#: widget/pr-box/_form.php:137 widget/pr-box/_form.php:158
+#: widget/pr-box/_form.php:179
+msgid "2 columns"
+msgstr "2カラム"
+
+#: widget/pr-box/_form.php:138 widget/pr-box/_form.php:159
+#: widget/pr-box/_form.php:180
+msgid "3 columns"
+msgstr "3カラム"
+
+#: widget/pr-box/_form.php:139 widget/pr-box/_form.php:160
+#: widget/pr-box/_form.php:181
+msgid "4 columns"
+msgstr "4カラム"
+
+#: widget/pr-box/_form.php:140 widget/pr-box/_form.php:161
+#: widget/pr-box/_form.php:182
+msgid "5 columns"
+msgstr "5カラム"
+
+#: widget/pr-box/_form.php:150
+msgid "Column size for tablet"
+msgstr "タブレットのカラムサイズ"
+
+#: widget/pr-box/_form.php:171
+msgid "Column size for PC"
+msgstr "PCのカラムサイズ"
+
+#: widget/pr-box/_form.php:192 widget/showcase/_form.php:123
+msgid "Link URL"
+msgstr "リンク URL"
+
+#: widget/pr-box/_form.php:202 widget/showcase/_form.php:133
+msgid "Link text"
+msgstr "リンクテキスト"
+
+#: widget/pr-box/pr-box.php:24
+msgid "WPAW: PR Box"
+msgstr "WPAW: PR ボックス"
+
+#: widget/recent-posts/_form.php:21
+msgid "Number of posts"
+msgstr "表示する投稿数"
+
+#: widget/recent-posts/_form.php:40
+msgid "Show thumbnail"
+msgstr "サムネイルを表示"
+
+#: widget/recent-posts/_form.php:51
+msgid "Show taxonomy"
+msgstr "分類を表示"
+
+#: widget/recent-posts/recent-posts.php:18
+msgid "WPAW: Recent posts"
+msgstr "WPAW: 最近の投稿"
+
+#: widget/showcase/_form.php:29
+msgid "Horizontal alignment of text"
+msgstr "テキストの水平位置"
+
+#: widget/showcase/_form.php:48
+msgid "Background image"
+msgstr "背景画像"
+
+#: widget/showcase/_form.php:66
+msgid "Background mask color"
+msgstr "背景マスクの色"
+
+#: widget/showcase/_form.php:77
+msgid "Background mask transparency"
+msgstr "背景マスクの透明度"
+
+#: widget/showcase/_form.php:87
+msgid "Thumbnail"
+msgstr "サムネイル"
+
+#: widget/showcase/_form.php:105
+msgid "Horizontal alignment of thumbnail"
+msgstr "サムネイルの位置"
+
+#: widget/showcase/showcase.php:24
+msgid "WPAW: Showcase"
+msgstr "WPAW: ショーケース"
+
+#: widget/slider/_form.php:50
+msgid "Add slider"
+msgstr "スライダーを追加"
+
+#: widget/slider/_form.php:54
+msgid "Slider type"
+msgstr "スライダーの種類"
+
+#: widget/slider/_form.php:61
+msgid "Fade"
+msgstr "フェード"
+
+#: widget/slider/_form.php:62
+msgid "Slide"
+msgstr "スライド"
+
+#: widget/slider/_form.php:72
+msgid "Animation time"
+msgstr "アニメーション時間"
+
+#: widget/slider/_form.php:83
+msgid "Interval time"
+msgstr "インターバル"
+
+#: widget/slider/_form.php:94
+msgid "Slides to show"
+msgstr "表示するスライド数"
+
+#: widget/slider/_form.php:105
+msgid "Slides to scroll"
+msgstr "スクロールするスライド数"
+
+#: widget/slider/slider.php:20
+msgid "WPAW: Slider"
+msgstr "WPAW: スライダー"

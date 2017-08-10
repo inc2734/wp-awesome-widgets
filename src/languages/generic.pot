@@ -1,0 +1,176 @@
+# Copyright (C) 2017 {package-name}
+# This file is distributed under the same license as the {package-name} package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
+"POT-Creation-Date: 2017-08-10 10:40:44+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: widget/pr-box/_form.php:26 widget/pr-box/_form.php:63
+#: widget/recent-posts/_form.php:11 widget/showcase/_form.php:11
+msgid "Title"
+msgstr ""
+
+#: widget/pr-box/_form.php:36 widget/showcase/_form.php:21
+msgid "Lead"
+msgstr ""
+
+#: widget/pr-box/_form.php:50 widget/showcase/_form.php:53
+#: widget/showcase/_form.php:92 widget/slider/_form.php:30
+msgid "Set image"
+msgstr ""
+
+#: widget/pr-box/_form.php:74
+msgid "Summary"
+msgstr ""
+
+#: widget/pr-box/_form.php:83 widget/slider/_form.php:43
+msgid "Delete"
+msgstr ""
+
+#: widget/pr-box/_form.php:90
+msgid "Add Item"
+msgstr ""
+
+#: widget/pr-box/_form.php:94
+msgid "Size of image to use"
+msgstr ""
+
+#: widget/pr-box/_form.php:111
+msgid "Thumbnail aspect ratio"
+msgstr ""
+
+#: widget/pr-box/_form.php:129
+msgid "Column size for mobile"
+msgstr ""
+
+#: widget/pr-box/_form.php:136 widget/pr-box/_form.php:157
+#: widget/pr-box/_form.php:178
+msgid "1 column"
+msgstr ""
+
+#: widget/pr-box/_form.php:137 widget/pr-box/_form.php:158
+#: widget/pr-box/_form.php:179
+msgid "2 columns"
+msgstr ""
+
+#: widget/pr-box/_form.php:138 widget/pr-box/_form.php:159
+#: widget/pr-box/_form.php:180
+msgid "3 columns"
+msgstr ""
+
+#: widget/pr-box/_form.php:139 widget/pr-box/_form.php:160
+#: widget/pr-box/_form.php:181
+msgid "4 columns"
+msgstr ""
+
+#: widget/pr-box/_form.php:140 widget/pr-box/_form.php:161
+#: widget/pr-box/_form.php:182
+msgid "5 columns"
+msgstr ""
+
+#: widget/pr-box/_form.php:150
+msgid "Column size for tablet"
+msgstr ""
+
+#: widget/pr-box/_form.php:171
+msgid "Column size for PC"
+msgstr ""
+
+#: widget/pr-box/_form.php:192 widget/showcase/_form.php:123
+msgid "Link URL"
+msgstr ""
+
+#: widget/pr-box/_form.php:202 widget/showcase/_form.php:133
+msgid "Link text"
+msgstr ""
+
+#: widget/pr-box/pr-box.php:24
+msgid "WPAW: PR Box"
+msgstr ""
+
+#: widget/recent-posts/_form.php:21
+msgid "Number of posts"
+msgstr ""
+
+#: widget/recent-posts/_form.php:40
+msgid "Show thumbnail"
+msgstr ""
+
+#: widget/recent-posts/_form.php:51
+msgid "Show taxonomy"
+msgstr ""
+
+#: widget/recent-posts/recent-posts.php:18
+msgid "WPAW: Recent posts"
+msgstr ""
+
+#: widget/showcase/_form.php:29
+msgid "Horizontal alignment of text"
+msgstr ""
+
+#: widget/showcase/_form.php:48
+msgid "Background image"
+msgstr ""
+
+#: widget/showcase/_form.php:66
+msgid "Background mask color"
+msgstr ""
+
+#: widget/showcase/_form.php:77
+msgid "Background mask transparency"
+msgstr ""
+
+#: widget/showcase/_form.php:87
+msgid "Thumbnail"
+msgstr ""
+
+#: widget/showcase/_form.php:105
+msgid "Horizontal alignment of thumbnail"
+msgstr ""
+
+#: widget/showcase/showcase.php:24
+msgid "WPAW: Showcase"
+msgstr ""
+
+#: widget/slider/_form.php:50
+msgid "Add slider"
+msgstr ""
+
+#: widget/slider/_form.php:54
+msgid "Slider type"
+msgstr ""
+
+#: widget/slider/_form.php:61
+msgid "Fade"
+msgstr ""
+
+#: widget/slider/_form.php:62
+msgid "Slide"
+msgstr ""
+
+#: widget/slider/_form.php:72
+msgid "Animation time"
+msgstr ""
+
+#: widget/slider/_form.php:83
+msgid "Interval time"
+msgstr ""
+
+#: widget/slider/_form.php:94
+msgid "Slides to show"
+msgstr ""
+
+#: widget/slider/_form.php:105
+msgid "Slides to scroll"
+msgstr ""
+
+#: widget/slider/slider.php:20
+msgid "WPAW: Slider"
+msgstr ""

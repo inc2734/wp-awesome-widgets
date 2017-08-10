@@ -8,6 +8,8 @@
 class Inc2734_WP_Awesome_Widgets {
 
 	public function __construct() {
+		load_textdomain( 'inc2734-wp-awesome-widgets', __DIR__ . '/languages/' . get_locale() . '.mo' );
+
 		$includes = array(
 			'/abstract',
 			'/widget/*',

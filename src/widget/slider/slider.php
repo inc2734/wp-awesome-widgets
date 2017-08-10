@@ -17,7 +17,7 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 	];
 
 	public function __construct() {
-		parent::__construct( false, __( 'Slider', 'inc2734-wp-awesome-widgets' ) );
+		parent::__construct( false, __( 'WPAW: Slider', 'inc2734-wp-awesome-widgets' ) );
 		$this->_path = __DIR__;
 
 		add_action( 'admin_enqueue_scripts', function() {
