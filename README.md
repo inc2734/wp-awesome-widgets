@@ -31,6 +31,17 @@ new Inc2734_WP_Awesome_Widgets();
 @import 'vendor/inc2734/wp-awesome-widgets/src/assets/scss/wp-awesome-widgets';
 ```
 
+### How to overwite widget templates
+You can overwite the widget template.
+For example,
+
+```
+$ cd wp-content/your-theme
+$ mkdir -p templates/widget
+$ cp vendor/inc2734/wp-awesome-widgets/src/widget/slider/_widget.php templates/widget/slider.php
+$ vi templates/widget/slider.php
+```
+
 ## Thirt-party resources
 ### slick
 * http://kenwheeler.github.io/slick/
