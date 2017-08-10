@@ -1,4 +1,4 @@
-WPAW: <?php
+<?php
 /**
  * @package inc2734/wp-awesome-widgets
  * @author inc2734
