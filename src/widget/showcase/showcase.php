@@ -27,7 +27,7 @@ class Inc2734_WP_Awesome_Widgets_Showcase extends Inc2734_WP_Awesome_Widgets_Abs
 		add_action( 'admin_enqueue_scripts', function() {
 			wp_enqueue_style(
 				'wp-awesome-widgets-showcase',
-				get_theme_file_uri( '/../vendor/inc2734/wp-awesome-widgets/src/widget/showcase/admin.css' )
+				home_url( str_replace( ABSPATH, '', __DIR__ ) . '/admin.css' )
 			);
 		} );
 	}
