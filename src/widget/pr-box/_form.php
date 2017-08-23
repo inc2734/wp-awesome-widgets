@@ -40,6 +40,17 @@
 			><?php echo esc_textarea( $instance['lead'] ); ?></textarea>
 		</p>
 
+		<p class="wpaw-color-picker-field">
+			<label for="<?php echo esc_attr( $this->get_field_id( 'bg-color' ) ); ?>"><?php esc_html_e( 'Background color', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+			<input
+				class="wpaw-color-picker-field__input"
+				type="text"
+				name="<?php echo esc_attr( $this->get_field_name( 'bg-color' ) ); ?>"
+				id="<?php echo esc_attr( $this->get_field_id( 'bg-color' ) ); ?>"
+				value="<?php echo esc_attr( $instance['bg-color'] ); ?>"
+			>
+		</p>
+
 		<?php foreach ( $instance['items'] as $key => $item ) : ?>
 			<div class="wpaw-repeaters__item">
 				<p class="wpaw-thumbnail-field">

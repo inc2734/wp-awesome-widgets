@@ -10,6 +10,7 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 	protected $_defaults = [
 		'title'                  => null,
 		'lead'                   => null,
+		'bg-color'               => '#fff',
 		'items'                  => [],
 		'thumbnail-size'         => 'medium',
 		'thumbnail-aspect-ratio' => '16to9',

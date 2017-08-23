@@ -8,11 +8,13 @@
 
 <?php echo $args['before_widget']; ?>
 
-	<div class="wpaw-pr-box" id="wpaw-pr-box-<?php echo esc_attr( $args['widget_id'] ); ?>">
+	<div class="wpaw-pr-box" id="wpaw-pr-box-<?php echo esc_attr( $args['widget_id'] ); ?>" style="background-color: <?php echo esc_attr( $instance['bg-color'] ); ?>">
 		<div class="wpaw-pr-box__inner">
 
 			<?php if ( ! empty( $instance['title'] ) ) : ?>
-				<h2 class="wpaw-pr-box__title"><?php echo esc_html( $instance['title'] ); ?></h2>
+				<div class="wpaw-pr-box__title">
+					<?php echo $args['before_title']; ?><?php echo esc_html( $instance['title'] ); ?><?php echo $args['after_title']; ?>
+				</div>
 			<?php endif; ?>
 
 			<?php if ( ! empty( $instance['lead'] ) ) : ?>
