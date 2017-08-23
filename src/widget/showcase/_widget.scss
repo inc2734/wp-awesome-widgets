@@ -24,7 +24,7 @@
     flex-wrap: wrap;
     align-items: center;
 
-    @media (min-width: 64em) {
+    @media (min-width: 40em) {
       flex-wrap: nowrap;
     }
 
@@ -66,7 +66,7 @@
     flex: 1 1 auto;
     text-align: center;
 
-    @media (min-width: 64em) {
+    @media (min-width: 40em) {
       flex: 1 0 auto;
       max-width: 50%;
     }
