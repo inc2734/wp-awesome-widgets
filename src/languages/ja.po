@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2017-08-10 19:41+0900\n"
-"PO-Revision-Date: 2017-08-10 19:41+0900\n"
+"POT-Creation-Date: 2017-08-27 21:29+0900\n"
+"PO-Revision-Date: 2017-08-27 21:30+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: widget/pr-box/_form.php:26 widget/pr-box/_form.php:63
+#: widget/pr-box/_form.php:26 widget/pr-box/_form.php:74
 #: widget/recent-posts/_form.php:11 widget/showcase/_form.php:11
 msgid "Title"
 msgstr "タイトル"
@@ -24,77 +24,81 @@ msgstr "タイトル"
 msgid "Lead"
 msgstr "リード文"
 
-#: widget/pr-box/_form.php:50 widget/showcase/_form.php:53
+#: widget/pr-box/_form.php:44
+msgid "Background color"
+msgstr "背景色"
+
+#: widget/pr-box/_form.php:61 widget/showcase/_form.php:53
 #: widget/showcase/_form.php:92 widget/slider/_form.php:30
 msgid "Set image"
 msgstr "画像を設定"
 
-#: widget/pr-box/_form.php:74
+#: widget/pr-box/_form.php:85
 msgid "Summary"
 msgstr "概要"
 
-#: widget/pr-box/_form.php:83 widget/slider/_form.php:43
+#: widget/pr-box/_form.php:94 widget/slider/_form.php:43
 msgid "Delete"
 msgstr "削除"
 
-#: widget/pr-box/_form.php:90
+#: widget/pr-box/_form.php:101
 msgid "Add Item"
 msgstr "項目を追加"
 
-#: widget/pr-box/_form.php:94
+#: widget/pr-box/_form.php:105
 msgid "Size of image to use"
 msgstr "使用する画像のサイズ"
 
-#: widget/pr-box/_form.php:111
+#: widget/pr-box/_form.php:122
 msgid "Thumbnail aspect ratio"
 msgstr "サムネイルのアスペクト比"
 
-#: widget/pr-box/_form.php:129
+#: widget/pr-box/_form.php:140
 msgid "Column size for mobile"
 msgstr "モバイルのカラムサイズ"
 
-#: widget/pr-box/_form.php:136 widget/pr-box/_form.php:157
-#: widget/pr-box/_form.php:178
+#: widget/pr-box/_form.php:147 widget/pr-box/_form.php:168
+#: widget/pr-box/_form.php:189
 msgid "1 column"
 msgstr "1カラム"
 
-#: widget/pr-box/_form.php:137 widget/pr-box/_form.php:158
-#: widget/pr-box/_form.php:179
+#: widget/pr-box/_form.php:148 widget/pr-box/_form.php:169
+#: widget/pr-box/_form.php:190
 msgid "2 columns"
 msgstr "2カラム"
 
-#: widget/pr-box/_form.php:138 widget/pr-box/_form.php:159
-#: widget/pr-box/_form.php:180
+#: widget/pr-box/_form.php:149 widget/pr-box/_form.php:170
+#: widget/pr-box/_form.php:191
 msgid "3 columns"
 msgstr "3カラム"
 
-#: widget/pr-box/_form.php:139 widget/pr-box/_form.php:160
-#: widget/pr-box/_form.php:181
+#: widget/pr-box/_form.php:150 widget/pr-box/_form.php:171
+#: widget/pr-box/_form.php:192
 msgid "4 columns"
 msgstr "4カラム"
 
-#: widget/pr-box/_form.php:140 widget/pr-box/_form.php:161
-#: widget/pr-box/_form.php:182
+#: widget/pr-box/_form.php:151 widget/pr-box/_form.php:172
+#: widget/pr-box/_form.php:193
 msgid "5 columns"
 msgstr "5カラム"
 
-#: widget/pr-box/_form.php:150
+#: widget/pr-box/_form.php:161
 msgid "Column size for tablet"
 msgstr "タブレットのカラムサイズ"
 
-#: widget/pr-box/_form.php:171
+#: widget/pr-box/_form.php:182
 msgid "Column size for PC"
 msgstr "PCのカラムサイズ"
 
-#: widget/pr-box/_form.php:192 widget/showcase/_form.php:123
+#: widget/pr-box/_form.php:203 widget/showcase/_form.php:123
 msgid "Link URL"
 msgstr "リンク URL"
 
-#: widget/pr-box/_form.php:202 widget/showcase/_form.php:133
+#: widget/pr-box/_form.php:213 widget/showcase/_form.php:133
 msgid "Link text"
 msgstr "リンクテキスト"
 
-#: widget/pr-box/pr-box.php:24
+#: widget/pr-box/pr-box.php:25
 msgid "WPAW: PR Box"
 msgstr "WPAW: PR ボックス"
 
@@ -141,6 +145,18 @@ msgstr "サムネイルの位置"
 #: widget/showcase/showcase.php:24
 msgid "WPAW: Showcase"
 msgstr "WPAW: ショーケース"
+
+#: widget/site-branding/_form.php:11
+msgid "Site description"
+msgstr "⑤ サイトの説明"
+
+#: widget/site-branding/_form.php:18
+msgid "HTML use allowed."
+msgstr "HTML 使用可"
+
+#: widget/site-branding/site-branding.php:15
+msgid "WPAW: Site branding"
+msgstr "WPAW: サイトブランディング"
 
 #: widget/slider/_form.php:50
 msgid "Add slider"
