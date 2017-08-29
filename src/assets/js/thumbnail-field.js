@@ -24,6 +24,7 @@ jQuery(function($) {
       wrapper.find('.wpaw-thumbnail-field__input-image').val(attachment.id);
 
       widget.find('.widget-control-save').css('display', 'inline-block');
+      widget.find('.widget-control-save').trigger('click');
       widget.find('.wpaw-dummy').val(Math.random());
     }).open();
   });
@@ -38,6 +39,7 @@ jQuery(function($) {
     wrapper.find('.wpaw-thumbnail-field__input-image').val('');
 
     widget.find('.widget-control-save').css('display', 'inline-block');
+    widget.find('.widget-control-save').trigger('click');
     widget.find('.wpaw-dummy').val(Math.random());
   });
 });

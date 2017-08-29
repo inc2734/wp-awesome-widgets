@@ -28,10 +28,15 @@
 							style="background-image: url( <?php echo esc_url( wp_get_attachment_image_url( $item['src'], $instance['thumbnail-size'] ) ); ?> );"
 						></div>
 
-						<div class="wpaw-pr-box__item-title"><?php echo esc_html( $item['title'] ); ?></div>
-						<div class="wpaw-pr-box__item-summary">
-							<?php echo esc_html( $item['summary'] ); ?>
-						</div>
+						<?php if ( ! empty( $item['title'] ) ) : ?>
+							<div class="wpaw-pr-box__item-title"><?php echo esc_html( $item['title'] ); ?></div>
+						<?php endif; ?>
+
+						<?php if ( ! empty( $item['summary'] ) ) : ?>
+							<div class="wpaw-pr-box__item-summary">
+								<?php echo esc_html( $item['summary'] ); ?>
+							</div>
+						<?php endif; ?>
 					</div>
 				<?php endforeach; ?>
 			</div>
