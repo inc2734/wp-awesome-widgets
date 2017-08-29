@@ -1,5 +1,5 @@
-.wpaw-thumbnail-field__set-image-btn {
-  width: 100%;
+.wpaw-thumbnail-field {
+  margin: 1em 0;
 }
 
 .wpaw-thumbnail-field__thumbnail {
@@ -10,4 +10,24 @@
   margin-bottom: 5px;
   height: auto;
   max-width: 100%;
+  vertical-align: top;
+}
+
+.wpaw-thumbnail-field__buttons::before,
+.wpaw-thumbnail-field__buttons::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.wpaw-thumbnail-field__set-image-btn {
+  float: left;
+  box-sizing: border-box;
+  width: 73%;
+}
+
+.wpaw-thumbnail-field__unset-image-btn {
+  float: right;
+  box-sizing: border-box;
+  width: 25%;
 }

@@ -22,13 +22,18 @@
 		?>
 		<?php foreach ( $instance['images'] as $key => $image ) : ?>
 			<div class="wpaw-repeaters__item">
-				<p class="wpaw-thumbnail-field">
+				<div class="wpaw-thumbnail-field">
 					<span class="wpaw-thumbnail-field__thumbnail">
 						<?php echo wp_get_attachment_image( $image['src'], 'medium' ); ?>
 					</span>
-					<button class="button wpaw-thumbnail-field__set-image-btn">
-						<?php esc_html_e( 'Set image', 'inc2734-wp-awesome-widgets' ); ?>
-					</button>
+					<div class="wpaw-thumbnail-field__buttons">
+						<button class="button wpaw-thumbnail-field__set-image-btn">
+							<?php esc_html_e( 'Set image', 'inc2734-wp-awesome-widgets' ); ?>
+						</button>
+						<button class="button wpaw-thumbnail-field__unset-image-btn">
+							<?php esc_html_e( 'Unset', 'inc2734-wp-awesome-widgets' ); ?>
+						</button>
+					</div>
 
 					<input
 						class="wpaw-thumbnail-field__input-image"
@@ -37,7 +42,7 @@
 						id="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][src]"
 						value="<?php echo esc_attr( $image['src'] ); ?>"
 					>
-				</p>
+				</div>
 
 				<div class="wpaw-repeaters__item-controls">
 					<a class="button-link button-link-delete"><?php esc_html_e( 'Delete', 'inc2734-wp-awesome-widgets' ); ?></a>

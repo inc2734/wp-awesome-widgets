@@ -44,14 +44,19 @@
 		</select>
 	</p>
 
-	<p class="wpaw-thumbnail-field">
+	<div class="wpaw-thumbnail-field">
 		<label for="<?php echo esc_attr( $this->get_field_id( 'bg-image' ) ); ?>"><?php esc_html_e( 'Background image', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<span class="wpaw-thumbnail-field__thumbnail">
 			<?php echo wp_get_attachment_image( $instance['bg-image'], 'medium' ); ?>
 		</span>
-		<button class="button wpaw-thumbnail-field__set-image-btn">
-			<?php esc_html_e( 'Set image', 'inc2734-wp-awesome-widgets' ); ?>
-		</button>
+		<div class="wpaw-thumbnail-field__buttons">
+			<button class="button wpaw-thumbnail-field__set-image-btn">
+				<?php esc_html_e( 'Set image', 'inc2734-wp-awesome-widgets' ); ?>
+			</button>
+			<button class="button wpaw-thumbnail-field__unset-image-btn">
+				<?php esc_html_e( 'Unset', 'inc2734-wp-awesome-widgets' ); ?>
+			</button>
+		</div>
 
 		<input
 			class="wpaw-thumbnail-field__input-image"
@@ -60,7 +65,7 @@
 			id="<?php echo esc_attr( $this->get_field_id( 'bg-image' ) ); ?>"
 			value="<?php echo esc_attr( $instance['bg-image'] ); ?>"
 		>
-	</p>
+	</div>
 
 	<p class="wpaw-color-picker-field">
 		<label for="<?php echo esc_attr( $this->get_field_id( 'mask-color' ) ); ?>"><?php esc_html_e( 'Background mask color', 'inc2734-wp-awesome-widgets' ); ?></label><br>
@@ -83,14 +88,19 @@
 		>
 	</p>
 
-	<p class="wpaw-thumbnail-field">
+	<div class="wpaw-thumbnail-field">
 		<label for="<?php echo esc_attr( $this->get_field_id( 'thumbnail' ) ); ?>"><?php esc_html_e( 'Thumbnail', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<span class="wpaw-thumbnail-field__thumbnail">
 			<?php echo wp_get_attachment_image( $instance['thumbnail'], 'medium' ); ?>
 		</span>
-		<button class="button wpaw-thumbnail-field__set-image-btn">
-			<?php esc_html_e( 'Set image', 'inc2734-wp-awesome-widgets' ); ?>
-		</button>
+		<div class="wpaw-thumbnail-field__buttons">
+			<button class="button wpaw-thumbnail-field__set-image-btn">
+				<?php esc_html_e( 'Set image', 'inc2734-wp-awesome-widgets' ); ?>
+			</button>
+			<button class="button wpaw-thumbnail-field__unset-image-btn">
+				<?php esc_html_e( 'Unset', 'inc2734-wp-awesome-widgets' ); ?>
+			</button>
+		</div>
 
 		<input
 			class="wpaw-thumbnail-field__input-image"
@@ -99,7 +109,7 @@
 			id="<?php echo esc_attr( $this->get_field_id( 'thumbnail' ) ); ?>"
 			value="<?php echo esc_attr( $instance['thumbnail'] ); ?>"
 		>
-	</p>
+	</div>
 
 	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'thumbnail-align' ) ); ?>"><?php esc_html_e( 'Horizontal alignment of thumbnail', 'inc2734-wp-awesome-widgets' ); ?></label><br>

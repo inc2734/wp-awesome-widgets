@@ -5,9 +5,6 @@ jQuery(function($) {
     var widget  = button.closest('.widget-inside');
     var wrapper = button.closest('.wpaw-thumbnail-field');
 
-    widget.find('.widget-control-save').css('display', 'inline-block');
-    widget.find('.wpaw-dummy').val(Math.random());
-
     var custom_uploader = wp.media({
       title: 'Insert image',
       library : {
@@ -25,6 +22,22 @@ jQuery(function($) {
       var thumbnail = $('<img/>').attr('src', thumbnail_url);
       wrapper.find('.wpaw-thumbnail-field__thumbnail').empty().append(thumbnail);
       wrapper.find('.wpaw-thumbnail-field__input-image').val(attachment.id);
+
+      widget.find('.widget-control-save').css('display', 'inline-block');
+      widget.find('.wpaw-dummy').val(Math.random());
     }).open();
+  });
+
+  $(document).on('click', '.wpaw-thumbnail-field__unset-image-btn', function(e) {
+    e.preventDefault();
+    var button  = $(this);
+    var widget  = button.closest('.widget-inside');
+    var wrapper = button.closest('.wpaw-thumbnail-field');
+
+    wrapper.find('.wpaw-thumbnail-field__thumbnail').empty();
+    wrapper.find('.wpaw-thumbnail-field__input-image').val('');
+
+    widget.find('.widget-control-save').css('display', 'inline-block');
+    widget.find('.wpaw-dummy').val(Math.random());
   });
 });

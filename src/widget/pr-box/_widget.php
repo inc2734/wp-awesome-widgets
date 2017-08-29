@@ -12,9 +12,7 @@
 		<div class="wpaw-pr-box__inner">
 
 			<?php if ( ! empty( $instance['title'] ) ) : ?>
-				<div class="wpaw-pr-box__title">
-					<?php echo $args['before_title']; ?><?php echo esc_html( $instance['title'] ); ?><?php echo $args['after_title']; ?>
-				</div>
+				<h2 class="wpaw-pr-box__title"><?php echo esc_html( $instance['title'] ); ?></h2>
 			<?php endif; ?>
 
 			<?php if ( ! empty( $instance['lead'] ) ) : ?>
