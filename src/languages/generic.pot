@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2017-08-29 03:53:21+00:00\n"
+"POT-Creation-Date: 2017-09-01 05:53:13+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +13,8 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: widget/pr-box/_form.php:26 widget/pr-box/_form.php:79
-#: widget/recent-posts/_form.php:11 widget/showcase/_form.php:11
+#: widget/ranking/_form.php:11 widget/recent-posts/_form.php:11
+#: widget/showcase/_form.php:11
 msgid "Title"
 msgstr ""
 
@@ -104,16 +105,20 @@ msgstr ""
 msgid "WPAW: PR Box"
 msgstr ""
 
-#: widget/recent-posts/_form.php:21
-msgid "Number of posts"
-msgstr ""
-
-#: widget/recent-posts/_form.php:40
+#: widget/ranking/_form.php:70 widget/recent-posts/_form.php:40
 msgid "Show thumbnail"
 msgstr ""
 
-#: widget/recent-posts/_form.php:51
+#: widget/ranking/_form.php:81 widget/recent-posts/_form.php:51
 msgid "Show taxonomy"
+msgstr ""
+
+#: widget/ranking/ranking.php:18
+msgid "WPAW: Ranking (Manual update)"
+msgstr ""
+
+#: widget/recent-posts/_form.php:21
+msgid "Number of posts"
 msgstr ""
 
 #: widget/recent-posts/recent-posts.php:18

@@ -66,6 +66,23 @@ class Inc2734_WP_Awesome_Widgets {
 			home_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/css/repeater.css' )
 		);
 
+		wp_enqueue_style(
+			'wp-awesome-widgets-item-selector',
+			home_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/css/item-selector.css' )
+		);
+
+		wp_enqueue_script(
+			'wp-awesome-widgets-item-selector',
+			home_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/js/item-selector.js' ),
+			[ 'jquery', 'jquery-ui-sortable' ],
+			false,
+			true
+		);
+
+		wp_localize_script( 'wp-awesome-widgets-item-selector', 'wp_awesome_widgets_item_selector_wp_api', [
+			'root' => esc_url_raw( rest_url() ),
+		] );
+
 		wp_enqueue_style( 'wp-color-picker' );
 	}
 }
