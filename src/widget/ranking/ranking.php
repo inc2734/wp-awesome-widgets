@@ -10,8 +10,8 @@ class Inc2734_WP_Awesome_Widgets_Ranking extends Inc2734_WP_Awesome_Widgets_Abst
 	protected $_defaults = [
 		'title'          => null,
 		'items'          => null,
-		'show-thumbnail' => true,
-		'show-taxonomy'  => true,
+		'show-thumbnail' => 1,
+		'show-taxonomy'  => 1,
 	];
 
 	public function __construct() {

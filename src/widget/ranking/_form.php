@@ -60,23 +60,25 @@
 	</div>
 
 	<p>
+		<input type="hidden" name="<?php echo esc_attr( $this->get_field_name( 'show-thumbnail' ) ); ?>" value="0">
 		<input
 			type="checkbox"
 			name="<?php echo esc_attr( $this->get_field_name( 'show-thumbnail' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'show-thumbnail' ) ); ?>"
-			value="<?php echo esc_attr( $instance['show-thumbnail'] ); ?>"
-			<?php checked( $instance['show-thumbnail'], true ); ?>
+			value="1"
+			<?php checked( $instance['show-thumbnail'], 1 ); ?>
 		>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'show-thumbnail' ) ); ?>"><?php esc_html_e( 'Show thumbnail', 'inc2734-wp-awesome-widgets' ); ?></label>
 	</p>
 
 	<p>
+		<input type="hidden" name="<?php echo esc_attr( $this->get_field_name( 'show-taxonomy' ) ); ?>" value="0">
 		<input
 			type="checkbox"
 			name="<?php echo esc_attr( $this->get_field_name( 'show-taxonomy' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'show-taxonomy' ) ); ?>"
-			value="<?php echo esc_attr( $instance['show-taxonomy'] ); ?>"
-			<?php checked( $instance['show-taxonomy'], true ); ?>
+			value="1"
+			<?php checked( $instance['show-taxonomy'], 1 ); ?>
 		>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'show-taxonomy' ) ); ?>"><?php esc_html_e( 'Show taxonomy', 'inc2734-wp-awesome-widgets' ); ?></label>
 	</p>
