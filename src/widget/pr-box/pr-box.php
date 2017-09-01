@@ -56,6 +56,9 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 			$new_instance['lg-columns'] = $this->_defaults['lg-columns'];
 		}
 
+		foreach ( $new_instance['items'] as $key => $image ) {
+			$new_instance['items'][ $key ] = array_filter( $new_instance['items'][ $key ] );
+		}
 		$new_instance['items'] = array_values( array_filter( $new_instance['items'] ) );
 
 		return $new_instance;
