@@ -13,6 +13,7 @@
 ## Install
 ```
 $ composer require inc2734/wp-awesome-widgets
+$ npm install --save slick-caroucel
 ```
 
 ## How to use

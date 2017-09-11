@@ -71,27 +71,3 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 add_action( 'widgets_init', function() {
 	register_widget( 'Inc2734_WP_Awesome_Widgets_Slider' );
 } );
-
-add_action( 'wp_enqueue_scripts', function() {
-	wp_enqueue_script(
-		'slick-caroucel',
-		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js',
-		[ 'jquery' ],
-		null,
-		true
-	);
-
-	wp_enqueue_style(
-		'slick-caroucel',
-		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css',
-		[],
-		null
-	);
-
-	wp_enqueue_style(
-		'slick-caroucel-theme',
-		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css',
-		[ 'slick-caroucel' ],
-		null
-	);
-} );
