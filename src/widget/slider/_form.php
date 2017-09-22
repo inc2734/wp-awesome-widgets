@@ -16,9 +16,9 @@
 
 	<div class="wpaw-repeaters">
 		<?php
-		$instance['images'][] = [
+		array_unshift( $instance['images'], [
 			'src' => '',
-		];
+		] );
 		?>
 		<?php foreach ( $instance['images'] as $key => $image ) : ?>
 			<div class="wpaw-repeaters__item">
@@ -49,11 +49,11 @@
 				</div>
 			</div>
 		<?php endforeach; ?>
-	</div>
 
-	<button class="button wpaw-repeaters__add-repeater-btn">
-		<?php esc_html_e( 'Add slider', 'inc2734-wp-awesome-widgets' ); ?>
-	</button>
+		<button class="button wpaw-repeaters__add-repeater-btn">
+			<?php esc_html_e( 'Add slider', 'inc2734-wp-awesome-widgets' ); ?>
+		</button>
+	</div>
 
 	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'type' ) ); ?>"><?php esc_html_e( 'Slider type', 'inc2734-wp-awesome-widgets' ); ?></label>

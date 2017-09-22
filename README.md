@@ -9,6 +9,9 @@
 * PR Box
 * Slider (slick)
 * Showcase
+* Site branding (Displaying the Logo)
+* Recent posts
+* Ranking (Self updating)
 
 ## Install
 ```
@@ -20,11 +23,11 @@ $ npm install --save slick-caroucel
 ```
 <?php
 // When Using composer auto loader
-// new Inc2734\WP_Awesome_Widgets\Awesome_Widgets();
+new Inc2734\WP_Awesome_Widgets\Awesome_Widgets();
 
 // When not Using composer auto loader
-include_once( get_theme_file_path( '/vendor/inc2734/wp-awesome-widgets/src/wp-awesome-widgets.php' ) );
-new Inc2734_WP_Awesome_Widgets();
+// include_once( get_theme_file_path( '/vendor/inc2734/wp-awesome-widgets/src/wp-awesome-widgets.php' ) );
+// new Inc2734_WP_Awesome_Widgets();
 ```
 
 ```
@@ -45,4 +48,4 @@ $ vi templates/widget/slider.php
 
 ## Thirt-party resources
 ### slick
-* http://kenwheeler.github.io/slick/
+http://kenwheeler.github.io/slick/

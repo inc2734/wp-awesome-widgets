@@ -14,42 +14,43 @@
 		type="hidden"
 	>
 
+	<p>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+		<input
+			type="text"
+			name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
+			id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
+			value="<?php echo esc_attr( $instance['title'] ); ?>"
+		>
+	</p>
+
+	<p>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'lead' ) ); ?>"><?php esc_html_e( 'Lead', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+		<textarea
+			name="<?php echo esc_attr( $this->get_field_name( 'lead' ) ); ?>"
+			id="<?php echo esc_attr( $this->get_field_id( 'lead' ) ); ?>"
+		><?php echo esc_textarea( $instance['lead'] ); ?></textarea>
+	</p>
+
+	<p class="wpaw-color-picker-field">
+		<label for="<?php echo esc_attr( $this->get_field_id( 'bg-color' ) ); ?>"><?php esc_html_e( 'Background color', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+		<input
+			class="wpaw-color-picker-field__input"
+			type="text"
+			name="<?php echo esc_attr( $this->get_field_name( 'bg-color' ) ); ?>"
+			id="<?php echo esc_attr( $this->get_field_id( 'bg-color' ) ); ?>"
+			value="<?php echo esc_attr( $instance['bg-color'] ); ?>"
+		>
+	</p>
+
 	<div class="wpaw-repeaters">
 		<?php
-		$instance['items'][] = [
+		array_unshift( $instance['items'], [
 			'src'     => '',
 			'title'   => '',
 			'summary' => '',
-		];
+		] );
 		?>
-		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'inc2734-wp-awesome-widgets' ); ?></label><br>
-			<input
-				type="text"
-				name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
-				id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
-				value="<?php echo esc_attr( $instance['title'] ); ?>"
-			>
-		</p>
-
-		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'lead' ) ); ?>"><?php esc_html_e( 'Lead', 'inc2734-wp-awesome-widgets' ); ?></label><br>
-			<textarea
-				name="<?php echo esc_attr( $this->get_field_name( 'lead' ) ); ?>"
-				id="<?php echo esc_attr( $this->get_field_id( 'lead' ) ); ?>"
-			><?php echo esc_textarea( $instance['lead'] ); ?></textarea>
-		</p>
-
-		<p class="wpaw-color-picker-field">
-			<label for="<?php echo esc_attr( $this->get_field_id( 'bg-color' ) ); ?>"><?php esc_html_e( 'Background color', 'inc2734-wp-awesome-widgets' ); ?></label><br>
-			<input
-				class="wpaw-color-picker-field__input"
-				type="text"
-				name="<?php echo esc_attr( $this->get_field_name( 'bg-color' ) ); ?>"
-				id="<?php echo esc_attr( $this->get_field_id( 'bg-color' ) ); ?>"
-				value="<?php echo esc_attr( $instance['bg-color'] ); ?>"
-			>
-		</p>
 
 		<?php foreach ( $instance['items'] as $key => $item ) : ?>
 			<div class="wpaw-repeaters__item">
@@ -100,11 +101,11 @@
 				</div>
 			</div>
 		<?php endforeach; ?>
-	</div>
 
-	<button class="button wpaw-repeaters__add-repeater-btn">
-		<?php esc_html_e( 'Add Item', 'inc2734-wp-awesome-widgets' ); ?>
-	</button>
+		<button class="button wpaw-repeaters__add-repeater-btn">
+			<?php esc_html_e( 'Add Item', 'inc2734-wp-awesome-widgets' ); ?>
+		</button>
+	</div>
 
 	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'thumbnail-size' ) ); ?>"><?php esc_html_e( 'Size of image to use', 'inc2734-wp-awesome-widgets' ); ?></label><br>

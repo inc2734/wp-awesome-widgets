@@ -11,7 +11,7 @@ if ( 'fade' === $instance['type'] ) {
 }
 ?>
 
-<?php echo $args['before_widget']; ?>
+<?php echo wp_kses_post( $args['before_widget'] ); ?>
 
 	<div class="wpaw-slider" id="wpaw-slider-<?php echo esc_attr( $args['widget_id'] ); ?>">
 		<div class="wpaw-slider__inner">
@@ -40,4 +40,4 @@ if ( 'fade' === $instance['type'] ) {
 	});
 	</script>
 
-<?php echo $args['after_widget']; ?>
+<?php echo wp_kses_post( $args['after_widget'] ); ?>

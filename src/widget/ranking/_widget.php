@@ -19,10 +19,12 @@ $recent_posts = get_posts( [
 ] );
 ?>
 
-<?php echo $args['before_widget']; ?>
+<?php echo wp_kses_post( $args['before_widget'] ); ?>
 
 	<?php if ( $instance['title'] ) : ?>
-		<?php echo $args['before_title']; ?><?php echo esc_html( $instance['title'] ); ?><?php echo $args['after_title']; ?>
+		<?php echo wp_kses_post( $args['before_title'] ); ?>
+			<?php echo esc_html( $instance['title'] ); ?>
+		<?php echo wp_kses_post( $args['after_title'] ); ?>
 	<?php endif; ?>
 
 	<div
@@ -60,4 +62,4 @@ $recent_posts = get_posts( [
 		</ul>
 	</div>
 
-<?php echo $args['after_widget']; ?>
+<?php echo wp_kses_post( $args['after_widget'] ); ?>

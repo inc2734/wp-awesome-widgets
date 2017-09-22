@@ -6,7 +6,7 @@
  */
 ?>
 
-<?php echo $args['before_widget']; ?>
+<?php echo wp_kses_post( $args['before_widget'] ); ?>
 
 	<div
 		class="wpaw-showcase"
@@ -48,4 +48,4 @@
 
 	</div>
 
-<?php echo $args['after_widget']; ?>
+<?php echo wp_kses_post( $args['after_widget'] ); ?>

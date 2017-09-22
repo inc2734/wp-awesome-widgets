@@ -6,7 +6,7 @@
  */
 ?>
 
-<?php echo $args['before_widget']; ?>
+<?php echo wp_kses_post( $args['before_widget'] ); ?>
 
 	<div class="wpaw-pr-box" id="wpaw-pr-box-<?php echo esc_attr( $args['widget_id'] ); ?>" style="background-color: <?php echo esc_attr( $instance['bg-color'] ); ?>">
 		<div class="wpaw-pr-box__inner">
@@ -52,4 +52,4 @@
 		</div>
 	</div>
 
-<?php echo $args['after_widget']; ?>
+<?php echo wp_kses_post( $args['after_widget'] ); ?>

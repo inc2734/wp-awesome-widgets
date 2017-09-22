@@ -6,11 +6,23 @@
   cursor: move;
 }
 
+.wpaw-repeaters__item:first-child {
+  display: none;
+}
+
+.wpaw-repeaters__item > * {
+  margin: 0;
+}
+
+.wpaw-repeaters__item > * + * {
+  margin-top: 1em;
+}
+
 .wpaw-repeaters__add-repeater-btn {
   margin: 0 0 10px !important;
   width: 100%;
 }
 
 .wpaw-repeaters__item-controls {
-  padding-top: 5px;
+  margin-top: .25em;
 }
