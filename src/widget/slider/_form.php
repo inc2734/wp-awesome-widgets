@@ -7,48 +7,44 @@
 ?>
 
 <div class="wpaw-slider-widget">
-	<input
-		class="wpaw-dummy"
-		name="<?php echo esc_attr( $this->get_field_name( 'wpaw-dummy' ) ); ?>"
-		id="<?php echo esc_attr( $this->get_field_id( 'wpaw-dummy' ) ); ?>"
-		type="hidden"
-	>
-
 	<div class="wpaw-repeaters">
-		<?php
-		array_unshift( $instance['images'], [
-			'src' => '',
-		] );
-		?>
-		<?php foreach ( $instance['images'] as $key => $image ) : ?>
-			<div class="wpaw-repeaters__item">
-				<div class="wpaw-thumbnail-field">
-					<span class="wpaw-thumbnail-field__thumbnail">
-						<?php echo wp_get_attachment_image( $image['src'], 'medium' ); ?>
-					</span>
-					<div class="wpaw-thumbnail-field__buttons">
-						<button class="button wpaw-thumbnail-field__set-image-btn">
-							<?php esc_html_e( 'Set image', 'inc2734-wp-awesome-widgets' ); ?>
-						</button>
-						<button class="button wpaw-thumbnail-field__unset-image-btn">
-							<?php esc_html_e( 'Unset', 'inc2734-wp-awesome-widgets' ); ?>
-						</button>
+		<div class="wpaw-repeaters__items">
+			<?php
+			$image_template = [
+				'src' => '',
+			];
+			array_unshift( $instance['images'], $image_template );
+			?>
+			<?php foreach ( $instance['images'] as $key => $image ) : $image = shortcode_atts( $image_template, $image ); ?>
+				<div class="wpaw-repeaters__item">
+					<div class="wpaw-thumbnail-field">
+						<span class="wpaw-thumbnail-field__thumbnail">
+							<?php echo wp_get_attachment_image( $image['src'], 'medium' ); ?>
+						</span>
+						<div class="wpaw-thumbnail-field__buttons">
+							<button class="button wpaw-thumbnail-field__set-image-btn">
+								<?php esc_html_e( 'Set image', 'inc2734-wp-awesome-widgets' ); ?>
+							</button>
+							<button class="button wpaw-thumbnail-field__unset-image-btn">
+								<?php esc_html_e( 'Unset', 'inc2734-wp-awesome-widgets' ); ?>
+							</button>
+						</div>
+
+						<input
+							class="wpaw-thumbnail-field__input-image"
+							type="hidden"
+							name="<?php echo esc_attr( $this->get_field_name( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][src]"
+							id="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][src]"
+							value="<?php echo esc_attr( $image['src'] ); ?>"
+						>
 					</div>
 
-					<input
-						class="wpaw-thumbnail-field__input-image"
-						type="hidden"
-						name="<?php echo esc_attr( $this->get_field_name( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][src]"
-						id="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][src]"
-						value="<?php echo esc_attr( $image['src'] ); ?>"
-					>
+					<div class="wpaw-repeaters__item-controls">
+						<a class="button-link button-link-delete"><?php esc_html_e( 'Delete', 'inc2734-wp-awesome-widgets' ); ?></a>
+					</div>
 				</div>
-
-				<div class="wpaw-repeaters__item-controls">
-					<a class="button-link button-link-delete"><?php esc_html_e( 'Delete', 'inc2734-wp-awesome-widgets' ); ?></a>
-				</div>
-			</div>
-		<?php endforeach; ?>
+			<?php endforeach; ?>
+		</div>
 
 		<button class="button wpaw-repeaters__add-repeater-btn">
 			<?php esc_html_e( 'Add slider', 'inc2734-wp-awesome-widgets' ); ?>

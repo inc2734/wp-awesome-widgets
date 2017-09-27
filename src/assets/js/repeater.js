@@ -4,7 +4,7 @@ jQuery(function($) {
     var button   = $(this);
     var widget   = button.closest('.widget-inside');
     var repeater = widget.find('.wpaw-repeaters__item').first().clone(true);
-    widget.find('.wpaw-repeaters').append(repeater);
+    widget.find('.wpaw-repeaters__items').append(repeater);
 
     widget.find('.wpaw-repeaters__item').each(function(i, e) {
       var _index    = i;
@@ -22,9 +22,7 @@ jQuery(function($) {
       });
     });
 
-    widget.find('.widget-control-save').css('display', 'inline-block');
-    widget.find('.widget-control-save').trigger('click');
-    widget.find('.wpaw-dummy').val(Math.random());
+    widget.find('.widget-control-save').css('display', 'none');
 
     $(document).trigger('wpaw-repeaters-add-repeater', {
       repeater: repeater,
@@ -41,7 +39,6 @@ jQuery(function($) {
     repeater.remove();
     widget.find('.widget-control-save').css('display', 'inline-block');
     widget.find('.widget-control-save').trigger('click');
-    widget.find('.wpaw-dummy').val(Math.random());
   });
 
   $(document).on('mouseover', '.wpaw-repeaters', function(e) {

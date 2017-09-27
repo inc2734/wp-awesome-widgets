@@ -25,7 +25,6 @@ jQuery(function($) {
 
       widget.find('.widget-control-save').css('display', 'inline-block');
       widget.find('.widget-control-save').trigger('click');
-      widget.find('.wpaw-dummy').val(Math.random());
     }).open();
   });
 
@@ -40,6 +39,5 @@ jQuery(function($) {
 
     widget.find('.widget-control-save').css('display', 'inline-block');
     widget.find('.widget-control-save').trigger('click');
-    widget.find('.wpaw-dummy').val(Math.random());
   });
 });

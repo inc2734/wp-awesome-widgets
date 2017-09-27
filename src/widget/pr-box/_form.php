@@ -7,13 +7,6 @@
 ?>
 
 <div class="wpaw-pr-box-widget">
-	<input
-		class="wpaw-dummy"
-		name="<?php echo esc_attr( $this->get_field_name( 'wpaw-dummy' ) ); ?>"
-		id="<?php echo esc_attr( $this->get_field_id( 'wpaw-dummy' ) ); ?>"
-		type="hidden"
-	>
-
 	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<input
@@ -44,63 +37,66 @@
 	</p>
 
 	<div class="wpaw-repeaters">
-		<?php
-		array_unshift( $instance['items'], [
-			'src'     => '',
-			'title'   => '',
-			'summary' => '',
-		] );
-		?>
+		<div class="wpaw-repeaters__items">
+			<?php
+			$item_template = [
+				'src'     => '',
+				'title'   => '',
+				'summary' => '',
+			];
+			array_unshift( $instance['items'], $item_template );
+			?>
 
-		<?php foreach ( $instance['items'] as $key => $item ) : ?>
-			<div class="wpaw-repeaters__item">
-				<div class="wpaw-thumbnail-field">
-					<span class="wpaw-thumbnail-field__thumbnail">
-						<?php echo wp_get_attachment_image( $item['src'], 'medium' ); ?>
-					</span>
-					<div class="wpaw-thumbnail-field__buttons">
-						<button class="button wpaw-thumbnail-field__set-image-btn">
-							<?php esc_html_e( 'Set image', 'inc2734-wp-awesome-widgets' ); ?>
-						</button>
-						<button class="button wpaw-thumbnail-field__unset-image-btn">
-							<?php esc_html_e( 'Unset', 'inc2734-wp-awesome-widgets' ); ?>
-						</button>
+			<?php foreach ( $instance['items'] as $key => $item ) : $item = shortcode_atts( $item_template, $item ); ?>
+				<div class="wpaw-repeaters__item">
+					<div class="wpaw-thumbnail-field">
+						<span class="wpaw-thumbnail-field__thumbnail">
+							<?php echo wp_get_attachment_image( $item['src'], 'medium' ); ?>
+						</span>
+						<div class="wpaw-thumbnail-field__buttons">
+							<button class="button wpaw-thumbnail-field__set-image-btn">
+								<?php esc_html_e( 'Set image', 'inc2734-wp-awesome-widgets' ); ?>
+							</button>
+							<button class="button wpaw-thumbnail-field__unset-image-btn">
+								<?php esc_html_e( 'Unset', 'inc2734-wp-awesome-widgets' ); ?>
+							</button>
+						</div>
+
+						<input
+							class="wpaw-thumbnail-field__input-image"
+							type="hidden"
+							name="<?php echo esc_attr( $this->get_field_name( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][src]"
+							id="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][src]"
+							value="<?php echo esc_attr( $item['src'] ); ?>"
+						>
 					</div>
 
-					<input
-						class="wpaw-thumbnail-field__input-image"
-						type="hidden"
-						name="<?php echo esc_attr( $this->get_field_name( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][src]"
-						id="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][src]"
-						value="<?php echo esc_attr( $item['src'] ); ?>"
-					>
+					<p>
+						<label for="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][title]"><?php esc_html_e( 'Title', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+						<input
+							class="wpaw-pr-box-widget__input-title"
+							type="text"
+							name="<?php echo esc_attr( $this->get_field_name( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][title]"
+							id="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][title]"
+							value="<?php echo esc_attr( $item['title'] ); ?>"
+						>
+					</p>
+
+					<p>
+						<label for="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"><?php esc_html_e( 'Summary', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+						<textarea
+							class="wpaw-pr-box-widget__input-summary"
+							name="<?php echo esc_attr( $this->get_field_name( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"
+							id="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"
+						><?php echo esc_textarea( $item['summary'] ); ?></textarea>
+					</p>
+
+					<div class="wpaw-repeaters__item-controls">
+						<a class="button-link button-link-delete"><?php esc_html_e( 'Delete', 'inc2734-wp-awesome-widgets' ); ?></a>
+					</div>
 				</div>
-
-				<p>
-					<label for="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][title]"><?php esc_html_e( 'Title', 'inc2734-wp-awesome-widgets' ); ?></label><br>
-					<input
-						class="wpaw-pr-box-widget__input-title"
-						type="text"
-						name="<?php echo esc_attr( $this->get_field_name( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][title]"
-						id="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][title]"
-						value="<?php echo esc_attr( $item['title'] ); ?>"
-					>
-				</p>
-
-				<p>
-					<label for="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"><?php esc_html_e( 'Summary', 'inc2734-wp-awesome-widgets' ); ?></label><br>
-					<textarea
-						class="wpaw-pr-box-widget__input-summary"
-						name="<?php echo esc_attr( $this->get_field_name( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"
-						id="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"
-					><?php echo esc_textarea( $item['summary'] ); ?></textarea>
-				</p>
-
-				<div class="wpaw-repeaters__item-controls">
-					<a class="button-link button-link-delete"><?php esc_html_e( 'Delete', 'inc2734-wp-awesome-widgets' ); ?></a>
-				</div>
-			</div>
-		<?php endforeach; ?>
+			<?php endforeach; ?>
+		</div>
 
 		<button class="button wpaw-repeaters__add-repeater-btn">
 			<?php esc_html_e( 'Add Item', 'inc2734-wp-awesome-widgets' ); ?>
