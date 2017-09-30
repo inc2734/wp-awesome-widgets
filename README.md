@@ -11,6 +11,7 @@
 * Showcase
 * Site branding (Displaying the Logo)
 * Recent posts
+* Any posts
 * Ranking (Self updating)
 
 ## Install

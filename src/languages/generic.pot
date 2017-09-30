@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2017-09-01 05:53:13+00:00\n"
+"POT-Creation-Date: 2017-09-30 14:50:31+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,108 +12,114 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: widget/pr-box/_form.php:26 widget/pr-box/_form.php:79
-#: widget/ranking/_form.php:11 widget/recent-posts/_form.php:11
-#: widget/showcase/_form.php:11
+#: widget/any-posts/_form.php:11 widget/pr-box/_form.php:11
+#: widget/pr-box/_form.php:76 widget/ranking/_form.php:11
+#: widget/recent-posts/_form.php:11 widget/showcase/_form.php:11
 msgid "Title"
 msgstr ""
 
-#: widget/pr-box/_form.php:36 widget/showcase/_form.php:21
+#: widget/any-posts/_form.php:71 widget/ranking/_form.php:71
+#: widget/recent-posts/_form.php:41
+msgid "Show thumbnail"
+msgstr ""
+
+#: widget/any-posts/_form.php:83 widget/ranking/_form.php:83
+#: widget/recent-posts/_form.php:53
+msgid "Show taxonomy"
+msgstr ""
+
+#: widget/any-posts/any-posts.php:24
+msgid "WPAW: Any Posts"
+msgstr ""
+
+#: widget/pr-box/_form.php:21 widget/showcase/_form.php:21
 msgid "Lead"
 msgstr ""
 
-#: widget/pr-box/_form.php:44
+#: widget/pr-box/_form.php:29
 msgid "Background color"
 msgstr ""
 
-#: widget/pr-box/_form.php:62 widget/showcase/_form.php:54
-#: widget/showcase/_form.php:98 widget/slider/_form.php:31
+#: widget/pr-box/_form.php:59 widget/showcase/_form.php:54
+#: widget/showcase/_form.php:98 widget/slider/_form.php:27
 msgid "Set image"
 msgstr ""
 
-#: widget/pr-box/_form.php:65 widget/showcase/_form.php:57
-#: widget/showcase/_form.php:101 widget/slider/_form.php:34
+#: widget/pr-box/_form.php:62 widget/showcase/_form.php:57
+#: widget/showcase/_form.php:101 widget/slider/_form.php:30
 msgid "Unset"
 msgstr ""
 
-#: widget/pr-box/_form.php:90
+#: widget/pr-box/_form.php:87
 msgid "Summary"
 msgstr ""
 
-#: widget/pr-box/_form.php:99 widget/slider/_form.php:48
+#: widget/pr-box/_form.php:96 widget/slider/_form.php:44
 msgid "Delete"
 msgstr ""
 
-#: widget/pr-box/_form.php:106
+#: widget/pr-box/_form.php:103
 msgid "Add Item"
 msgstr ""
 
-#: widget/pr-box/_form.php:110
+#: widget/pr-box/_form.php:108
 msgid "Size of image to use"
 msgstr ""
 
-#: widget/pr-box/_form.php:127
+#: widget/pr-box/_form.php:125
 msgid "Thumbnail aspect ratio"
 msgstr ""
 
-#: widget/pr-box/_form.php:145
+#: widget/pr-box/_form.php:143
 msgid "Column size for mobile"
+msgstr ""
+
+#: widget/pr-box/_form.php:150 widget/pr-box/_form.php:171
+#: widget/pr-box/_form.php:192
+msgid "1 column"
+msgstr ""
+
+#: widget/pr-box/_form.php:151 widget/pr-box/_form.php:172
+#: widget/pr-box/_form.php:193
+msgid "2 columns"
 msgstr ""
 
 #: widget/pr-box/_form.php:152 widget/pr-box/_form.php:173
 #: widget/pr-box/_form.php:194
-msgid "1 column"
+msgid "3 columns"
 msgstr ""
 
 #: widget/pr-box/_form.php:153 widget/pr-box/_form.php:174
 #: widget/pr-box/_form.php:195
-msgid "2 columns"
+msgid "4 columns"
 msgstr ""
 
 #: widget/pr-box/_form.php:154 widget/pr-box/_form.php:175
 #: widget/pr-box/_form.php:196
-msgid "3 columns"
-msgstr ""
-
-#: widget/pr-box/_form.php:155 widget/pr-box/_form.php:176
-#: widget/pr-box/_form.php:197
-msgid "4 columns"
-msgstr ""
-
-#: widget/pr-box/_form.php:156 widget/pr-box/_form.php:177
-#: widget/pr-box/_form.php:198
 msgid "5 columns"
 msgstr ""
 
-#: widget/pr-box/_form.php:166
+#: widget/pr-box/_form.php:164
 msgid "Column size for tablet"
 msgstr ""
 
-#: widget/pr-box/_form.php:187
+#: widget/pr-box/_form.php:185
 msgid "Column size for PC"
 msgstr ""
 
-#: widget/pr-box/_form.php:208 widget/showcase/_form.php:133
+#: widget/pr-box/_form.php:206 widget/showcase/_form.php:115
 msgid "Link URL"
 msgstr ""
 
-#: widget/pr-box/_form.php:218 widget/showcase/_form.php:143
+#: widget/pr-box/_form.php:216 widget/showcase/_form.php:125
 msgid "Link text"
 msgstr ""
 
-#: widget/pr-box/pr-box.php:25
+#: widget/pr-box/pr-box.php:31
 msgid "WPAW: PR Box"
 msgstr ""
 
-#: widget/ranking/_form.php:70 widget/recent-posts/_form.php:40
-msgid "Show thumbnail"
-msgstr ""
-
-#: widget/ranking/_form.php:81 widget/recent-posts/_form.php:51
-msgid "Show taxonomy"
-msgstr ""
-
-#: widget/ranking/ranking.php:18
+#: widget/ranking/ranking.php:24
 msgid "WPAW: Ranking (Manual update)"
 msgstr ""
 
@@ -121,12 +127,12 @@ msgstr ""
 msgid "Number of posts"
 msgstr ""
 
-#: widget/recent-posts/recent-posts.php:18
+#: widget/recent-posts/recent-posts.php:24
 msgid "WPAW: Recent posts"
 msgstr ""
 
 #: widget/showcase/_form.php:29
-msgid "Horizontal alignment of text"
+msgid "Format"
 msgstr ""
 
 #: widget/showcase/_form.php:48
@@ -145,11 +151,7 @@ msgstr ""
 msgid "Thumbnail"
 msgstr ""
 
-#: widget/showcase/_form.php:115
-msgid "Horizontal alignment of thumbnail"
-msgstr ""
-
-#: widget/showcase/showcase.php:24
+#: widget/showcase/showcase.php:29
 msgid "WPAW: Showcase"
 msgstr ""
 
@@ -161,42 +163,42 @@ msgstr ""
 msgid "HTML use allowed."
 msgstr ""
 
-#: widget/site-branding/site-branding.php:15
+#: widget/site-branding/site-branding.php:21
 msgid "WPAW: Site branding"
 msgstr ""
 
-#: widget/slider/_form.php:55
+#: widget/slider/_form.php:51
 msgid "Add slider"
 msgstr ""
 
-#: widget/slider/_form.php:59
+#: widget/slider/_form.php:56
 msgid "Slider type"
 msgstr ""
 
-#: widget/slider/_form.php:66
+#: widget/slider/_form.php:63
 msgid "Fade"
 msgstr ""
 
-#: widget/slider/_form.php:67
+#: widget/slider/_form.php:64
 msgid "Slide"
 msgstr ""
 
-#: widget/slider/_form.php:77
+#: widget/slider/_form.php:74
 msgid "Animation time"
 msgstr ""
 
-#: widget/slider/_form.php:88
+#: widget/slider/_form.php:85
 msgid "Interval time"
 msgstr ""
 
-#: widget/slider/_form.php:99
+#: widget/slider/_form.php:96
 msgid "Slides to show"
 msgstr ""
 
-#: widget/slider/_form.php:110
+#: widget/slider/_form.php:107
 msgid "Slides to scroll"
 msgstr ""
 
-#: widget/slider/slider.php:20
+#: widget/slider/slider.php:26
 msgid "WPAW: Slider"
 msgstr ""
