@@ -1,6 +1,4 @@
 .wpaw-showcase {
-  $root: &;
-
   position: relative;
   background-size: cover;
   background-position: 50% 50%;
@@ -19,61 +17,10 @@
 
   &__inner {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-
-    @media (min-width: 40em) {
-      flex-wrap: nowrap;
-    }
-
-    &--align-left {
-      #{$root}__title,
-      #{$root}__lead,
-      #{$root}__action {
-        text-align: left;
-      }
-    }
-
-    &--align-center {
-      #{$root}__title,
-      #{$root}__lead,
-      #{$root}__action {
-        text-align: center;
-      }
-    }
-
-    &--align-right {
-      #{$root}__title,
-      #{$root}__lead,
-      #{$root}__action {
-        text-align: right;
-      }
-    }
-
-    &--thumbnail-align-left {
-      flex-direction: row-reverse;
-      justify-content: flex-start;
-    }
-
-    &--thumbnail-align-right {
-      justify-content: flex-end;
-    }
   }
 
   &__figure {
-    flex: 1 1 auto;
     text-align: center;
-
-    @media (min-width: 40em) {
-      flex: 1 0 auto;
-      max-width: 50%;
-    }
-  }
-
-  &__body {
-    flex: 1 1 auto;
   }
 
   &__title {
@@ -99,5 +46,76 @@
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
+  }
+
+  /**
+   * Right image
+   */
+  &--format-1 .wpaw-showcase {
+    &__inner {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+
+      @media (min-width: 40em) {
+        flex-wrap: nowrap;
+      }
+    }
+
+    &__figure {
+      flex: 1 1 auto;
+
+      @media (min-width: 40em) {
+        max-width: 50%;
+      }
+    }
+
+    &__body {
+      flex: 1 1 auto;
+    }
+  }
+
+  /**
+   * Left image
+   */
+  &--format-2 .wpaw-showcase {
+    &__inner {
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      align-items: center;
+
+      @media (min-width: 40em) {
+        flex-wrap: nowrap;
+      }
+    }
+
+    &__figure {
+      flex: 1 1 auto;
+
+      @media (min-width: 40em) {
+        max-width: 50%;
+      }
+    }
+
+    &__body {
+      flex: 1 1 auto;
+    }
+  }
+
+  /**
+   * Bottom image
+   */
+  &--format-3 {
+    padding-bottom: 0 !important;
+
+    .wpaw-showcase {
+      &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   }
 }

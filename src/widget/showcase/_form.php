@@ -26,20 +26,20 @@
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'text-align' ) ); ?>"><?php esc_html_e( 'Horizontal alignment of text', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>"><?php esc_html_e( 'Format', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<select
-			name="<?php echo esc_attr( $this->get_field_name( 'text-align' ) ); ?>"
-			id="<?php echo esc_attr( $this->get_field_id( 'text-align' ) ); ?>"
+			name="<?php echo esc_attr( $this->get_field_name( 'format' ) ); ?>"
+			id="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>"
 		>
 			<?php
-			$aligns = [
-				'left',
-				'center',
-				'right',
+			$formats = [
+				'format-1',
+				'format-2',
+				'format-3',
 			];
 			?>
-			<?php foreach ( $aligns as $align ) : ?>
-				<option value="<?php echo esc_attr( $align ); ?>" <?php selected( $align, $instance['text-align'], true ); ?>><?php echo esc_html( $align ); ?></option>
+			<?php foreach ( $formats as $format ) : ?>
+				<option value="<?php echo esc_attr( $format ); ?>" <?php selected( $format, $instance['format'], true ); ?>><?php echo esc_html( $format ); ?></option>
 			<?php endforeach; ?>
 		</select>
 	</p>
@@ -110,24 +110,6 @@
 			value="<?php echo esc_attr( $instance['thumbnail'] ); ?>"
 		>
 	</div>
-
-	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'thumbnail-align' ) ); ?>"><?php esc_html_e( 'Horizontal alignment of thumbnail', 'inc2734-wp-awesome-widgets' ); ?></label><br>
-		<select
-			name="<?php echo esc_attr( $this->get_field_name( 'thumbnail-align' ) ); ?>"
-			id="<?php echo esc_attr( $this->get_field_id( 'thumbnail-align' ) ); ?>"
-		>
-			<?php
-			$aligns = [
-				'left',
-				'right',
-			];
-			?>
-			<?php foreach ( $aligns as $align ) : ?>
-				<option value="<?php echo esc_attr( $align ); ?>" <?php selected( $align, $instance['thumbnail-align'], true ); ?>><?php echo esc_html( $align ); ?></option>
-			<?php endforeach; ?>
-		</select>
-	</p>
 
 	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'link-url' ) ); ?>"><?php esc_html_e( 'Link URL', 'inc2734-wp-awesome-widgets' ); ?></label><br>

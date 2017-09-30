@@ -14,16 +14,15 @@ class Inc2734_WP_Awesome_Widgets_Showcase extends Inc2734_WP_Awesome_Widgets_Abs
 	 * @var array
 	 */
 	protected $_defaults = [
-		'title'           => null,
-		'lead'            => null,
-		'bg-image'        => null,
-		'mask-color'      => '#000',
-		'mask-opacity'    => .7,
-		'thumbnail'       => null,
-		'thumbnail-align' => 'right',
-		'link-url'        => null,
-		'link-text'       => null,
-		'text-align'      => 'center',
+		'title'        => null,
+		'lead'         => null,
+		'bg-image'     => null,
+		'mask-color'   => '#000',
+		'mask-opacity' => .7,
+		'thumbnail'    => null,
+		'link-url'     => null,
+		'link-text'    => null,
+		'format'       => 'format-1',
 	];
 
 	public function __construct() {

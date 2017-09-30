@@ -9,7 +9,7 @@
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
 
 	<div
-		class="wpaw-showcase"
+		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?>"
 		id="wpaw-showcase-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $instance['bg-image'], 'large' ) ); ?> );"
 		>
@@ -18,7 +18,7 @@
 			style="background-color: <?php echo esc_attr( sanitize_hex_color( $instance['mask-color'] ) ); ?>; opacity: <?php echo esc_attr( $instance['mask-opacity'] ); ?>"
 		></div>
 
-		<div class="wpaw-showcase__inner wpaw-showcase__inner--align-<?php echo esc_attr( $instance['text-align'] ); ?> wpaw-showcase__inner--thumbnail-align-<?php echo esc_attr( $instance['thumbnail-align'] ); ?>">
+		<div class="wpaw-showcase__inner">
 
 			<div class="wpaw-showcase__body">
 				<?php if ( ! empty( $instance['title'] ) ) : ?>
