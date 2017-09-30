@@ -3,9 +3,9 @@ jQuery(function($) {
     _initColorPicker(widget);
   });
 
-  $(function() {
-    $('#widgets-right .widget:has(.color-picker)').each(function() {
-      _initColorPicker($('.widget-inside'));
+  $(document).ready(function() {
+    $('#widgets-right .widget:has(.wpaw-color-picker-field__input) .widget-inside').each(function(i, e) {
+      _initColorPicker($(e));
     });
   });
 
@@ -13,7 +13,7 @@ jQuery(function($) {
     widget.find('.wpaw-color-picker-field__input').wpColorPicker( {
       change: _.throttle(function() {
         $(this).trigger('change');
-      }, 200)
+      }, 3000)
     });
   }
 });
