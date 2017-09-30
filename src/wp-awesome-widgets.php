@@ -5,6 +5,9 @@
  * @license GPL-2.0+
  */
 
+/**
+ * Adds some awesome widgets
+ */
 class Inc2734_WP_Awesome_Widgets {
 
 	public function __construct() {

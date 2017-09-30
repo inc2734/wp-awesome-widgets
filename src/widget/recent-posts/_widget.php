@@ -27,22 +27,25 @@ $recent_posts = get_posts( [
 		>
 
 		<ul class="wpaw-recent-posts__list">
-			<?php foreach ( $recent_posts as $post ) : setup_postdata( $post ); ?>
+			<?php foreach ( $recent_posts as $post ) : ?>
+				<?php setup_postdata( $post ); ?>
 				<li class="wpaw-recent-posts__item">
 					<a href="<?php the_permalink(); ?>">
 
 						<?php if ( $instance['show-thumbnail'] ) : ?>
 							<div class="wpaw-recent-posts__figure"
-								style="background-image: url(<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'thumbnail' ); ?> )"
+								style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'thumbnail' ) ); ?> )"
 							></div>
 						<?php endif; ?>
 
 						<div class="wpaw-recent-posts__body">
-							<?php if ( $instance['show-taxonomy'] && $terms = get_the_terms( get_the_ID(), 'category' ) ) : ?>
+							<?php $terms = get_the_terms( get_the_ID(), 'category' ); ?>
+							<?php if ( $instance['show-taxonomy'] && $terms ) : ?>
 								<div class="wpaw-recent-posts__taxonomy">
 									<?php foreach ( $terms as $term ) : ?>
 										<span class="wpaw-recent-posts__term"><?php echo esc_html( $term->name ); ?></span>
-									<?php break; endforeach; ?>
+										<?php break; ?>
+									<?php endforeach; ?>
 								</div>
 							<?php endif; ?>
 
@@ -52,7 +55,8 @@ $recent_posts = get_posts( [
 
 					</a>
 				</li>
-			<?php endforeach; wp_reset_postdata(); ?>
+			<?php endforeach; ?>
+			<?php wp_reset_postdata(); ?>
 		</ul>
 	</div>
 

@@ -15,7 +15,7 @@
 		>
 
 		<div class="wpaw-showcase__mask"
-			style="background-color: <?php echo sanitize_hex_color( $instance['mask-color'] ); ?>; opacity: <?php echo esc_attr( $instance['mask-opacity'] ); ?>"
+			style="background-color: <?php echo esc_attr( sanitize_hex_color( $instance['mask-color'] ) ); ?>; opacity: <?php echo esc_attr( $instance['mask-opacity'] ); ?>"
 		></div>
 
 		<div class="wpaw-showcase__inner wpaw-showcase__inner--align-<?php echo esc_attr( $instance['text-align'] ); ?> wpaw-showcase__inner--thumbnail-align-<?php echo esc_attr( $instance['thumbnail-align'] ); ?>">

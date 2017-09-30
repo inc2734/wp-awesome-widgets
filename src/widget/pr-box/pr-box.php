@@ -5,8 +5,14 @@
  * @license GPL-2.0+
  */
 
+/**
+ * PR box widget
+ */
 class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstract_Widget {
 
+	/**
+	 * @var array
+	 */
 	protected $_defaults = [
 		'title'                  => null,
 		'lead'                   => null,
@@ -56,7 +62,8 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 			$new_instance['lg-columns'] = $this->_defaults['lg-columns'];
 		}
 
-		foreach ( $new_instance['items'] as $key => $image ) {
+		$item_keys = array_keys( $new_instance['items'] );
+		foreach ( $item_keys as $key ) {
 			$new_instance['items'][ $key ] = array_filter( $new_instance['items'][ $key ] );
 		}
 		$new_instance['items'] = array_values( array_filter( $new_instance['items'] ) );

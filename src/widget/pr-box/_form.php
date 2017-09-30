@@ -47,7 +47,8 @@
 			array_unshift( $instance['items'], $item_template );
 			?>
 
-			<?php foreach ( $instance['items'] as $key => $item ) : $item = shortcode_atts( $item_template, $item ); ?>
+			<?php foreach ( $instance['items'] as $key => $item ) : ?>
+				<?php $item = shortcode_atts( $item_template, $item ); ?>
 				<div class="wpaw-repeaters__item">
 					<div class="wpaw-thumbnail-field">
 						<span class="wpaw-thumbnail-field__thumbnail">

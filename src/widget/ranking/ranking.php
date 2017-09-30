@@ -5,8 +5,14 @@
  * @license GPL-2.0+
  */
 
+/**
+ * Ranking widget
+ */
 class Inc2734_WP_Awesome_Widgets_Ranking extends Inc2734_WP_Awesome_Widgets_Abstract_Widget {
 
+	/**
+	 * @var array
+	 */
 	protected $_defaults = [
 		'title'          => null,
 		'items'          => null,

@@ -25,7 +25,7 @@ global $post;
 
 		<?php if ( ! empty( $instance['description'] ) ) : ?>
 			<div class="wpaw-site-branding__description">
-				<?php echo wpautop( $instance['description'] ); ?>
+				<?php echo wp_kses_post( wpautop( $instance['description'] ) ); ?>
 			</div>
 		<?php endif; ?>
 	</div>

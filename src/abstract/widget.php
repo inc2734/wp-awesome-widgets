@@ -5,9 +5,19 @@
  * @license GPL-2.0+
  */
 
+/**
+ * Abstract widget
+ */
 class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 
+	/**
+	 * @var array
+	 */
 	protected $_defaults = [];
+
+	/**
+	 * @var string
+	 */
 	protected $_path;
 
 	public function __construct( $id_base, $name ) {
@@ -18,7 +28,7 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 			if ( file_exists( $path ) ) {
 				require_once( $path );
 			} else {
-				require_once( __DIR__ .  '/../../wp-view-controller/src/wp-view-controller.php' );
+				require_once( __DIR__ . '/../../wp-view-controller/src/wp-view-controller.php' );
 			}
 		}
 

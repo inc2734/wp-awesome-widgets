@@ -16,7 +16,7 @@ if ( 'fade' === $instance['type'] ) {
 	<div class="wpaw-slider" id="wpaw-slider-<?php echo esc_attr( $args['widget_id'] ); ?>">
 		<div class="wpaw-slider__inner">
 			<div class="wpaw-slider__canvas">
-				<?php foreach( $instance['images'] as $image ) : ?>
+				<?php foreach ( $instance['images'] as $image ) : ?>
 					<div class="slick-slide" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $image['src'], 'full' ) ); ?>);"></div>
 				<?php endforeach; ?>
 			</div>

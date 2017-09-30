@@ -5,8 +5,14 @@
  * @license GPL-2.0+
  */
 
+/**
+ * Showcase widget
+ */
 class Inc2734_WP_Awesome_Widgets_Showcase extends Inc2734_WP_Awesome_Widgets_Abstract_Widget {
 
+	/**
+	 * @var array
+	 */
 	protected $_defaults = [
 		'title'           => null,
 		'lead'            => null,

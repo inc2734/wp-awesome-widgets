@@ -15,7 +15,8 @@
 			];
 			array_unshift( $instance['images'], $image_template );
 			?>
-			<?php foreach ( $instance['images'] as $key => $image ) : $image = shortcode_atts( $image_template, $image ); ?>
+			<?php foreach ( $instance['images'] as $key => $image ) : ?>
+				<?php $image = shortcode_atts( $image_template, $image ); ?>
 				<div class="wpaw-repeaters__item">
 					<div class="wpaw-thumbnail-field">
 						<span class="wpaw-thumbnail-field__thumbnail">

@@ -5,8 +5,14 @@
  * @license GPL-2.0+
  */
 
+/**
+ * Slide widget
+ */
 class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstract_Widget {
 
+	/**
+	 * @var array
+	 */
 	protected $_defaults = [
 		'images'           => [],
 		'type'             => 'slide',
@@ -59,7 +65,8 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 			$new_instance['slides-to-scroll'] = $this->_defaults['slides-to-scroll'];
 		}
 
-		foreach ( $new_instance['images'] as $key => $image ) {
+		$image_keys = array_keys( $new_instance['images'] );
+		foreach ( $image_keys as $key ) {
 			$new_instance['images'][ $key ] = array_filter( $new_instance['images'][ $key ] );
 		}
 		$new_instance['images'] = array_values( array_filter( $new_instance['images'] ) );
