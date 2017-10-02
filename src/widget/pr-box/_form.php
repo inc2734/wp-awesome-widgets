@@ -22,6 +22,7 @@
 		<textarea
 			name="<?php echo esc_attr( $this->get_field_name( 'lead' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'lead' ) ); ?>"
+			rows="5"
 		><?php echo esc_textarea( $instance['lead'] ); ?></textarea>
 	</p>
 
@@ -89,6 +90,7 @@
 							class="wpaw-pr-box-widget__input-summary"
 							name="<?php echo esc_attr( $this->get_field_name( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"
 							id="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"
+							rows="5"
 						><?php echo esc_textarea( $item['summary'] ); ?></textarea>
 					</p>
 

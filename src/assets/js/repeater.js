@@ -22,8 +22,6 @@ jQuery(function($) {
       });
     });
 
-    widget.find('.widget-control-save').css('display', 'none');
-
     $(document).trigger('wpaw-repeaters-add-repeater', {
       repeater: repeater,
       widget  : widget
@@ -41,8 +39,7 @@ jQuery(function($) {
     widget.find('.widget-control-save').trigger('click');
   });
 
-  $(document).on('mouseover', '.wpaw-repeaters', function(e) {
+  $(document).on('mouseover', '.wpaw-repeaters__items', function(e) {
     $(this).sortable();
-    $(this).disableSelection();
   });
 });

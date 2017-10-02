@@ -22,6 +22,7 @@
 		<textarea
 			name="<?php echo esc_attr( $this->get_field_name( 'lead' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'lead' ) ); ?>"
+			rows="5"
 		><?php echo esc_textarea( $instance['lead'] ); ?></textarea>
 	</p>
 

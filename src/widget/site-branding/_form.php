@@ -14,6 +14,7 @@
 			class="widefat"
 			rows="5"
 			id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"
+			rows="5"
 		><?php echo esc_attr( $instance['description'] ); ?></textarea><br>
 		<small><?php esc_html_e( 'HTML use allowed.', 'inc2734-wp-awesome-widgets' ); ?></small>
 	</p>
