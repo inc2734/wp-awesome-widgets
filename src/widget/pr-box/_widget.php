@@ -17,7 +17,7 @@
 
 			<?php if ( ! empty( $instance['lead'] ) ) : ?>
 				<div class="wpaw-pr-box__lead">
-					<?php echo esc_html( $instance['lead'] ); ?>
+					<?php echo wp_kses_post( wpautop( $instance['lead'] ) ); ?>
 				</div>
 			<?php endif; ?>
 
@@ -36,7 +36,7 @@
 
 						<?php if ( ! empty( $item['summary'] ) ) : ?>
 							<div class="wpaw-pr-box__item-summary">
-								<?php echo esc_html( $item['summary'] ); ?>
+								<?php echo wp_kses_post( wpautop( $item['summary'] ) ); ?>
 							</div>
 						<?php endif; ?>
 					</div>
