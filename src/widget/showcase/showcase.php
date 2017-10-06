@@ -32,7 +32,7 @@ class Inc2734_WP_Awesome_Widgets_Showcase extends Inc2734_WP_Awesome_Widgets_Abs
 		add_action( 'admin_enqueue_scripts', function() {
 			wp_enqueue_style(
 				'wp-awesome-widgets-showcase',
-				home_url( str_replace( ABSPATH, '', __DIR__ ) . '/admin.css' )
+				site_url( str_replace( ABSPATH, '', __DIR__ ) . '/admin.css' )
 			);
 		} );
 	}

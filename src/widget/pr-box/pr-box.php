@@ -34,7 +34,7 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 		add_action( 'admin_enqueue_scripts', function() {
 			wp_enqueue_script(
 				'wp-awesome-widgets-pr-box',
-				home_url( str_replace( ABSPATH, '', __DIR__ ) . '/admin.js' ),
+				site_url( str_replace( ABSPATH, '', __DIR__ ) . '/admin.js' ),
 				[ 'jquery', 'wp-awesome-widgets-repeater', 'wp-awesome-widgets-thumbnail-field' ],
 				false,
 				true
@@ -42,7 +42,7 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 
 			wp_enqueue_style(
 				'wp-awesome-widgets-pr-box',
-				home_url( str_replace( ABSPATH, '', __DIR__ ) . '/admin.css' )
+				site_url( str_replace( ABSPATH, '', __DIR__ ) . '/admin.css' )
 			);
 		} );
 	}

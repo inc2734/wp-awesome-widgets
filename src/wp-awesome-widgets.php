@@ -37,7 +37,7 @@ class Inc2734_WP_Awesome_Widgets {
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-color-picker-field',
-			home_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/js/color-picker-field.js' ),
+			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/js/color-picker-field.js' ),
 			[ 'jquery', 'wp-color-picker' ],
 			false,
 			true
@@ -45,7 +45,7 @@ class Inc2734_WP_Awesome_Widgets {
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-thumbnail-field',
-			home_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/js/thumbnail-field.js' ),
+			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/js/thumbnail-field.js' ),
 			[ 'jquery' ],
 			false,
 			true
@@ -53,12 +53,12 @@ class Inc2734_WP_Awesome_Widgets {
 
 		wp_enqueue_style(
 			'wp-awesome-widgets-thumbnail-field',
-			home_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/css/thumbnail-field.css' )
+			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/css/thumbnail-field.css' )
 		);
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-repeater',
-			home_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/js/repeater.js' ),
+			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/js/repeater.js' ),
 			[ 'jquery', 'jquery-ui-sortable' ],
 			false,
 			true
@@ -66,17 +66,17 @@ class Inc2734_WP_Awesome_Widgets {
 
 		wp_enqueue_style(
 			'wp-awesome-widgets-repeater',
-			home_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/css/repeater.css' )
+			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/css/repeater.css' )
 		);
 
 		wp_enqueue_style(
 			'wp-awesome-widgets-item-selector',
-			home_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/css/item-selector.css' )
+			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/css/item-selector.css' )
 		);
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-item-selector',
-			home_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/js/item-selector.js' ),
+			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/js/item-selector.js' ),
 			[ 'jquery', 'jquery-ui-sortable' ],
 			false,
 			true
