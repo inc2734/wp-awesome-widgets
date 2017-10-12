@@ -7,9 +7,10 @@ jQuery(function($) {
     var selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
     var input        = wrapper.find('.wpaw-item-selector__input');
 
+    var label        = ($(this).attr('data-post-title')) ? $(this).attr('data-post-title') : '&nbsp';
     var selectedItem = $('<li class="wpaw-item-selector__selected-item" />')
                           .attr('data-post-id', $(this).attr('data-post-id'))
-                          .html('<span class="dashicons dashicons-minus" />' + $(this).attr('data-post-title'));
+                          .html('<span class="dashicons dashicons-minus" />' + label);
     selectedItem.appendTo(selectedArea);
 
     _updateInput(selectedArea);
@@ -71,10 +72,11 @@ jQuery(function($) {
       }).then(
         function(data) {
           data.forEach(function(post) {
-              var item = $('<li class="wpaw-item-selector__item" />')
+              var label = (post.title.rendered) ? post.title.rendered : '&nbsp;';
+              var item  = $('<li class="wpaw-item-selector__item" />')
                             .attr('data-post-id', post.id)
                             .attr('data-post-title', post.title.rendered)
-                            .html('<span class="dashicons dashicons-plus" />' + post.title.rendered);
+                            .html('<span class="dashicons dashicons-plus" />' + label);
               item.appendTo(area);
           });
           offset += per_page;
