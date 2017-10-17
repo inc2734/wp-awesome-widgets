@@ -1,0 +1,51 @@
+.wpaw-taxonomy-posts {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin: 0;
+    padding: 0;
+
+    > a {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      text-decoration: none;
+    }
+  }
+
+  &__figure {
+    margin-right: 1em;
+    flex: none;
+    height: 90px;
+    width: 90px;
+    background-color: #eee;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+
+  &__body {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    > * {
+      flex: none;
+    }
+  }
+
+  &__date {
+    margin-top: auto;
+  }
+}
