@@ -13,6 +13,7 @@
 * Recent posts
 * Any posts
 * Ranking (Self updating)
+* Taxonomy posts
 
 ## Install
 ```
