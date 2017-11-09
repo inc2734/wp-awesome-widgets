@@ -11,6 +11,11 @@ jQuery(function($) {
     var selectedItem = $('<li class="wpaw-item-selector__selected-item" />')
                           .attr('data-post-id', $(this).attr('data-post-id'))
                           .html('<span class="dashicons dashicons-minus" />' + label);
+
+    if (selectedArea.find('[data-post-id="' + $(this).attr('data-post-id') + '"]').length) {
+      return;
+    }
+    
     selectedItem.appendTo(selectedArea);
 
     _updateInput(selectedArea);
