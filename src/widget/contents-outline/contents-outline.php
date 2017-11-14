@@ -13,8 +13,7 @@ class Inc2734_WP_Awesome_Widgets_Contents_Outline extends Inc2734_WP_Awesome_Wid
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
-	];
+	protected $_defaults = [];
 
 	public function __construct() {
 		parent::__construct( false, __( 'WPAW: Contents outline', 'inc2734-wp-awesome-widgets' ) );
