@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2017-10-17 23:06+0900\n"
-"PO-Revision-Date: 2017-10-17 23:06+0900\n"
+"POT-Creation-Date: 2017-11-14 15:31+0900\n"
+"PO-Revision-Date: 2017-11-14 15:31+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -35,6 +35,10 @@ msgstr "分類を表示"
 #: widget/any-posts/any-posts.php:24
 msgid "WPAW: Any Posts"
 msgstr "WPAW: 任意の投稿"
+
+#: widget/contents-outline/contents-outline.php:20
+msgid "WPAW: Contents outline"
+msgstr "WPAW: 目次"
 
 #: widget/pr-box/_form.php:21 widget/showcase/_form.php:21
 msgid "Lead"
