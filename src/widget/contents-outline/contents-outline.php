@@ -13,7 +13,10 @@ class Inc2734_WP_Awesome_Widgets_Contents_Outline extends Inc2734_WP_Awesome_Wid
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [];
+	protected $_defaults = [
+		'headings'    => [ 'h2' ],
+		'show-mobile' => 0,
+	];
 
 	public function __construct() {
 		parent::__construct( false, __( 'WPAW: Contents outline', 'inc2734-wp-awesome-widgets' ) );
@@ -22,6 +25,9 @@ class Inc2734_WP_Awesome_Widgets_Contents_Outline extends Inc2734_WP_Awesome_Wid
 
 	public function update( $new_instance, $old_instance ) {
 		$new_instance = shortcode_atts( $this->_defaults, $new_instance );
+
+		$new_instance['headings'] = array_filter( $new_instance['headings'] );
+
 		return $new_instance;
 	}
 }
