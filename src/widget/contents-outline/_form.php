@@ -8,7 +8,7 @@
 
 <div class="wpaw-contents-outline-widget">
 	<p>
-		<?php esc_html_e( 'Show Headings', 'inc2734-wp-awesome-widgets' ); ?><br>
+		<?php esc_html_e( 'Show headings', 'inc2734-wp-awesome-widgets' ); ?><br>
 		<input type="hidden" name="<?php echo esc_attr( $this->get_field_name( 'headings' ) ); ?>[]" value="">
 		<?php foreach ( [ 'h2', 'h3', 'h4', 'h5', 'h6' ] as $heading ) : ?>
 			<label>
@@ -33,6 +33,6 @@
 			value="1"
 			<?php checked( $instance['show-mobile'], 1 ); ?>
 		>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'show-mobile' ) ); ?>"><?php esc_html_e( 'Show in mobile', 'inc2734-wp-awesome-widgets' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'show-mobile' ) ); ?>"><?php esc_html_e( 'Also show on mobile', 'inc2734-wp-awesome-widgets' ); ?></label>
 	</p>
 </div>

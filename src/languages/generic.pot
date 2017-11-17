@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2017-11-14 06:31:04+00:00\n"
+"POT-Creation-Date: 2017-11-17 07:17:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,7 +33,15 @@ msgstr ""
 msgid "WPAW: Any Posts"
 msgstr ""
 
-#: widget/contents-outline/contents-outline.php:20
+#: widget/contents-outline/_form.php:11
+msgid "Show headings"
+msgstr ""
+
+#: widget/contents-outline/_form.php:36
+msgid "Also show on mobile"
+msgstr ""
+
+#: widget/contents-outline/contents-outline.php:22
 msgid "WPAW: Contents outline"
 msgstr ""
 
