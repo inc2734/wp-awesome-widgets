@@ -12,16 +12,24 @@
   }
 
   .slick-slide {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    max-height: 100vh;
-    height: auto;
+    position: relative;
 
     &::before {
       content: '';
       display: block;
       padding-top: 56.25%;
+    }
+
+    .wpaw-slider__item {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      height: auto;
     }
   }
 }
