@@ -1,6 +1,4 @@
 .wpaw-pr-box {
-  $root: &;
-
   &__title {
     text-align: center;
   }
@@ -9,44 +7,20 @@
     text-align: center;
   }
 
+  /**
+   * Overwrite with theme css
+   *
+   * &__row--<size>
+   * &__row--md-<size>
+   * &__row--lg-<size>
+   */
   &__row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0 (1.5rem / 2 * -1) (1.5rem * -1);
-    overflow: hidden;
-
-    @for $i from 1 through 5 {
-      &--#{$i} {
-        #{$root}__item {
-          width: calc(100% / #{$i});
-          max-width: calc(100% / #{$i});
-        }
-      }
-
-      &--md-#{$i} {
-        @media (min-width: 40em) {
-          #{$root}__item {
-            width: calc(100% / #{$i});
-            max-width: calc(100% / #{$i});
-          }
-        }
-      }
-
-      &--lg-#{$i} {
-        @media (min-width: 64em) {
-          #{$root}__item {
-            width: calc(100% / #{$i});
-            max-width: calc(100% / #{$i});
-          }
-        }
-      }
-    }
   }
 
+  /**
+   * Overwrite with theme css
+   */
   &__item {
-    flex: none;
-    padding: 0 (1.5rem / 2) (1.5rem);
   }
 
   &__item-figure {
