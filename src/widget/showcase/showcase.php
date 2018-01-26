@@ -19,6 +19,7 @@ class Inc2734_WP_Awesome_Widgets_Showcase extends Inc2734_WP_Awesome_Widgets_Abs
 		'bg-image'     => null,
 		'mask-color'   => '#000',
 		'mask-opacity' => .7,
+		'color'        => '#fff',
 		'thumbnail'    => null,
 		'link-url'     => null,
 		'link-text'    => null,

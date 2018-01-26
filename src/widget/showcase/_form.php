@@ -89,6 +89,17 @@
 		>
 	</p>
 
+	<p class="wpaw-color-picker-field">
+		<label for="<?php echo esc_attr( $this->get_field_id( 'color' ) ); ?>"><?php esc_html_e( 'Text color', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+		<input
+			class="wpaw-color-picker-field__input"
+			type="text"
+			name="<?php echo esc_attr( $this->get_field_name( 'color' ) ); ?>"
+			id="<?php echo esc_attr( $this->get_field_id( 'color' ) ); ?>"
+			value="<?php echo esc_attr( $instance['color'] ); ?>"
+		>
+	</p>
+
 	<div class="wpaw-thumbnail-field">
 		<label for="<?php echo esc_attr( $this->get_field_id( 'thumbnail' ) ); ?>"><?php esc_html_e( 'Thumbnail', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<span class="wpaw-thumbnail-field__thumbnail">
