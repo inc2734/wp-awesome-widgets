@@ -23,12 +23,12 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 	public function __construct( $id_base, $name ) {
 		$this->_path = __DIR__;
 
-		if ( ! class_exists( 'Inc2734_WP_View_Controller' ) ) {
-			$path = get_theme_file_path( '/vendor/inc2734/wp-view-controller/src/wp-view-controller.php' );
+		if ( ! function_exists( 'wpvc_get_template_part' ) ) {
+			$path = get_theme_file_path( '/vendor/inc2734/wp-view-controller/src/App/template-tags/get-template-part.php' );
 			if ( file_exists( $path ) ) {
 				require_once( $path );
 			} else {
-				require_once( __DIR__ . '/../../wp-view-controller/src/wp-view-controller.php' );
+				require_once( __DIR__ . '/../../wp-view-controller/src/App/template-tags/get-template-part.php' );
 			}
 		}
 
