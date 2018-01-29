@@ -8,6 +8,7 @@
 
 * PR Box
 * Slider (slick)
+* Pickup slider (slick)
 * Showcase
 * Site branding (Displaying the Logo)
 * Recent posts

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-01-26 07:53:50+00:00\n"
-"PO-Revision-Date: 2018-01-26 16:54+0900\n"
+"POT-Creation-Date: 2018-01-29 14:03:49+00:00\n"
+"PO-Revision-Date: 2018-01-29 23:06+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -47,6 +47,18 @@ msgstr "モバイルでも表示"
 #: widget/contents-outline/contents-outline.php:22
 msgid "WPAW: Contents outline"
 msgstr "WPAW: 目次"
+
+#: widget/pickup-slider/_form.php:11
+msgid "Posts tagged as \"pickup\" are displayed as slider."
+msgstr "「pickup」タグが付与された記事をスライダーとして表示します。"
+
+#: widget/pickup-slider/_widget.php:51
+msgid "READ MORE"
+msgstr "READ MORE"
+
+#: widget/pickup-slider/pickup-slider.php:20
+msgid "WPAW: Pickup slider"
+msgstr "WPAW: ピックアップスライダー"
 
 #: widget/pr-box/_form.php:21 widget/showcase/_form.php:21
 msgid "Lead"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-01-26 07:53:50+00:00\n"
+"POT-Creation-Date: 2018-01-29 14:03:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,6 +43,18 @@ msgstr ""
 
 #: widget/contents-outline/contents-outline.php:22
 msgid "WPAW: Contents outline"
+msgstr ""
+
+#: widget/pickup-slider/_form.php:11
+msgid "Posts tagged as \"pickup\" are displayed as slider."
+msgstr ""
+
+#: widget/pickup-slider/_widget.php:51
+msgid "READ MORE"
+msgstr ""
+
+#: widget/pickup-slider/pickup-slider.php:20
+msgid "WPAW: Pickup slider"
 msgstr ""
 
 #: widget/pr-box/_form.php:21 widget/showcase/_form.php:21

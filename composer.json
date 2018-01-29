@@ -2,7 +2,7 @@
   "name": "inc2734/wp-awesome-widgets",
   "description": "A library to add some awesome widgets for WordPress.",
   "license": "GPL-2.0-or-later",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "require": {
     "php": ">=5.6",
     "inc2734/wp-view-controller": ">=4.0.1",
