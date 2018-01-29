@@ -69,10 +69,7 @@ global $post;
 			"autoplay": true,
 			"dots": false,
 			"infinite": true,
-			"adaptiveHeight": true,
-			"arrows": true,
-			"pauseOnFocus": false,
-			"pauseOnHover": false
+			"adaptiveHeight": true
 		});
 	});
 	</script>
