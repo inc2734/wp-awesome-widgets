@@ -13,6 +13,7 @@
 			type="text"
 			name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
+			class="widefat"
 			value="<?php echo esc_attr( $instance['title'] ); ?>"
 		>
 	</p>
@@ -22,6 +23,7 @@
 		<textarea
 			name="<?php echo esc_attr( $this->get_field_name( 'lead' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'lead' ) ); ?>"
+			class="widefat"
 			rows="5"
 		><?php echo esc_textarea( $instance['lead'] ); ?></textarea>
 	</p>
@@ -31,6 +33,7 @@
 		<select
 			name="<?php echo esc_attr( $this->get_field_name( 'format' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>"
+			class="widefat"
 		>
 			<?php
 			$formats = [
@@ -129,6 +132,7 @@
 			type="text"
 			name="<?php echo esc_attr( $this->get_field_name( 'link-url' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'link-url' ) ); ?>"
+			class="widefat"
 			value="<?php echo esc_attr( $instance['link-url'] ); ?>"
 		>
 	</p>
@@ -139,6 +143,7 @@
 			type="text"
 			name="<?php echo esc_attr( $this->get_field_name( 'link-text' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'link-text' ) ); ?>"
+			class="widefat"
 			value="<?php echo esc_attr( $instance['link-text'] ); ?>"
 		>
 	</p>

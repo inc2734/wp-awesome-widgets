@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-01-29 14:03:49+00:00\n"
-"PO-Revision-Date: 2018-01-29 23:06+0900\n"
+"POT-Creation-Date: 2018-02-01 01:13:46+00:00\n"
+"PO-Revision-Date: 2018-02-01 10:14+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -16,19 +16,19 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: widget/any-posts/_form.php:11 widget/pr-box/_form.php:11
-#: widget/pr-box/_form.php:77 widget/ranking/_form.php:11
+#: widget/pr-box/_form.php:79 widget/ranking/_form.php:11
 #: widget/recent-posts/_form.php:11 widget/showcase/_form.php:11
 #: widget/taxonomy-posts/_form.php:11
 msgid "Title"
 msgstr "タイトル"
 
-#: widget/any-posts/_form.php:71 widget/ranking/_form.php:71
-#: widget/recent-posts/_form.php:41 widget/taxonomy-posts/_form.php:85
+#: widget/any-posts/_form.php:72 widget/ranking/_form.php:72
+#: widget/recent-posts/_form.php:42 widget/taxonomy-posts/_form.php:88
 msgid "Show thumbnail"
 msgstr "サムネイルを表示"
 
-#: widget/any-posts/_form.php:83 widget/ranking/_form.php:83
-#: widget/recent-posts/_form.php:53
+#: widget/any-posts/_form.php:84 widget/ranking/_form.php:84
+#: widget/recent-posts/_form.php:54
 msgid "Show taxonomy"
 msgstr "分類を表示"
 
@@ -56,90 +56,90 @@ msgstr "「pickup」タグが付与された記事をスライダーとして表
 msgid "READ MORE"
 msgstr "READ MORE"
 
-#: widget/pickup-slider/pickup-slider.php:20
+#: widget/pickup-slider/pickup-slider.php:19
 msgid "WPAW: Pickup slider"
 msgstr "WPAW: ピックアップスライダー"
 
-#: widget/pr-box/_form.php:21 widget/showcase/_form.php:21
+#: widget/pr-box/_form.php:22 widget/showcase/_form.php:22
 msgid "Lead"
 msgstr "リード文"
 
-#: widget/pr-box/_form.php:30
+#: widget/pr-box/_form.php:32
 msgid "Background color"
 msgstr "背景色"
 
-#: widget/pr-box/_form.php:60 widget/showcase/_form.php:55
-#: widget/showcase/_form.php:110 widget/slider/_form.php:27
+#: widget/pr-box/_form.php:62 widget/showcase/_form.php:58
+#: widget/showcase/_form.php:113 widget/slider/_form.php:27
 msgid "Set image"
 msgstr "画像を設定"
 
-#: widget/pr-box/_form.php:63 widget/showcase/_form.php:58
-#: widget/showcase/_form.php:113 widget/slider/_form.php:30
+#: widget/pr-box/_form.php:65 widget/showcase/_form.php:61
+#: widget/showcase/_form.php:116 widget/slider/_form.php:30
 msgid "Unset"
 msgstr "解除"
 
-#: widget/pr-box/_form.php:88
+#: widget/pr-box/_form.php:90
 msgid "Summary"
 msgstr "概要"
 
-#: widget/pr-box/_form.php:98 widget/slider/_form.php:44
+#: widget/pr-box/_form.php:100 widget/slider/_form.php:44
 msgid "Delete"
 msgstr "削除"
 
-#: widget/pr-box/_form.php:105
+#: widget/pr-box/_form.php:107
 msgid "Add Item"
 msgstr "項目を追加"
 
-#: widget/pr-box/_form.php:110
+#: widget/pr-box/_form.php:112
 msgid "Size of image to use"
 msgstr "使用する画像のサイズ"
 
-#: widget/pr-box/_form.php:127
+#: widget/pr-box/_form.php:130
 msgid "Thumbnail aspect ratio"
 msgstr "サムネイルのアスペクト比"
 
-#: widget/pr-box/_form.php:145
+#: widget/pr-box/_form.php:149
 msgid "Column size for mobile"
 msgstr "モバイルのカラムサイズ"
 
-#: widget/pr-box/_form.php:152 widget/pr-box/_form.php:173
-#: widget/pr-box/_form.php:194
+#: widget/pr-box/_form.php:157 widget/pr-box/_form.php:179
+#: widget/pr-box/_form.php:201
 msgid "1 column"
 msgstr "1カラム"
 
-#: widget/pr-box/_form.php:153 widget/pr-box/_form.php:174
-#: widget/pr-box/_form.php:195
+#: widget/pr-box/_form.php:158 widget/pr-box/_form.php:180
+#: widget/pr-box/_form.php:202
 msgid "2 columns"
 msgstr "2カラム"
 
-#: widget/pr-box/_form.php:154 widget/pr-box/_form.php:175
-#: widget/pr-box/_form.php:196
+#: widget/pr-box/_form.php:159 widget/pr-box/_form.php:181
+#: widget/pr-box/_form.php:203
 msgid "3 columns"
 msgstr "3カラム"
 
-#: widget/pr-box/_form.php:155 widget/pr-box/_form.php:176
-#: widget/pr-box/_form.php:197
+#: widget/pr-box/_form.php:160 widget/pr-box/_form.php:182
+#: widget/pr-box/_form.php:204
 msgid "4 columns"
 msgstr "4カラム"
 
-#: widget/pr-box/_form.php:156 widget/pr-box/_form.php:177
-#: widget/pr-box/_form.php:198
+#: widget/pr-box/_form.php:161 widget/pr-box/_form.php:183
+#: widget/pr-box/_form.php:205
 msgid "5 columns"
 msgstr "5カラム"
 
-#: widget/pr-box/_form.php:166
+#: widget/pr-box/_form.php:171
 msgid "Column size for tablet"
 msgstr "タブレットのカラムサイズ"
 
-#: widget/pr-box/_form.php:187
+#: widget/pr-box/_form.php:193
 msgid "Column size for PC"
 msgstr "PCのカラムサイズ"
 
-#: widget/pr-box/_form.php:208 widget/showcase/_form.php:127
+#: widget/pr-box/_form.php:215 widget/showcase/_form.php:130
 msgid "Link URL"
 msgstr "リンク URL"
 
-#: widget/pr-box/_form.php:218 widget/showcase/_form.php:137
+#: widget/pr-box/_form.php:226 widget/showcase/_form.php:141
 msgid "Link text"
 msgstr "リンクテキスト"
 
@@ -151,7 +151,7 @@ msgstr "WPAW: PR ボックス"
 msgid "WPAW: Ranking (Manual update)"
 msgstr "WPAW: ランキング（手動更新）"
 
-#: widget/recent-posts/_form.php:21 widget/taxonomy-posts/_form.php:65
+#: widget/recent-posts/_form.php:22 widget/taxonomy-posts/_form.php:68
 msgid "Number of posts"
 msgstr "表示する投稿数"
 
@@ -159,27 +159,27 @@ msgstr "表示する投稿数"
 msgid "WPAW: Recent posts"
 msgstr "WPAW: 最近の投稿"
 
-#: widget/showcase/_form.php:30
+#: widget/showcase/_form.php:32
 msgid "Format"
 msgstr "フォーマット"
 
-#: widget/showcase/_form.php:49
+#: widget/showcase/_form.php:52
 msgid "Background image"
 msgstr "背景画像"
 
-#: widget/showcase/_form.php:72
+#: widget/showcase/_form.php:75
 msgid "Background mask color"
 msgstr "背景マスクの色"
 
-#: widget/showcase/_form.php:83
+#: widget/showcase/_form.php:86
 msgid "Background mask transparency"
 msgstr "背景マスクの透明度"
 
-#: widget/showcase/_form.php:93
+#: widget/showcase/_form.php:96
 msgid "Text color"
 msgstr "文字色"
 
-#: widget/showcase/_form.php:104
+#: widget/showcase/_form.php:107
 msgid "Thumbnail"
 msgstr "サムネイル"
 
@@ -207,33 +207,37 @@ msgstr "スライダーを追加"
 msgid "Slider type"
 msgstr "スライダーの種類"
 
-#: widget/slider/_form.php:63
+#: widget/slider/_form.php:64
 msgid "Fade"
 msgstr "フェード"
 
-#: widget/slider/_form.php:64
+#: widget/slider/_form.php:65
 msgid "Slide"
 msgstr "スライド"
 
-#: widget/slider/_form.php:74
+#: widget/slider/_form.php:75
 msgid "Animation time"
 msgstr "アニメーション時間"
 
-#: widget/slider/_form.php:85
+#: widget/slider/_form.php:86
 msgid "Interval time"
 msgstr "インターバル"
 
-#: widget/slider/_form.php:96
+#: widget/slider/_form.php:97
 msgid "Slides to show"
 msgstr "表示するスライド数"
 
-#: widget/slider/_form.php:107
+#: widget/slider/_form.php:108
 msgid "Slides to scroll"
 msgstr "スクロールするスライド数"
 
 #: widget/slider/slider.php:26
 msgid "WPAW: Slider"
 msgstr "WPAW: スライダー"
+
+#: widget/taxonomy-posts/_form.php:35
+msgid "Displayed term"
+msgstr "表示するターム"
 
 #: widget/taxonomy-posts/taxonomy-posts.php:24
 msgid "WPAW: Taxonomy posts"

@@ -53,10 +53,11 @@
 	</div>
 
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'type' ) ); ?>"><?php esc_html_e( 'Slider type', 'inc2734-wp-awesome-widgets' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'type' ) ); ?>"><?php esc_html_e( 'Slider type', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<select
 			name="<?php echo esc_attr( $this->get_field_name( 'type' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'type' ) ); ?>"
+			class="widefat"
 		>
 			<?php
 			$types = [
@@ -77,7 +78,7 @@
 			name="<?php echo esc_attr( $this->get_field_name( 'duration' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'duration' ) ); ?>"
 			value="<?php echo esc_attr( $instance['duration'] ); ?>"
-			style="width: 50px"
+			style="width: 100px"
 		> ms
 	</p>
 
@@ -88,7 +89,7 @@
 			name="<?php echo esc_attr( $this->get_field_name( 'interval' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'interval' ) ); ?>"
 			value="<?php echo esc_attr( $instance['interval'] ); ?>"
-			style="width: 50px"
+			style="width: 100px"
 		> ms
 	</p>
 
@@ -99,7 +100,7 @@
 			name="<?php echo esc_attr( $this->get_field_name( 'slides-to-show' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'slides-to-show' ) ); ?>"
 			value="<?php echo esc_attr( $instance['slides-to-show'] ); ?>"
-			style="width: 50px"
+			style="width: 100px"
 		>
 	</p>
 
@@ -110,7 +111,7 @@
 			name="<?php echo esc_attr( $this->get_field_name( 'slides-to-scroll' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'slides-to-scroll' ) ); ?>"
 			value="<?php echo esc_attr( $instance['slides-to-scroll'] ); ?>"
-			style="width: 50px"
+			style="width: 100px"
 		>
 	</p>
 </div>

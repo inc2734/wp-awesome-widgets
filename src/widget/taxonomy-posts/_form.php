@@ -13,6 +13,7 @@
 			type="text"
 			name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
+			class="widefat"
 			value="<?php echo esc_attr( $instance['title'] ); ?>"
 		>
 	</p>
@@ -31,9 +32,11 @@
 			] );
 		}
 		?>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Displayed term', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<select
 			name="<?php echo esc_attr( $this->get_field_name( 'taxonomy' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'taxonomy' ) ); ?>"
+			class="widefat"
 		>
 			<?php foreach ( $all_terms as $taxonomy_id => $terms ) : ?>
 				<optgroup label="<?php echo esc_attr( get_taxonomy( $taxonomy_id )->label ); ?>">

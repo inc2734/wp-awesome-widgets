@@ -13,6 +13,7 @@
 			type="text"
 			name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
+			class="widefat"
 			value="<?php echo esc_attr( $instance['title'] ); ?>"
 		>
 	</p>

@@ -13,6 +13,7 @@
 			type="text"
 			name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
+			class="widefat"
 			value="<?php echo esc_attr( $instance['title'] ); ?>"
 		>
 	</p>
@@ -22,6 +23,7 @@
 		<textarea
 			name="<?php echo esc_attr( $this->get_field_name( 'lead' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'lead' ) ); ?>"
+			class="widefat"
 			rows="5"
 		><?php echo esc_textarea( $instance['lead'] ); ?></textarea>
 	</p>
@@ -76,7 +78,7 @@
 					<p>
 						<label for="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][title]"><?php esc_html_e( 'Title', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 						<input
-							class="wpaw-pr-box-widget__input-title"
+							class="wpaw-pr-box-widget__input-title widefat"
 							type="text"
 							name="<?php echo esc_attr( $this->get_field_name( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][title]"
 							id="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][title]"
@@ -87,7 +89,7 @@
 					<p>
 						<label for="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"><?php esc_html_e( 'Summary', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 						<textarea
-							class="wpaw-pr-box-widget__input-summary"
+							class="wpaw-pr-box-widget__input-summary widefat"
 							name="<?php echo esc_attr( $this->get_field_name( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"
 							id="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"
 							rows="5"
@@ -111,6 +113,7 @@
 		<select
 			name="<?php echo esc_attr( $this->get_field_name( 'thumbnail-size' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'thumbnail-size' ) ); ?>"
+			class="widefat"
 		>
 			<?php
 			$thumbnail_sizes = get_intermediate_image_sizes();
@@ -128,6 +131,7 @@
 		<select
 			name="<?php echo esc_attr( $this->get_field_name( 'thumbnail-aspect-ratio' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'thumbnail-aspect-ratio' ) ); ?>"
+			class="widefat"
 		>
 			<?php
 			$aspect_ratios = [
@@ -146,6 +150,7 @@
 		<select
 			name="<?php echo esc_attr( $this->get_field_name( 'sm-columns' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'sm-columns' ) ); ?>"
+			class="widefat"
 		>
 			<?php
 			$types = [
@@ -167,6 +172,7 @@
 		<select
 			name="<?php echo esc_attr( $this->get_field_name( 'md-columns' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'md-columns' ) ); ?>"
+			class="widefat"
 		>
 			<?php
 			$types = [
@@ -188,6 +194,7 @@
 		<select
 			name="<?php echo esc_attr( $this->get_field_name( 'lg-columns' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'lg-columns' ) ); ?>"
+			class="widefat"
 		>
 			<?php
 			$types = [
@@ -210,6 +217,7 @@
 			type="text"
 			name="<?php echo esc_attr( $this->get_field_name( 'link-url' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'link-url' ) ); ?>"
+			class="widefat"
 			value="<?php echo esc_attr( $instance['link-url'] ); ?>"
 		>
 	</p>
@@ -220,6 +228,7 @@
 			type="text"
 			name="<?php echo esc_attr( $this->get_field_name( 'link-text' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'link-text' ) ); ?>"
+			class="widefat"
 			value="<?php echo esc_attr( $instance['link-text'] ); ?>"
 		>
 	</p>
