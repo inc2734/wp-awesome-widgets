@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-02-01 01:13:46+00:00\n"
+"POT-Creation-Date: 2018-02-02 12:00:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,7 +15,7 @@ msgstr ""
 #: widget/any-posts/_form.php:11 widget/pr-box/_form.php:11
 #: widget/pr-box/_form.php:79 widget/ranking/_form.php:11
 #: widget/recent-posts/_form.php:11 widget/showcase/_form.php:11
-#: widget/taxonomy-posts/_form.php:11
+#: widget/slider/_form.php:50 widget/taxonomy-posts/_form.php:11
 msgid "Title"
 msgstr ""
 
@@ -66,20 +66,20 @@ msgid "Background color"
 msgstr ""
 
 #: widget/pr-box/_form.php:62 widget/showcase/_form.php:58
-#: widget/showcase/_form.php:113 widget/slider/_form.php:27
+#: widget/showcase/_form.php:113 widget/slider/_form.php:33
 msgid "Set image"
 msgstr ""
 
 #: widget/pr-box/_form.php:65 widget/showcase/_form.php:61
-#: widget/showcase/_form.php:116 widget/slider/_form.php:30
+#: widget/showcase/_form.php:116 widget/slider/_form.php:36
 msgid "Unset"
 msgstr ""
 
-#: widget/pr-box/_form.php:90
+#: widget/pr-box/_form.php:90 widget/slider/_form.php:61
 msgid "Summary"
 msgstr ""
 
-#: widget/pr-box/_form.php:100 widget/slider/_form.php:44
+#: widget/pr-box/_form.php:100 widget/slider/_form.php:118
 msgid "Delete"
 msgstr ""
 
@@ -133,10 +133,12 @@ msgid "Column size for PC"
 msgstr ""
 
 #: widget/pr-box/_form.php:215 widget/showcase/_form.php:130
+#: widget/slider/_form.php:71
 msgid "Link URL"
 msgstr ""
 
 #: widget/pr-box/_form.php:226 widget/showcase/_form.php:141
+#: widget/slider/_form.php:82
 msgid "Link text"
 msgstr ""
 
@@ -164,11 +166,11 @@ msgstr ""
 msgid "Background image"
 msgstr ""
 
-#: widget/showcase/_form.php:75
+#: widget/showcase/_form.php:75 widget/slider/_form.php:93
 msgid "Background mask color"
 msgstr ""
 
-#: widget/showcase/_form.php:86
+#: widget/showcase/_form.php:86 widget/slider/_form.php:104
 msgid "Background mask transparency"
 msgstr ""
 
@@ -196,36 +198,36 @@ msgstr ""
 msgid "WPAW: Site branding"
 msgstr ""
 
-#: widget/slider/_form.php:51
+#: widget/slider/_form.php:125
 msgid "Add slider"
 msgstr ""
 
-#: widget/slider/_form.php:56
+#: widget/slider/_form.php:130
 msgid "Slider type"
 msgstr ""
 
-#: widget/slider/_form.php:64
+#: widget/slider/_form.php:138
 msgid "Fade"
 msgstr ""
 
-#: widget/slider/_form.php:65
+#: widget/slider/_form.php:139
 msgid "Slide"
 msgstr ""
 
-#: widget/slider/_form.php:75
+#: widget/slider/_form.php:149
 msgid "Animation time"
 msgstr ""
 
-#: widget/slider/_form.php:86
+#: widget/slider/_form.php:160
 msgid "Interval time"
 msgstr ""
 
-#: widget/slider/_form.php:97
-msgid "Slides to show"
+#: widget/slider/_form.php:171
+msgid "Number of slides to display at once(PC)"
 msgstr ""
 
-#: widget/slider/_form.php:108
-msgid "Slides to scroll"
+#: widget/slider/_form.php:182
+msgid "Number of slides to slide at once(PC)"
 msgstr ""
 
 #: widget/slider/slider.php:26

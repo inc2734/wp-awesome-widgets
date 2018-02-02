@@ -20,7 +20,7 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 	 */
 	protected $_path;
 
-	public function __construct( $id_base, $name ) {
+	public function __construct( $id_base, $name, $widget_options = [] ) {
 		$this->_path = __DIR__;
 
 		if ( ! function_exists( 'wpvc_get_template_part' ) ) {
@@ -32,7 +32,7 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 			}
 		}
 
-		parent::__construct( false, $name );
+		parent::__construct( false, $name, $widget_options );
 	}
 
 	public function widget( $args, $instance ) {

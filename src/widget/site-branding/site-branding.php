@@ -18,7 +18,10 @@ class Inc2734_WP_Awesome_Widgets_Site_Branding extends Inc2734_WP_Awesome_Widget
 	];
 
 	public function __construct() {
-		parent::__construct( false, __( 'WPAW: Site branding', 'inc2734-wp-awesome-widgets' ) );
+		parent::__construct( false, __( 'WPAW: Site branding', 'inc2734-wp-awesome-widgets' ), [
+			'customize_selective_refresh' => true,
+		] );
+
 		$this->_path = __DIR__;
 	}
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-02-01 01:13:46+00:00\n"
-"PO-Revision-Date: 2018-02-01 10:14+0900\n"
+"POT-Creation-Date: 2018-02-02 12:00:04+00:00\n"
+"PO-Revision-Date: 2018-02-02 21:00+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -18,7 +18,7 @@ msgstr ""
 #: widget/any-posts/_form.php:11 widget/pr-box/_form.php:11
 #: widget/pr-box/_form.php:79 widget/ranking/_form.php:11
 #: widget/recent-posts/_form.php:11 widget/showcase/_form.php:11
-#: widget/taxonomy-posts/_form.php:11
+#: widget/slider/_form.php:50 widget/taxonomy-posts/_form.php:11
 msgid "Title"
 msgstr "タイトル"
 
@@ -69,20 +69,20 @@ msgid "Background color"
 msgstr "背景色"
 
 #: widget/pr-box/_form.php:62 widget/showcase/_form.php:58
-#: widget/showcase/_form.php:113 widget/slider/_form.php:27
+#: widget/showcase/_form.php:113 widget/slider/_form.php:33
 msgid "Set image"
 msgstr "画像を設定"
 
 #: widget/pr-box/_form.php:65 widget/showcase/_form.php:61
-#: widget/showcase/_form.php:116 widget/slider/_form.php:30
+#: widget/showcase/_form.php:116 widget/slider/_form.php:36
 msgid "Unset"
 msgstr "解除"
 
-#: widget/pr-box/_form.php:90
+#: widget/pr-box/_form.php:90 widget/slider/_form.php:61
 msgid "Summary"
 msgstr "概要"
 
-#: widget/pr-box/_form.php:100 widget/slider/_form.php:44
+#: widget/pr-box/_form.php:100 widget/slider/_form.php:118
 msgid "Delete"
 msgstr "削除"
 
@@ -136,10 +136,12 @@ msgid "Column size for PC"
 msgstr "PCのカラムサイズ"
 
 #: widget/pr-box/_form.php:215 widget/showcase/_form.php:130
+#: widget/slider/_form.php:71
 msgid "Link URL"
 msgstr "リンク URL"
 
 #: widget/pr-box/_form.php:226 widget/showcase/_form.php:141
+#: widget/slider/_form.php:82
 msgid "Link text"
 msgstr "リンクテキスト"
 
@@ -167,11 +169,11 @@ msgstr "フォーマット"
 msgid "Background image"
 msgstr "背景画像"
 
-#: widget/showcase/_form.php:75
+#: widget/showcase/_form.php:75 widget/slider/_form.php:93
 msgid "Background mask color"
 msgstr "背景マスクの色"
 
-#: widget/showcase/_form.php:86
+#: widget/showcase/_form.php:86 widget/slider/_form.php:104
 msgid "Background mask transparency"
 msgstr "背景マスクの透明度"
 
@@ -199,37 +201,37 @@ msgstr "HTML 使用可"
 msgid "WPAW: Site branding"
 msgstr "WPAW: サイトブランディング"
 
-#: widget/slider/_form.php:51
+#: widget/slider/_form.php:125
 msgid "Add slider"
 msgstr "スライダーを追加"
 
-#: widget/slider/_form.php:56
+#: widget/slider/_form.php:130
 msgid "Slider type"
 msgstr "スライダーの種類"
 
-#: widget/slider/_form.php:64
+#: widget/slider/_form.php:138
 msgid "Fade"
 msgstr "フェード"
 
-#: widget/slider/_form.php:65
+#: widget/slider/_form.php:139
 msgid "Slide"
 msgstr "スライド"
 
-#: widget/slider/_form.php:75
+#: widget/slider/_form.php:149
 msgid "Animation time"
 msgstr "アニメーション時間"
 
-#: widget/slider/_form.php:86
+#: widget/slider/_form.php:160
 msgid "Interval time"
 msgstr "インターバル"
 
-#: widget/slider/_form.php:97
-msgid "Slides to show"
-msgstr "表示するスライド数"
+#: widget/slider/_form.php:171
+msgid "Number of slides to display at once(PC)"
+msgstr "1度に表示するスライド数（PC）"
 
-#: widget/slider/_form.php:108
-msgid "Slides to scroll"
-msgstr "スクロールするスライド数"
+#: widget/slider/_form.php:182
+msgid "Number of slides to slide at once(PC)"
+msgstr "1度にスライドするスライド数（PC）"
 
 #: widget/slider/slider.php:26
 msgid "WPAW: Slider"
@@ -242,6 +244,12 @@ msgstr "表示するターム"
 #: widget/taxonomy-posts/taxonomy-posts.php:24
 msgid "WPAW: Taxonomy posts"
 msgstr "WPAW: 任意のタクソノミーの投稿"
+
+#~ msgid "Slides to show"
+#~ msgstr "表示するスライド数"
+
+#~ msgid "Slides to scroll"
+#~ msgstr "スクロールするスライド数"
 
 #~ msgid "Horizontal alignment of text"
 #~ msgstr "テキストの水平位置"

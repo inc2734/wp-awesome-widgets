@@ -7,6 +7,18 @@
     }
   }
 
+  &__mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__body {
+    position: relative;
+  }
+
   .slick-track {
     display: flex;
   }

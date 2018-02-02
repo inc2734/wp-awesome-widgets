@@ -21,7 +21,10 @@ class Inc2734_WP_Awesome_Widgets_Any_Posts extends Inc2734_WP_Awesome_Widgets_Ab
 	];
 
 	public function __construct() {
-		parent::__construct( false, __( 'WPAW: Any Posts', 'inc2734-wp-awesome-widgets' ) );
+		parent::__construct( false, __( 'WPAW: Any Posts', 'inc2734-wp-awesome-widgets' ), [
+			'customize_selective_refresh' => true,
+		] );
+
 		$this->_path = __DIR__;
 	}
 

@@ -11,7 +11,13 @@
 		<div class="wpaw-repeaters__items">
 			<?php
 			$image_template = [
-				'src' => '',
+				'src'          => '',
+				'title'        => '',
+				'summary'      => '',
+				'link-url'     => '',
+				'link-text'    => '',
+				'mask-color'   => '#000',
+				'mask-opacity' => 0,
 			];
 			array_unshift( $instance['images'], $image_template );
 			?>
@@ -39,6 +45,74 @@
 							value="<?php echo esc_attr( $image['src'] ); ?>"
 						>
 					</div>
+
+					<p>
+						<label for="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][title]"><?php esc_html_e( 'Title', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+						<input
+							class="widefat"
+							type="text"
+							name="<?php echo esc_attr( $this->get_field_name( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][title]"
+							id="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][title]"
+							value="<?php echo esc_attr( $image['title'] ); ?>"
+						>
+					</p>
+
+					<p>
+						<label for="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"><?php esc_html_e( 'Summary', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+						<textarea
+							class="widefat"
+							name="<?php echo esc_attr( $this->get_field_name( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"
+							id="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][summary]"
+							rows="5"
+						><?php echo esc_textarea( $image['summary'] ); ?></textarea>
+					</p>
+
+					<p>
+						<label for="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][link-url]"><?php esc_html_e( 'Link URL', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+						<input
+							class="widefat"
+							type="text"
+							name="<?php echo esc_attr( $this->get_field_name( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][link-url]"
+							id="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][link-url]"
+							value="<?php echo esc_attr( $image['link-url'] ); ?>"
+						>
+					</p>
+
+					<p>
+						<label for="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][link-text]"><?php esc_html_e( 'Link text', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+						<input
+							class="widefat"
+							type="text"
+							name="<?php echo esc_attr( $this->get_field_name( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][link-text]"
+							id="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][link-text]"
+							value="<?php echo esc_attr( $image['link-text'] ); ?>"
+						>
+					</p>
+
+					<p class="wpaw-color-picker-field">
+						<label for="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][mask-color]"><?php esc_html_e( 'Background mask color', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+						<input
+							class="wpaw-color-picker-field__input"
+							type="text"
+							name="<?php echo esc_attr( $this->get_field_name( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][mask-color]"
+							id="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][mask-color]"
+							value="<?php echo esc_attr( $image['mask-color'] ); ?>"
+						>
+					</p>
+
+					<p>
+						<label for="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][mask-opacity]"><?php esc_html_e( 'Background mask transparency', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+						<input
+							type="number"
+							name="<?php echo esc_attr( $this->get_field_name( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][mask-opacity]"
+							id="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][mask-opacity]"
+							value="<?php echo esc_attr( $image['mask-opacity'] ); ?>"
+							step="0.1"
+							max="1"
+							min="0"
+							style="width: 100px"
+						>
+					</p>
 
 					<div class="wpaw-repeaters__item-controls">
 						<a class="button-link button-link-delete"><?php esc_html_e( 'Delete', 'inc2734-wp-awesome-widgets' ); ?></a>
@@ -94,7 +168,7 @@
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'slides-to-show' ) ); ?>"><?php esc_html_e( 'Slides to show', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'slides-to-show' ) ); ?>"><?php esc_html_e( 'Number of slides to display at once(PC)', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<input
 			type="number"
 			name="<?php echo esc_attr( $this->get_field_name( 'slides-to-show' ) ); ?>"
@@ -105,7 +179,7 @@
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'slides-to-scroll' ) ); ?>"><?php esc_html_e( 'Slides to scroll', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'slides-to-scroll' ) ); ?>"><?php esc_html_e( 'Number of slides to slide at once(PC)', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<input
 			type="number"
 			name="<?php echo esc_attr( $this->get_field_name( 'slides-to-scroll' ) ); ?>"

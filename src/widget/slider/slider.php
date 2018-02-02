@@ -23,7 +23,10 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 	];
 
 	public function __construct() {
-		parent::__construct( false, __( 'WPAW: Slider', 'inc2734-wp-awesome-widgets' ) );
+		parent::__construct( false, __( 'WPAW: Slider', 'inc2734-wp-awesome-widgets' ), [
+			'customize_selective_refresh' => true,
+		] );
+
 		$this->_path = __DIR__;
 
 		add_action( 'admin_enqueue_scripts', function() {
@@ -67,7 +70,11 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 
 		$image_keys = array_keys( $new_instance['images'] );
 		foreach ( $image_keys as $key ) {
-			$new_instance['images'][ $key ] = array_filter( $new_instance['images'][ $key ] );
+			if ( ! $new_instance['images'][ $key ]['src'] ) {
+				unset( $new_instance['images'][ $key ] );
+				continue;
+			}
+			$new_instance['images'][ $key ] = $new_instance['images'][ $key ];
 		}
 		$new_instance['images'] = array_values( array_filter( $new_instance['images'] ) );
 

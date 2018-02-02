@@ -17,7 +17,35 @@ if ( 'fade' === $instance['type'] ) {
 		<div class="wpaw-slider__inner">
 			<div class="wpaw-slider__canvas">
 				<?php foreach ( $instance['images'] as $image ) : ?>
-					<div class="wpaw-slider__item" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $image['src'], 'full' ) ); ?>);"></div>
+					<div>
+						<div class="wpaw-slider__item" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $image['src'], 'full' ) ); ?>);">
+							<?php if ( 0 < $image['mask-opacity'] ) : ?>
+								<div class="wpaw-slider__mask"
+									style="background-color: <?php echo esc_attr( sanitize_hex_color( $image['mask-color'] ) ); ?>; opacity: <?php echo esc_attr( $image['mask-opacity'] ); ?>"
+								></div>
+							<?php endif; ?>
+
+							<?php if ( ! empty( $image['title'] ) || ! empty( $image['summary'] ) || ! empty( $image['link-url'] ) && ! empty( $image['link-text'] ) ) : ?>
+								<div class="wpaw-slider__item-body">
+									<div class="wpaw-slider__item-content">
+										<?php if ( ! empty( $image['title'] ) ) : ?>
+											<div class="wpaw-slider__item-title"><?php echo esc_html( $image['title'] ); ?></div>
+										<?php endif; ?>
+
+										<?php if ( ! empty( $image['summary'] ) ) : ?>
+											<div class="wpaw-slider__item-summary"><?php echo esc_html( $image['summary'] ); ?></div>
+										<?php endif; ?>
+
+										<?php if ( ! empty( $image['link-url'] ) && ! empty( $image['link-text'] ) ) : ?>
+											<div class="wpaw-slider__item-action">
+												<a class="wpaw-slider__item-more" href="<?php echo esc_url( $image['link-url'] ); ?>"><?php echo esc_html( $image['link-text'] ); ?></a>
+											</div>
+										<?php endif; ?>
+									</div>
+								</div>
+							<?php endif; ?>
+						</div>
+					</div>
 				<?php endforeach; ?>
 			</div>
 		</div>
@@ -35,7 +63,16 @@ if ( 'fade' === $instance['type'] ) {
 			"dots": true,
 			"infinite": true,
 			"adaptiveHeight": true,
-			"arrows": false
+			"arrows": false,
+			"responsive": [
+				{
+					"breakpoint": 1024,
+					"settings": {
+						"slidesToShow": 1,
+						"slidesToScroll": 1
+					}
+				}
+			]
 		});
 	});
 	</script>
