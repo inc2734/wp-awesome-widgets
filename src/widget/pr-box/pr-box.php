@@ -17,7 +17,13 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 		'title'                  => null,
 		'lead'                   => null,
 		'bg-color'               => '#fff',
-		'items'                  => [],
+		'items'                  => [
+			[
+				'src'     => '',
+				'title'   => '',
+				'summary' => '',
+			],
+		],
 		'thumbnail-size'         => 'medium',
 		'thumbnail-aspect-ratio' => '16to9',
 		'sm-columns'             => 1,
@@ -65,11 +71,11 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 			$new_instance['lg-columns'] = $this->_defaults['lg-columns'];
 		}
 
-		$item_keys = array_keys( $new_instance['items'] );
-		foreach ( $item_keys as $key ) {
-			$new_instance['items'][ $key ] = array_filter( $new_instance['items'][ $key ], 'strlen' );
+		foreach ( $new_instance['items'] as $key => $item ) {
+			if ( ! array_filter( $item ) ) {
+				unset( $new_instance['items'][ $key ] );
+			}
 		}
-		$new_instance['items'] = array_values( array_filter( $new_instance['items'] ) );
 
 		return $new_instance;
 	}

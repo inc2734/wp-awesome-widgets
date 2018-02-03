@@ -14,7 +14,17 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 	 * @var array
 	 */
 	protected $_defaults = [
-		'images'           => [],
+		'images' => [
+			[
+				'src'          => '',
+				'title'        => '',
+				'summary'      => '',
+				'link-url'     => '',
+				'link-text'    => '',
+				'mask-color'   => '#000',
+				'mask-opacity' => 0,
+			],
+		],
 		'type'             => 'slide',
 		'duration'         => 500,
 		'interval'         => 3000,
@@ -68,15 +78,11 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 			$new_instance['slides-to-scroll'] = $this->_defaults['slides-to-scroll'];
 		}
 
-		$image_keys = array_keys( $new_instance['images'] );
-		foreach ( $image_keys as $key ) {
-			if ( ! $new_instance['images'][ $key ]['src'] ) {
+		foreach ( $new_instance['images'] as $key => $image ) {
+			if ( ! $image['src'] ) {
 				unset( $new_instance['images'][ $key ] );
-				continue;
 			}
-			$new_instance['images'][ $key ] = $new_instance['images'][ $key ];
 		}
-		$new_instance['images'] = array_values( array_filter( $new_instance['images'] ) );
 
 		return $new_instance;
 	}

@@ -37,11 +37,28 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 
 	public function widget( $args, $instance ) {
 		$instance = shortcode_atts( $this->_defaults, $instance );
+		foreach ( $instance as $key => $value ) {
+			if ( is_array( $this->_defaults[ $key ] ) && isset( $this->_defaults[ $key ][0] ) && is_array( $this->_defaults[ $key ][0] ) ) {
+				foreach ( array_keys( $value ) as $repeater_key ) {
+					$instance[ $key ][ $repeater_key ] = shortcode_atts( $this->_defaults[ $key ][0], $instance[ $key ][ $repeater_key ] );
+				}
+			}
+		}
 		$this->_render_widget( $args, $instance );
 	}
 
 	public function form( $instance ) {
 		$instance = shortcode_atts( $this->_defaults, $instance );
+		foreach ( $instance as $key => $value ) {
+			if ( is_array( $this->_defaults[ $key ] ) && isset( $this->_defaults[ $key ][0] ) && is_array( $this->_defaults[ $key ][0] ) ) {
+				foreach ( array_keys( $value ) as $repeater_key ) {
+					$instance[ $key ][ $repeater_key ] = shortcode_atts( $this->_defaults[ $key ][0], $instance[ $key ][ $repeater_key ] );
+				}
+				if ( ! isset( $instance[ $key ][0] ) ) {
+					array_unshift( $instance[ $key ], $this->_defaults[ $key ][0] );
+				}
+			}
+		}
 		$this->_render_form( $instance );
 	}
 

@@ -9,16 +9,18 @@ jQuery(function($) {
     widget.find('.wpaw-repeaters__item').each(function(i, e) {
       var _index    = i;
       var _repeater = $(e);
-      _repeater.find('input, select, textarea').each(function(i, e) {
-        $(e)
-          .attr(
-            'name',
-            $(e).attr('name').replace(/\[\s*\d+\s*\](\[[^\[\]]+\])$/, '[' + _index + ']$1'
-          ))
-          .attr(
-            'id',
-            $(e).attr('id').replace(/\[\s*\d+\s*\](\[[^\[\]]+\])$/, '[' + _index + ']$1'
-          ));
+      _repeater.find('input, select, textarea, button').each(function(i, e) {
+        if (typeof $(e).attr('name') !== 'undefined') {
+          $(e)
+            .attr(
+              'name',
+              $(e).attr('name').replace(/\[\s*\d+\s*\](\[[^\[\]]+\])$/, '[' + _index + ']$1'
+            ))
+            .attr(
+              'id',
+              $(e).attr('id').replace(/\[\s*\d+\s*\](\[[^\[\]]+\])$/, '[' + _index + ']$1'
+            ));
+        }
       });
     });
 

@@ -9,20 +9,7 @@
 <div class="wpaw-slider-widget">
 	<div class="wpaw-repeaters">
 		<div class="wpaw-repeaters__items">
-			<?php
-			$image_template = [
-				'src'          => '',
-				'title'        => '',
-				'summary'      => '',
-				'link-url'     => '',
-				'link-text'    => '',
-				'mask-color'   => '#000',
-				'mask-opacity' => 0,
-			];
-			array_unshift( $instance['images'], $image_template );
-			?>
 			<?php foreach ( $instance['images'] as $key => $image ) : ?>
-				<?php $image = shortcode_atts( $image_template, $image ); ?>
 				<div class="wpaw-repeaters__item">
 					<div class="wpaw-thumbnail-field">
 						<span class="wpaw-thumbnail-field__thumbnail">
