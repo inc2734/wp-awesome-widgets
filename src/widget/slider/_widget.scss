@@ -19,6 +19,19 @@
     position: relative;
   }
 
+  &__item-title {
+    color: #fff;
+  }
+
+  &__item-summary {
+    color: #fff;
+  }
+
+  &__item-more {
+    border: 1px solid #fff;
+    color: #fff;
+  }
+
   .slick-track {
     display: flex;
   }

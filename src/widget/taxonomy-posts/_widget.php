@@ -40,7 +40,7 @@ $recent_posts = get_posts( [
 	<?php endif; ?>
 
 	<div
-		class="wpaw-taxonomy-posts"
+		class="wpaw-taxonomy-posts wpaw-taxonomy-posts--<?php echo esc_attr( $args['widget_id'] ); ?>"
 		id="wpaw-taxonomy-posts-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		>
 

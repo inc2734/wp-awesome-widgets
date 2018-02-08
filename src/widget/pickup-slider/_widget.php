@@ -27,7 +27,7 @@ global $post;
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
 
 	<div
-		class="wpaw-pickup-slider"
+		class="wpaw-pickup-slider wpaw-pickup-slider--<?php echo esc_attr( $args['widget_id'] ); ?>"
 		id="wpaw-pickup-slider-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		>
 		<div class="wpaw-pickup-slider__inner">

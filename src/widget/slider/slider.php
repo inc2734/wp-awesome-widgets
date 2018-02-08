@@ -23,6 +23,7 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 				'link-text'    => '',
 				'mask-color'   => '#000',
 				'mask-opacity' => 0,
+				'text-color'   => '#fff',
 			],
 		],
 		'type'             => 'slide',

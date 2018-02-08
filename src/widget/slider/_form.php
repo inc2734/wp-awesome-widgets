@@ -101,6 +101,17 @@
 						>
 					</p>
 
+					<p class="wpaw-color-picker-field">
+						<label for="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][text-color]"><?php esc_html_e( 'Text color', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+						<input
+							class="wpaw-color-picker-field__input"
+							type="text"
+							name="<?php echo esc_attr( $this->get_field_name( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][text-color]"
+							id="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][text-color]"
+							value="<?php echo esc_attr( $image['text-color'] ); ?>"
+						>
+					</p>
+
 					<div class="wpaw-repeaters__item-controls">
 						<a class="button-link button-link-delete"><?php esc_html_e( 'Delete', 'inc2734-wp-awesome-widgets' ); ?></a>
 					</div>

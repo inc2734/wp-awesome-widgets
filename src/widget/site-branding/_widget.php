@@ -11,7 +11,7 @@ global $post;
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
 
 	<div
-		class="wpaw-site-branding"
+		class="wpaw-site-branding wpaw-site-branding--<?php echo esc_attr( $args['widget_id'] ); ?>"
 		id="wpaw-site-branding-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		>
 
