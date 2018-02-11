@@ -54,9 +54,7 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 				foreach ( array_keys( $value ) as $repeater_key ) {
 					$instance[ $key ][ $repeater_key ] = shortcode_atts( $this->_defaults[ $key ][0], $instance[ $key ][ $repeater_key ] );
 				}
-				if ( 0 < count( $instance[ $key ] ) ) {
-					array_unshift( $instance[ $key ], $this->_defaults[ $key ][0] );
-				}
+				array_unshift( $instance[ $key ], $this->_defaults[ $key ][0] );
 			}
 		}
 		$this->_render_form( $instance );
