@@ -14,7 +14,7 @@
 			id="<?php echo esc_attr( $this->get_field_id( 'code' ) ); ?>"
 			class="widefat"
 			><?php echo esc_attr( $instance['code'] ); ?></textarea><br>
-			<small><?php esc_html_e( 'Past the code of the responsive ad unit.', 'snow-monkey' ); ?></small>
+			<small><?php esc_html_e( 'Past the code of the responsive ad unit.', 'inc2734-wp-awesome-widgets' ); ?></small>
 	</p>
 
 	<p>
@@ -26,14 +26,14 @@
 		>
 			<?php
 			$sizes = [
-				'auto'              => __( 'Auto', 'snow-monkey' ),
-				'big-banner'        => __( 'Big banner (728 x 90)', 'snow-monkey' ),
-				'rectangle-big'     => __( 'Rectangle big (336 x 280)', 'snow-monkey' ),
-				'large-mobile'      => __( 'Large mobile banner (320 x 100)', 'snow-monkey' ),
-				'large-sky-scraper' => __( 'Large skyscraper (300 x 600)', 'snow-monkey' ),
-				'rectangle'         => __( 'Rectangle (300 x 250)', 'snow-monkey' ),
-				'rectangle-big-2'   => __( 'Rectangle big (336 x 280) two', 'snow-monkey' ),
-				'rectangle-2'       => __( 'Rectangle (300 x 250) two', 'snow-monkey' ),
+				'auto'              => __( 'Auto', 'inc2734-wp-awesome-widgets' ),
+				'big-banner'        => __( 'Big banner (728 x 90)', 'inc2734-wp-awesome-widgets' ),
+				'rectangle-big'     => __( 'Rectangle big (336 x 280)', 'inc2734-wp-awesome-widgets' ),
+				'large-mobile'      => __( 'Large mobile banner (320 x 100)', 'inc2734-wp-awesome-widgets' ),
+				'large-sky-scraper' => __( 'Large skyscraper (300 x 600)', 'inc2734-wp-awesome-widgets' ),
+				'rectangle'         => __( 'Rectangle (300 x 250)', 'inc2734-wp-awesome-widgets' ),
+				'rectangle-big-2'   => __( 'Rectangle big (336 x 280) two', 'inc2734-wp-awesome-widgets' ),
+				'rectangle-2'       => __( 'Rectangle (300 x 250) two', 'inc2734-wp-awesome-widgets' ),
 			];
 			?>
 			<?php foreach ( $sizes as $key => $label ) : ?>
