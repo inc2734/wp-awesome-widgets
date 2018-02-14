@@ -1,0 +1,59 @@
+.wpaw-google-adsense {
+  overflow: hidden;
+
+  &__row {
+    margin: 0 -.5em -1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    flex: 1 1 0%;
+    max-width: 100%;
+    padding: 0 .5em 1em;
+  }
+
+  &__ad {
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+
+    &--auto {}
+
+    &--big-banner {
+      max-width: 728px;
+      max-height: 90px;
+    }
+
+    &--rectangle-big {
+      max-width: 336px;
+      max-height: 280px;
+    }
+
+    &--large-mobile {
+      max-width: 320px;
+      max-height: 100px;
+    }
+
+    &--large-sky-scraper {
+      max-width: 300px;
+      max-height: 600px;
+    }
+
+    &--rectangle {
+      max-width: 300px;
+      max-height: 250px;
+    }
+
+    &--rectangle-big-2 {
+      max-width: 336px;
+      max-height: 280px;
+    }
+
+    &--rectangle-2 {
+      max-width: 300px;
+      max-height: 250px;
+    }
+  }
+}

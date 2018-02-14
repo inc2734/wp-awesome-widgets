@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-02-02 12:00:04+00:00\n"
-"PO-Revision-Date: 2018-02-02 21:00+0900\n"
+"POT-Creation-Date: 2018-02-14 04:22:37+00:00\n"
+"PO-Revision-Date: 2018-02-14 13:22+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -16,9 +16,9 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: widget/any-posts/_form.php:11 widget/pr-box/_form.php:11
-#: widget/pr-box/_form.php:79 widget/ranking/_form.php:11
+#: widget/pr-box/_form.php:69 widget/ranking/_form.php:11
 #: widget/recent-posts/_form.php:11 widget/showcase/_form.php:11
-#: widget/slider/_form.php:50 widget/taxonomy-posts/_form.php:11
+#: widget/slider/_form.php:37 widget/taxonomy-posts/_form.php:11
 msgid "Title"
 msgstr "タイトル"
 
@@ -48,6 +48,54 @@ msgstr "モバイルでも表示"
 msgid "WPAW: Contents outline"
 msgstr "WPAW: 目次"
 
+#: widget/google-adsense/_form.php:11
+msgid "Adsense code"
+msgstr "アドセンスコード"
+
+#: widget/google-adsense/_form.php:17
+msgid "Past the code of the responsive ad unit."
+msgstr "レスポンシブ広告ユニットのコードを貼り付けてください。"
+
+#: widget/google-adsense/_form.php:21
+msgid "Size"
+msgstr "サイズ"
+
+#: widget/google-adsense/_form.php:29
+msgid "Auto"
+msgstr "自動"
+
+#: widget/google-adsense/_form.php:30
+msgid "Big banner (728 x 90)"
+msgstr "ビッグバナー (728 x 90)"
+
+#: widget/google-adsense/_form.php:31
+msgid "Rectangle big (336 x 280)"
+msgstr "レクタングル 大 (336 x 280)"
+
+#: widget/google-adsense/_form.php:32
+msgid "Large mobile banner (320 x 100)"
+msgstr "ラージモバイルバナー (320 x 100)"
+
+#: widget/google-adsense/_form.php:33
+msgid "Large skyscraper (300 x 600)"
+msgstr "ラージ スカイスクレイパー (300 x 600)"
+
+#: widget/google-adsense/_form.php:34
+msgid "Rectangle (300 x 250)"
+msgstr "レクタングル (300 x 250)"
+
+#: widget/google-adsense/_form.php:35
+msgid "Rectangle big (336 x 280) two"
+msgstr "レクタングル大 (336 x 280) 2個"
+
+#: widget/google-adsense/_form.php:36
+msgid "Rectangle (300 x 250) two"
+msgstr "レクタングル (300 x 250) 2個"
+
+#: widget/google-adsense/google-adsense.php:22
+msgid "WPAW: Google Adsense"
+msgstr "WPAW: Google アドセンス"
+
 #: widget/pickup-slider/_form.php:11
 msgid "Posts tagged as \"pickup\" are displayed as slider."
 msgstr "「pickup」タグが付与された記事をスライダーとして表示します。"
@@ -68,84 +116,84 @@ msgstr "リード文"
 msgid "Background color"
 msgstr "背景色"
 
-#: widget/pr-box/_form.php:62 widget/showcase/_form.php:58
-#: widget/showcase/_form.php:113 widget/slider/_form.php:33
+#: widget/pr-box/_form.php:52 widget/showcase/_form.php:58
+#: widget/showcase/_form.php:113 widget/slider/_form.php:20
 msgid "Set image"
 msgstr "画像を設定"
 
-#: widget/pr-box/_form.php:65 widget/showcase/_form.php:61
-#: widget/showcase/_form.php:116 widget/slider/_form.php:36
+#: widget/pr-box/_form.php:55 widget/showcase/_form.php:61
+#: widget/showcase/_form.php:116 widget/slider/_form.php:23
 msgid "Unset"
 msgstr "解除"
 
-#: widget/pr-box/_form.php:90 widget/slider/_form.php:61
+#: widget/pr-box/_form.php:80 widget/slider/_form.php:48
 msgid "Summary"
 msgstr "概要"
 
-#: widget/pr-box/_form.php:100 widget/slider/_form.php:118
+#: widget/pr-box/_form.php:90 widget/slider/_form.php:116
 msgid "Delete"
 msgstr "削除"
 
-#: widget/pr-box/_form.php:107
+#: widget/pr-box/_form.php:97
 msgid "Add Item"
 msgstr "項目を追加"
 
-#: widget/pr-box/_form.php:112
+#: widget/pr-box/_form.php:102
 msgid "Size of image to use"
 msgstr "使用する画像のサイズ"
 
-#: widget/pr-box/_form.php:130
+#: widget/pr-box/_form.php:120
 msgid "Thumbnail aspect ratio"
 msgstr "サムネイルのアスペクト比"
 
-#: widget/pr-box/_form.php:149
+#: widget/pr-box/_form.php:139
 msgid "Column size for mobile"
 msgstr "モバイルのカラムサイズ"
 
-#: widget/pr-box/_form.php:157 widget/pr-box/_form.php:179
-#: widget/pr-box/_form.php:201
+#: widget/pr-box/_form.php:147 widget/pr-box/_form.php:169
+#: widget/pr-box/_form.php:191
 msgid "1 column"
 msgstr "1カラム"
 
-#: widget/pr-box/_form.php:158 widget/pr-box/_form.php:180
-#: widget/pr-box/_form.php:202
+#: widget/pr-box/_form.php:148 widget/pr-box/_form.php:170
+#: widget/pr-box/_form.php:192
 msgid "2 columns"
 msgstr "2カラム"
 
-#: widget/pr-box/_form.php:159 widget/pr-box/_form.php:181
-#: widget/pr-box/_form.php:203
+#: widget/pr-box/_form.php:149 widget/pr-box/_form.php:171
+#: widget/pr-box/_form.php:193
 msgid "3 columns"
 msgstr "3カラム"
 
-#: widget/pr-box/_form.php:160 widget/pr-box/_form.php:182
-#: widget/pr-box/_form.php:204
+#: widget/pr-box/_form.php:150 widget/pr-box/_form.php:172
+#: widget/pr-box/_form.php:194
 msgid "4 columns"
 msgstr "4カラム"
 
-#: widget/pr-box/_form.php:161 widget/pr-box/_form.php:183
-#: widget/pr-box/_form.php:205
+#: widget/pr-box/_form.php:151 widget/pr-box/_form.php:173
+#: widget/pr-box/_form.php:195
 msgid "5 columns"
 msgstr "5カラム"
 
-#: widget/pr-box/_form.php:171
+#: widget/pr-box/_form.php:161
 msgid "Column size for tablet"
 msgstr "タブレットのカラムサイズ"
 
-#: widget/pr-box/_form.php:193
+#: widget/pr-box/_form.php:183
 msgid "Column size for PC"
 msgstr "PCのカラムサイズ"
 
-#: widget/pr-box/_form.php:215 widget/showcase/_form.php:130
-#: widget/slider/_form.php:71
+#: widget/pr-box/_form.php:205 widget/showcase/_form.php:130
+#: widget/slider/_form.php:58
 msgid "Link URL"
 msgstr "リンク URL"
 
-#: widget/pr-box/_form.php:226 widget/showcase/_form.php:141
-#: widget/slider/_form.php:82
+#: widget/pr-box/_form.php:216 widget/showcase/_form.php:141
+#: widget/slider/_form.php:69
 msgid "Link text"
 msgstr "リンクテキスト"
 
-#: widget/pr-box/pr-box.php:31
+#: widget/pr-box/pr-box.php:37
 msgid "WPAW: PR Box"
 msgstr "WPAW: PR ボックス"
 
@@ -169,15 +217,15 @@ msgstr "フォーマット"
 msgid "Background image"
 msgstr "背景画像"
 
-#: widget/showcase/_form.php:75 widget/slider/_form.php:93
+#: widget/showcase/_form.php:75 widget/slider/_form.php:80
 msgid "Background mask color"
 msgstr "背景マスクの色"
 
-#: widget/showcase/_form.php:86 widget/slider/_form.php:104
+#: widget/showcase/_form.php:86 widget/slider/_form.php:91
 msgid "Background mask transparency"
 msgstr "背景マスクの透明度"
 
-#: widget/showcase/_form.php:96
+#: widget/showcase/_form.php:96 widget/slider/_form.php:105
 msgid "Text color"
 msgstr "文字色"
 
@@ -201,39 +249,39 @@ msgstr "HTML 使用可"
 msgid "WPAW: Site branding"
 msgstr "WPAW: サイトブランディング"
 
-#: widget/slider/_form.php:125
+#: widget/slider/_form.php:123
 msgid "Add slider"
 msgstr "スライダーを追加"
 
-#: widget/slider/_form.php:130
+#: widget/slider/_form.php:128
 msgid "Slider type"
 msgstr "スライダーの種類"
 
-#: widget/slider/_form.php:138
+#: widget/slider/_form.php:136
 msgid "Fade"
 msgstr "フェード"
 
-#: widget/slider/_form.php:139
+#: widget/slider/_form.php:137
 msgid "Slide"
 msgstr "スライド"
 
-#: widget/slider/_form.php:149
+#: widget/slider/_form.php:147
 msgid "Animation time"
 msgstr "アニメーション時間"
 
-#: widget/slider/_form.php:160
+#: widget/slider/_form.php:158
 msgid "Interval time"
 msgstr "インターバル"
 
-#: widget/slider/_form.php:171
+#: widget/slider/_form.php:169
 msgid "Number of slides to display at once(PC)"
 msgstr "1度に表示するスライド数（PC）"
 
-#: widget/slider/_form.php:182
+#: widget/slider/_form.php:180
 msgid "Number of slides to slide at once(PC)"
 msgstr "1度にスライドするスライド数（PC）"
 
-#: widget/slider/slider.php:26
+#: widget/slider/slider.php:37
 msgid "WPAW: Slider"
 msgstr "WPAW: スライダー"
 

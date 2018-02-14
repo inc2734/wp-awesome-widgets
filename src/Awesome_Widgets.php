@@ -88,3 +88,58 @@ class Awesome_Widgets {
 		wp_enqueue_style( 'wp-color-picker' );
 	}
 }
+
+/**
+ * Add safe style attribute for wp_kses
+ *
+ * @param array $styles
+ * @return array
+ */
+function inc2734_wpaw_safe_style_css_display( $styles ) {
+	$styles[] = 'display';
+	return $styles;
+}
+
+/**
+ * Display google adsense
+ *
+ * @param $code
+ * @param $size
+ * @return void
+ */
+function inc2734_wpaw_display_adsense_code( $code, $size = null ) {
+	add_filter( 'safe_style_css', 'inc2734_wpaw_safe_style_css_display' );
+
+	if ( ! is_null( $size ) ) {
+		if ( in_array( $size, [ 'big-banner', 'large-mobile' ] ) ) {
+			$code = preg_replace( '/data-ad-format=[\"|\'][a-z]+?[\"|\']/', 'data-ad-format="horizontal"', $code );
+		} elseif ( in_array( $size, [ 'large-sky-scraper' ] ) ) {
+			$code = preg_replace( '/data-ad-format=[\"|\'][a-z]+?[\"|\']/', 'data-ad-format="vertical"', $code );
+		} elseif ( in_array( $size, [ 'rectangle-big', 'rectangle', 'rectangle-big-2', 'rectangle-2' ] ) ) {
+			$code = preg_replace( '/data-ad-format=[\"|\'][a-z]+?[\"|\']/', 'data-ad-format="rectangle"', $code );
+		}
+	}
+
+	if ( class_exists( 'Jetpack' ) ) {
+		// @todo
+		// @codingStandardsIgnoreStart
+		echo $code;
+		// @codingStandardsIgnoreEnd
+	} else {
+		echo wp_kses( $code, [
+			'script' => [
+				'async' => [],
+				'src'   => [],
+			],
+			'ins' => [
+				'class'          => [],
+				'style'          => [],
+				'data-ad-client' => [],
+				'data-ad-slot'   => [],
+				'data-ad-format' => [],
+			],
+		] );
+	}
+
+	remove_filter( 'safe_style_css', 'inc2734_wpaw_safe_style_css_display' );
+}
