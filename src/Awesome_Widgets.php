@@ -108,7 +108,7 @@ function inc2734_wpaw_safe_style_css_display( $styles ) {
  * @return void
  */
 function inc2734_wpaw_display_adsense_code( $code, $size = null ) {
-	add_filter( 'safe_style_css', 'inc2734_wpaw_safe_style_css_display' );
+	add_filter( 'safe_style_css', __NAMESPACE__ . '\\inc2734_wpaw_safe_style_css_display' );
 
 	if ( ! is_null( $size ) ) {
 		if ( in_array( $size, [ 'big-banner', 'large-mobile' ] ) ) {
@@ -141,5 +141,5 @@ function inc2734_wpaw_display_adsense_code( $code, $size = null ) {
 		] );
 	}
 
-	remove_filter( 'safe_style_css', 'inc2734_wpaw_safe_style_css_display' );
+	remove_filter( 'safe_style_css', __NAMESPACE__ . '\\inc2734_wpaw_safe_style_css_display' );
 }
