@@ -129,7 +129,7 @@
 		<select
 			name="<?php echo esc_attr( $this->get_field_name( 'type' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'type' ) ); ?>"
-			class="widefat"
+			class="widefat js-wpaw-slider-widget-type"
 		>
 			<?php
 			$types = [
@@ -165,7 +165,7 @@
 		> ms
 	</p>
 
-	<p>
+	<p class="js-wpaw-slider-widget-only-slide" aria-hidden="true">
 		<label for="<?php echo esc_attr( $this->get_field_id( 'slides-to-show' ) ); ?>"><?php esc_html_e( 'Number of slides to display at once(PC)', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<input
 			type="number"
@@ -176,7 +176,7 @@
 		>
 	</p>
 
-	<p>
+	<p class="js-wpaw-slider-widget-only-slide" aria-hidden="true">
 		<label for="<?php echo esc_attr( $this->get_field_id( 'slides-to-scroll' ) ); ?>"><?php esc_html_e( 'Number of slides to slide at once(PC)', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<input
 			type="number"

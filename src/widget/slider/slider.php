@@ -79,6 +79,11 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 			$new_instance['slides-to-scroll'] = $this->_defaults['slides-to-scroll'];
 		}
 
+		if ( 'fade' === $new_instance['type'] ) {
+			$new_instance['slides-to-show']   = 1;
+			$new_instance['slides-to-scroll'] = 1;
+		}
+
 		foreach ( $new_instance['images'] as $key => $image ) {
 			if ( ! $image['src'] ) {
 				unset( $new_instance['images'][ $key ] );

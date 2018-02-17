@@ -3,3 +3,11 @@
   height: auto;
   max-width: 100%;
 }
+
+.js-wpaw-slider-widget-only-slide {
+  display: none;
+}
+
+.js-wpaw-slider-widget-only-slide[aria-hidden="false"] {
+  display: block;
+}
