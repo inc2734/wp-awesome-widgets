@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-02-14 04:22:37+00:00\n"
-"PO-Revision-Date: 2018-02-14 13:22+0900\n"
+"POT-Creation-Date: 2018-02-26 12:51:19+00:00\n"
+"PO-Revision-Date: 2018-02-26 21:51+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -22,17 +22,17 @@ msgstr ""
 msgid "Title"
 msgstr "タイトル"
 
-#: widget/any-posts/_form.php:72 widget/ranking/_form.php:72
-#: widget/recent-posts/_form.php:42 widget/taxonomy-posts/_form.php:88
+#: widget/any-posts/_form.php:81 widget/ranking/_form.php:81
+#: widget/recent-posts/_form.php:65 widget/taxonomy-posts/_form.php:88
 msgid "Show thumbnail"
 msgstr "サムネイルを表示"
 
-#: widget/any-posts/_form.php:84 widget/ranking/_form.php:84
-#: widget/recent-posts/_form.php:54
+#: widget/any-posts/_form.php:93 widget/ranking/_form.php:93
+#: widget/recent-posts/_form.php:77
 msgid "Show taxonomy"
 msgstr "分類を表示"
 
-#: widget/any-posts/any-posts.php:24
+#: widget/any-posts/any-posts.php:25
 msgid "WPAW: Any Posts"
 msgstr "WPAW: 任意の投稿"
 
@@ -197,15 +197,19 @@ msgstr "リンクテキスト"
 msgid "WPAW: PR Box"
 msgstr "WPAW: PR ボックス"
 
-#: widget/ranking/ranking.php:24
+#: widget/ranking/ranking.php:25
 msgid "WPAW: Ranking (Manual update)"
 msgstr "WPAW: ランキング（手動更新）"
 
-#: widget/recent-posts/_form.php:22 widget/taxonomy-posts/_form.php:68
+#: widget/recent-posts/_form.php:22
+msgid "Post type"
+msgstr "投稿タイプ"
+
+#: widget/recent-posts/_form.php:45 widget/taxonomy-posts/_form.php:68
 msgid "Number of posts"
 msgstr "表示する投稿数"
 
-#: widget/recent-posts/recent-posts.php:24
+#: widget/recent-posts/recent-posts.php:25
 msgid "WPAW: Recent posts"
 msgstr "WPAW: 最近の投稿"
 

@@ -15,6 +15,7 @@ class Inc2734_WP_Awesome_Widgets_Recent_Posts extends Inc2734_WP_Awesome_Widgets
 	 */
 	protected $_defaults = [
 		'title'          => null,
+		'post-type'      => 'post',
 		'posts-per-page' => 5,
 		'show-thumbnail' => 1,
 		'show-taxonomy'  => 1,

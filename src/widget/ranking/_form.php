@@ -19,6 +19,27 @@
 	</p>
 
 	<div class="wpaw-item-selector">
+		<select
+			name="<?php echo esc_attr( $this->get_field_name( 'post-type' ) ); ?>"
+			id="<?php echo esc_attr( $this->get_field_id( 'post-type' ) ); ?>"
+			class="wpaw-item-selector__post-type widefat"
+		>
+			<?php
+			$post_types = get_post_types( [
+				'public'       => true,
+				'show_ui'      => true,
+				'show_in_rest' => true,
+			], 'objects' );
+			unset( $post_types['attachment'] );
+			?>
+			<?php foreach ( $post_types as $post_type ) : ?>
+				<?php $rest_base = ( ! empty( $post_type->rest_base ) ) ? $post_type->rest_base : $post_type->name; ?>
+				<option value="<?php echo esc_attr( $rest_base ); ?>" <?php selected( $rest_base, $instance['post-type'] ); ?>>
+					<?php echo esc_html( $post_type->label ); ?>
+				</option>
+			<?php endforeach; ?>
+		</select>
+
 		<ul class="wpaw-item-selector__selected-items">
 			<?php
 			$items = $instance['items'];
@@ -36,19 +57,7 @@
 			<?php endforeach; ?>
 		</ul>
 
-		<?php
-		$recent_posts = get_posts( [
-			'post_type'      => 'post',
-			'posts_per_page' => 10,
-		] );
-		?>
-		<ul class="wpaw-item-selector__items">
-			<?php foreach ( $recent_posts as $_post ) : ?>
-				<li class="wpaw-item-selector__item" data-post-id="<?php echo esc_attr( $_post->ID ); ?>" data-post-title="<?php echo esc_attr( $_post->post_title ); ?>">
-					<span class="dashicons dashicons-plus"></span>
-					<?php echo esc_html( $_post->post_title ); ?>
-				</li>
-			<?php endforeach; ?>
+		<ul class="wpaw-item-selector__items" data-offset="0" data-per-page="10" data-loading="false">
 		</ul>
 
 		<input
