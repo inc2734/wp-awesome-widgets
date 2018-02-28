@@ -96,13 +96,15 @@ jQuery(function($) {
    */
   (function() {
     document.addEventListener('scroll', function (event) {
-      if ('wpaw-item-selector__items' !== $(event.target).attr('class')) {
+      if (! $(event.target).hasClass('wpaw-item-selector__items')) {
         return;
       }
 
       if ($(event.target).get(0).scrollHeight - $(event.target).height() > $(event.target).scrollTop()) {
         return;
       }
+
+      var wrapper = $(event.target).closest('.wpaw-item-selector');
 
       _updateItems(wrapper);
     }, true);
@@ -163,7 +165,7 @@ jQuery(function($) {
         area.attr('data-offset', parseInt(area.attr('data-offset')) + parseInt(area.attr('data-per-page')));
       })
       .fail(function() {
-        console.error('Read failed!');
+        console.error('Read failed or canceled.');
       })
       .always(function() {
         area.find('.spinner').remove();
