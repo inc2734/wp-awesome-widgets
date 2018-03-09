@@ -25,8 +25,6 @@ class Inc2734_WP_Awesome_Widgets_Ranking extends Inc2734_WP_Awesome_Widgets_Abst
 		parent::__construct( false, __( 'WPAW: Ranking (Manual update)', 'inc2734-wp-awesome-widgets' ), [
 			'customize_selective_refresh' => true,
 		] );
-
-		$this->_path = __DIR__;
 	}
 
 	public function update( $new_instance, $old_instance ) {

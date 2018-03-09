@@ -31,12 +31,13 @@ class Inc2734_WP_Awesome_Widgets_Showcase extends Inc2734_WP_Awesome_Widgets_Abs
 			'customize_selective_refresh' => true,
 		] );
 
-		$this->_path = __DIR__;
-
 		add_action( 'admin_enqueue_scripts', function() {
+			$abspath = str_replace( '\\', '/', ABSPATH );
+			$__dir__ = str_replace( '\\', '/', __DIR__ );
+
 			wp_enqueue_style(
 				'wp-awesome-widgets-showcase',
-				site_url( str_replace( ABSPATH, '', __DIR__ ) . '/admin.css' )
+				site_url( str_replace( $abspath, '', $__dir__ ) . '/admin.css' )
 			);
 		} );
 	}

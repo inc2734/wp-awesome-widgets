@@ -38,16 +38,17 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 			'customize_selective_refresh' => true,
 		] );
 
-		$this->_path = __DIR__;
-
 		add_action( 'admin_enqueue_scripts', function() {
 			if ( ! did_action( 'wp_enqueue_media' ) ) {
 				wp_enqueue_media();
 			}
 
+			$abspath = str_replace( '\\', '/', ABSPATH );
+			$__dir__ = str_replace( '\\', '/', __DIR__ );
+
 			wp_enqueue_script(
 				'wp-awesome-widgets-slider',
-				site_url( str_replace( ABSPATH, '', __DIR__ ) . '/admin.js' ),
+				site_url( str_replace( $abspath, '', $__dir__ ) . '/admin.js' ),
 				[ 'jquery', 'wp-awesome-widgets-repeater', 'wp-awesome-widgets-thumbnail-field' ],
 				false,
 				true
@@ -55,7 +56,7 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 
 			wp_enqueue_style(
 				'wp-awesome-widgets-slider',
-				site_url( str_replace( ABSPATH, '', __DIR__ ) . '/admin.css' )
+				site_url( str_replace( $abspath, '', $__dir__ ) . '/admin.css' )
 			);
 		} );
 	}

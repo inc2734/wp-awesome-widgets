@@ -34,9 +34,12 @@ class Awesome_Widgets {
 			wp_enqueue_media();
 		}
 
+		$abspath = str_replace( '\\', '/', ABSPATH );
+		$__dir__ = str_replace( '\\', '/', __DIR__ );
+
 		wp_enqueue_script(
 			'wp-awesome-widgets-color-picker-field',
-			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/js/color-picker-field.js' ),
+			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/js/color-picker-field.js' ),
 			[ 'jquery', 'wp-color-picker' ],
 			false,
 			true
@@ -44,7 +47,7 @@ class Awesome_Widgets {
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-thumbnail-field',
-			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/js/thumbnail-field.js' ),
+			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/js/thumbnail-field.js' ),
 			[ 'jquery' ],
 			false,
 			true
@@ -52,12 +55,12 @@ class Awesome_Widgets {
 
 		wp_enqueue_style(
 			'wp-awesome-widgets-thumbnail-field',
-			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/css/thumbnail-field.css' )
+			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/css/thumbnail-field.css' )
 		);
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-repeater',
-			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/js/repeater.js' ),
+			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/js/repeater.js' ),
 			[ 'jquery', 'jquery-ui-sortable' ],
 			false,
 			true
@@ -65,17 +68,17 @@ class Awesome_Widgets {
 
 		wp_enqueue_style(
 			'wp-awesome-widgets-repeater',
-			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/css/repeater.css' )
+			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/css/repeater.css' )
 		);
 
 		wp_enqueue_style(
 			'wp-awesome-widgets-item-selector',
-			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/css/item-selector.css' )
+			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/css/item-selector.css' )
 		);
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-item-selector',
-			site_url( str_replace( ABSPATH, '', __DIR__ ) . '/assets/js/item-selector.js' ),
+			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/js/item-selector.js' ),
 			[ 'jquery', 'jquery-ui-sortable' ],
 			false,
 			true

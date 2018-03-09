@@ -21,7 +21,8 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 	protected $_path;
 
 	public function __construct( $id_base, $name, $widget_options = [] ) {
-		$this->_path = __DIR__;
+		$reflection  = new \ReflectionClass( $this );
+		$this->_path = dirname( $reflection->getFileName() );
 
 		if ( ! function_exists( 'wpvc_get_template_part' ) ) {
 			$path = get_theme_file_path( '/vendor/inc2734/wp-view-controller/src/App/template-tags/get-template-part.php' );
@@ -33,6 +34,10 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 		}
 
 		parent::__construct( false, $name, $widget_options );
+	}
+
+	public function _get_dir_path() {
+		return __DIR__;
 	}
 
 	public function widget( $args, $instance ) {

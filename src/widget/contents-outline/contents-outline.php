@@ -22,8 +22,6 @@ class Inc2734_WP_Awesome_Widgets_Contents_Outline extends Inc2734_WP_Awesome_Wid
 		parent::__construct( false, __( 'WPAW: Contents outline', 'inc2734-wp-awesome-widgets' ), [
 			'customize_selective_refresh' => true,
 		] );
-
-		$this->_path = __DIR__;
 	}
 
 	public function update( $new_instance, $old_instance ) {

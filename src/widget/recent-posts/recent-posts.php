@@ -25,8 +25,6 @@ class Inc2734_WP_Awesome_Widgets_Recent_Posts extends Inc2734_WP_Awesome_Widgets
 		parent::__construct( false, __( 'WPAW: Recent posts', 'inc2734-wp-awesome-widgets' ), [
 			'customize_selective_refresh' => true,
 		] );
-
-		$this->_path = __DIR__;
 	}
 
 	public function update( $new_instance, $old_instance ) {

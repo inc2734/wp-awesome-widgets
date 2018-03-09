@@ -22,7 +22,6 @@ class Inc2734_WP_Awesome_Widgets_Taxonomy_Posts extends Inc2734_WP_Awesome_Widge
 
 	public function __construct() {
 		parent::__construct( false, __( 'WPAW: Taxonomy posts', 'inc2734-wp-awesome-widgets' ) );
-		$this->_path = __DIR__;
 	}
 
 	public function update( $new_instance, $old_instance ) {
