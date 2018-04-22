@@ -26,7 +26,7 @@ if ( 'fade' === $instance['type'] ) {
 		<?php endforeach; ?>
 	</style>
 
-	<div class="wpaw-slider wpaw-slider--<?php echo esc_attr( $args['widget_id'] ); ?>" id="wpaw-slider-<?php echo esc_attr( $args['widget_id'] ); ?>">
+	<div class="wpaw-slider wpaw-slider--<?php echo esc_attr( $args['widget_id'] ); ?>" id="wpaw-slider-<?php echo esc_attr( $args['widget_id'] ); ?>" data-wpaw-slide-slides-to-show="<?php echo esc_attr( $instance['slides-to-show'] ); ?>">
 		<div class="wpaw-slider__inner">
 			<div class="wpaw-slider__canvas">
 				<?php foreach ( $instance['images'] as $key => $image ) : ?>
