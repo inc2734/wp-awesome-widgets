@@ -13,7 +13,9 @@ class Inc2734_WP_Awesome_Widgets_Pickup_Slider extends Inc2734_WP_Awesome_Widget
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [];
+	protected $_defaults = [
+		'random' => 0,
+	];
 
 	public function __construct() {
 		parent::__construct( false, __( 'WPAW: Pickup slider', 'inc2734-wp-awesome-widgets' ), [

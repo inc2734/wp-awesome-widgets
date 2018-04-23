@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-02-26 12:51:19+00:00\n"
-"PO-Revision-Date: 2018-02-26 21:51+0900\n"
+"POT-Creation-Date: 2018-04-23 04:44:01+00:00\n"
+"PO-Revision-Date: 2018-04-23 13:44+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -100,11 +100,17 @@ msgstr "WPAW: Google アドセンス"
 msgid "Posts tagged as \"pickup\" are displayed as slider."
 msgstr "「pickup」タグが付与された記事をスライダーとして表示します。"
 
-#: widget/pickup-slider/_widget.php:51
+#: widget/pickup-slider/_form.php:23
+#, fuzzy
+#| msgid "Display in random order."
+msgid "Display in random order"
+msgstr "ランダムな順序で表示"
+
+#: widget/pickup-slider/_widget.php:59
 msgid "READ MORE"
 msgstr "READ MORE"
 
-#: widget/pickup-slider/pickup-slider.php:19
+#: widget/pickup-slider/pickup-slider.php:21
 msgid "WPAW: Pickup slider"
 msgstr "WPAW: ピックアップスライダー"
 

@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-$pickup_posts = get_posts( [
+$query_args = [
 	'post_type'      => 'any',
 	'posts_per_page' => -1,
 	'tax_query'      => [
@@ -15,7 +15,15 @@ $pickup_posts = get_posts( [
 			'field'    => 'slug',
 		],
 	],
-] );
+];
+
+if ( ! empty( $instance['random'] ) ) {
+	$query_args = array_merge( $query_args, [
+		'orderby' => 'rand',
+	] );
+}
+
+$pickup_posts = get_posts( $query_args );
 
 if ( ! $pickup_posts ) {
 	return;
