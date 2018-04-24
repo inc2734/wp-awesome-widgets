@@ -29,4 +29,8 @@
   &__item-body {
     position: relative;
   }
+
+  .slick-list {
+    height: auto !important;
+  }
 }

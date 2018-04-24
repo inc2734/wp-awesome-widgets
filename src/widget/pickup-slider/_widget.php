@@ -65,7 +65,7 @@ global $post;
 		</div>
 	</div>
 
-	<script>
+	<script defer>
 	jQuery(function($) {
 		var slider = $('#wpaw-pickup-slider-<?php echo esc_attr( $args['widget_id'] ); ?> .wpaw-pickup-slider__canvas');
 

@@ -68,7 +68,7 @@ if ( 'fade' === $instance['type'] ) {
 		</div>
 	</div>
 
-	<script>
+	<script defer>
 	jQuery(function($) {
 		$('#wpaw-slider-<?php echo esc_attr( $args['widget_id'] ); ?> .wpaw-slider__canvas').slick({
 			"speed": <?php echo esc_js( $instance['duration'] ); ?>,

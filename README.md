@@ -35,6 +35,11 @@ new Inc2734\WP_Awesome_Widgets\Awesome_Widgets();
 @import 'vendor/inc2734/wp-awesome-widgets/src/assets/scss/wp-awesome-widgets';
 ```
 
+```
+// Using default styles (.js)
+import 'vendor/inc2734/wp-awesome-widgets/src/assets/js/wp-awesome-widgets.js';
+```
+
 ### How to overwite widget templates
 You can overwite the widget template.
 For example,
