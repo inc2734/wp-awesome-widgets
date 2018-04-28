@@ -5,10 +5,39 @@
  * @license GPL-2.0+
  */
 
-$fade = 'false';
-if ( 'fade' === $instance['type'] ) {
-	$fade = 'true';
-}
+add_action( 'wp_footer', function() use ( $args, $instance ) {
+	$fade = 'false';
+	if ( 'fade' === $instance['type'] ) {
+		$fade = 'true';
+	}
+	?>
+<script>
+jQuery(function($) {
+	$('#wpaw-slider-<?php echo esc_attr( $args['widget_id'] ); ?> .wpaw-slider__canvas').slick({
+		"speed": <?php echo esc_js( $instance['duration'] ); ?>,
+		"autoplaySpeed": <?php echo esc_js( $instance['interval'] ); ?>,
+		"slidesToShow": <?php echo esc_js( $instance['slides-to-show'] ); ?>,
+		"slidesToScroll": <?php echo esc_js( $instance['slides-to-scroll'] ); ?>,
+		"autoplay": true,
+		"fade": <?php echo esc_js( $fade ); ?>,
+		"dots": true,
+		"infinite": true,
+		"adaptiveHeight": true,
+		"arrows": false,
+		"responsive": [
+			{
+				"breakpoint": 1024,
+				"settings": {
+					"slidesToShow": 1,
+					"slidesToScroll": 1
+				}
+			}
+		]
+	});
+});
+</script>
+	<?php
+}, 9999 );
 ?>
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
@@ -67,31 +96,5 @@ if ( 'fade' === $instance['type'] ) {
 			</div>
 		</div>
 	</div>
-
-	<script defer>
-	jQuery(function($) {
-		$('#wpaw-slider-<?php echo esc_attr( $args['widget_id'] ); ?> .wpaw-slider__canvas').slick({
-			"speed": <?php echo esc_js( $instance['duration'] ); ?>,
-			"autoplaySpeed": <?php echo esc_js( $instance['interval'] ); ?>,
-			"slidesToShow": <?php echo esc_js( $instance['slides-to-show'] ); ?>,
-			"slidesToScroll": <?php echo esc_js( $instance['slides-to-scroll'] ); ?>,
-			"autoplay": true,
-			"fade": <?php echo esc_js( $fade ); ?>,
-			"dots": true,
-			"infinite": true,
-			"adaptiveHeight": true,
-			"arrows": false,
-			"responsive": [
-				{
-					"breakpoint": 1024,
-					"settings": {
-						"slidesToShow": 1,
-						"slidesToScroll": 1
-					}
-				}
-			]
-		});
-	});
-	</script>
 
 <?php echo wp_kses_post( $args['after_widget'] ); ?>
