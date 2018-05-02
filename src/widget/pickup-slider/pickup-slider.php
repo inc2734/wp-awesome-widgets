@@ -6,7 +6,7 @@
  */
 
 /**
- * Site branding widget
+ * Pickup slider widget
  */
 class Inc2734_WP_Awesome_Widgets_Pickup_Slider extends Inc2734_WP_Awesome_Widgets_Abstract_Widget {
 
@@ -19,7 +19,7 @@ class Inc2734_WP_Awesome_Widgets_Pickup_Slider extends Inc2734_WP_Awesome_Widget
 
 	public function __construct() {
 		parent::__construct( false, __( 'WPAW: Pickup slider', 'inc2734-wp-awesome-widgets' ), [
-			'customize_selective_refresh' => true,
+			'customize_selective_refresh' => false,
 		] );
 	}
 
