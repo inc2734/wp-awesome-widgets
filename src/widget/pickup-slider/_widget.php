@@ -65,19 +65,4 @@ global $post;
 		</div>
 	</div>
 
-	<script>
-	jQuery(function($) {
-		$('#wpaw-pickup-slider-<?php echo esc_attr( $args['widget_id'] ); ?> .wpaw-pickup-slider__canvas').slick({
-			"speed": 500,
-			"autoplaySpeed": 4000,
-			"slidesToShow": 1,
-			"fade": true,
-			"autoplay": true,
-			"dots": false,
-			"infinite": true,
-			"adaptiveHeight": true
-		});
-	});
-	</script>
-
 <?php echo wp_kses_post( $args['after_widget'] ); ?>

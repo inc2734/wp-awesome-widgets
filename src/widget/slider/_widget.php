@@ -5,9 +5,9 @@
  * @license GPL-2.0+
  */
 
-$fade = 'false';
+$fade = 0;
 if ( 'fade' === $instance['type'] ) {
-	$fade = 'true';
+	$fade = 1;
 }
 ?>
 
@@ -26,7 +26,16 @@ if ( 'fade' === $instance['type'] ) {
 		<?php endforeach; ?>
 	</style>
 
-	<div class="wpaw-slider wpaw-slider--<?php echo esc_attr( $args['widget_id'] ); ?>" id="wpaw-slider-<?php echo esc_attr( $args['widget_id'] ); ?>" data-wpaw-slide-slides-to-show="<?php echo esc_attr( $instance['slides-to-show'] ); ?>">
+	<div
+		class="wpaw-slider wpaw-slider--<?php echo esc_attr( $args['widget_id'] ); ?>"
+		id="wpaw-slider-<?php echo esc_attr( $args['widget_id'] ); ?>"
+		data-wpaw-slide-duration="<?php echo esc_attr( $instance['duration'] ); ?>"
+		data-wpaw-slide-interval="<?php echo esc_attr( $instance['interval'] ); ?>"
+		data-wpaw-slide-slides-to-show="<?php echo esc_attr( $instance['slides-to-show'] ); ?>"
+		data-wpaw-slide-slides-to-scroll="<?php echo esc_attr( $instance['slides-to-scroll'] ); ?>"
+		data-wpaw-slide-fade="<?php echo esc_attr( 'fade' === $instance['type'] ? 1 : 0 ); ?>"
+		>
+
 		<div class="wpaw-slider__inner">
 			<div class="wpaw-slider__canvas">
 				<?php foreach ( $instance['images'] as $key => $image ) : ?>
@@ -67,31 +76,5 @@ if ( 'fade' === $instance['type'] ) {
 			</div>
 		</div>
 	</div>
-
-	<script>
-	jQuery(function($) {
-		$('#wpaw-slider-<?php echo esc_attr( $args['widget_id'] ); ?> .wpaw-slider__canvas').slick({
-			"speed": <?php echo esc_js( $instance['duration'] ); ?>,
-			"autoplaySpeed": <?php echo esc_js( $instance['interval'] ); ?>,
-			"slidesToShow": <?php echo esc_js( $instance['slides-to-show'] ); ?>,
-			"slidesToScroll": <?php echo esc_js( $instance['slides-to-scroll'] ); ?>,
-			"autoplay": true,
-			"fade": <?php echo esc_js( $fade ); ?>,
-			"dots": true,
-			"infinite": true,
-			"adaptiveHeight": true,
-			"arrows": false,
-			"responsive": [
-				{
-					"breakpoint": 1024,
-					"settings": {
-						"slidesToShow": 1,
-						"slidesToScroll": 1
-					}
-				}
-			]
-		});
-	});
-	</script>
 
 <?php echo wp_kses_post( $args['after_widget'] ); ?>

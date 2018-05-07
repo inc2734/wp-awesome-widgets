@@ -38,6 +38,8 @@ new Inc2734\WP_Awesome_Widgets\Awesome_Widgets();
 ```
 // Using default styles (.js)
 import 'vendor/inc2734/wp-awesome-widgets/src/assets/js/wp-awesome-widgets.js';
+$('.wpaw-pickup-slider__canvas').WpawPickupSlider();
+$('.wpaw-slider__canvas').WpawSlider();
 ```
 
 ### How to overwite widget templates

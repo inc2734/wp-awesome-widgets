@@ -1,28 +1,56 @@
-(function($) {
-  $('.wpaw-pickup-slider__canvas').each((i, e) => {
-    const slider = $(e);
+'use strict';
 
-    slider.on('init setPosition', (event, slick) => {
-      setSliderHeight();
+import $ from 'jquery';
+
+$.fn.WpawPickupSlider = function() {
+  const methods = {
+    setItemHeight: function(items) {
+      let sliderHeight = 0;
+      items.css('min-height', '');
+      items.each((i, e) => {
+        const slide = $(e);
+        const naturalHeight   = slide.outerHeight();
+        const recommendHeight = slide.outerWidth() * 0.5625;
+        if (sliderHeight < naturalHeight || sliderHeight < recommendHeight) {
+          if (recommendHeight < naturalHeight) {
+            sliderHeight = naturalHeight;
+          } else {
+            sliderHeight = recommendHeight;
+          }
+        }
+      });
+      items.css('min-height', sliderHeight);
+    }
+  };
+
+  let windowWidth = $(window).width();
+
+  return this.each((i, e) => {
+    const slider = $(e);
+    let sliderWidth = false;
+
+    slider.on('init', (event, slick) => {
+      setTimeout(() => {
+        methods.setItemHeight(slider.find('.wpaw-pickup-slider__item'));
+      }, 0);
     });
 
-    function setSliderHeight() {
-      let sliderHeight = 0;
-      slider.find('.wpaw-pickup-slider__item')
-        .css('min-height', '')
-        .each((i, e) => {
-          const slide = $(e);
-          const recommendHeight = slide.outerWidth() * 0.5625;
-          const naturalHeight = slide.outerHeight();
-          let height = recommendHeight;
-          if (recommendHeight < naturalHeight) {
-            height = naturalHeight;
-          }
-          if (sliderHeight < height) {
-            sliderHeight = height;
-          }
-        })
-        .css('min-height', sliderHeight);
-    }
+    slider.on('setPosition', (event, slick) => {
+      if (slick.windowWidth !== windowWidth || slick.slideWidth !== sliderWidth) {
+        methods.setItemHeight(slider.find('.wpaw-pickup-slider__item'));
+        windowWidth = slick.windowWidth;
+        sliderWidth = slick.slideWidth;
+      }
+    });
+
+    slider.slick({
+      "speed": 500,
+      "autoplaySpeed": 4000,
+      "slidesToShow": 1,
+      "fade": true,
+      "autoplay": true,
+      "dots": false,
+      "infinite": true
+    });
   });
-})(jQuery);
+};
