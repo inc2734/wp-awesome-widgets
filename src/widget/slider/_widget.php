@@ -29,11 +29,11 @@ if ( 'fade' === $instance['type'] ) {
 	<div
 		class="wpaw-slider wpaw-slider--<?php echo esc_attr( $args['widget_id'] ); ?>"
 		id="wpaw-slider-<?php echo esc_attr( $args['widget_id'] ); ?>"
-		data-wpaw-slide-duration="<?php echo esc_attr( $instance['duration'] ); ?>"
-		data-wpaw-slide-interval="<?php echo esc_attr( $instance['interval'] ); ?>"
-		data-wpaw-slide-slides-to-show="<?php echo esc_attr( $instance['slides-to-show'] ); ?>"
-		data-wpaw-slide-slides-to-scroll="<?php echo esc_attr( $instance['slides-to-scroll'] ); ?>"
-		data-wpaw-slide-fade="<?php echo esc_attr( 'fade' === $instance['type'] ? 1 : 0 ); ?>"
+		data-wpaw-slider-duration="<?php echo esc_attr( $instance['duration'] ); ?>"
+		data-wpaw-slider-interval="<?php echo esc_attr( $instance['interval'] ); ?>"
+		data-wpaw-slider-slides-to-show="<?php echo esc_attr( $instance['slides-to-show'] ); ?>"
+		data-wpaw-slider-slides-to-scroll="<?php echo esc_attr( $instance['slides-to-scroll'] ); ?>"
+		data-wpaw-slider-fade="<?php echo esc_attr( 'fade' === $instance['type'] ? 'true' : 'false' ); ?>"
 		>
 
 		<div class="wpaw-slider__inner">

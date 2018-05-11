@@ -44,12 +44,12 @@ $.fn.WpawSlider = function() {
     });
 
     slider.slick({
-      "speed": slider.attr('data-wpaw-slide-duration'),
-      "autoplaySpeed": slider.attr('data-wpaw-slide-interval'),
-      "slidesToShow": slider.attr('data-wpaw-slide-slides-to-show'),
-      "slidesToScroll": slider.attr('data-wpaw-slide-slides-to-scroll'),
+      "speed": slider.attr('data-wpaw-slider-duration'),
+      "autoplaySpeed": parseInt(slider.closest('.wpaw-slider').attr('data-wpaw-slider-interval')),
+      "slidesToShow": parseInt(slider.closest('.wpaw-slider').attr('data-wpaw-slider-slides-to-show')),
+      "slidesToScroll": parseInt(slider.closest('.wpaw-slider').attr('data-wpaw-slider-slides-to-scroll')),
       "autoplay": true,
-      "fade": slider.attr('data-wpaw-slide-fade'),
+      "fade": 'true' === slider.closest('.wpaw-slider').attr('data-wpaw-slider-fade'),
       "dots": true,
       "infinite": true,
       "arrows": false,
