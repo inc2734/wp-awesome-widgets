@@ -39,8 +39,12 @@ if ( 'fade' === $instance['type'] ) {
 		<div class="wpaw-slider__inner">
 			<div class="wpaw-slider__canvas">
 				<?php foreach ( $instance['images'] as $key => $image ) : ?>
+					<?php
+					$thumbnail_size = wp_is_mobile() ? 'large' : 'full';
+					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_slider_image_size', $thumbnail_size, wp_is_mobile(), $args['widget_id'] );
+					?>
 					<div>
-						<div class="wpaw-slider__item wpaw-slider__item--<?php echo esc_attr( $key ); ?>" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $image['src'], 'full' ) ); ?>);">
+						<div class="wpaw-slider__item wpaw-slider__item--<?php echo esc_attr( $key ); ?>" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $image['src'], $thumbnail_size ) ); ?>);">
 							<?php if ( 0 < $image['mask-opacity'] ) : ?>
 								<div class="wpaw-slider__mask"
 									style="background-color: <?php echo esc_attr( sanitize_hex_color( $image['mask-color'] ) ); ?>; opacity: <?php echo esc_attr( $image['mask-opacity'] ); ?>"

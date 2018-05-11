@@ -41,8 +41,11 @@ global $post;
 		<div class="wpaw-pickup-slider__inner">
 			<div class="wpaw-pickup-slider__canvas">
 				<?php foreach ( $pickup_posts as $post ) : ?>
-					<?php setup_postdata( $post ); ?>
-					<?php $thumbnail_size = wp_is_mobile() ? 'large' : 'full'; ?>
+					<?php
+					setup_postdata( $post );
+					$thumbnail_size = wp_is_mobile() ? 'large' : 'full';
+					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_pickup_slider_image_size', $thumbnail_size, wp_is_mobile(), $args['widget_id'] );
+					?>
 					<div class="wpaw-pickup-slider__item">
 						<div class="wpaw-pickup-slider__figure"
 							style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), $thumbnail_size ) ); ?>);">
