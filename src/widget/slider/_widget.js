@@ -44,7 +44,7 @@ $.fn.WpawSlider = function() {
     });
 
     slider.slick({
-      "speed": slider.attr('data-wpaw-slider-duration'),
+      "speed": parseInt(slider.closest('.wpaw-slider').attr('data-wpaw-slider-duration')),
       "autoplaySpeed": parseInt(slider.closest('.wpaw-slider').attr('data-wpaw-slider-interval')),
       "slidesToShow": parseInt(slider.closest('.wpaw-slider').attr('data-wpaw-slider-slides-to-show')),
       "slidesToScroll": parseInt(slider.closest('.wpaw-slider').attr('data-wpaw-slider-slides-to-scroll')),
