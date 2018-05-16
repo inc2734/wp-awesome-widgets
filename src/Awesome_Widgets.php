@@ -27,6 +27,7 @@ class Awesome_Widgets {
 		}
 
 		add_action( 'admin_enqueue_scripts', [ $this, '_admin_enqueue_scripts' ], 9 );
+		add_action( 'elementor/editor/before_enqueue_scripts', [ $this, '_admin_enqueue_scripts' ] );
 	}
 
 	public function _admin_enqueue_scripts() {
