@@ -8,6 +8,14 @@
 if ( empty( $instance['code'] ) ) {
 	return;
 }
+
+wp_enqueue_script(
+	'google-adsense',
+	'//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+	[],
+	false,
+	true
+);
 ?>
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>

@@ -24,6 +24,8 @@ class Inc2734_WP_Awesome_Widgets_Google_Adsense extends Inc2734_WP_Awesome_Widge
 
 	public function update( $new_instance, $old_instance ) {
 		$new_instance = shortcode_atts( $this->_defaults, $new_instance );
+		$new_instance['code'] = preg_replace( '@<script>[^<]*<\/script>@s', '', $new_instance['code'] );
+		$new_instance['code'] = strip_tags( $new_instance['code'], '<ins>' );
 		return $new_instance;
 	}
 }

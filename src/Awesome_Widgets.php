@@ -124,26 +124,20 @@ function inc2734_wpaw_display_adsense_code( $code, $size = null ) {
 		}
 	}
 
-	if ( class_exists( 'Jetpack' ) ) {
-		// @todo
-		// @codingStandardsIgnoreStart
-		echo $code;
-		// @codingStandardsIgnoreEnd
-	} else {
-		echo wp_kses( $code, [
-			'script' => [
-				'async' => [],
-				'src'   => [],
-			],
-			'ins' => [
-				'class'          => [],
-				'style'          => [],
-				'data-ad-client' => [],
-				'data-ad-slot'   => [],
-				'data-ad-format' => [],
-			],
-		] );
+	if ( ! preg_match( '/<script>/s', $code ) ) {
+		if ( ! preg_match( '/<ins /s', $code ) ) {
+			// Auto ads.
+			$code = '<script>' . $code . '</script>';
+		} else {
+			// Not auto ads.
+			$code .= '<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
+		}
 	}
+
+	// @todo
+	// @codingStandardsIgnoreStart
+	echo $code;
+	// @codingStandardsIgnoreEnd
 
 	remove_filter( 'safe_style_css', __NAMESPACE__ . '\\inc2734_wpaw_safe_style_css_display' );
 }

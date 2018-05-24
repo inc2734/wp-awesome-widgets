@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-04-23 07:02:00+00:00\n"
+"POT-Creation-Date: 2018-05-24 15:48:59+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,43 +49,47 @@ msgstr ""
 msgid "Adsense code"
 msgstr ""
 
-#: widget/google-adsense/_form.php:17
+#: widget/google-adsense/_form.php:19
 msgid "Past the code of the responsive ad unit."
 msgstr ""
 
-#: widget/google-adsense/_form.php:21
+#: widget/google-adsense/_form.php:20
+msgid "Paste only the ins tag."
+msgstr ""
+
+#: widget/google-adsense/_form.php:25
 msgid "Size"
 msgstr ""
 
-#: widget/google-adsense/_form.php:29
+#: widget/google-adsense/_form.php:33
 msgid "Auto"
 msgstr ""
 
-#: widget/google-adsense/_form.php:30
+#: widget/google-adsense/_form.php:34
 msgid "Big banner (728 x 90)"
 msgstr ""
 
-#: widget/google-adsense/_form.php:31
+#: widget/google-adsense/_form.php:35
 msgid "Rectangle big (336 x 280)"
 msgstr ""
 
-#: widget/google-adsense/_form.php:32
+#: widget/google-adsense/_form.php:36
 msgid "Large mobile banner (320 x 100)"
 msgstr ""
 
-#: widget/google-adsense/_form.php:33
+#: widget/google-adsense/_form.php:37
 msgid "Large skyscraper (300 x 600)"
 msgstr ""
 
-#: widget/google-adsense/_form.php:34
+#: widget/google-adsense/_form.php:38
 msgid "Rectangle (300 x 250)"
 msgstr ""
 
-#: widget/google-adsense/_form.php:35
+#: widget/google-adsense/_form.php:39
 msgid "Rectangle big (336 x 280) two"
 msgstr ""
 
-#: widget/google-adsense/_form.php:36
+#: widget/google-adsense/_form.php:40
 msgid "Rectangle (300 x 250) two"
 msgstr ""
 
@@ -101,7 +105,7 @@ msgstr ""
 msgid "Display in random order"
 msgstr ""
 
-#: widget/pickup-slider/_widget.php:59
+#: widget/pickup-slider/_widget.php:62
 msgid "READ MORE"
 msgstr ""
 

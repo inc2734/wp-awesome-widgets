@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-04-23 07:02:00+00:00\n"
-"PO-Revision-Date: 2018-04-23 16:03+0900\n"
+"POT-Creation-Date: 2018-05-24 15:48:59+00:00\n"
+"PO-Revision-Date: 2018-05-25 00:49+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -52,43 +52,47 @@ msgstr "WPAW: 目次"
 msgid "Adsense code"
 msgstr "アドセンスコード"
 
-#: widget/google-adsense/_form.php:17
+#: widget/google-adsense/_form.php:19
 msgid "Past the code of the responsive ad unit."
 msgstr "レスポンシブ広告ユニットのコードを貼り付けてください。"
 
-#: widget/google-adsense/_form.php:21
+#: widget/google-adsense/_form.php:20
+msgid "Paste only the ins tag."
+msgstr "ins タグだけを貼り付けてください。"
+
+#: widget/google-adsense/_form.php:25
 msgid "Size"
 msgstr "サイズ"
 
-#: widget/google-adsense/_form.php:29
+#: widget/google-adsense/_form.php:33
 msgid "Auto"
 msgstr "自動"
 
-#: widget/google-adsense/_form.php:30
+#: widget/google-adsense/_form.php:34
 msgid "Big banner (728 x 90)"
 msgstr "ビッグバナー (728 x 90)"
 
-#: widget/google-adsense/_form.php:31
+#: widget/google-adsense/_form.php:35
 msgid "Rectangle big (336 x 280)"
 msgstr "レクタングル 大 (336 x 280)"
 
-#: widget/google-adsense/_form.php:32
+#: widget/google-adsense/_form.php:36
 msgid "Large mobile banner (320 x 100)"
 msgstr "ラージモバイルバナー (320 x 100)"
 
-#: widget/google-adsense/_form.php:33
+#: widget/google-adsense/_form.php:37
 msgid "Large skyscraper (300 x 600)"
 msgstr "ラージ スカイスクレイパー (300 x 600)"
 
-#: widget/google-adsense/_form.php:34
+#: widget/google-adsense/_form.php:38
 msgid "Rectangle (300 x 250)"
 msgstr "レクタングル (300 x 250)"
 
-#: widget/google-adsense/_form.php:35
+#: widget/google-adsense/_form.php:39
 msgid "Rectangle big (336 x 280) two"
 msgstr "レクタングル大 (336 x 280) 2個"
 
-#: widget/google-adsense/_form.php:36
+#: widget/google-adsense/_form.php:40
 msgid "Rectangle (300 x 250) two"
 msgstr "レクタングル (300 x 250) 2個"
 
@@ -104,7 +108,7 @@ msgstr "「pickup」タグが付与された記事をスライダーとして表
 msgid "Display in random order"
 msgstr "ランダムな順序で表示"
 
-#: widget/pickup-slider/_widget.php:59
+#: widget/pickup-slider/_widget.php:62
 msgid "READ MORE"
 msgstr "READ MORE"
 

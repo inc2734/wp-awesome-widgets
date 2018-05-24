@@ -13,8 +13,12 @@
 			name="<?php echo esc_attr( $this->get_field_name( 'code' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'code' ) ); ?>"
 			class="widefat"
-			><?php echo esc_attr( $instance['code'] ); ?></textarea><br>
-			<small><?php esc_html_e( 'Past the code of the responsive ad unit.', 'inc2734-wp-awesome-widgets' ); ?></small>
+			><?php echo esc_attr( $instance['code'] ); ?></textarea>
+		<br>
+		<small>
+			<?php esc_html_e( 'Past the code of the responsive ad unit.', 'inc2734-wp-awesome-widgets' ); ?>
+			<?php esc_html_e( 'Paste only the ins tag.', 'inc2734-wp-awesome-widgets' ); ?>
+		</small>
 	</p>
 
 	<p>
