@@ -7,6 +7,11 @@ $.fn.WpawSlider = function() {
     setItemHeight: function(items) {
       let sliderHeight = 0;
       items.css('min-height', '');
+
+      if (methods.isIE11()) {
+        items.css('height', '');
+      }
+
       items.each((i, e) => {
         const slide = $(e);
         const naturalHeight   = slide.outerHeight();
@@ -19,7 +24,16 @@ $.fn.WpawSlider = function() {
           }
         }
       });
+
+      if (methods.isIE11()) {
+        items.css('height', sliderHeight);
+      }
+
       items.css('min-height', sliderHeight);
+    },
+    isIE11: function() {
+      const ua = navigator.userAgent;
+      return ua.indexOf('Trident') !== -1;
     }
   };
 
