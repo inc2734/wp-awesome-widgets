@@ -16,6 +16,7 @@
 * Ranking (Self updating)
 * Taxonomy posts
 * Contents outline
+* Profile box
 
 ## Install
 ```

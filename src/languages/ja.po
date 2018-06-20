@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-05-24 15:48:59+00:00\n"
-"PO-Revision-Date: 2018-05-25 00:49+0900\n"
+"POT-Creation-Date: 2018-06-20 01:59:21+00:00\n"
+"PO-Revision-Date: 2018-06-20 11:00+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -204,6 +204,10 @@ msgstr "リンクテキスト"
 #: widget/pr-box/pr-box.php:37
 msgid "WPAW: PR Box"
 msgstr "WPAW: PR ボックス"
+
+#: widget/profile-box/profile-box.php:20
+msgid "WPAW: Profile box"
+msgstr "WPAW: プロフィールボックス"
 
 #: widget/ranking/ranking.php:25
 msgid "WPAW: Ranking (Manual update)"
