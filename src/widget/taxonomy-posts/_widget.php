@@ -18,9 +18,11 @@ if ( 2 !== count( $_taxonomy ) ) {
 
 $taxonomy_id = $_taxonomy[0];
 $term_id     = $_taxonomy[1];
+$taxonomy    = get_taxonomy( $taxonomy_id );
+$post_types  = empty( $taxonomy->object_type ) ? 'post' : $taxonomy->object_type;
 
 $recent_posts = get_posts( [
-	'post_type'      => 'post',
+	'post_type'      => $post_types,
 	'posts_per_page' => $instance['posts-per-page'],
 	'tax_query'      => [
 		[
