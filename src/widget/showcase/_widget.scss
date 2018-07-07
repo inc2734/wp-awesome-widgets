@@ -1,9 +1,31 @@
 .wpaw-showcase {
   position: relative;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+
+  &__bgimage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    > img {
+      position: absolute;
+      width: auto;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+
+      @media (max-width: 1023px) {
+        transform: translate(-50%, -50%) !important;
+      }
+    }
+  }
 
   &__mask {
     position: absolute;

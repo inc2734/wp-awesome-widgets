@@ -42,9 +42,21 @@ if ( 'fade' === $instance['type'] ) {
 					<?php
 					$thumbnail_size = wp_is_mobile() ? 'large' : 'full';
 					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_slider_image_size', $thumbnail_size, wp_is_mobile(), $args['widget_id'] );
+					$bgimage        = wp_get_attachment_image_url( $image['src'], $thumbnail_size );
+					$is_block_link  = ! empty( $image['link-url'] ) && empty( $image['link-text'] );
+					$wrapper_tag    = $is_block_link ? 'a' : 'div';
 					?>
 					<div>
-						<div class="wpaw-slider__item wpaw-slider__item--<?php echo esc_attr( $key ); ?>" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $image['src'], $thumbnail_size ) ); ?>);">
+						<<?php echo esc_attr( $wrapper_tag ); ?>
+							<?php if ( $is_block_link ) : ?>
+								href="<?php echo esc_url( $image['link-url'] ); ?>"
+							<?php endif; ?>
+							class="wpaw-slider__item wpaw-slider__item--<?php echo esc_attr( $key ); ?>"
+							<?php if ( $bgimage ) : ?>
+								style="background-image: url(<?php echo esc_url( $bgimage ); ?>);"
+							<?php endif; ?>
+							>
+
 							<?php if ( 0 < $image['mask-opacity'] ) : ?>
 								<div class="wpaw-slider__mask"
 									style="background-color: <?php echo esc_attr( sanitize_hex_color( $image['mask-color'] ) ); ?>; opacity: <?php echo esc_attr( $image['mask-opacity'] ); ?>"
@@ -74,7 +86,7 @@ if ( 'fade' === $instance['type'] ) {
 									</div>
 								</div>
 							<?php endif; ?>
-						</div>
+						</<?php echo esc_attr( $wrapper_tag ); ?>>
 					</div>
 				<?php endforeach; ?>
 			</div>

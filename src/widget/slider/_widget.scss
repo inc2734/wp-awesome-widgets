@@ -16,9 +16,11 @@
   }
 
   &__item {
+    display: block;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    text-decoration: none;
   }
 
   &__body {
