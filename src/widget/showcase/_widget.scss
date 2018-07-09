@@ -20,9 +20,20 @@
       transform: translate(-50%, -50%);
       min-width: 100%;
       min-height: 100%;
+      max-width: none;
+      max-height: none;
 
       @media (max-width: 1023px) {
-        transform: translate(-50%, -50%) !important;
+        transform: translate(-50%, -50%);
+      }
+
+      @supports (object-fit: cover) {
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transform: none;
       }
     }
   }
