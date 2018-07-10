@@ -29,10 +29,6 @@
 
       @supports (object-fit: cover) {
         object-fit: cover;
-        transform: none;
-        position: static;
-        top: auto;
-        left: auto;
         width: 100%;
       }
     }
