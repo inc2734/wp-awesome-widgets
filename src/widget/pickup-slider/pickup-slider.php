@@ -14,7 +14,8 @@ class Inc2734_WP_Awesome_Widgets_Pickup_Slider extends Inc2734_WP_Awesome_Widget
 	 * @var array
 	 */
 	protected $_defaults = [
-		'random' => 0,
+		'random'    => 0,
+		'link-type' => 'button',
 	];
 
 	public function __construct() {

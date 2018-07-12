@@ -22,4 +22,23 @@
 		>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'random' ) ); ?>"><?php esc_html_e( 'Display in random order', 'inc2734-wp-awesome-widgets' ); ?></label>
 	</p>
+
+	<p>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'link-type' ) ); ?>"><?php esc_html_e( 'Link type', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+		<select
+			name="<?php echo esc_attr( $this->get_field_name( 'link-type' ) ); ?>"
+			id="<?php echo esc_attr( $this->get_field_id( 'link-type' ) ); ?>"
+			class="widefat"
+		>
+			<?php
+			$link_types = [
+				'button' => __( 'Button link', 'inc2734-wp-awesome-widgets' ),
+				'overall' => __( 'Overall link', 'inc2734-wp-awesome-widgets' ),
+			];
+			?>
+			<?php foreach ( $link_types as $link_type => $label ) : ?>
+				<option value="<?php echo esc_attr( $link_type ); ?>" <?php selected( $link_type, $instance['link-type'], true ); ?>><?php echo esc_html( $label ); ?></option>
+			<?php endforeach; ?>
+		</select>
+	</p>
 </div>

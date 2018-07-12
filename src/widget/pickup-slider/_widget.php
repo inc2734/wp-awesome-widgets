@@ -34,6 +34,12 @@ global $post;
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
 
+	<?php
+	$is_block_link = 'overall' === $instance['link-type'];
+	$wrapper_tag   = $is_block_link ? 'a' : 'div';
+	$button_tag    = $is_block_link ? 'span' : 'a';
+	?>
+
 	<div
 		class="wpaw-pickup-slider wpaw-pickup-slider--<?php echo esc_attr( $args['widget_id'] ); ?>"
 		id="wpaw-pickup-slider-<?php echo esc_attr( $args['widget_id'] ); ?>"
@@ -46,7 +52,12 @@ global $post;
 					$thumbnail_size = wp_is_mobile() ? 'large' : 'full';
 					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_pickup_slider_image_size', $thumbnail_size, wp_is_mobile(), $args['widget_id'] );
 					?>
-					<div class="wpaw-pickup-slider__item">
+					<<?php echo esc_attr( $wrapper_tag ); ?>
+						class="wpaw-pickup-slider__item"
+						<?php if ( $is_block_link ) : ?>
+							href="<?php the_permalink(); ?>"
+						<?php endif; ?>
+						>
 						<div class="wpaw-pickup-slider__figure"
 							style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), $thumbnail_size ) ); ?>);">
 						</div>
@@ -59,9 +70,16 @@ global $post;
 								<li class="c-meta__item"><?php echo esc_html( get_the_time( get_option( 'date_format' ) ) ); ?></li>
 							</ul>
 
-							<a class="wpaw-pickup-slider__item-more" href="<?php the_permalink(); ?>"><?php esc_html_e( 'READ MORE', 'inc2734-wp-awesome-widgets' ); ?></a>
+							<<?php echo esc_attr( $button_tag ); ?>
+								class="wpaw-pickup-slider__item-more"
+								<?php if ( ! $is_block_link ) : ?>
+									href="<?php the_permalink(); ?>"
+								<?php endif; ?>
+								>
+								<?php esc_html_e( 'READ MORE', 'inc2734-wp-awesome-widgets' ); ?>
+							</<?php echo esc_attr( $button_tag ); ?>>
 						</div>
-					</div>
+					</<?php echo esc_attr( $wrapper_tag ); ?>>
 				<?php endforeach; ?>
 				<?php wp_reset_postdata(); ?>
 			</div>

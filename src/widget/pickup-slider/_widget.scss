@@ -9,6 +9,8 @@
 
   &__item {
     position: relative;
+    display: block;
+    text-decoration: none;
 
     .wpaw-pickup-slider__figure {
       position: absolute;

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-06-20 01:59:21+00:00\n"
-"PO-Revision-Date: 2018-06-20 11:00+0900\n"
+"POT-Creation-Date: 2018-07-12 04:13:45+00:00\n"
+"PO-Revision-Date: 2018-07-12 13:14+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -108,11 +108,23 @@ msgstr "「pickup」タグが付与された記事をスライダーとして表
 msgid "Display in random order"
 msgstr "ランダムな順序で表示"
 
-#: widget/pickup-slider/_widget.php:62
+#: widget/pickup-slider/_form.php:27
+msgid "Link type"
+msgstr "リンクの種類"
+
+#: widget/pickup-slider/_form.php:35
+msgid "Button link"
+msgstr "ボタンリンク"
+
+#: widget/pickup-slider/_form.php:36
+msgid "Overall link"
+msgstr "全体リンク"
+
+#: widget/pickup-slider/_widget.php:79
 msgid "READ MORE"
 msgstr "READ MORE"
 
-#: widget/pickup-slider/pickup-slider.php:21
+#: widget/pickup-slider/pickup-slider.php:22
 msgid "WPAW: Pickup slider"
 msgstr "WPAW: ピックアップスライダー"
 
@@ -205,7 +217,7 @@ msgstr "リンクテキスト"
 msgid "WPAW: PR Box"
 msgstr "WPAW: PR ボックス"
 
-#: widget/profile-box/profile-box.php:20
+#: widget/profile-box/profile-box.php:19
 msgid "WPAW: Profile box"
 msgstr "WPAW: プロフィールボックス"
 
