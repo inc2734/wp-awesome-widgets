@@ -19,26 +19,29 @@
 	</p>
 
 	<div class="wpaw-item-selector">
-		<select
-			name="<?php echo esc_attr( $this->get_field_name( 'post-type' ) ); ?>"
-			id="<?php echo esc_attr( $this->get_field_id( 'post-type' ) ); ?>"
-			class="wpaw-item-selector__post-type widefat"
-		>
-			<?php
-			$post_types = get_post_types( [
-				'public'       => true,
-				'show_ui'      => true,
-				'show_in_rest' => true,
-			], 'objects' );
-			unset( $post_types['attachment'] );
-			?>
-			<?php foreach ( $post_types as $post_type ) : ?>
-				<?php $rest_base = ( ! empty( $post_type->rest_base ) ) ? $post_type->rest_base : $post_type->name; ?>
-				<option value="<?php echo esc_attr( $rest_base ); ?>" <?php selected( $rest_base, $instance['post-type'] ); ?>>
-					<?php echo esc_html( $post_type->label ); ?>
-				</option>
-			<?php endforeach; ?>
-		</select>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'post-type' ) ); ?>"><?php esc_html_e( 'Post type', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+			<select
+				name="<?php echo esc_attr( $this->get_field_name( 'post-type' ) ); ?>"
+				id="<?php echo esc_attr( $this->get_field_id( 'post-type' ) ); ?>"
+				class="wpaw-item-selector__post-type widefat"
+			>
+				<?php
+				$post_types = get_post_types( [
+					'public'       => true,
+					'show_ui'      => true,
+					'show_in_rest' => true,
+				], 'objects' );
+				unset( $post_types['attachment'] );
+				?>
+				<?php foreach ( $post_types as $post_type ) : ?>
+					<?php $rest_base = ( ! empty( $post_type->rest_base ) ) ? $post_type->rest_base : $post_type->name; ?>
+					<option value="<?php echo esc_attr( $rest_base ); ?>" <?php selected( $rest_base, $instance['post-type'] ); ?>>
+						<?php echo esc_html( $post_type->label ); ?>
+					</option>
+				<?php endforeach; ?>
+			</select>
+		</p>
 
 		<ul class="wpaw-item-selector__selected-items">
 			<?php

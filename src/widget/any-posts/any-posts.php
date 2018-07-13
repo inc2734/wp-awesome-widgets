@@ -15,7 +15,7 @@ class Inc2734_WP_Awesome_Widgets_Any_Posts extends Inc2734_WP_Awesome_Widgets_Ab
 	 */
 	protected $_defaults = [
 		'title'          => null,
-		'post-type'      => 'posts',
+		'post-type'      => 'post',
 		'items'          => null,
 		'show-thumbnail' => 1,
 		'show-taxonomy'  => 1,
