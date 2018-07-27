@@ -42,17 +42,27 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 			$abspath = str_replace( '\\', '/', ABSPATH );
 			$__dir__ = str_replace( '\\', '/', __DIR__ );
 
+			$relative_path = str_replace( $abspath, '', $__dir__ ) . '/admin.js';
+			$src  = site_url( $relative_path );
+			$path = $abspath . $relative_path;
+
 			wp_enqueue_script(
 				'wp-awesome-widgets-pr-box',
-				site_url( str_replace( $abspath, '', $__dir__ ) . '/admin.js' ),
+				$src,
 				[ 'jquery', 'wp-awesome-widgets-repeater', 'wp-awesome-widgets-thumbnail-field' ],
-				false,
+				filemtime( $path ),
 				true
 			);
 
+			$relative_path = str_replace( $abspath, '', $__dir__ ) . '/admin.css';
+			$src  = site_url( $relative_path );
+			$path = $abspath . $relative_path;
+
 			wp_enqueue_style(
 				'wp-awesome-widgets-pr-box',
-				site_url( str_replace( $abspath, '', $__dir__ ) . '/admin.css' )
+				$src,
+				[],
+				filemtime( $path )
 			);
 		} );
 	}

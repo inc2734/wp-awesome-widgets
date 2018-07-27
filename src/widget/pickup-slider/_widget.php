@@ -23,13 +23,15 @@ if ( ! empty( $instance['random'] ) ) {
 	] );
 }
 
-$pickup_posts = get_posts( $query_args );
+$pickup_posts_query = new WP_Query( array_merge( $query_args, [
+	'ignore_sticky_posts' => true,
+	'no_found_rows'       => true,
+	'suppress_filters'    => true,
+] ) );
 
-if ( ! $pickup_posts ) {
+if ( ! $pickup_posts_query->have_posts() ) {
 	return;
 }
-
-global $post;
 ?>
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
@@ -46,9 +48,9 @@ global $post;
 		>
 		<div class="wpaw-pickup-slider__inner">
 			<div class="wpaw-pickup-slider__canvas">
-				<?php foreach ( $pickup_posts as $post ) : ?>
+				<?php while ( $pickup_posts_query->have_posts() ) : ?>
 					<?php
-					setup_postdata( $post );
+					$pickup_posts_query->the_post();
 					$thumbnail_size = wp_is_mobile() ? 'large' : 'full';
 					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_pickup_slider_image_size', $thumbnail_size, wp_is_mobile(), $args['widget_id'] );
 					?>
@@ -66,7 +68,7 @@ global $post;
 								<?php the_title(); ?>
 							</div>
 							<ul class="wpaw-pickup-slider__item-meta c-meta">
-								<li class="c-meta__item c-meta__item--author"><?php echo get_avatar( $post->post_author ); ?><?php echo esc_html( get_the_author() ); ?></li>
+								<li class="c-meta__item c-meta__item--author"><?php echo get_avatar( get_post()->post_author ); ?><?php echo esc_html( get_the_author() ); ?></li>
 								<li class="c-meta__item"><?php echo esc_html( get_the_time( get_option( 'date_format' ) ) ); ?></li>
 							</ul>
 
@@ -80,7 +82,7 @@ global $post;
 							</<?php echo esc_attr( $button_tag ); ?>>
 						</div>
 					</<?php echo esc_attr( $wrapper_tag ); ?>>
-				<?php endforeach; ?>
+				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 			</div>
 		</div>

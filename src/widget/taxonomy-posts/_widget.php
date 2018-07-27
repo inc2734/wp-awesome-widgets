@@ -5,8 +5,6 @@
  * @license GPL-2.0+
  */
 
-global $post;
-
 if ( empty( $instance['taxonomy'] ) ) {
 	return;
 }
@@ -21,7 +19,7 @@ $term_id     = $_taxonomy[1];
 $taxonomy    = get_taxonomy( $taxonomy_id );
 $post_types  = empty( $taxonomy->object_type ) ? 'post' : $taxonomy->object_type;
 
-$recent_posts = get_posts( [
+$taxonomy_posts_query = new WP_Query( [
 	'post_type'      => $post_types,
 	'posts_per_page' => $instance['posts-per-page'],
 	'tax_query'      => [
@@ -30,7 +28,14 @@ $recent_posts = get_posts( [
 			'terms'    => $term_id,
 		],
 	],
+	'ignore_sticky_posts' => true,
+	'no_found_rows'       => true,
+	'suppress_filters'    => true,
 ] );
+
+if ( ! $taxonomy_posts_query->have_posts() ) {
+	return;
+}
 ?>
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
@@ -47,8 +52,8 @@ $recent_posts = get_posts( [
 		>
 
 		<ul class="wpaw-taxonomy-posts__list">
-			<?php foreach ( $recent_posts as $post ) : ?>
-				<?php setup_postdata( $post ); ?>
+			<?php while ( $taxonomy_posts_query->have_posts() ) : ?>
+				<?php $taxonomy_posts_query->the_post(); ?>
 				<li class="wpaw-taxonomy-posts__item">
 					<a href="<?php the_permalink(); ?>">
 
@@ -65,7 +70,7 @@ $recent_posts = get_posts( [
 
 					</a>
 				</li>
-			<?php endforeach; ?>
+			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 		</ul>
 	</div>

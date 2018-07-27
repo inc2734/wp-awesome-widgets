@@ -8,8 +8,6 @@
 if ( ! is_singular() ) {
 	return;
 }
-
-global $post;
 ?>
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>

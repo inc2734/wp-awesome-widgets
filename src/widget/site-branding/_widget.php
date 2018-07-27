@@ -4,8 +4,6 @@
  * @author inc2734
  * @license GPL-2.0+
  */
-
-global $post;
 ?>
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>

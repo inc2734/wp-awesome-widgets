@@ -38,50 +38,84 @@ class Awesome_Widgets {
 		$abspath = str_replace( '\\', '/', ABSPATH );
 		$__dir__ = str_replace( '\\', '/', __DIR__ );
 
+		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/js/color-picker-field.js';
+		$src  = site_url( $relative_path );
+		$path = $abspath . $relative_path;
+
 		wp_enqueue_script(
 			'wp-awesome-widgets-color-picker-field',
-			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/js/color-picker-field.js' ),
+			$src,
 			[ 'jquery', 'wp-color-picker' ],
-			false,
+			filemtime( $path ),
 			true
 		);
 
+		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/js/thumbnail-field.js';
+		$src  = site_url( $relative_path );
+		$path = $abspath . $relative_path;
+
 		wp_enqueue_script(
 			'wp-awesome-widgets-thumbnail-field',
-			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/js/thumbnail-field.js' ),
+			$src,
 			[ 'jquery' ],
-			false,
+			filemtime( $path ),
 			true
 		);
+
+		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/css/thumbnail-field.css';
+		$src  = site_url( $relative_path );
+		$path = $abspath . $relative_path;
 
 		wp_enqueue_style(
 			'wp-awesome-widgets-thumbnail-field',
-			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/css/thumbnail-field.css' )
+			$src,
+			[],
+			filemtime( $path )
 		);
+
+		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/js/repeater.js';
+		$src  = site_url( $relative_path );
+		$path = $abspath . $relative_path;
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-repeater',
-			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/js/repeater.js' ),
+			$src,
 			[ 'jquery', 'jquery-ui-sortable' ],
-			false,
+			filemtime( $path ),
 			true
 		);
 
+		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/css/repeater.css';
+		$src  = site_url( $relative_path );
+		$path = $abspath . $relative_path;
+
 		wp_enqueue_style(
 			'wp-awesome-widgets-repeater',
-			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/css/repeater.css' )
+			$src,
+			[],
+			filemtime( $path )
 		);
+
+		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/css/item-selector.css';
+		$src  = site_url( $relative_path );
+		$path = $abspath . $relative_path;
 
 		wp_enqueue_style(
 			'wp-awesome-widgets-item-selector',
-			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/css/item-selector.css' )
+			$src,
+			[],
+			filemtime( $path )
 		);
+
+		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/js/item-selector.js';
+		$src  = site_url( $relative_path );
+		$path = $abspath . $relative_path;
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-item-selector',
-			site_url( str_replace( $abspath, '', $__dir__ ) . '/assets/js/item-selector.js' ),
+			$src,
 			[ 'jquery', 'jquery-ui-sortable' ],
-			false,
+			filemtime( $path ),
 			true
 		);
 

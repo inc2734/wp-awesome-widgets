@@ -13,7 +13,7 @@ wp_enqueue_script(
 	'google-adsense',
 	'//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
 	[],
-	false,
+	1,
 	true
 );
 ?>
