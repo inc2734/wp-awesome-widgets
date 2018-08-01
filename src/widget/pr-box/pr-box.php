@@ -19,9 +19,11 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 		'bg-color' => '#fff',
 		'items'    => [
 			[
-				'src'     => '',
-				'title'   => '',
-				'summary' => '',
+				'src'       => '',
+				'title'     => '',
+				'summary'   => '',
+				'link-text' => '',
+				'link-url'  => '',
 			],
 		],
 		'thumbnail-size'         => 'medium',

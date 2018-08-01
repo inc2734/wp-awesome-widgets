@@ -86,6 +86,28 @@
 						><?php echo esc_textarea( $item['summary'] ); ?></textarea>
 					</p>
 
+					<p>
+						<label for="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][link-url]"><?php esc_html_e( 'Link URL', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+						<input
+							type="text"
+							name="<?php echo esc_attr( $this->get_field_name( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][link-url]"
+							id="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][link-url]"
+							class="widefat"
+							value="<?php echo esc_attr( $item['link-url'] ); ?>"
+						>
+					</p>
+
+					<p>
+						<label for="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][link-text]"><?php esc_html_e( 'Link text', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+						<input
+							type="text"
+							name="<?php echo esc_attr( $this->get_field_name( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][link-text]"
+							id="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][link-text]"
+							class="widefat"
+							value="<?php echo esc_attr( $item['link-text'] ); ?>"
+						>
+					</p>
+
 					<div class="wpaw-repeaters__item-controls">
 						<a class="button-link button-link-delete"><?php esc_html_e( 'Delete', 'inc2734-wp-awesome-widgets' ); ?></a>
 					</div>
