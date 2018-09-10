@@ -43,12 +43,9 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 				wp_enqueue_media();
 			}
 
-			$abspath = str_replace( '\\', '/', ABSPATH );
-			$__dir__ = str_replace( '\\', '/', __DIR__ );
-
-			$relative_path = str_replace( $abspath, '', $__dir__ ) . '/admin.js';
-			$src  = site_url( $relative_path );
-			$path = $abspath . $relative_path;
+			$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/widget/slider/admin.js';
+			$src  = get_template_directory_uri() . $relative_path;
+			$path = get_template_directory() . $relative_path;
 
 			wp_enqueue_script(
 				'wp-awesome-widgets-slider',
@@ -58,9 +55,9 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 				true
 			);
 
-			$relative_path = str_replace( $abspath, '', $__dir__ ) . '/admin.css';
-			$src  = site_url( $relative_path );
-			$path = $abspath . $relative_path;
+			$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/widget/slider/admin.css';
+			$src  = get_template_directory_uri() . $relative_path;
+			$path = get_template_directory() . $relative_path;
 
 			wp_enqueue_style(
 				'wp-awesome-widgets-slider',

@@ -32,12 +32,9 @@ class Inc2734_WP_Awesome_Widgets_Showcase extends Inc2734_WP_Awesome_Widgets_Abs
 		] );
 
 		add_action( 'admin_enqueue_scripts', function() {
-			$abspath = str_replace( '\\', '/', ABSPATH );
-			$__dir__ = str_replace( '\\', '/', __DIR__ );
-
-			$relative_path = str_replace( $abspath, '', $__dir__ ) . '/admin.css';
-			$src  = site_url( $relative_path );
-			$path = $abspath . $relative_path;
+			$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/widget/showcase/admin.css';
+			$src  = get_template_directory_uri() . $relative_path;
+			$path = get_template_directory() . $relative_path;
 
 			wp_enqueue_style(
 				'wp-awesome-widgets-showcase',

@@ -35,12 +35,9 @@ class Awesome_Widgets {
 			wp_enqueue_media();
 		}
 
-		$abspath = str_replace( '\\', '/', ABSPATH );
-		$__dir__ = str_replace( '\\', '/', __DIR__ );
-
-		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/js/color-picker-field.js';
-		$src  = site_url( $relative_path );
-		$path = $abspath . $relative_path;
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/js/color-picker-field.js';
+		$src  = get_template_directory_uri() . $relative_path;
+		$path = get_template_directory() . $relative_path;
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-color-picker-field',
@@ -50,9 +47,9 @@ class Awesome_Widgets {
 			true
 		);
 
-		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/js/thumbnail-field.js';
-		$src  = site_url( $relative_path );
-		$path = $abspath . $relative_path;
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/js/thumbnail-field.js';
+		$src  = get_template_directory_uri() . $relative_path;
+		$path = get_template_directory() . $relative_path;
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-thumbnail-field',
@@ -62,9 +59,9 @@ class Awesome_Widgets {
 			true
 		);
 
-		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/css/thumbnail-field.css';
-		$src  = site_url( $relative_path );
-		$path = $abspath . $relative_path;
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/css/thumbnail-field.css';
+		$src  = get_template_directory_uri() . $relative_path;
+		$path = get_template_directory() . $relative_path;
 
 		wp_enqueue_style(
 			'wp-awesome-widgets-thumbnail-field',
@@ -73,9 +70,9 @@ class Awesome_Widgets {
 			filemtime( $path )
 		);
 
-		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/js/repeater.js';
-		$src  = site_url( $relative_path );
-		$path = $abspath . $relative_path;
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/js/repeater.js';
+		$src  = get_template_directory_uri() . $relative_path;
+		$path = get_template_directory() . $relative_path;
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-repeater',
@@ -85,9 +82,9 @@ class Awesome_Widgets {
 			true
 		);
 
-		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/css/repeater.css';
-		$src  = site_url( $relative_path );
-		$path = $abspath . $relative_path;
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/css/repeater.css';
+		$src  = get_template_directory_uri() . $relative_path;
+		$path = get_template_directory() . $relative_path;
 
 		wp_enqueue_style(
 			'wp-awesome-widgets-repeater',
@@ -96,9 +93,9 @@ class Awesome_Widgets {
 			filemtime( $path )
 		);
 
-		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/css/item-selector.css';
-		$src  = site_url( $relative_path );
-		$path = $abspath . $relative_path;
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/css/item-selector.css';
+		$src  = get_template_directory_uri() . $relative_path;
+		$path = get_template_directory() . $relative_path;
 
 		wp_enqueue_style(
 			'wp-awesome-widgets-item-selector',
@@ -107,9 +104,9 @@ class Awesome_Widgets {
 			filemtime( $path )
 		);
 
-		$relative_path = str_replace( $abspath, '', $__dir__ ) . '/assets/js/item-selector.js';
-		$src  = site_url( $relative_path );
-		$path = $abspath . $relative_path;
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/js/item-selector.js';
+		$src  = get_template_directory_uri() . $relative_path;
+		$path = get_template_directory() . $relative_path;
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-item-selector',
