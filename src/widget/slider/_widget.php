@@ -19,7 +19,7 @@ if ( 'fade' === $instance['type'] ) {
 			.wpaw-slider--<?php echo esc_attr( $args['widget_id'] ); ?> .wpaw-slider__item--<?php echo esc_html( $key ); ?> .wpaw-slider__item-summary a {
 				color: <?php echo esc_html( $image['text-color'] ); ?>;
 			}
-			.wpaw-slider--<?php echo esc_attr( $args['widget_id'] ); ?> .wpaw-slider__item--<?php echo esc_html( $key ); ?> .wpaw-slider__item-more {
+			.wpaw-slider--<?php echo esc_attr( $args['widget_id'] ); ?> .wpaw-slider__item--<?php echo esc_html( $key ); ?> .wpaw-slider__item-more--ghost {
 				border-color: <?php echo esc_html( $image['text-color'] ); ?>;
 				color: <?php echo esc_html( $image['text-color'] ); ?>;
 			}
@@ -80,7 +80,13 @@ if ( 'fade' === $instance['type'] ) {
 
 										<?php if ( ! empty( $image['link-url'] ) && ! empty( $image['link-text'] ) ) : ?>
 											<div class="wpaw-slider__item-action">
-												<a class="wpaw-slider__item-more" href="<?php echo esc_url( $image['link-url'] ); ?>"><?php echo esc_html( $image['link-text'] ); ?></a>
+												<?php
+												$classes = [ 'wpaw-slider__item-more' ];
+												if ( 'ghost' === $image['btn-type'] ) {
+													$classes[] = 'wpaw-slider__item-more--ghost';
+												}
+												?>
+												<a class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" href="<?php echo esc_url( $image['link-url'] ); ?>"><?php echo esc_html( $image['link-text'] ); ?></a>
 											</div>
 										<?php endif; ?>
 									</div>

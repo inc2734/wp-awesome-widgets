@@ -16,22 +16,24 @@ if ( 2 !== count( $_taxonomy ) ) {
 
 $taxonomy_id = $_taxonomy[0];
 $term_id     = $_taxonomy[1];
-$taxonomy    = get_taxonomy( $taxonomy_id );
-$post_types  = empty( $taxonomy->object_type ) ? 'post' : $taxonomy->object_type;
+$_taxonomy   = get_taxonomy( $taxonomy_id );
+$post_types  = empty( $_taxonomy->object_type ) ? 'post' : $_taxonomy->object_type;
 
-$taxonomy_posts_query = new WP_Query( [
-	'post_type'      => $post_types,
-	'posts_per_page' => $instance['posts-per-page'],
-	'tax_query'      => [
-		[
-			'taxonomy' => $taxonomy_id,
-			'terms'    => $term_id,
+$taxonomy_posts_query = new WP_Query(
+	[
+		'post_type'      => $post_types,
+		'posts_per_page' => $instance['posts-per-page'],
+		'tax_query'      => [
+			[
+				'taxonomy' => $taxonomy_id,
+				'terms'    => $term_id,
+			],
 		],
-	],
-	'ignore_sticky_posts' => true,
-	'no_found_rows'       => true,
-	'suppress_filters'    => true,
-] );
+		'ignore_sticky_posts' => true,
+		'no_found_rows'       => true,
+		'suppress_filters'    => true,
+	]
+);
 
 if ( ! $taxonomy_posts_query->have_posts() ) {
 	return;

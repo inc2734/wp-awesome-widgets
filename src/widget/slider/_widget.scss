@@ -36,8 +36,10 @@
   }
 
   &__item-more {
-    border: 1px solid #fff;
-    color: #fff;
+    &--ghost {
+      border: 1px solid #fff;
+      color: #fff;
+    }
   }
 
   .slick-list {

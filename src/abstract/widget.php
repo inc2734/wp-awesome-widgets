@@ -68,10 +68,14 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 	protected function _render_widget( $args, $instance ) {
 		$widget_templates = apply_filters( 'inc2734_wp_awesome_widgets_widget_templates', 'templates/widget' );
 		if ( locate_template( $widget_templates . '/' . basename( $this->_path ) . '.php', false ) ) {
-			wpvc_get_template_part( $widget_templates . '/' . basename( $this->_path ), null, [
-				'args'     => $args,
-				'instance' => $instance,
-			] );
+			wpvc_get_template_part(
+				$widget_templates . '/' . basename( $this->_path ),
+				null,
+				[
+					'args'     => $args,
+					'instance' => $instance,
+				]
+			);
 			return;
 		}
 

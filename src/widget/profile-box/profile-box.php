@@ -16,9 +16,13 @@ class Inc2734_WP_Awesome_Widgets_Profile_Box extends Inc2734_WP_Awesome_Widgets_
 	protected $_defaults = [];
 
 	public function __construct() {
-		parent::__construct( false, __( 'WPAW: Profile box', 'inc2734-wp-awesome-widgets' ), [
-			'customize_selective_refresh' => false,
-		] );
+		parent::__construct(
+			false,
+			__( 'WPAW: Profile box', 'inc2734-wp-awesome-widgets' ),
+			[
+				'customize_selective_refresh' => false,
+			]
+		);
 	}
 
 	public function update( $new_instance, $old_instance ) {
@@ -27,6 +31,9 @@ class Inc2734_WP_Awesome_Widgets_Profile_Box extends Inc2734_WP_Awesome_Widgets_
 	}
 }
 
-add_action( 'widgets_init', function() {
-	register_widget( 'Inc2734_WP_Awesome_Widgets_Profile_Box' );
-} );
+add_action(
+	'widgets_init',
+	function() {
+		register_widget( 'Inc2734_WP_Awesome_Widgets_Profile_Box' );
+	}
+);

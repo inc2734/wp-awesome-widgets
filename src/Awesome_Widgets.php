@@ -116,9 +116,13 @@ class Awesome_Widgets {
 			true
 		);
 
-		wp_localize_script( 'wp-awesome-widgets-item-selector', 'wp_awesome_widgets_item_selector_wp_api', [
-			'root' => esc_url_raw( rest_url() ),
-		] );
+		wp_localize_script(
+			'wp-awesome-widgets-item-selector',
+			'wp_awesome_widgets_item_selector_wp_api',
+			[
+				'root' => esc_url_raw( rest_url() ),
+			]
+		);
 
 		wp_enqueue_style( 'wp-color-picker' );
 	}

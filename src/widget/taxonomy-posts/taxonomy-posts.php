@@ -30,6 +30,9 @@ class Inc2734_WP_Awesome_Widgets_Taxonomy_Posts extends Inc2734_WP_Awesome_Widge
 	}
 }
 
-add_action( 'widgets_init', function() {
-	register_widget( 'Inc2734_WP_Awesome_Widgets_Taxonomy_Posts' );
-} );
+add_action(
+	'widgets_init',
+	function() {
+		register_widget( 'Inc2734_WP_Awesome_Widgets_Taxonomy_Posts' );
+	}
+);

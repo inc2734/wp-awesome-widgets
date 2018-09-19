@@ -18,16 +18,24 @@ $query_args = [
 ];
 
 if ( ! empty( $instance['random'] ) ) {
-	$query_args = array_merge( $query_args, [
-		'orderby' => 'rand',
-	] );
+	$query_args = array_merge(
+		$query_args,
+		[
+			'orderby' => 'rand',
+		]
+	);
 }
 
-$pickup_posts_query = new WP_Query( array_merge( $query_args, [
-	'ignore_sticky_posts' => true,
-	'no_found_rows'       => true,
-	'suppress_filters'    => true,
-] ) );
+$pickup_posts_query = new WP_Query(
+	array_merge(
+		$query_args,
+		[
+			'ignore_sticky_posts' => true,
+			'no_found_rows'       => true,
+			'suppress_filters'    => true,
+		]
+	)
+);
 
 if ( ! $pickup_posts_query->have_posts() ) {
 	return;

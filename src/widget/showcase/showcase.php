@@ -27,22 +27,29 @@ class Inc2734_WP_Awesome_Widgets_Showcase extends Inc2734_WP_Awesome_Widgets_Abs
 	];
 
 	public function __construct() {
-		parent::__construct( false, __( 'WPAW: Showcase', 'inc2734-wp-awesome-widgets' ), [
-			'customize_selective_refresh' => true,
-		] );
+		parent::__construct(
+			false,
+			__( 'WPAW: Showcase', 'inc2734-wp-awesome-widgets' ),
+			[
+				'customize_selective_refresh' => true,
+			]
+		);
 
-		add_action( 'admin_enqueue_scripts', function() {
-			$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/widget/showcase/admin.css';
-			$src  = get_template_directory_uri() . $relative_path;
-			$path = get_template_directory() . $relative_path;
+		add_action(
+			'admin_enqueue_scripts',
+			function() {
+				$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/widget/showcase/admin.css';
+				$src  = get_template_directory_uri() . $relative_path;
+				$path = get_template_directory() . $relative_path;
 
-			wp_enqueue_style(
-				'wp-awesome-widgets-showcase',
-				$src,
-				[],
-				filemtime( $path )
-			);
-		} );
+				wp_enqueue_style(
+					'wp-awesome-widgets-showcase',
+					$src,
+					[],
+					filemtime( $path )
+				);
+			}
+		);
 	}
 
 	public function update( $new_instance, $old_instance ) {
@@ -51,6 +58,9 @@ class Inc2734_WP_Awesome_Widgets_Showcase extends Inc2734_WP_Awesome_Widgets_Abs
 	}
 }
 
-add_action( 'widgets_init', function() {
+add_action(
+	'widgets_init',
+	function() {
 	register_widget( 'Inc2734_WP_Awesome_Widgets_Showcase' );
-} );
+	}
+);

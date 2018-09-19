@@ -24,6 +24,7 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 				'mask-color'   => '#000',
 				'mask-opacity' => 0,
 				'text-color'   => '#fff',
+				'btn-type'     => 'ghost',
 			],
 		],
 		'type'             => 'slide',
@@ -34,38 +35,45 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 	];
 
 	public function __construct() {
-		parent::__construct( false, __( 'WPAW: Slider', 'inc2734-wp-awesome-widgets' ), [
-			'customize_selective_refresh' => true,
-		] );
+		parent::__construct(
+			false,
+			__( 'WPAW: Slider', 'inc2734-wp-awesome-widgets' ),
+			[
+				'customize_selective_refresh' => true,
+			]
+		);
 
-		add_action( 'admin_enqueue_scripts', function() {
-			if ( ! did_action( 'wp_enqueue_media' ) ) {
-				wp_enqueue_media();
+		add_action(
+			'admin_enqueue_scripts',
+			function() {
+				if ( ! did_action( 'wp_enqueue_media' ) ) {
+					wp_enqueue_media();
+				}
+
+				$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/widget/slider/admin.js';
+				$src  = get_template_directory_uri() . $relative_path;
+				$path = get_template_directory() . $relative_path;
+
+				wp_enqueue_script(
+					'wp-awesome-widgets-slider',
+					$src,
+					[ 'jquery', 'wp-awesome-widgets-repeater', 'wp-awesome-widgets-thumbnail-field' ],
+					filemtime( $path ),
+					true
+				);
+
+				$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/widget/slider/admin.css';
+				$src  = get_template_directory_uri() . $relative_path;
+				$path = get_template_directory() . $relative_path;
+
+				wp_enqueue_style(
+					'wp-awesome-widgets-slider',
+					$src,
+					[],
+					filemtime( $path )
+				);
 			}
-
-			$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/widget/slider/admin.js';
-			$src  = get_template_directory_uri() . $relative_path;
-			$path = get_template_directory() . $relative_path;
-
-			wp_enqueue_script(
-				'wp-awesome-widgets-slider',
-				$src,
-				[ 'jquery', 'wp-awesome-widgets-repeater', 'wp-awesome-widgets-thumbnail-field' ],
-				filemtime( $path ),
-				true
-			);
-
-			$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/widget/slider/admin.css';
-			$src  = get_template_directory_uri() . $relative_path;
-			$path = get_template_directory() . $relative_path;
-
-			wp_enqueue_style(
-				'wp-awesome-widgets-slider',
-				$src,
-				[],
-				filemtime( $path )
-			);
-		} );
+		);
 	}
 
 	public function update( $new_instance, $old_instance ) {
@@ -102,6 +110,9 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Inc2734_WP_Awesome_Widgets_Abstr
 	}
 }
 
-add_action( 'widgets_init', function() {
-	register_widget( 'Inc2734_WP_Awesome_Widgets_Slider' );
-} );
+add_action(
+	'widgets_init',
+	function() {
+		register_widget( 'Inc2734_WP_Awesome_Widgets_Slider' );
+	}
+);

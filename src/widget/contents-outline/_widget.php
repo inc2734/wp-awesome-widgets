@@ -32,11 +32,13 @@ if ( ! is_singular() ) {
 		<?php endif; ?>
 
 		<?php
-		echo do_shortcode( sprintf(
-			'[wp_contents_outline post_id="%1$d" selector=".c-entry__content" display_before_first_heading="false" headings="%2$s"]',
-			get_the_ID(),
-			implode( ',', array_filter( $instance['headings'] ) )
-		) );
+		echo do_shortcode(
+			sprintf(
+				'[wp_contents_outline post_id="%1$d" selector=".c-entry__content" display_before_first_heading="false" headings="%2$s"]',
+				get_the_ID(),
+				implode( ',', array_filter( $instance['headings'] ) )
+			)
+		);
 		?>
 	</div>
 

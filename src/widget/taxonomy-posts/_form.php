@@ -20,16 +20,22 @@
 
 	<p>
 		<?php
-		$taxonomies = get_taxonomies( [
-			'public'  => true,
-			'show_ui' => true,
-		], 'names' );
+		$taxonomies = get_taxonomies(
+			[
+				'public'  => true,
+				'show_ui' => true,
+			],
+			'names'
+		);
 
 		$all_terms = [];
-		foreach ( $taxonomies as $taxonomy ) {
-			$all_terms[ $taxonomy ] = get_terms( $taxonomy, [
-				'parent' => 0,
-			] );
+		foreach ( $taxonomies as $_taxonomy ) {
+			$all_terms[ $_taxonomy ] = get_terms(
+				$_taxonomy,
+				[
+					'parent' => 0,
+				]
+			);
 		}
 		?>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Displayed term', 'inc2734-wp-awesome-widgets' ); ?></label><br>
@@ -43,9 +49,12 @@
 					<?php
 					if ( ! function_exists( 'wpaw_taxonomy_posts_display_children' ) ) {
 						function wpaw_taxonomy_posts_display_children( $taxonomy_id, $term_id, $saved_term, $hierarchy = 0 ) {
-							$terms = get_terms( $taxonomy_id, [
-								'parent' => $term_id,
-							] );
+							$terms = get_terms(
+								$taxonomy_id,
+								[
+									'parent' => $term_id,
+								]
+							);
 							?>
 							<?php foreach ( $terms as $term ) : ?>
 								<?php $value = $taxonomy_id . '@' . $term->term_id; ?>

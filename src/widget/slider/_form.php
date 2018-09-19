@@ -112,6 +112,25 @@
 						>
 					</p>
 
+					<p>
+						<label for="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][btn-type]"><?php esc_html_e( 'Button type', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+						<select
+							class="widefat"
+							name="<?php echo esc_attr( $this->get_field_name( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][btn-type]"
+							id="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][btn-type]"
+						>
+							<?php
+							$btn_types = [
+								'normal' => __( 'Normal button', 'inc2734-wp-awesome-widgets' ),
+								'ghost'  => __( 'Ghost button', 'inc2734-wp-awesome-widgets' ),
+							]
+							?>
+							<?php foreach ( $btn_types as $value => $label ) : ?>
+								<option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $image['btn-type'], true ); ?>><?php echo esc_html( $label ); ?></option>
+							<?php endforeach; ?>
+						</select>
+					</p>
+
 					<div class="wpaw-repeaters__item-controls">
 						<a class="button-link button-link-delete"><?php esc_html_e( 'Delete', 'inc2734-wp-awesome-widgets' ); ?></a>
 					</div>

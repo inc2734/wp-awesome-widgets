@@ -27,17 +27,20 @@
 				class="wpaw-item-selector__post-type widefat"
 			>
 				<?php
-				$post_types = get_post_types( [
-					'public'       => true,
-					'show_ui'      => true,
-					'show_in_rest' => true,
-				], 'objects' );
+				$post_types = get_post_types(
+					[
+						'public'       => true,
+						'show_ui'      => true,
+						'show_in_rest' => true,
+					],
+					'objects'
+				);
 				unset( $post_types['attachment'] );
 				?>
-				<?php foreach ( $post_types as $post_type ) : ?>
-					<?php $rest_base = ( ! empty( $post_type->rest_base ) ) ? $post_type->rest_base : $post_type->name; ?>
+				<?php foreach ( $post_types as $_post_type ) : ?>
+					<?php $rest_base = ( ! empty( $_post_type->rest_base ) ) ? $_post_type->rest_base : $_post_type->name; ?>
 					<option value="<?php echo esc_attr( $rest_base ); ?>" <?php selected( $rest_base, $instance['post-type'] ); ?>>
-						<?php echo esc_html( $post_type->label ); ?>
+						<?php echo esc_html( $_post_type->label ); ?>
 					</option>
 				<?php endforeach; ?>
 			</select>

@@ -36,34 +36,41 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 	];
 
 	public function __construct() {
-		parent::__construct( false, __( 'WPAW: PR Box', 'inc2734-wp-awesome-widgets' ), [
-			'customize_selective_refresh' => true,
-		] );
+		parent::__construct(
+			false,
+			__( 'WPAW: PR Box', 'inc2734-wp-awesome-widgets' ),
+			[
+				'customize_selective_refresh' => true,
+			]
+		);
 
-		add_action( 'admin_enqueue_scripts', function() {
-			$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/widget/pr-box/admin.js';
-			$src  = get_template_directory_uri() . $relative_path;
-			$path = get_template_directory() . $relative_path;
+		add_action(
+			'admin_enqueue_scripts',
+			function() {
+				$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/widget/pr-box/admin.js';
+				$src  = get_template_directory_uri() . $relative_path;
+				$path = get_template_directory() . $relative_path;
 
-			wp_enqueue_script(
-				'wp-awesome-widgets-pr-box',
-				$src,
-				[ 'jquery', 'wp-awesome-widgets-repeater', 'wp-awesome-widgets-thumbnail-field' ],
-				filemtime( $path ),
-				true
-			);
+				wp_enqueue_script(
+					'wp-awesome-widgets-pr-box',
+					$src,
+					[ 'jquery', 'wp-awesome-widgets-repeater', 'wp-awesome-widgets-thumbnail-field' ],
+					filemtime( $path ),
+					true
+				);
 
-			$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/widget/pr-box/admin.css';
-			$src  = get_template_directory_uri() . $relative_path;
-			$path = get_template_directory() . $relative_path;
+				$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/widget/pr-box/admin.css';
+				$src  = get_template_directory_uri() . $relative_path;
+				$path = get_template_directory() . $relative_path;
 
-			wp_enqueue_style(
-				'wp-awesome-widgets-pr-box',
-				$src,
-				[],
-				filemtime( $path )
-			);
-		} );
+				wp_enqueue_style(
+					'wp-awesome-widgets-pr-box',
+					$src,
+					[],
+					filemtime( $path )
+				);
+			}
+		);
 	}
 
 	public function update( $new_instance, $old_instance ) {
@@ -91,6 +98,9 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 	}
 }
 
-add_action( 'widgets_init', function() {
-	register_widget( 'Inc2734_WP_Awesome_Widgets_PR_Box' );
-} );
+add_action(
+	'widgets_init',
+	function() {
+		register_widget( 'Inc2734_WP_Awesome_Widgets_PR_Box' );
+	}
+);

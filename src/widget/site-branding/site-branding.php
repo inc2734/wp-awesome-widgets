@@ -18,9 +18,13 @@ class Inc2734_WP_Awesome_Widgets_Site_Branding extends Inc2734_WP_Awesome_Widget
 	];
 
 	public function __construct() {
-		parent::__construct( false, __( 'WPAW: Site branding', 'inc2734-wp-awesome-widgets' ), [
-			'customize_selective_refresh' => true,
-		] );
+		parent::__construct(
+			false,
+			__( 'WPAW: Site branding', 'inc2734-wp-awesome-widgets' ),
+			[
+				'customize_selective_refresh' => true,
+			]
+		);
 	}
 
 	public function update( $new_instance, $old_instance ) {
@@ -29,6 +33,9 @@ class Inc2734_WP_Awesome_Widgets_Site_Branding extends Inc2734_WP_Awesome_Widget
 	}
 }
 
-add_action( 'widgets_init', function() {
-	register_widget( 'Inc2734_WP_Awesome_Widgets_Site_Branding' );
-} );
+add_action(
+	'widgets_init',
+	function() {
+		register_widget( 'Inc2734_WP_Awesome_Widgets_Site_Branding' );
+	}
+);

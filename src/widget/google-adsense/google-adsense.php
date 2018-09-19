@@ -30,6 +30,9 @@ class Inc2734_WP_Awesome_Widgets_Google_Adsense extends Inc2734_WP_Awesome_Widge
 	}
 }
 
-add_action( 'widgets_init', function() {
-	register_widget( 'Inc2734_WP_Awesome_Widgets_Google_Adsense' );
-} );
+add_action(
+	'widgets_init',
+	function() {
+		register_widget( 'Inc2734_WP_Awesome_Widgets_Google_Adsense' );
+	}
+);
