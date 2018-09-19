@@ -1,6 +1,7 @@
 'use strict';
 
 import $ from 'jquery';
+import 'slick-carousel';
 
 $.fn.WpawSlider = function() {
   const methods = {

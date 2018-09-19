@@ -21,7 +21,6 @@
 ## Install
 ```
 $ composer require inc2734/wp-awesome-widgets
-$ npm install --save slick-caroucel
 ```
 
 ## How to use
@@ -29,18 +28,6 @@ $ npm install --save slick-caroucel
 <?php
 // When Using composer auto loader
 new Inc2734\WP_Awesome_Widgets\Awesome_Widgets();
-```
-
-```
-// Using default styles (.scss)
-@import 'vendor/inc2734/wp-awesome-widgets/src/assets/scss/wp-awesome-widgets';
-```
-
-```
-// Using default styles (.js)
-import 'vendor/inc2734/wp-awesome-widgets/src/assets/js/wp-awesome-widgets.js';
-$('.wpaw-pickup-slider__canvas').WpawPickupSlider();
-$('.wpaw-slider__canvas').WpawSlider();
 ```
 
 ### How to overwite widget templates

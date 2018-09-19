@@ -26,98 +26,76 @@ class Awesome_Widgets {
 			}
 		}
 
+		add_action( 'wp_enqueue_scripts', [ $this, '_wp_enqueue_scripts' ] );
 		add_action( 'admin_enqueue_scripts', [ $this, '_admin_enqueue_scripts' ], 9 );
 		add_action( 'elementor/editor/before_enqueue_scripts', [ $this, '_admin_enqueue_scripts' ] );
 	}
 
-	public function _admin_enqueue_scripts() {
-		if ( ! did_action( 'wp_enqueue_media' ) ) {
-			wp_enqueue_media();
-		}
-
-		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/js/color-picker-field.js';
+	/**
+	 * Enqueue assets
+	 *
+	 * @return void
+	 */
+	public function _wp_enqueue_scripts() {
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/css/wp-awesome-widgets.min.css';
 		$src  = get_template_directory_uri() . $relative_path;
 		$path = get_template_directory() . $relative_path;
 
-		wp_enqueue_script(
-			'wp-awesome-widgets-color-picker-field',
+		wp_enqueue_style(
+			'wp-awesome-widgets',
 			$src,
-			[ 'jquery', 'wp-color-picker' ],
-			filemtime( $path ),
-			true
+			[],
+			filemtime( $path )
 		);
 
-		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/js/thumbnail-field.js';
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/js/wp-awesome-widgets.min.js';
 		$src  = get_template_directory_uri() . $relative_path;
 		$path = get_template_directory() . $relative_path;
 
 		wp_enqueue_script(
-			'wp-awesome-widgets-thumbnail-field',
+			'wp-awesome-widgets',
 			$src,
 			[ 'jquery' ],
 			filemtime( $path ),
 			true
 		);
+	}
 
-		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/css/thumbnail-field.css';
+	/**
+	 * Enqueue assets for admin
+	 *
+	 * @return void
+	 */
+	public function _admin_enqueue_scripts() {
+		if ( ! did_action( 'wp_enqueue_media' ) ) {
+			wp_enqueue_media();
+		}
+
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/admin-css/wp-awesome-widgets-admin.min.css';
 		$src  = get_template_directory_uri() . $relative_path;
 		$path = get_template_directory() . $relative_path;
 
 		wp_enqueue_style(
-			'wp-awesome-widgets-thumbnail-field',
+			'wp-awesome-widgets-admin',
 			$src,
 			[],
 			filemtime( $path )
 		);
 
-		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/js/repeater.js';
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/admin-js/wp-awesome-widgets-admin.min.js';
 		$src  = get_template_directory_uri() . $relative_path;
 		$path = get_template_directory() . $relative_path;
 
 		wp_enqueue_script(
-			'wp-awesome-widgets-repeater',
+			'wp-awesome-widgets-admin',
 			$src,
-			[ 'jquery', 'jquery-ui-sortable' ],
-			filemtime( $path ),
-			true
-		);
-
-		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/css/repeater.css';
-		$src  = get_template_directory_uri() . $relative_path;
-		$path = get_template_directory() . $relative_path;
-
-		wp_enqueue_style(
-			'wp-awesome-widgets-repeater',
-			$src,
-			[],
-			filemtime( $path )
-		);
-
-		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/css/item-selector.css';
-		$src  = get_template_directory_uri() . $relative_path;
-		$path = get_template_directory() . $relative_path;
-
-		wp_enqueue_style(
-			'wp-awesome-widgets-item-selector',
-			$src,
-			[],
-			filemtime( $path )
-		);
-
-		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/js/item-selector.js';
-		$src  = get_template_directory_uri() . $relative_path;
-		$path = get_template_directory() . $relative_path;
-
-		wp_enqueue_script(
-			'wp-awesome-widgets-item-selector',
-			$src,
-			[ 'jquery', 'jquery-ui-sortable' ],
+			[ 'jquery', 'jquery-ui-sortable', 'wp-color-picker' ],
 			filemtime( $path ),
 			true
 		);
 
 		wp_localize_script(
-			'wp-awesome-widgets-item-selector',
+			'wp-awesome-widgets-admin',
 			'wp_awesome_widgets_item_selector_wp_api',
 			[
 				'root' => esc_url_raw( rest_url() ),
