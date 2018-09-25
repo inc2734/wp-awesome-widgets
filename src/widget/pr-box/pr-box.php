@@ -54,7 +54,7 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 				wp_enqueue_script(
 					'wp-awesome-widgets-pr-box',
 					$src,
-					[ 'jquery', 'wp-awesome-widgets-repeater', 'wp-awesome-widgets-thumbnail-field' ],
+					[ 'wp-awesome-widgets-admin' ],
 					filemtime( $path ),
 					true
 				);
