@@ -170,6 +170,8 @@
 			id="<?php echo esc_attr( $this->get_field_id( 'duration' ) ); ?>"
 			value="<?php echo esc_attr( $instance['duration'] ); ?>"
 			style="width: 100px"
+			step="1"
+			min="1"
 		> ms
 	</p>
 
@@ -181,6 +183,8 @@
 			id="<?php echo esc_attr( $this->get_field_id( 'interval' ) ); ?>"
 			value="<?php echo esc_attr( $instance['interval'] ); ?>"
 			style="width: 100px"
+			step="1"
+			min="1"
 		> ms
 	</p>
 
@@ -192,6 +196,8 @@
 			id="<?php echo esc_attr( $this->get_field_id( 'slides-to-show' ) ); ?>"
 			value="<?php echo esc_attr( $instance['slides-to-show'] ); ?>"
 			style="width: 100px"
+			step="1"
+			min="1"
 		>
 	</p>
 
@@ -203,6 +209,8 @@
 			id="<?php echo esc_attr( $this->get_field_id( 'slides-to-scroll' ) ); ?>"
 			value="<?php echo esc_attr( $instance['slides-to-scroll'] ); ?>"
 			style="width: 100px"
+			step="1"
+			min="1"
 		>
 	</p>
 </div>
