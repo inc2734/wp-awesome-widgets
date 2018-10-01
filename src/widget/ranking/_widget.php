@@ -10,7 +10,7 @@ if ( ! $items ) {
 	return;
 }
 
-$recent_posts_query = new WP_Query(
+$ranking_posts_query = new WP_Query(
 	[
 		'post_type'           => 'any',
 		'posts_per_page'      => count( $items ),
@@ -37,13 +37,13 @@ $recent_posts_query = new WP_Query(
 		>
 
 		<ul class="wpaw-ranking__list">
-			<?php while ( $recent_posts_query->have_posts() ) : ?>
-				<?php $recent_posts_query->the_post(); ?>
+			<?php while ( $ranking_posts_query->have_posts() ) : ?>
+				<?php $ranking_posts_query->the_post(); ?>
 				<li class="wpaw-ranking__item">
 					<a href="<?php the_permalink(); ?>">
 
 						<?php if ( $instance['show-thumbnail'] ) : ?>
-							<div class="wpaw-recent-posts__figure"
+							<div class="wpaw-ranking__figure"
 								style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'thumbnail' ) ); ?> )"
 							></div>
 						<?php endif; ?>
@@ -57,7 +57,9 @@ $recent_posts_query = new WP_Query(
 							<?php if ( $instance['show-taxonomy'] && $terms ) : ?>
 								<div class="wpaw-ranking__taxonomy">
 									<?php foreach ( $terms as $_term ) : ?>
-										<span class="wpaw-ranking__term"><?php echo esc_html( $_term->name ); ?></span>
+										<span class="wpaw-term wpaw-term--<?php echo esc_attr( $_taxonomy ); ?>-<?php echo esc_attr( $_term->term_id ); ?> wpaw-ranking__term">
+											<?php echo esc_html( $_term->name ); ?>
+										</span>
 										<?php break; ?>
 									<?php endforeach; ?>
 								</div>

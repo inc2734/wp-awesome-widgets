@@ -37,13 +37,13 @@ $any_posts_query = new WP_Query(
 		>
 
 		<ul class="wpaw-any-posts__list">
-			<?php while ( $any_posts_query->the_posts() ) : ?>
+			<?php while ( $any_posts_query->have_posts() ) : ?>
 				<?php $any_posts_query->the_post(); ?>
 				<li class="wpaw-any-posts__item">
 					<a href="<?php the_permalink(); ?>">
 
 						<?php if ( $instance['show-thumbnail'] ) : ?>
-							<div class="wpaw-recent-posts__figure"
+							<div class="wpaw-any-posts__figure"
 								style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'thumbnail' ) ); ?> )"
 							></div>
 						<?php endif; ?>
@@ -57,7 +57,9 @@ $any_posts_query = new WP_Query(
 							<?php if ( $instance['show-taxonomy'] && $terms ) : ?>
 								<div class="wpaw-any-posts__taxonomy">
 									<?php foreach ( $terms as $_term ) : ?>
-										<span class="wpaw-any-posts__term"><?php echo esc_html( $_term->name ); ?></span>
+										<span class="wpaw-term wpaw-term--<?php echo esc_attr( $_taxonomy ); ?>-<?php echo esc_attr( $_term->term_id ); ?> wpaw-any-posts__term">
+											<?php echo esc_html( $_term->name ); ?>
+										</span>
 										<?php break; ?>
 									<?php endforeach; ?>
 								</div>

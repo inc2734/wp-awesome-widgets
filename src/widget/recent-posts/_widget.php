@@ -54,7 +54,9 @@ if ( ! $recent_posts_query->have_posts() ) {
 							<?php if ( $instance['show-taxonomy'] && $terms ) : ?>
 								<div class="wpaw-recent-posts__taxonomy">
 									<?php foreach ( $terms as $_term ) : ?>
-										<span class="wpaw-recent-posts__term"><?php echo esc_html( $_term->name ); ?></span>
+										<span class="wpaw-term wpaw-term--<?php echo esc_attr( $_taxonomy ); ?>-<?php echo esc_attr( $_term->term_id ); ?> wpaw-recent-posts__term">
+											<?php echo esc_html( $_term->name ); ?>
+										</span>
 										<?php break; ?>
 									<?php endforeach; ?>
 								</div>

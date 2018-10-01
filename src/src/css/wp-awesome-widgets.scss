@@ -1,5 +1,14 @@
 @charset 'UTF-8';
 
+.wpaw-term {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  line-height: 1;
+  font-size: 12px;
+  padding: 3px 6px 2px;
+}
+
 @import '../../widget/slider/widget';
 @import '../../widget/pr-box/widget';
 @import '../../widget/showcase/widget';
@@ -9,3 +18,4 @@
 @import '../../widget/taxonomy-posts/widget';
 @import '../../widget/pickup-slider/widget';
 @import '../../widget/google-adsense/widget';
+@import '../../widget/carousel-any-posts/widget';

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-09-19 02:50:37+00:00\n"
-"PO-Revision-Date: 2018-09-19 11:51+0900\n"
+"POT-Creation-Date: 2018-10-01 14:42:54+00:00\n"
+"PO-Revision-Date: 2018-10-01 23:43+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -15,31 +15,36 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: widget/any-posts/_form.php:11 widget/pr-box/_form.php:11
-#: widget/pr-box/_form.php:69 widget/ranking/_form.php:11
-#: widget/recent-posts/_form.php:11 widget/showcase/_form.php:11
-#: widget/slider/_form.php:37 widget/taxonomy-posts/_form.php:11
+#: widget/any-posts/_form.php:11 widget/carousel-any-posts/_form.php:11
+#: widget/pr-box/_form.php:11 widget/pr-box/_form.php:69
+#: widget/ranking/_form.php:11 widget/recent-posts/_form.php:11
+#: widget/showcase/_form.php:11 widget/slider/_form.php:37
+#: widget/taxonomy-posts/_form.php:11
 msgid "Title"
 msgstr "タイトル"
 
-#: widget/any-posts/_form.php:23 widget/ranking/_form.php:23
-#: widget/recent-posts/_form.php:22
+#: widget/any-posts/_form.php:23 widget/carousel-any-posts/_form.php:23
+#: widget/ranking/_form.php:23 widget/recent-posts/_form.php:22
 msgid "Post type"
 msgstr "投稿タイプ"
 
-#: widget/any-posts/_form.php:84 widget/ranking/_form.php:84
-#: widget/recent-posts/_form.php:65 widget/taxonomy-posts/_form.php:88
+#: widget/any-posts/_form.php:87 widget/ranking/_form.php:87
+#: widget/recent-posts/_form.php:68 widget/taxonomy-posts/_form.php:97
 msgid "Show thumbnail"
 msgstr "サムネイルを表示"
 
-#: widget/any-posts/_form.php:96 widget/ranking/_form.php:96
-#: widget/recent-posts/_form.php:77
+#: widget/any-posts/_form.php:99 widget/ranking/_form.php:99
+#: widget/recent-posts/_form.php:80
 msgid "Show taxonomy"
 msgstr "分類を表示"
 
-#: widget/any-posts/any-posts.php:25
+#: widget/any-posts/any-posts.php:27
 msgid "WPAW: Any Posts"
 msgstr "WPAW: 任意の投稿"
+
+#: widget/carousel-any-posts/carousel-any-posts.php:25
+msgid "WPAW: Carousel ( Any Posts )"
+msgstr "WPAW: カルーセル（任意の投稿）"
 
 #: widget/contents-outline/_form.php:11
 msgid "Show headings"
@@ -49,7 +54,7 @@ msgstr "見出しを表示"
 msgid "Also show on mobile"
 msgstr "モバイルでも表示"
 
-#: widget/contents-outline/contents-outline.php:22
+#: widget/contents-outline/contents-outline.php:24
 msgid "WPAW: Contents outline"
 msgstr "WPAW: 目次"
 
@@ -125,11 +130,11 @@ msgstr "ボタンリンク"
 msgid "Overall link"
 msgstr "全体リンク"
 
-#: widget/pickup-slider/_widget.php:81
+#: widget/pickup-slider/_widget.php:89
 msgid "READ MORE"
 msgstr "READ MORE"
 
-#: widget/pickup-slider/pickup-slider.php:22
+#: widget/pickup-slider/pickup-slider.php:24
 msgid "WPAW: Pickup slider"
 msgstr "WPAW: ピックアップスライダー"
 
@@ -218,23 +223,23 @@ msgstr "タブレットのカラムサイズ"
 msgid "Column size for PC"
 msgstr "PCのカラムサイズ"
 
-#: widget/pr-box/pr-box.php:39
+#: widget/pr-box/pr-box.php:41
 msgid "WPAW: PR Box"
 msgstr "WPAW: PR ボックス"
 
-#: widget/profile-box/profile-box.php:19
+#: widget/profile-box/profile-box.php:21
 msgid "WPAW: Profile box"
 msgstr "WPAW: プロフィールボックス"
 
-#: widget/ranking/ranking.php:25
+#: widget/ranking/ranking.php:27
 msgid "WPAW: Ranking (Manual update)"
 msgstr "WPAW: ランキング（手動更新）"
 
-#: widget/recent-posts/_form.php:45 widget/taxonomy-posts/_form.php:68
+#: widget/recent-posts/_form.php:48 widget/taxonomy-posts/_form.php:77
 msgid "Number of posts"
 msgstr "表示する投稿数"
 
-#: widget/recent-posts/recent-posts.php:25
+#: widget/recent-posts/recent-posts.php:27
 msgid "WPAW: Recent posts"
 msgstr "WPAW: 最近の投稿"
 
@@ -262,7 +267,7 @@ msgstr "文字色"
 msgid "Thumbnail"
 msgstr "サムネイル"
 
-#: widget/showcase/showcase.php:30
+#: widget/showcase/showcase.php:32
 msgid "WPAW: Showcase"
 msgstr "WPAW: ショーケース"
 
@@ -274,7 +279,7 @@ msgstr "サイトの説明"
 msgid "HTML use allowed."
 msgstr "HTML 使用可"
 
-#: widget/site-branding/site-branding.php:21
+#: widget/site-branding/site-branding.php:23
 msgid "WPAW: Site branding"
 msgstr "WPAW: サイトブランディング"
 
@@ -310,23 +315,23 @@ msgstr "スライド"
 msgid "Animation time"
 msgstr "アニメーション時間"
 
-#: widget/slider/_form.php:177
+#: widget/slider/_form.php:179
 msgid "Interval time"
 msgstr "インターバル"
 
-#: widget/slider/_form.php:188
+#: widget/slider/_form.php:192
 msgid "Number of slides to display at once(PC)"
 msgstr "1度に表示するスライド数（PC）"
 
-#: widget/slider/_form.php:199
+#: widget/slider/_form.php:205
 msgid "Number of slides to slide at once(PC)"
 msgstr "1度にスライドするスライド数（PC）"
 
-#: widget/slider/slider.php:38
+#: widget/slider/slider.php:40
 msgid "WPAW: Slider"
 msgstr "WPAW: スライダー"
 
-#: widget/taxonomy-posts/_form.php:35
+#: widget/taxonomy-posts/_form.php:41
 msgid "Displayed term"
 msgstr "表示するターム"
 
