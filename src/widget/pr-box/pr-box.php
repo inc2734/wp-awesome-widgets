@@ -33,6 +33,7 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 		'lg-columns'             => 3,
 		'link-text'              => null,
 		'link-url'               => null,
+		'chameleon'              => 0,
 	];
 
 	public function __construct() {

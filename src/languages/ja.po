@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-10-01 14:42:54+00:00\n"
-"PO-Revision-Date: 2018-10-01 23:43+0900\n"
+"POT-Creation-Date: 2018-10-02 00:54:11+00:00\n"
+"PO-Revision-Date: 2018-10-02 09:54+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -223,7 +223,11 @@ msgstr "タブレットのカラムサイズ"
 msgid "Column size for PC"
 msgstr "PCのカラムサイズ"
 
-#: widget/pr-box/pr-box.php:41
+#: widget/pr-box/_form.php:257
+msgid "Remove side padding"
+msgstr "左右余白を削除"
+
+#: widget/pr-box/pr-box.php:42
 msgid "WPAW: PR Box"
 msgstr "WPAW: PR ボックス"
 

@@ -1,4 +1,10 @@
 .wpaw-pr-box {
+  /**
+   * Overwrite with theme css
+   */
+  &--chameleon {
+  }
+
   &__title {
     text-align: center;
   }

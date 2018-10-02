@@ -8,8 +8,19 @@
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
 
+	<?php
+	$classes = [
+		'wpaw-pr-box',
+		'wpaw-pr-box--' . $args['widget_id'],
+	];
+
+	if ( $instance['chameleon'] ) {
+		$classes[] = 'wpaw-pr-box--chameleon';
+	}
+	?>
+
 	<div
-		class="wpaw-pr-box wpaw-pr-box--<?php echo esc_attr( $args['widget_id'] ); ?>"
+		class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>"
 		id="wpaw-pr-box-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		style="background-color: <?php echo esc_attr( $instance['bg-color'] ); ?>"
 		>

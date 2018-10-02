@@ -244,4 +244,16 @@
 			value="<?php echo esc_attr( $instance['link-text'] ); ?>"
 		>
 	</p>
+
+	<p>
+		<input type="hidden" name="<?php echo esc_attr( $this->get_field_name( 'chameleon' ) ); ?>" value="0">
+		<input
+			type="checkbox"
+			name="<?php echo esc_attr( $this->get_field_name( 'chameleon' ) ); ?>"
+			id="<?php echo esc_attr( $this->get_field_id( 'chameleon' ) ); ?>"
+			value="1"
+			<?php checked( $instance['chameleon'], 1 ); ?>
+		>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'chameleon' ) ); ?>"><?php esc_html_e( 'Remove side padding', 'inc2734-wp-awesome-widgets' ); ?></label>
+	</p>
 </div>
