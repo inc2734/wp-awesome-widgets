@@ -84,7 +84,11 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 			return;
 		}
 
+		// @codingStandardsIgnoreStart
+		ob_start();
 		include( $file );
+		echo apply_filters( 'inc2734_wp_awesome_widgets_render_widget', ob_get_clean(), $args, $instance );
+		// @codingStandardsIgnoreEnd
 	}
 
 	protected function _render_form( $instance ) {
