@@ -67,27 +67,32 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 
 	protected function _render_widget( $args, $instance ) {
 		$widget_templates = apply_filters( 'inc2734_wp_awesome_widgets_widget_templates', 'templates/widget' );
-		if ( locate_template( $widget_templates . '/' . basename( $this->_path ) . '.php', false ) ) {
+		$default_template = $this->_path . '/_widget.php';
+		$custom_template  = $widget_templates . '/' . basename( $this->_path );
+
+		if ( locate_template( $custom_template . '.php', false ) ) {
+			ob_start();
 			wpvc_get_template_part(
-				$widget_templates . '/' . basename( $this->_path ),
+				$custom_template,
 				null,
 				[
 					'args'     => $args,
 					'instance' => $instance,
 				]
 			);
-			return;
+			$widget = ob_get_clean();
+		} elseif ( file_exists( $default_template ) ) {
+			ob_start();
+			include( $default_template );
+			$widget = ob_get_clean();
 		}
 
-		$file = $this->_path . '/_widget.php';
-		if ( ! file_exists( $file ) ) {
+		if ( empty( $widget ) ) {
 			return;
 		}
 
 		// @codingStandardsIgnoreStart
-		ob_start();
-		include( $file );
-		echo apply_filters( 'inc2734_wp_awesome_widgets_render_widget', ob_get_clean(), $args, $instance );
+		echo apply_filters( 'inc2734_wp_awesome_widgets_render_widget', $widget, $args, $instance );
 		// @codingStandardsIgnoreEnd
 	}
 
