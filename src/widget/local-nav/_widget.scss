@@ -1,0 +1,30 @@
+.wpaw-local-nav {
+  &__list,
+  &__item
+  &__sublist,
+  &__subitem {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &--vertical {
+  }
+
+  &--horizontal {
+    .wpaw-local-nav__sublist {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .wpaw-local-nav__subitem {
+      display: inline-block;
+      margin-left: 0;
+      padding-left: 0;
+
+      &:not(:first-child) {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

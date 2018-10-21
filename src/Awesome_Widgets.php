@@ -13,12 +13,13 @@ class Awesome_Widgets {
 		load_textdomain( 'inc2734-wp-awesome-widgets', __DIR__ . '/languages/' . get_locale() . '.mo' );
 
 		$includes = array(
+			'/Helper',
 			'/abstract',
 			'/widget/*',
 		);
 		foreach ( $includes as $include ) {
 			foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
-				if ( false !== strpos( basename( $file ), '_' ) ) {
+				if ( '_' === substr( basename( $file ), 0, 1 ) ) {
 					continue;
 				}
 

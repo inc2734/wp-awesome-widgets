@@ -51,6 +51,9 @@
 .wpaw-pr-box {
   /**
    * Overwrite with theme css
+   */
+  /**
+   * Overwrite with theme css
    *
    * &__row--<size>
    * &__row--md-<size>
@@ -449,3 +452,20 @@
   top: 0;
   left: 0;
   line-height: 1; }
+
+.wpaw-local-nav__list,
+.wpaw-local-nav__item .wpaw-local-nav__sublist, .wpaw-local-nav__subitem {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.wpaw-local-nav--horizontal .wpaw-local-nav__sublist {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0; }
+
+.wpaw-local-nav--horizontal .wpaw-local-nav__subitem {
+  display: inline-block;
+  margin-left: 0;
+  padding-left: 0; }
+  .wpaw-local-nav--horizontal .wpaw-local-nav__subitem:not(:first-child) {
+    margin-left: 1rem; }
