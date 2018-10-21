@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-10-02 00:54:11+00:00\n"
-"PO-Revision-Date: 2018-10-02 09:54+0900\n"
+"POT-Creation-Date: 2018-10-21 02:18:56+00:00\n"
+"PO-Revision-Date: 2018-10-21 11:20+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -109,6 +109,30 @@ msgstr "レクタングル (300 x 250) 2個"
 #: widget/google-adsense/google-adsense.php:22
 msgid "WPAW: Google Adsense"
 msgstr "WPAW: Google アドセンス"
+
+#: widget/local-nav/_form.php:11
+msgid "Direction"
+msgstr "方向"
+
+#: widget/local-nav/_form.php:19
+msgid "Vertical"
+msgstr "垂直方向"
+
+#: widget/local-nav/_form.php:20
+msgid "Horizontal"
+msgstr "水平方向"
+
+#: widget/local-nav/_form.php:40
+msgid "Display the page title of the top-level"
+msgstr "トップレベルのページのタイトルを表示"
+
+#: widget/local-nav/_form.php:52
+msgid "Display only when you have descendants"
+msgstr "子孫があるときだけ表示"
+
+#: widget/local-nav/local-nav.php:25
+msgid "WPAW: Local Navigation"
+msgstr "WPAW: ローカルナビゲーション"
 
 #: widget/pickup-slider/_form.php:11
 msgid "Posts tagged as \"pickup\" are displayed as slider."

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-10-02 00:54:11+00:00\n"
+"POT-Creation-Date: 2018-10-21 02:18:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -105,6 +105,30 @@ msgstr ""
 
 #: widget/google-adsense/google-adsense.php:22
 msgid "WPAW: Google Adsense"
+msgstr ""
+
+#: widget/local-nav/_form.php:11
+msgid "Direction"
+msgstr ""
+
+#: widget/local-nav/_form.php:19
+msgid "Vertical"
+msgstr ""
+
+#: widget/local-nav/_form.php:20
+msgid "Horizontal"
+msgstr ""
+
+#: widget/local-nav/_form.php:40
+msgid "Display the page title of the top-level"
+msgstr ""
+
+#: widget/local-nav/_form.php:52
+msgid "Display only when you have descendants"
+msgstr ""
+
+#: widget/local-nav/local-nav.php:25
+msgid "WPAW: Local Navigation"
 msgstr ""
 
 #: widget/pickup-slider/_form.php:11

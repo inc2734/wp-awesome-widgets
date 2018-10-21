@@ -58,7 +58,8 @@ if ( $instance['display-only-have-descendants'] ) {
 				'limit'                        => 'horizontal' === $instance['direction'] ? 1 : -1,
 				'display-top-level-page-title' => $instance['display-top-level-page-title'],
 			]
-		); ?>
+		);
+		?>
 	</div>
 
 <?php echo wp_kses_post( $args['after_widget'] ); ?>

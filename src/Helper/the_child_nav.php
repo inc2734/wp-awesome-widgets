@@ -20,10 +20,9 @@ function the_child_nav( $parent_id, $current_page_id, $args ) {
 		return;
 	}
 
-	if ( $current_page_id !== get_the_id()
+	if ( get_the_id() !== $current_page_id
 			 && ! in_array( $current_page_id, get_post_ancestors( get_the_id() ) )
-			 && ! in_array( get_the_ID(), get_post_ancestors( $current_page_id ) ) )
-	{
+			 && ! in_array( get_the_ID(), get_post_ancestors( $current_page_id ) ) ) {
 		return;
 	}
 
@@ -57,15 +56,14 @@ function the_child_nav( $parent_id, $current_page_id, $args ) {
 			<li class="<?php echo esc_attr( $args['subitem-class'] ); ?>">
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 				<?php
-				if ( -1 === $args['limit'] || 0 < $args['limit'] ) {
-					if ( -1 !== $args['limit'] ) {
-						$args['limit'] --;
-					}
+				if ( -1 >= $args['limit'] || 0 < $args['limit'] ) {
+					$args['limit'] --;
 					the_child_nav( get_the_ID(), $current_page_id, $args );
 				}
 				?>
 			</li>
-		<?php endwhile; wp_reset_postdata(); ?>
+		<?php endwhile; ?>
+		<?php wp_reset_postdata(); ?>
 	</ul>
 	<?php
 }

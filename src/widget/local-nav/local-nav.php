@@ -5,6 +5,9 @@
  * @license GPL-2.0+
  */
 
+/**
+ * Local navigation widget
+ */
 class Inc2734_WP_Awesome_Widgets_Local_Nav extends Inc2734_WP_Awesome_Widgets_Abstract_Widget {
 
 	/**

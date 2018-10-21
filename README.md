@@ -17,6 +17,8 @@
 * Taxonomy posts
 * Contents outline
 * Profile box
+* Carousel (Any posts)
+* Local navigation
 
 ## Install
 ```
