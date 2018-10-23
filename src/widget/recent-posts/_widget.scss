@@ -18,20 +18,12 @@
   }
 
   &__figure {
+    @include cover-img();
     margin-right: 1em;
     flex: none;
     height: 90px;
     width: 90px;
     background-color: #eee;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-
-    &::before {
-      content: '';
-      display: block;
-      padding-top: 100%;
-    }
   }
 
   &__body {

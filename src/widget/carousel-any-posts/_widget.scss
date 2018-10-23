@@ -12,37 +12,13 @@
   }
 
   &__figure {
-    position: relative;
+    @include cover-img();
     background-color: #eee;
-    overflow: hidden;
 
     &::before {
       content: '';
       display: block;
       padding-top: 75%;
-    }
-
-    > img {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      bottom: 0;
-      left: 50%;
-      width: auto;
-      height: auto;
-      min-height: 100%;
-      min-width: 100%;
-      transform: translate(-50%, -50%);
-
-      @supports(object-fit: cover) {
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
-        transform: none;
-      }
     }
   }
 

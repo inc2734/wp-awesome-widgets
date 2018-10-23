@@ -21,6 +21,10 @@ $ranking_posts_query = new WP_Query(
 		'suppress_filters'    => true,
 	]
 );
+
+if ( ! $ranking_posts_query->have_posts() ) {
+	return;
+}
 ?>
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
@@ -43,9 +47,9 @@ $ranking_posts_query = new WP_Query(
 					<a href="<?php the_permalink(); ?>">
 
 						<?php if ( $instance['show-thumbnail'] ) : ?>
-							<div class="wpaw-ranking__figure"
-								style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'thumbnail' ) ); ?> )"
-							></div>
+							<div class="wpaw-ranking__figure">
+								<?php the_post_thumbnail( 'thumbnail' ); ?>
+							</div>
 						<?php endif; ?>
 
 						<div class="wpaw-ranking__body">

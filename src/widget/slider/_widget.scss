@@ -16,22 +16,26 @@
   }
 
   &__item {
-    display: block;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    text-decoration: none;
-  }
-
-  &__body {
     position: relative;
+    display: block;
+    text-decoration: none;
+
+    .wpaw-slider__figure {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
   }
 
-  &__item-title {
-    color: #fff;
+  &__figure {
+    @include cover-img();
+    display: block;
   }
 
-  &__item-summary {
+  &__item-content {
+    position: relative;
     color: #fff;
   }
 

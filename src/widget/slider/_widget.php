@@ -52,9 +52,6 @@ if ( 'fade' === $instance['type'] ) {
 								href="<?php echo esc_url( $image['link-url'] ); ?>"
 							<?php endif; ?>
 							class="wpaw-slider__item wpaw-slider__item--<?php echo esc_attr( $key ); ?>"
-							<?php if ( $bgimage ) : ?>
-								style="background-image: url(<?php echo esc_url( $bgimage ); ?>);"
-							<?php endif; ?>
 							>
 
 							<?php if ( 0 < $image['mask-opacity'] ) : ?>
@@ -62,6 +59,10 @@ if ( 'fade' === $instance['type'] ) {
 									style="background-color: <?php echo esc_attr( sanitize_hex_color( $image['mask-color'] ) ); ?>; opacity: <?php echo esc_attr( $image['mask-opacity'] ); ?>"
 								></div>
 							<?php endif; ?>
+
+							<div class="wpaw-slider__figure">
+								<img src="<?php echo esc_url( $bgimage ); ?>" alt="">
+							</div>
 
 							<?php if ( ! empty( $image['title'] ) || ! empty( $image['summary'] ) || ! empty( $image['link-url'] ) && ! empty( $image['link-text'] ) ) : ?>
 								<div class="wpaw-slider__item-body">

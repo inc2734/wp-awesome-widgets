@@ -22,14 +22,13 @@
   }
 
   &__figure {
+    @include cover-img();
     display: block;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
-  &__item-body {
+  &__item-content {
     position: relative;
+    color: #fff;
   }
 
   .slick-list {
