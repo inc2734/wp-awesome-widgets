@@ -65,11 +65,11 @@
 					<?php
 					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_showcase_image_size', 'large', wp_is_mobile(), $args['widget_id'] );
 					?>
-					<?php if ( ! $is_block_link && $instance['link-url'] && $thumbnail ) : ?>
+					<?php if ( ! $is_block_link && $instance['link-url'] ) : ?>
 						<a href="<?php echo esc_url( $instance['link-url'] ); ?>">
 							<?php echo wp_get_attachment_image( $instance['thumbnail'], $thumbnail_size ); ?>
 						</a>
-					<?php elseif ( $thumbnail ) : ?>
+					<?php else : ?>
 						<?php echo wp_get_attachment_image( $instance['thumbnail'], $thumbnail_size ); ?>
 					<?php endif; ?>
 				</div>
