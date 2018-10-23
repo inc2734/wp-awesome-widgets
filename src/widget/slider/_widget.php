@@ -61,7 +61,9 @@ if ( 'fade' === $instance['type'] ) {
 							<?php endif; ?>
 
 							<div class="wpaw-slider__figure">
-								<img src="<?php echo esc_url( $bgimage ); ?>" alt="">
+								<?php if ( $bgimage ) : ?>
+									<img src="<?php echo esc_url( $bgimage ); ?>" alt="">
+								<?php endif; ?>
 							</div>
 
 							<?php if ( ! empty( $image['title'] ) || ! empty( $image['summary'] ) || ! empty( $image['link-url'] ) && ! empty( $image['link-text'] ) ) : ?>
