@@ -32,7 +32,8 @@
 .wpaw-slider__figure {
   position: relative;
   overflow: hidden;
-  display: block; }
+  display: block;
+  background-color: #111; }
   .wpaw-slider__figure > img {
     position: absolute;
     top: 50%;
@@ -434,7 +435,8 @@
 .wpaw-pickup-slider__figure {
   position: relative;
   overflow: hidden;
-  display: block; }
+  display: block;
+  background-color: #111; }
   .wpaw-pickup-slider__figure > img {
     position: absolute;
     top: 50%;

@@ -32,6 +32,7 @@
   &__figure {
     @include cover-img();
     display: block;
+    background-color: #111;
   }
 
   &__item-content {

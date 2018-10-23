@@ -16,7 +16,6 @@
 
 	<?php
 	$bg_image_size = apply_filters( 'inc2734_wp_awesome_widgets_showcase_backgroud_image_size', 'large', wp_is_mobile(), $args['widget_id'] );
-	$bgimage       = ! empty( $instance['bg-image'] ) ? wp_get_attachment_image_url( $instance['bg-image'], $bg_image_size ) : null;
 	$is_block_link = ! empty( $instance['link-url'] ) && empty( $instance['link-text'] );
 	$wrapper_tag   = $is_block_link ? 'a' : 'div';
 	?>
@@ -29,9 +28,9 @@
 		id="wpaw-showcase-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		>
 
-		<?php if ( $bgimage ) : ?>
+		<?php if ( $instance['bg-image'] ) : ?>
 			<div class="wpaw-showcase__bgimage">
-				<img src="<?php echo esc_url( $bgimage ); ?>" alt="">
+				<?php echo wp_get_attachment_image( $instance['bg-image'], $thumbnail_size ); ?>
 			</div>
 		<?php endif; ?>
 
@@ -65,14 +64,13 @@
 				<div class="wpaw-showcase__figure">
 					<?php
 					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_showcase_image_size', 'large', wp_is_mobile(), $args['widget_id'] );
-					$thumbnail      = wp_get_attachment_image_url( $instance['thumbnail'], $thumbnail_size );
 					?>
 					<?php if ( ! $is_block_link && $instance['link-url'] && $thumbnail ) : ?>
 						<a href="<?php echo esc_url( $instance['link-url'] ); ?>">
-							<img src="<?php echo esc_url( $thumbnail ); ?>" alt="">
+							<?php echo wp_get_attachment_image( $instance['thumbnail'], $thumbnail_size ); ?>
 						</a>
 					<?php elseif ( $thumbnail ) : ?>
-						<img src="<?php echo esc_url( $thumbnail ); ?>" alt="">
+						<?php echo wp_get_attachment_image( $instance['thumbnail'], $thumbnail_size ); ?>
 					<?php endif; ?>
 				</div>
 			<?php endif; ?>

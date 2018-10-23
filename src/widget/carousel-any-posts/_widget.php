@@ -38,8 +38,7 @@ if ( ! $carousel_any_posts_query->have_posts() ) {
 				<?php while ( $carousel_any_posts_query->have_posts() ) : ?>
 					<?php
 					$carousel_any_posts_query->the_post();
-					$thumbnail_size = wp_is_mobile() ? 'large' : 'full';
-					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_carousel_image_size', $thumbnail_size, wp_is_mobile(), $args['widget_id'] );
+					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_carousel_image_size', 'large', wp_is_mobile(), $args['widget_id'] );
 					?>
 					<a
 						class="wpaw-carousel__item"
