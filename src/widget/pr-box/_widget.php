@@ -42,19 +42,19 @@
 					<div class="wpaw-pr-box__item">
 						<?php if ( ! empty( $item['src'] ) ) : ?>
 							<?php
-							$thumbnail    = wp_get_attachment_image_url( $item['src'], $instance['thumbnail-size'] );
-							$aspect_ratio = $instance['thumbnail-aspect-ratio'];
+							$aspect_ratio   = $instance['thumbnail-aspect-ratio'];
+							$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_pr_box_thumbnail_size', 'xlarge', wp_is_mobile(), $args['widget_id'] );
 							?>
 							<?php if ( ! empty( $item['link-url'] ) ) : ?>
 								<a href="<?php echo esc_html( $item['link-url'] ); ?>">
-									<div class="wpaw-pr-box__item-figure wpaw-pr-box__item-figure--<?php echo esc_attr( $aspect_ratio ); ?>"
-										style="background-image: url( <?php echo esc_url( $thumbnail ); ?> );"
-									></div>
+									<div class="wpaw-pr-box__item-figure wpaw-pr-box__item-figure--<?php echo esc_attr( $aspect_ratio ); ?>">
+										<?php echo wp_get_attachment_image( $item['src'], $thumbnail_size ); ?>
+									</div>
 								</a>
 							<?php else : ?>
-								<div class="wpaw-pr-box__item-figure wpaw-pr-box__item-figure--<?php echo esc_attr( $aspect_ratio ); ?>"
-									style="background-image: url( <?php echo esc_url( $thumbnail ); ?> );"
-								></div>
+								<div class="wpaw-pr-box__item-figure wpaw-pr-box__item-figure--<?php echo esc_attr( $aspect_ratio ); ?>">
+									<?php echo wp_get_attachment_image( $item['src'], $thumbnail_size ); ?>
+								</div>
 							<?php endif; ?>
 						<?php endif; ?>
 

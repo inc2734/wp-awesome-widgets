@@ -30,9 +30,7 @@
   }
 
   &__item-figure {
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
+    @include cover-img();
     background-color: #eee;
 
     &::before {

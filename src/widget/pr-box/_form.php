@@ -121,24 +121,6 @@
 	</div>
 
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'thumbnail-size' ) ); ?>"><?php esc_html_e( 'Size of image to use', 'inc2734-wp-awesome-widgets' ); ?></label><br>
-		<select
-			name="<?php echo esc_attr( $this->get_field_name( 'thumbnail-size' ) ); ?>"
-			id="<?php echo esc_attr( $this->get_field_id( 'thumbnail-size' ) ); ?>"
-			class="widefat"
-		>
-			<?php
-			$thumbnail_sizes = get_intermediate_image_sizes();
-			$thumbnail_sizes[] = 'full';
-			$thumbnail_sizes = array_unique( $thumbnail_sizes );
-			?>
-			<?php foreach ( $thumbnail_sizes as $thumbnail_size ) : ?>
-				<option value="<?php echo esc_attr( $thumbnail_size ); ?>" <?php selected( $thumbnail_size, $instance['thumbnail-size'], true ); ?>><?php echo esc_html( $thumbnail_size ); ?></option>
-			<?php endforeach; ?>
-		</select>
-	</p>
-
-	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'thumbnail-aspect-ratio' ) ); ?>"><?php esc_html_e( 'Thumbnail aspect ratio', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<select
 			name="<?php echo esc_attr( $this->get_field_name( 'thumbnail-aspect-ratio' ) ); ?>"

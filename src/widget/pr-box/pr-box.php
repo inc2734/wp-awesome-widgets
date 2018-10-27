@@ -26,7 +26,6 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Inc2734_WP_Awesome_Widgets_Abstr
 				'link-url'  => '',
 			],
 		],
-		'thumbnail-size'         => 'medium',
 		'thumbnail-aspect-ratio' => '16to9',
 		'sm-columns'             => 1,
 		'md-columns'             => 1,
