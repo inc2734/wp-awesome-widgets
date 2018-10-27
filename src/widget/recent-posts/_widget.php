@@ -5,14 +5,25 @@
  * @license GPL-2.0+
  */
 
+$widget_id = explode( '-', $args['widget_id'] );
+$widget_id = end( $widget_id );
+
+$query_args = [
+	'post_type'      => $instance['post-type'],
+	'posts_per_page' => $instance['posts-per-page'],
+];
+$query_args = apply_filters( 'inc2734_wp_awesome_widgets_recent_posts_widget_args', $query_args );
+$query_args = apply_filters( 'inc2734_wp_awesome_widgets_recent_posts_widget_args_' . $widget_id, $query_args );
+
 $recent_posts_query = new WP_Query(
-	[
-		'post_type'           => $instance['post-type'],
-		'posts_per_page'      => $instance['posts-per-page'],
-		'ignore_sticky_posts' => true,
-		'no_found_rows'       => true,
-		'suppress_filters'    => true,
-	]
+	array_merge(
+		$query_args,
+		[
+			'ignore_sticky_posts' => true,
+			'no_found_rows'       => true,
+			'suppress_filters'    => true,
+		]
+	)
 );
 
 if ( ! $recent_posts_query->have_posts() ) {

@@ -26,6 +26,12 @@ if ( ! empty( $instance['random'] ) ) {
 	);
 }
 
+$widget_id = explode( '-', $args['widget_id'] );
+$widget_id = end( $widget_id );
+
+$query_args = apply_filters( 'inc2734_wp_awesome_widgets_pickup_slider_widget_args', $query_args );
+$query_args = apply_filters( 'inc2734_wp_awesome_widgets_pickup_slider_widget_args_' . $widget_id, $query_args );
+
 $pickup_posts_query = new WP_Query(
 	array_merge(
 		$query_args,

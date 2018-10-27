@@ -19,20 +19,31 @@ $term_id     = $_taxonomy[1];
 $_taxonomy   = get_taxonomy( $taxonomy_id );
 $post_types  = empty( $_taxonomy->object_type ) ? 'post' : $_taxonomy->object_type;
 
-$taxonomy_posts_query = new WP_Query(
-	[
-		'post_type'      => $post_types,
-		'posts_per_page' => $instance['posts-per-page'],
-		'tax_query'      => [
-			[
-				'taxonomy' => $taxonomy_id,
-				'terms'    => $term_id,
-			],
+$widget_id = explode( '-', $args['widget_id'] );
+$widget_id = end( $widget_id );
+
+$query_args = [
+	'post_type'      => $post_types,
+	'posts_per_page' => $instance['posts-per-page'],
+	'tax_query'      => [
+		[
+			'taxonomy' => $taxonomy_id,
+			'terms'    => $term_id,
 		],
-		'ignore_sticky_posts' => true,
-		'no_found_rows'       => true,
-		'suppress_filters'    => true,
-	]
+	],
+];
+$query_args = apply_filters( 'inc2734_wp_awesome_widgets_taxonomy_posts_widget_args', $query_args );
+$query_args = apply_filters( 'inc2734_wp_awesome_widgets_taxonomy_posts_widget_args_' . $widget_id, $query_args );
+
+$taxonomy_posts_query = new WP_Query(
+	array_merge(
+		$query_args,
+		[
+			'ignore_sticky_posts' => true,
+			'no_found_rows'       => true,
+			'suppress_filters'    => true,
+		]
+	)
 );
 
 if ( ! $taxonomy_posts_query->have_posts() ) {

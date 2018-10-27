@@ -6,20 +6,33 @@
  */
 
 $items = explode( ',', $instance['items'] );
-if ( ! $items ) {
+
+$widget_id = explode( '-', $args['widget_id'] );
+$widget_id = end( $widget_id );
+
+$query_args = [
+	'post_type'      => 'any',
+	'posts_per_page' => count( $items ),
+	'post__in'       => $items,
+	'orderby'        => 'post__in',
+];
+$query_args = apply_filters( 'inc2734_wp_awesome_widgets_ranking_widget_args', $query_args );
+$query_args = apply_filters( 'inc2734_wp_awesome_widgets_ranking_widget_args_' . $widget_id, $query_args );
+
+
+if ( empty( $query_args['post__in'] ) ) {
 	return;
 }
 
 $ranking_posts_query = new WP_Query(
-	[
-		'post_type'           => 'any',
-		'posts_per_page'      => count( $items ),
-		'post__in'            => $items,
-		'orderby'             => 'post__in',
-		'ignore_sticky_posts' => true,
-		'no_found_rows'       => true,
-		'suppress_filters'    => true,
-	]
+	array_merge(
+		$query_args,
+		[
+			'ignore_sticky_posts' => true,
+			'no_found_rows'       => true,
+			'suppress_filters'    => true,
+		]
+	)
 );
 
 if ( ! $ranking_posts_query->have_posts() ) {
