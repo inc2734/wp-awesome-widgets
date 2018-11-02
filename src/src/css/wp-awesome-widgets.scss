@@ -35,13 +35,51 @@
   }
 }
 
+.wpaw-posts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    margin: 0;
+    padding: 0;
+
+    > a {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      text-decoration: none;
+    }
+  }
+
+  &__figure {
+    @include cover-img();
+    margin-right: 1em;
+    flex: none;
+    height: 90px;
+    width: 90px;
+    background-color: #eee;
+  }
+
+  &__body {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    > * {
+      flex: none;
+    }
+  }
+
+  &__date {
+    margin-top: auto;
+  }
+}
+
 @import '../../widget/slider/widget';
 @import '../../widget/pr-box/widget';
 @import '../../widget/showcase/widget';
-@import '../../widget/recent-posts/widget';
-@import '../../widget/any-posts/widget';
-@import '../../widget/ranking/widget';
-@import '../../widget/taxonomy-posts/widget';
 @import '../../widget/pickup-slider/widget';
 @import '../../widget/google-adsense/widget';
 @import '../../widget/carousel-any-posts/widget';

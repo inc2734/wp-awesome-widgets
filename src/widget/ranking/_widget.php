@@ -53,26 +53,26 @@ if ( ! $ranking_posts_query->have_posts() ) {
 		id="wpaw-ranking-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		>
 
-		<ul class="wpaw-ranking__list">
+		<ul class="wpaw-ranking__list wpaw-posts-list">
 			<?php while ( $ranking_posts_query->have_posts() ) : ?>
 				<?php $ranking_posts_query->the_post(); ?>
-				<li class="wpaw-ranking__item">
+				<li class="wpaw-ranking__item wpaw-posts-list__item">
 					<a href="<?php the_permalink(); ?>">
 
 						<?php if ( $instance['show-thumbnail'] ) : ?>
-							<div class="wpaw-ranking__figure">
+							<div class="wpaw-ranking__figure wpaw-posts-list__figure">
 								<?php the_post_thumbnail( 'thumbnail' ); ?>
 							</div>
 						<?php endif; ?>
 
-						<div class="wpaw-ranking__body">
+						<div class="wpaw-ranking__body wpaw-posts-list__body">
 							<?php
 							$taxonomies = get_post_taxonomies( get_the_ID() );
 							$_taxonomy  = ! empty( $taxonomies[0] ) ? $taxonomies[0] : false;
 							$terms      = ( $_taxonomy ) ? get_the_terms( get_the_ID(), $_taxonomy ) : [];
 							?>
 							<?php if ( $instance['show-taxonomy'] && $terms ) : ?>
-								<div class="wpaw-ranking__taxonomy">
+								<div class="wpaw-ranking__taxonomy wpaw-posts-list__taxonomy">
 									<?php foreach ( $terms as $_term ) : ?>
 										<span class="wpaw-term wpaw-term--<?php echo esc_attr( $_taxonomy ); ?>-<?php echo esc_attr( $_term->term_id ); ?> wpaw-ranking__term">
 											<?php echo esc_html( $_term->name ); ?>
@@ -82,8 +82,8 @@ if ( ! $ranking_posts_query->have_posts() ) {
 								</div>
 							<?php endif; ?>
 
-							<div class="wpaw-ranking__title"><?php the_title(); ?></div>
-							<div class="wpaw-ranking__date"><?php the_time( get_option( 'date_format' ) ); ?></div>
+							<div class="wpaw-ranking__title wpaw-posts-list__title"><?php the_title(); ?></div>
+							<div class="wpaw-ranking__date wpaw-posts-list__date"><?php the_time( get_option( 'date_format' ) ); ?></div>
 						</div>
 
 					</a>
