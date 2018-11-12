@@ -7,16 +7,20 @@
 
 namespace Inc2734\WP_Awesome_Widgets;
 
+use Inc2734\WP_View_Controller\App\Loader;
+
 class Awesome_Widgets {
 
 	public function __construct() {
 		load_textdomain( 'inc2734-wp-awesome-widgets', __DIR__ . '/languages/' . get_locale() . '.mo' );
 
-		$includes = array(
+		Loader::load_template_tags();
+
+		$includes = [
 			'/Helper',
 			'/abstract',
 			'/widget/*',
-		);
+		];
 		foreach ( $includes as $include ) {
 			foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
 				if ( '_' === substr( basename( $file ), 0, 1 ) ) {
