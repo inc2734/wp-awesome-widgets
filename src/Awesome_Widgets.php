@@ -32,8 +32,19 @@ class Awesome_Widgets {
 		}
 
 		add_action( 'wp_enqueue_scripts', [ $this, '_wp_enqueue_scripts' ] );
-		add_action( 'admin_enqueue_scripts', [ $this, '_admin_enqueue_scripts' ], 9 );
+		add_action( 'load-widgets.php', [ $this, '_admin_enqueue_scripts' ], 9 );
 		add_action( 'elementor/editor/before_enqueue_scripts', [ $this, '_admin_enqueue_scripts' ] );
+
+		add_action(
+			'admin_enqueue_scripts',
+			function() {
+				if ( ! is_customize_preview() ) {
+					return;
+				}
+				$this->_admin_enqueue_scripts();
+			},
+			9
+		);
 	}
 
 	/**
@@ -72,6 +83,8 @@ class Awesome_Widgets {
 	 * @return void
 	 */
 	public function _admin_enqueue_scripts() {
+		do_action( 'inc2734_wp_awesome_widgets_before_admin_enqueue_scripts' );
+
 		if ( ! did_action( 'wp_enqueue_media' ) ) {
 			wp_enqueue_media();
 		}
@@ -108,6 +121,8 @@ class Awesome_Widgets {
 		);
 
 		wp_enqueue_style( 'wp-color-picker' );
+
+		do_action( 'inc2734_wp_awesome_widgets_after_admin_enqueue_scripts' );
 	}
 }
 
