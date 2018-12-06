@@ -24,22 +24,23 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 		$reflection  = new \ReflectionClass( $this );
 		$this->_path = dirname( $reflection->getFileName() );
 
-		if ( ! function_exists( 'wpvc_get_template_part' ) ) {
-			$path = get_theme_file_path( '/vendor/inc2734/wp-view-controller/src/App/template-tags/get-template-part.php' );
-			if ( file_exists( $path ) ) {
-				require_once( $path );
-			} else {
-				require_once( __DIR__ . '/../../wp-view-controller/src/App/template-tags/get-template-part.php' );
-			}
-		}
-
 		parent::__construct( false, $name, $widget_options );
 	}
 
+	/**
+	 * Return __DIR__
+	 */
 	public function _get_dir_path() {
 		return __DIR__;
 	}
 
+	/**
+	 * Render widget
+	 *
+	 * @param array $args
+	 * @param array $instance
+	 * @return void
+	 */
 	public function widget( $args, $instance ) {
 		$instance = shortcode_atts( $this->_defaults, $instance );
 		foreach ( $instance as $key => $value ) {
@@ -52,6 +53,12 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 		$this->_render_widget( $args, $instance );
 	}
 
+	/**
+	 * Render form
+	 *
+	 * @param array $instance
+	 * @return void
+	 */
 	public function form( $instance ) {
 		$instance = shortcode_atts( $this->_defaults, $instance );
 		foreach ( $instance as $key => $value ) {
@@ -65,27 +72,27 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 		$this->_render_form( $instance );
 	}
 
+	/**
+	 * Render widget
+	 *
+	 * @param array $args
+	 * @param array $instance
+	 * @return void
+	 */
 	protected function _render_widget( $args, $instance ) {
 		$widget_templates = apply_filters( 'inc2734_wp_awesome_widgets_widget_templates', 'templates/widget' );
 		$default_template = $this->_path . '/_widget.php';
 		$custom_template  = $widget_templates . '/' . basename( $this->_path );
 
-		if ( locate_template( $custom_template . '.php', false ) ) {
-			ob_start();
-			wpvc_get_template_part(
-				$custom_template,
-				null,
-				[
-					'args'     => $args,
-					'instance' => $instance,
-				]
-			);
-			$widget = ob_get_clean();
+		ob_start();
+
+		if ( file_exists( get_theme_file_path( $custom_template . '.php' ) ) ) {
+			include( get_theme_file_path( $custom_template . '.php' ) );
 		} elseif ( file_exists( $default_template ) ) {
-			ob_start();
 			include( $default_template );
-			$widget = ob_get_clean();
 		}
+
+		$widget = ob_get_clean();
 
 		if ( empty( $widget ) ) {
 			return;
@@ -96,6 +103,12 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 		// @codingStandardsIgnoreEnd
 	}
 
+	/**
+	 * Render form
+	 *
+	 * @param array $instance
+	 * @return void
+	 */
 	protected function _render_form( $instance ) {
 		$file = $this->_path . '/_form.php';
 		if ( ! file_exists( $file ) ) {
