@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\WP_Awesome_Widgets\Helper;
+
 if ( empty( $instance['code'] ) ) {
 	return;
 }
@@ -29,18 +31,18 @@ wp_enqueue_script(
 			<?php if ( preg_match( '/-2$/', $instance['size'] ) ) : ?>
 				<div class="wpaw-google-adsense__col">
 					<div class="wpaw-google-adsense__ad wpaw-google-adsense__ad--<?php echo esc_attr( $instance['size'] ); ?>">
-						<?php \Inc2734\WP_Awesome_Widgets\inc2734_wpaw_display_adsense_code( $instance['code'], $instance['size'] ); ?>
+						<?php Helper\display_adsense_code( $instance['code'], $instance['size'] ); ?>
 					</div>
 				</div>
 				<div class="wpaw-google-adsense__col">
 					<div class="wpaw-google-adsense__ad wpaw-google-adsense__ad--<?php echo esc_attr( $instance['size'] ); ?>">
-						<?php \Inc2734\WP_Awesome_Widgets\inc2734_wpaw_display_adsense_code( $instance['code'], $instance['size'] ); ?>
+						<?php Helper\display_adsense_code( $instance['code'], $instance['size'] ); ?>
 					</div>
 				</div>
 			<?php else : ?>
 				<div class="wpaw-google-adsense__col">
 					<div class="wpaw-google-adsense__ad wpaw-google-adsense__ad--<?php echo esc_attr( $instance['size'] ); ?>">
-						<?php \Inc2734\WP_Awesome_Widgets\inc2734_wpaw_display_adsense_code( $instance['code'], $instance['size'] ); ?>
+						<?php Helper\display_adsense_code( $instance['code'], $instance['size'] ); ?>
 					</div>
 				</div>
 			<?php endif; ?>
