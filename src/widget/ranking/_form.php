@@ -58,7 +58,7 @@
 			<?php foreach ( $items as $item ) : ?>
 				<li class="wpaw-item-selector__selected-item" data-post-id="<?php echo esc_attr( $item ); ?>">
 					<span class="dashicons dashicons-minus"></span>
-					<?php echo get_the_title( $item ); ?>
+					<?php echo wp_kses_post( get_the_title( $item ) ); ?>
 				</li>
 			<?php endforeach; ?>
 		</ul>
