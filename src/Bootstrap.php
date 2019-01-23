@@ -30,7 +30,13 @@ class Bootstrap {
 		add_action( 'wp_enqueue_scripts', [ $this, '_wp_enqueue_scripts' ] );
 		add_action( 'load-widgets.php', [ $this, '_admin_enqueue_scripts' ], 9 );
 		add_action( 'load-customize.php', [ $this, '_admin_enqueue_scripts' ], 9 );
+
 		add_action( 'elementor/editor/before_enqueue_scripts', [ $this, '_admin_enqueue_scripts' ] );
+		add_action( 'elementor/preview/init', [ $this, '_preview_enqueue_scripts_for_elemener' ] );
+
+		add_action( 'load-post-new.php', [ $this, '_admin_enqueue_scripts_for_siteorigin_panels' ] );
+		add_action( 'load-post.php', [ $this, '_admin_enqueue_scripts_for_siteorigin_panels' ] );
+
 	}
 
 	/**
@@ -40,25 +46,19 @@ class Bootstrap {
 	 */
 	public function _wp_enqueue_scripts() {
 		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/css/wp-awesome-widgets.min.css';
-		$src  = get_template_directory_uri() . $relative_path;
-		$path = get_template_directory() . $relative_path;
-
 		wp_enqueue_style(
 			'wp-awesome-widgets',
-			$src,
+			get_template_directory_uri() . $relative_path,
 			[],
-			filemtime( $path )
+			filemtime( get_template_directory() . $relative_path )
 		);
 
 		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/js/wp-awesome-widgets.min.js';
-		$src  = get_template_directory_uri() . $relative_path;
-		$path = get_template_directory() . $relative_path;
-
 		wp_enqueue_script(
 			'wp-awesome-widgets',
-			$src,
+			get_template_directory_uri() . $relative_path,
 			[ 'jquery' ],
-			filemtime( $path ),
+			filemtime( get_template_directory() . $relative_path ),
 			true
 		);
 	}
@@ -76,25 +76,19 @@ class Bootstrap {
 		}
 
 		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/admin-css/wp-awesome-widgets-admin.min.css';
-		$src  = get_template_directory_uri() . $relative_path;
-		$path = get_template_directory() . $relative_path;
-
 		wp_enqueue_style(
 			'wp-awesome-widgets-admin',
-			$src,
+			get_template_directory_uri() . $relative_path,
 			[],
-			filemtime( $path )
+			filemtime( get_template_directory() . $relative_path )
 		);
 
 		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/admin-js/wp-awesome-widgets-admin.min.js';
-		$src  = get_template_directory_uri() . $relative_path;
-		$path = get_template_directory() . $relative_path;
-
 		wp_enqueue_script(
 			'wp-awesome-widgets-admin',
-			$src,
+			get_template_directory_uri() . $relative_path,
 			[ 'jquery', 'jquery-ui-sortable', 'wp-color-picker' ],
-			filemtime( $path ),
+			filemtime( get_template_directory() . $relative_path ),
 			true
 		);
 
@@ -109,5 +103,34 @@ class Bootstrap {
 		wp_enqueue_style( 'wp-color-picker' );
 
 		do_action( 'inc2734_wp_awesome_widgets_after_admin_enqueue_scripts' );
+	}
+
+	/**
+	 * Enqueue assets for Elementor preview screen
+	 *
+	 * @return void
+	 */
+	public function _preview_enqueue_scripts_for_elemener() {
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/admin-js/elementor-preview.min.js';
+		wp_enqueue_script(
+			'wp-awesome-widgets-elementor-preview',
+			get_template_directory_uri() . $relative_path,
+			[ 'wp-awesome-widgets' ],
+			filemtime( get_template_directory() . $relative_path ),
+			true
+		);
+	}
+
+	/**
+	 * Enqueue assets for Page Builder for SiteOrigin
+	 *
+	 * @return void
+	 */
+	public function _admin_enqueue_scripts_for_siteorigin_panels() {
+		if ( ! class_exists( '\SiteOrigin_Panels' ) ) {
+			return;
+		}
+
+		$this->_admin_enqueue_scripts();
 	}
 }

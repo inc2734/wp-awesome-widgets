@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="wpaw-site-branding-widget">
+<div class="wpaw-site-branding-widget wpaw-widget-form">
 	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php esc_html_e( 'Site description', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<textarea

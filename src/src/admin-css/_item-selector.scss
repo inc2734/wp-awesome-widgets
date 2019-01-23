@@ -28,6 +28,12 @@
   visibility: visible;
 }
 
+.wpaw-item-selector__items .wpaw-item-selector__refresh-btn-wrapper {
+  margin: 0;
+  padding: 10px;
+  border: none;
+}
+
 .wpaw-item-selector__selected-item,
 .wpaw-item-selector__item {
   position: relative;

@@ -71,6 +71,19 @@ jQuery(function($) {
     });
   });
 
+  $(document).on('click', '.wpaw-item-selector__refresh-btn', function(e) {
+    var wrapper = $(this).closest('.wpaw-item-selector');
+    var selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
+    var area         = wrapper.find('.wpaw-item-selector__items');
+
+    area.attr('data-offset', 0);
+
+    // Reset area
+    area.empty();
+
+    _updateItems(wrapper);
+  });
+
   /**
    * Update post type
    */

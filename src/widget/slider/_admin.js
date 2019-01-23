@@ -7,7 +7,7 @@ jQuery(function($) {
   });
 
   $(document).on('change', '.js-wpaw-slider-widget-type', function() {
-    var widget = $(this).closest('.widget-inside');
+    var widget = $(this).closest('.wpaw-widget-form');
     if ('slide' === $(this).val()) {
       widget.find('.js-wpaw-slider-widget-only-slide').attr('aria-hidden', 'false');
     } else {

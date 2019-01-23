@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="wpaw-google-adsense-widget">
+<div class="wpaw-google-adsense-widget wpaw-widget-form">
 	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'code' ) ); ?>"><?php esc_html_e( 'Adsense code', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<textarea

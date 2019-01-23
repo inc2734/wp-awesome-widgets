@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="wpaw-contents-outline-widget">
+<div class="wpaw-contents-outline-widget wpaw-widget-form">
 	<p>
 		<?php esc_html_e( 'Show headings', 'inc2734-wp-awesome-widgets' ); ?><br>
 		<input type="hidden" name="<?php echo esc_attr( $this->get_field_name( 'headings' ) ); ?>[]" value="">

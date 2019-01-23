@@ -2,7 +2,7 @@ jQuery(function($) {
   $(document).on('click', '.wpaw-thumbnail-field__set-image-btn', function(e) {
     e.preventDefault();
     var button  = $(this);
-    var widget  = button.closest('.widget-inside');
+    var widget  = button.closest('.wpaw-widget-form');
     var wrapper = button.closest('.wpaw-thumbnail-field');
 
     var custom_uploader = wp.media({
@@ -31,7 +31,7 @@ jQuery(function($) {
   $(document).on('click', '.wpaw-thumbnail-field__unset-image-btn', function(e) {
     e.preventDefault();
     var button  = $(this);
-    var widget  = button.closest('.widget-inside');
+    var widget  = button.closest('.wpaw-widget-form');
     var wrapper = button.closest('.wpaw-thumbnail-field');
 
     wrapper.find('.wpaw-thumbnail-field__thumbnail').empty();

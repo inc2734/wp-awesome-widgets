@@ -5,7 +5,18 @@ import '../../widget/slider/_widget.js';
 import '../../widget/carousel-any-posts/_widget.js';
 
 jQuery(($) => {
-  $('.wpaw-pickup-slider__canvas').WpawPickupSlider();
-  $('.wpaw-slider__canvas').WpawSlider();
-  $('.wpaw-carousel__canvas').WpawCarousel();
+  const pickupSliderCanvas = $('.wpaw-pickup-slider__canvas');
+  if (0 < pickupSliderCanvas.length) {
+    pickupSliderCanvas.WpawPickupSlider();
+  }
+
+  const sliderCanvas = $('.wpaw-slider__canvas');
+  if (0 < sliderCanvas.length) {
+    sliderCanvas.WpawSlider();
+  }
+
+  const carouselCanvas = $('.wpaw-carousel__canvas');
+  if (0 < carouselCanvas.length) {
+    carouselCanvas.WpawCarousel();
+  }
 });

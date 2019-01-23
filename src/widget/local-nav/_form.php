@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="wpaw-local-nav-widget">
+<div class="wpaw-local-nav-widget wpaw-widget-form">
 	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'direction' ) ); ?>"><?php esc_html_e( 'Direction', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<select

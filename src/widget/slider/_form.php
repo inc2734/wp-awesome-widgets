@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="wpaw-slider-widget">
+<div class="wpaw-slider-widget wpaw-widget-form">
 	<div class="wpaw-repeaters">
 		<div class="wpaw-repeaters__items">
 			<?php foreach ( $instance['images'] as $key => $image ) : ?>

@@ -6,5 +6,5 @@
  */
 ?>
 
-<div class="wpaw-profile-box-widget">
+<div class="wpaw-profile-box-widget wpaw-widget-form">
 </div>

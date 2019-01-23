@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="wpaw-any-posts-widget">
+<div class="wpaw-any-posts-widget wpaw-widget-form">
 	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<input
@@ -64,6 +64,9 @@
 		</ul>
 
 		<ul class="wpaw-item-selector__items" data-offset="0" data-per-page="10" data-loading="false">
+			<li class="wpaw-item-selector__refresh-btn-wrapper">
+				<button class="button wpaw-item-selector__refresh-btn"><?php esc_html_e( 'Refresh', 'inc2734-wp-awesome-widgets' ); ?></button>
+			</li>
 		</ul>
 
 		<input

@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="wpaw-taxonomy-posts-widget">
+<div class="wpaw-taxonomy-posts-widget wpaw-widget-form">
 	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<input

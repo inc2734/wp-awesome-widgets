@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="wpaw-pickup-slider-widget">
+<div class="wpaw-pickup-slider-widget wpaw-widget-form">
 	<p>
 		<?php esc_html_e( 'Posts tagged as "pickup" are displayed as slider.', 'inc2734-wp-awesome-widgets' ); ?>
 	</p>

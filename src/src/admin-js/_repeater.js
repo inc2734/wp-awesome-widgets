@@ -2,7 +2,7 @@ jQuery(function($) {
   $(document).on('click', '.wpaw-repeaters__add-repeater-btn', function(e) {
     e.preventDefault();
     var button   = $(this);
-    var widget   = button.closest('.widget-inside');
+    var widget   = button.closest('.wpaw-widget-form');
     var repeater = widget.find('.wpaw-repeaters__item').first().clone(true);
     widget.find('.wpaw-repeaters__items').append(repeater);
 
@@ -33,7 +33,7 @@ jQuery(function($) {
   $(document).on('click', '.wpaw-repeaters__item-controls .button-link-delete', function(e) {
     e.preventDefault();
     var button   = $(this);
-    var widget   = button.closest('.widget-inside');
+    var widget   = button.closest('.wpaw-widget-form');
     var repeater = button.closest('.wpaw-repeaters__item');
 
     repeater.remove();
