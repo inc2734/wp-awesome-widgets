@@ -131,6 +131,6 @@ class Bootstrap {
 			return;
 		}
 
-		$this->_admin_enqueue_scripts();
+		add_action( 'admin_enqueue_scripts', [ $this, '_admin_enqueue_scripts' ] );
 	}
 }
