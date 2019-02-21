@@ -1,47 +1,60 @@
 jQuery(function($) {
-  $(document).on('click', '.wpaw-repeaters__add-repeater-btn', function(e) {
+  $(document).on('click', '.wpaw-repeaters__add-repeater-btn', (e) => {
     e.preventDefault();
-    var button   = $(this);
-    var widget   = button.closest('.wpaw-widget-form');
-    var repeater = widget.find('.wpaw-repeaters__item').first().clone(true);
-    widget.find('.wpaw-repeaters__items').append(repeater);
 
-    widget.find('.wpaw-repeaters__item').each(function(i, e) {
-      var _index    = i;
-      var _repeater = $(e);
-      _repeater.find('input, select, textarea, button').each(function(i, e) {
-        if (typeof $(e).attr('name') !== 'undefined') {
-          $(e)
-            .attr(
-              'name',
-              $(e).attr('name').replace(/\[\s*\d+\s*\](\[[^\[\]]+\])$/, '[' + _index + ']$1'
-            ))
-            .attr(
-              'id',
-              $(e).attr('id').replace(/\[\s*\d+\s*\](\[[^\[\]]+\])$/, '[' + _index + ']$1'
-            ));
+    const button = $(e.currentTarget);
+    const widget = button.closest('.wpaw-widget-form');
+    const clonedRepeater = widget.find('.wpaw-repeaters__item').first().clone(true);
+
+    widget.find('.wpaw-repeaters__items').append(clonedRepeater);
+
+    widget.find('.wpaw-repeaters__item').each((i, e) => {
+      const index    = i;
+      const repeater = $(e);
+
+      repeater.find('input, select, textarea, button').each((i, e) => {
+        const control = $(e);
+
+        if (typeof control.attr('name') === 'undefined') {
+          return true;
         }
+
+        control.attr(
+          'name',
+          $(e).attr('name').replace(/\[\s*\d+\s*\](\[[^\[\]]+\])$/, '[' + index + ']$1'
+        ));
+
+        control.attr(
+          'id',
+          $(e).attr('id').replace(/\[\s*\d+\s*\](\[[^\[\]]+\])$/, '[' + index + ']$1'
+        ));
+
+        control.on('touchstart', () => {
+          control.focus();
+        });
       });
     });
 
     $(document).trigger('wpaw-repeaters-add-repeater', {
-      repeater: repeater,
+      repeater: clonedRepeater,
       widget  : widget
     });
   });
 
-  $(document).on('click', '.wpaw-repeaters__item-controls .button-link-delete', function(e) {
+  $(document).on('click', '.wpaw-repeaters__item-controls .button-link-delete', (e) => {
     e.preventDefault();
-    var button   = $(this);
-    var widget   = button.closest('.wpaw-widget-form');
-    var repeater = button.closest('.wpaw-repeaters__item');
+
+    const button   = $(e.currentTarget);
+    const widget   = button.closest('.wpaw-widget-form');
+    const repeater = button.closest('.wpaw-repeaters__item');
 
     repeater.remove();
+
     widget.find('.widget-control-save').css('display', 'inline-block');
     widget.find('.widget-control-save').trigger('click');
   });
 
-  $(document).on('mouseover', '.wpaw-repeaters__items', function(e) {
-    $(this).sortable();
+  $(document).on('mouseover', '.wpaw-repeaters__items', (e) => {
+    $(e.currentTarget).sortable();
   });
 });
