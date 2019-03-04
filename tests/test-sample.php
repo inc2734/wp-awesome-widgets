@@ -14,6 +14,8 @@ class Sample_Test extends WP_UnitTestCase {
 	 * @test
 	 */
 	public function sample() {
-		new Inc2734\WP_Awesome_Widgets\Bootstrap();
+		$bootstrap = new Inc2734\WP_Awesome_Widgets\Bootstrap();
+
+		$this->assertTrue( is_a( $bootstrap, 'Inc2734\WP_Awesome_Widgets\Bootstrap' ) );
 	}
 }
