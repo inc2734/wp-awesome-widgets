@@ -1,58 +1,94 @@
-jQuery(function($) {
+'use strict';
+
+import $ from 'jquery';
+
+$(() => {
 
   /**
    * Add selected item if click the item
    */
-  $(document).on('click', '.wpaw-item-selector__item', function(e) {
-    var wrapper      = $(this).closest('.wpaw-item-selector');
-    var selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
-    var input        = wrapper.find('.wpaw-item-selector__input');
+  $(document).on(
+    'click',
+    '.wpaw-item-selector__item',
+    (event) => {
+      const wrapper      = $(event.currentTarget).closest('.wpaw-item-selector');
+      const selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
+      const input        = wrapper.find('.wpaw-item-selector__input');
 
-    var label        = ($(this).attr('data-post-title')) ? $(this).attr('data-post-title') : '&nbsp';
-    var selectedItem = $('<li class="wpaw-item-selector__selected-item" />')
-                          .attr('data-post-id', $(this).attr('data-post-id'))
-                          .html('<span class="dashicons dashicons-minus" />' + label);
+      const postTitle    = $(event.currentTarget).attr('data-post-title');
+      const label        = postTitle || '&nbsp';
+      const selectedItem = $('<li class="wpaw-item-selector__selected-item" />')
+                            .attr('data-post-id', $(event.currentTarget).attr('data-post-id'))
+                            .html('<span class="dashicons dashicons-minus" />' + label);
 
-    if (selectedArea.find('[data-post-id="' + $(this).attr('data-post-id') + '"]').length) {
-      return;
+      if (selectedArea.find('[data-post-id="' + $(event.currentTarget).attr('data-post-id') + '"]').length) {
+        return;
+      }
+
+      selectedItem.appendTo(selectedArea);
+
+      _updateInput(selectedArea);
     }
-
-    selectedItem.appendTo(selectedArea);
-
-    _updateInput(selectedArea);
-  });
+  );
 
   /**
    * sortable proccesses
    */
-  $(document).on('mouseover', '.wpaw-item-selector__selected-items', function(e) {
-    var selectedArea = $(this);
+  $(document).on(
+    'mouseover',
+    '.wpaw-item-selector__selected-items',
+    (event) => {
+      const selectedArea = $(event.currentTarget);
 
-    $(this).sortable({
-      update: function(event, ui) {
-        _updateInput(selectedArea);
-      }
-    });
-    $(this).disableSelection();
-  });
+      $(event.currentTarget).sortable(
+        {
+          update: (event, ui) => {
+            _updateInput(selectedArea);
+          }
+        }
+      );
+
+      $(event.currentTarget).disableSelection();
+    }
+  );
 
   /**
    * Remove the selected-item
    */
-  $(document).on('click', '.wpaw-item-selector__selected-item', function(e) {
-    var wrapper      = $(this).closest('.wpaw-item-selector');
-    var selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
+  $(document).on(
+    'click',
+    '.wpaw-item-selector__selected-item',
+    (event) => {
+      const wrapper      = $(event.currentTarget).closest('.wpaw-item-selector');
+      const selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
 
-    $(this).remove();
+      $(event.currentTarget).remove();
 
-    _updateInput(selectedArea);
-  });
+      _updateInput(selectedArea);
+    }
+  );
 
   /**
    * Add or Update widget
    */
-  $(document).on('widget-added widget-updated', function(event, widget) {
-    var wrapper  = widget.find('.wpaw-item-selector');
+  $(document).on(
+    'widget-added widget-updated',
+    (event, widget) => {
+      const wrapper = widget.find('.wpaw-item-selector');
+
+      if (1 > wrapper.length) {
+        return;
+      }
+
+      _updateItems(wrapper);
+    }
+  );
+
+  /**
+   * For widget screen
+   */
+  $('#widgets-right .widget:has(.wpaw-item-selector) .widget-inside').each((i, e) => {
+    var wrapper = $(e).find('.wpaw-item-selector');
 
     if (1 > wrapper.length) {
       return;
@@ -61,59 +97,53 @@ jQuery(function($) {
     _updateItems(wrapper);
   });
 
-  /**
-   * For widget screen
-   */
-  $(document).ready(function() {
-    $('#widgets-right .widget:has(.wpaw-item-selector) .widget-inside').each(function(i, e) {
-      var wrapper = $(e).find('.wpaw-item-selector');
+  $(document).on(
+    'click',
+    '.wpaw-item-selector__refresh-btn',
+    (event) => {
+      const wrapper      = $(event.currentTarget).closest('.wpaw-item-selector');
+      const selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
+      const area         = wrapper.find('.wpaw-item-selector__items');
 
-      if (1 > wrapper.length) {
-        return;
-      }
+      area.attr('data-offset', 0);
+
+      // Reset area
+      area.empty();
 
       _updateItems(wrapper);
-    });
-  });
-
-  $(document).on('click', '.wpaw-item-selector__refresh-btn', function(e) {
-    var wrapper = $(this).closest('.wpaw-item-selector');
-    var selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
-    var area         = wrapper.find('.wpaw-item-selector__items');
-
-    area.attr('data-offset', 0);
-
-    // Reset area
-    area.empty();
-
-    _updateItems(wrapper);
-  });
+    }
+  );
 
   /**
    * Update post type
    */
-  $(document).on('change', '.wpaw-item-selector__post-type', function(e) {
-    var wrapper = $(this).closest('.wpaw-item-selector');
-    var selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
-    var area         = wrapper.find('.wpaw-item-selector__items');
+  $(document).on(
+    'change',
+    '.wpaw-item-selector__post-type',
+    (event) => {
+      const wrapper      = $(event.currentTarget).closest('.wpaw-item-selector');
+      const selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
+      const area         = wrapper.find('.wpaw-item-selector__items');
 
-    area.attr('data-offset', 0);
+      area.attr('data-offset', 0);
 
-    // Reset selected items
-    selectedArea.empty();
-    _updateInput(selectedArea);
+      // Reset selected items
+      selectedArea.empty();
+      _updateInput(selectedArea);
 
-    // Reset area
-    area.empty();
+      // Reset area
+      area.empty();
 
-    _updateItems(wrapper);
-  });
+      _updateItems(wrapper);
+    }
+  );
 
   /**
    * Infinit scroll with selected-items-area
    */
-  (function() {
-    document.addEventListener('scroll', function (event) {
+  document.addEventListener(
+    'scroll',
+    (event) => {
       if (! $(event.target).hasClass('wpaw-item-selector__items')) {
         return;
       }
@@ -125,42 +155,47 @@ jQuery(function($) {
       var wrapper = $(event.target).closest('.wpaw-item-selector');
 
       _updateItems(wrapper);
-    }, true);
-  })();
+    },
+    true
+  );
 
   function _updateInput(selectedArea) {
-    var input = selectedArea.closest('.wpaw-item-selector').find('.wpaw-item-selector__input');
-    var value = selectedArea.find('.wpaw-item-selector__selected-item').map(function(i, e) {
+    const input = selectedArea.closest('.wpaw-item-selector').find('.wpaw-item-selector__input');
+
+    const value = selectedArea.find('.wpaw-item-selector__selected-item').map((i, e) => {
       return $(e).attr('data-post-id');
     }).get();
+
     input.val(value).trigger('change');
   }
 
   function _request(restBase, param) {
-    return $.ajax({
-      dataType: 'json',
-      type    : 'GET',
-      url     : wp_awesome_widgets_item_selector_wp_api.root + 'wp/v2/' + restBase + param
-    });
+    return $.ajax(
+      {
+        dataType: 'json',
+        type    : 'GET',
+        url     : wp_awesome_widgets_item_selector_wp_api.root + 'wp/v2/' + restBase + param
+      }
+    );
   }
 
   function _renderItems(area, data) {
-    data.forEach(function(post) {
-        var label = (post.title.rendered) ? post.title.rendered : '&nbsp;';
-        var item  = $('<li class="wpaw-item-selector__item" />')
-                      .attr('data-post-id', post.id)
-                      .attr('data-post-title', post.title.rendered)
-                      .html('<span class="dashicons dashicons-plus" />' + label);
-        item.appendTo(area);
+    data.forEach((post) => {
+      const label = (post.title.rendered) ? post.title.rendered : '&nbsp;';
+      const item  = $('<li class="wpaw-item-selector__item" />')
+                    .attr('data-post-id', post.id)
+                    .attr('data-post-title', post.title.rendered)
+                    .html('<span class="dashicons dashicons-plus" />' + label);
+      item.appendTo(area);
     });
   }
 
   function _updateItems(wrapper) {
-    var selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
-    var area         = wrapper.find('.wpaw-item-selector__items');
-    var postType     = wrapper.find('.wpaw-item-selector__post-type').val();
-    var param        = '';
+    const selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
+    const area         = wrapper.find('.wpaw-item-selector__items');
+    const postType     = wrapper.find('.wpaw-item-selector__post-type').val();
 
+    let param = '';
     param  = '?per_page=' + area.attr('data-per-page');
     param += '&offset=' + area.attr('data-offset');
 
@@ -178,14 +213,14 @@ jQuery(function($) {
     area.attr('data-loading', 'true');
 
     jqxhr = _request(postType, param)
-      .done(function(data) {
+      .done((data) => {
         _renderItems(area, data);
         area.attr('data-offset', parseInt(area.attr('data-offset')) + parseInt(area.attr('data-per-page')));
       })
-      .fail(function() {
+      .fail(() => {
         console.error('Read failed or canceled.');
       })
-      .always(function() {
+      .always(() => {
         area.find('.spinner').remove();
         area.attr('data-loading', 'false');
       });

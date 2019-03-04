@@ -1,60 +1,79 @@
-jQuery(function($) {
-  $(document).on('click', '.wpaw-repeaters__add-repeater-btn', (e) => {
-    e.preventDefault();
+'use strict';
 
-    const button = $(e.currentTarget);
-    const widget = button.closest('.wpaw-widget-form');
-    const clonedRepeater = widget.find('.wpaw-repeaters__item').first().clone(true);
+import $ from 'jquery';
 
-    widget.find('.wpaw-repeaters__items').append(clonedRepeater);
+$(() => {
+  $(document).on(
+    'click',
+    '.wpaw-repeaters__add-repeater-btn',
+    (event) => {
+      event.preventDefault();
 
-    widget.find('.wpaw-repeaters__item').each((i, e) => {
-      const index    = i;
-      const repeater = $(e);
+      const button = $(event.currentTarget);
+      const widget = button.closest('.wpaw-widget-form');
+      const clonedRepeater = widget.find('.wpaw-repeaters__item').first().clone(true);
 
-      repeater.find('input, select, textarea, button').each((i, e) => {
-        const control = $(e);
+      widget.find('.wpaw-repeaters__items').append(clonedRepeater);
 
-        if (typeof control.attr('name') === 'undefined') {
-          return true;
-        }
+      widget.find('.wpaw-repeaters__item').each((i, e) => {
+        const index    = i;
+        const repeater = $(e);
 
-        control.attr(
-          'name',
-          $(e).attr('name').replace(/\[\s*\d+\s*\](\[[^\[\]]+\])$/, '[' + index + ']$1'
-        ));
+        repeater.find('input, select, textarea, button').each((i, e) => {
+          const control = $(e);
 
-        control.attr(
-          'id',
-          $(e).attr('id').replace(/\[\s*\d+\s*\](\[[^\[\]]+\])$/, '[' + index + ']$1'
-        ));
+          if (typeof control.attr('name') === 'undefined') {
+            return true;
+          }
 
-        control.on('touchstart', () => {
-          control.focus();
+          control.attr(
+            'name',
+            $(e).attr('name').replace(/\[\s*\d+\s*\](\[[^\[\]]+\])$/, '[' + index + ']$1'
+          ));
+
+          control.attr(
+            'id',
+            $(e).attr('id').replace(/\[\s*\d+\s*\](\[[^\[\]]+\])$/, '[' + index + ']$1'
+          ));
+
+          control.on('touchstart', () => {
+            control.focus();
+          });
         });
       });
-    });
 
-    $(document).trigger('wpaw-repeaters-add-repeater', {
-      repeater: clonedRepeater,
-      widget  : widget
-    });
-  });
+      $(document).trigger(
+        'wpaw-repeaters-add-repeater',
+        {
+          repeater: clonedRepeater,
+          widget  : widget
+        }
+      );
+    }
+  );
 
-  $(document).on('click', '.wpaw-repeaters__item-controls .button-link-delete', (e) => {
-    e.preventDefault();
+  $(document).on(
+    'click',
+    '.wpaw-repeaters__item-controls .button-link-delete',
+    (event) => {
+      event.preventDefault();
 
-    const button   = $(e.currentTarget);
-    const widget   = button.closest('.wpaw-widget-form');
-    const repeater = button.closest('.wpaw-repeaters__item');
+      const button   = $(event.currentTarget);
+      const widget   = button.closest('.wpaw-widget-form');
+      const repeater = button.closest('.wpaw-repeaters__item');
 
-    repeater.remove();
+      repeater.remove();
 
-    widget.find('.widget-control-save').css('display', 'inline-block');
-    widget.find('.widget-control-save').trigger('click');
-  });
+      widget.find('.widget-control-save').css('display', 'inline-block');
+      widget.find('.widget-control-save').trigger('click');
+    }
+  );
 
-  $(document).on('mouseover', '.wpaw-repeaters__items', (e) => {
-    $(e.currentTarget).sortable();
-  });
+  $(document).on(
+    'mouseover',
+    '.wpaw-repeaters__items',
+    (event) => {
+      $(event.currentTarget).sortable();
+    }
+  );
 });

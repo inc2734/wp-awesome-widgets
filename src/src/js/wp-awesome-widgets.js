@@ -1,22 +1,21 @@
 'use strict';
 
-import '../../widget/pickup-slider/_widget.js';
-import '../../widget/slider/_widget.js';
-import '../../widget/carousel-any-posts/_widget.js';
+import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
+import {wpawPickupSlider} from '../../widget/pickup-slider/_widget.js';
+import {wpawSlider} from '../../widget/slider/_widget.js';
+import {wpawCarousel} from '../../widget/carousel-any-posts/_widget.js';
 
-jQuery(($) => {
-  const pickupSliderCanvas = $('.wpaw-pickup-slider__canvas');
-  if (0 < pickupSliderCanvas.length) {
-    pickupSliderCanvas.WpawPickupSlider();
-  }
+window.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    const pickupSliderCanvases = document.querySelectorAll('.wpaw-pickup-slider__canvas');
+    forEachHtmlNodes(pickupSliderCanvases, (canvas) => wpawPickupSlider(canvas));
 
-  const sliderCanvas = $('.wpaw-slider__canvas');
-  if (0 < sliderCanvas.length) {
-    sliderCanvas.WpawSlider();
-  }
+    const sliderCanvases = document.querySelectorAll('.wpaw-slider__canvas');
+    forEachHtmlNodes(sliderCanvases, (canvas) => wpawSlider(canvas));
 
-  const carouselCanvas = $('.wpaw-carousel__canvas');
-  if (0 < carouselCanvas.length) {
-    carouselCanvas.WpawCarousel();
-  }
-});
+    const carouselCanvas = document.querySelectorAll('.wpaw-carousel__canvas');
+    forEachHtmlNodes(carouselCanvas, (canvas) => wpawCarousel(canvas));
+  },
+  false
+);

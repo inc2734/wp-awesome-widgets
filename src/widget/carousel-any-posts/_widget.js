@@ -3,11 +3,9 @@
 import $ from 'jquery';
 import 'slick-carousel';
 
-$.fn.WpawCarousel = function() {
-  return this.each((i, e) => {
-    const carousel = $(e);
-
-    carousel.slick({
+export const wpawCarousel = (carousel) => {
+  $(carousel).slick(
+    {
       speed: 500,
       autoplaySpeed: 4000,
       slidesToShow: 3,
@@ -23,6 +21,6 @@ $.fn.WpawCarousel = function() {
           }
         }
       ]
-    });
-  });
+    }
+  );
 };

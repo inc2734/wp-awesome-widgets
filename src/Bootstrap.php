@@ -30,13 +30,14 @@ class Bootstrap {
 		add_action( 'wp_enqueue_scripts', [ $this, '_wp_enqueue_scripts' ] );
 		add_action( 'load-widgets.php', [ $this, '_admin_enqueue_scripts' ], 9 );
 		add_action( 'load-customize.php', [ $this, '_admin_enqueue_scripts' ], 9 );
+		add_action( 'customize_preview_init', [ $this, '_customize_preview_init' ], 9 );
 
 		add_action( 'elementor/editor/before_enqueue_scripts', [ $this, '_admin_enqueue_scripts' ] );
 		add_action( 'elementor/preview/init', [ $this, '_preview_enqueue_scripts_for_elemener' ] );
+		add_action( 'elementor/frontend/after_register_scripts', [ $this, '_deregister_elementor_slick' ] );
 
 		add_action( 'load-post-new.php', [ $this, '_admin_enqueue_scripts_for_siteorigin_panels' ] );
 		add_action( 'load-post.php', [ $this, '_admin_enqueue_scripts_for_siteorigin_panels' ] );
-
 	}
 
 	/**
@@ -106,6 +107,23 @@ class Bootstrap {
 	}
 
 	/**
+	 * Enqueue script for customize preview
+	 *
+	 * @return void
+	 */
+	public function _customize_preview_init() {
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/admin-js/customize-preview.min.js';
+
+		wp_enqueue_script(
+			'wp-awesome-widgets-customize-preview',
+			get_template_directory_uri() . $relative_path,
+			[ 'customize-preview' ],
+			filemtime( get_template_directory() . $relative_path ),
+			true
+		);
+	}
+
+	/**
 	 * Enqueue assets for Elementor preview screen
 	 *
 	 * @return void
@@ -115,10 +133,19 @@ class Bootstrap {
 		wp_enqueue_script(
 			'wp-awesome-widgets-elementor-preview',
 			get_template_directory_uri() . $relative_path,
-			[ 'wp-awesome-widgets' ],
+			[],
 			filemtime( get_template_directory() . $relative_path ),
 			true
 		);
+	}
+
+	/**
+	 * Deregister slick of Elementor
+	 *
+	 * @return void
+	 */
+	public function _deregister_elementor_slick() {
+		wp_deregister_script( 'jquery-slick' );
 	}
 
 	/**
