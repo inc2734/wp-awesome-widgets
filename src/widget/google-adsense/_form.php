@@ -38,6 +38,7 @@
 				'rectangle'         => __( 'Rectangle (300 x 250)', 'inc2734-wp-awesome-widgets' ),
 				'rectangle-big-2'   => __( 'Rectangle big (336 x 280) two', 'inc2734-wp-awesome-widgets' ),
 				'rectangle-2'       => __( 'Rectangle (300 x 250) two', 'inc2734-wp-awesome-widgets' ),
+				'link'              => __( 'Link unit', 'inc2734-wp-awesome-widgets' ),
 			];
 			?>
 			<?php foreach ( $sizes as $key => $label ) : ?>

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2018-10-21 02:18:56+00:00\n"
-"PO-Revision-Date: 2018-10-21 11:20+0900\n"
+"POT-Creation-Date: 2019-03-05 01:40:39+00:00\n"
+"PO-Revision-Date: 2019-03-05 10:41+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -28,12 +28,17 @@ msgstr "タイトル"
 msgid "Post type"
 msgstr "投稿タイプ"
 
-#: widget/any-posts/_form.php:87 widget/ranking/_form.php:87
+#: widget/any-posts/_form.php:68 widget/carousel-any-posts/_form.php:68
+#: widget/ranking/_form.php:68
+msgid "Refresh"
+msgstr "更新"
+
+#: widget/any-posts/_form.php:90 widget/ranking/_form.php:90
 #: widget/recent-posts/_form.php:68 widget/taxonomy-posts/_form.php:97
 msgid "Show thumbnail"
 msgstr "サムネイルを表示"
 
-#: widget/any-posts/_form.php:99 widget/ranking/_form.php:99
+#: widget/any-posts/_form.php:102 widget/ranking/_form.php:102
 #: widget/recent-posts/_form.php:80
 msgid "Show taxonomy"
 msgstr "分類を表示"
@@ -106,6 +111,10 @@ msgstr "レクタングル大 (336 x 280) 2個"
 msgid "Rectangle (300 x 250) two"
 msgstr "レクタングル (300 x 250) 2個"
 
+#: widget/google-adsense/_form.php:41
+msgid "Link unit"
+msgstr "リンクユニット"
+
 #: widget/google-adsense/google-adsense.php:22
 msgid "WPAW: Google Adsense"
 msgstr "WPAW: Google アドセンス"
@@ -154,7 +163,7 @@ msgstr "ボタンリンク"
 msgid "Overall link"
 msgstr "全体リンク"
 
-#: widget/pickup-slider/_widget.php:89
+#: widget/pickup-slider/_widget.php:97
 msgid "READ MORE"
 msgstr "READ MORE"
 
@@ -184,12 +193,12 @@ msgstr "解除"
 msgid "Summary"
 msgstr "概要"
 
-#: widget/pr-box/_form.php:90 widget/pr-box/_form.php:227
+#: widget/pr-box/_form.php:90 widget/pr-box/_form.php:209
 #: widget/showcase/_form.php:130 widget/slider/_form.php:58
 msgid "Link URL"
 msgstr "リンク URL"
 
-#: widget/pr-box/_form.php:101 widget/pr-box/_form.php:238
+#: widget/pr-box/_form.php:101 widget/pr-box/_form.php:220
 #: widget/showcase/_form.php:141 widget/slider/_form.php:69
 msgid "Link text"
 msgstr "リンクテキスト"
@@ -203,55 +212,51 @@ msgid "Add Item"
 msgstr "項目を追加"
 
 #: widget/pr-box/_form.php:124
-msgid "Size of image to use"
-msgstr "使用する画像のサイズ"
-
-#: widget/pr-box/_form.php:142
 msgid "Thumbnail aspect ratio"
 msgstr "サムネイルのアスペクト比"
 
-#: widget/pr-box/_form.php:161
+#: widget/pr-box/_form.php:143
 msgid "Column size for mobile"
 msgstr "モバイルのカラムサイズ"
 
-#: widget/pr-box/_form.php:169 widget/pr-box/_form.php:191
-#: widget/pr-box/_form.php:213
+#: widget/pr-box/_form.php:151 widget/pr-box/_form.php:173
+#: widget/pr-box/_form.php:195
 msgid "1 column"
 msgstr "1カラム"
 
-#: widget/pr-box/_form.php:170 widget/pr-box/_form.php:192
-#: widget/pr-box/_form.php:214
+#: widget/pr-box/_form.php:152 widget/pr-box/_form.php:174
+#: widget/pr-box/_form.php:196
 msgid "2 columns"
 msgstr "2カラム"
 
-#: widget/pr-box/_form.php:171 widget/pr-box/_form.php:193
-#: widget/pr-box/_form.php:215
+#: widget/pr-box/_form.php:153 widget/pr-box/_form.php:175
+#: widget/pr-box/_form.php:197
 msgid "3 columns"
 msgstr "3カラム"
 
-#: widget/pr-box/_form.php:172 widget/pr-box/_form.php:194
-#: widget/pr-box/_form.php:216
+#: widget/pr-box/_form.php:154 widget/pr-box/_form.php:176
+#: widget/pr-box/_form.php:198
 msgid "4 columns"
 msgstr "4カラム"
 
-#: widget/pr-box/_form.php:173 widget/pr-box/_form.php:195
-#: widget/pr-box/_form.php:217
+#: widget/pr-box/_form.php:155 widget/pr-box/_form.php:177
+#: widget/pr-box/_form.php:199
 msgid "5 columns"
 msgstr "5カラム"
 
-#: widget/pr-box/_form.php:183
+#: widget/pr-box/_form.php:165
 msgid "Column size for tablet"
 msgstr "タブレットのカラムサイズ"
 
-#: widget/pr-box/_form.php:205
+#: widget/pr-box/_form.php:187
 msgid "Column size for PC"
 msgstr "PCのカラムサイズ"
 
-#: widget/pr-box/_form.php:257
+#: widget/pr-box/_form.php:239
 msgid "Remove side padding"
 msgstr "左右余白を削除"
 
-#: widget/pr-box/pr-box.php:42
+#: widget/pr-box/pr-box.php:41
 msgid "WPAW: PR Box"
 msgstr "WPAW: PR ボックス"
 
@@ -366,6 +371,9 @@ msgstr "表示するターム"
 #: widget/taxonomy-posts/taxonomy-posts.php:24
 msgid "WPAW: Taxonomy posts"
 msgstr "WPAW: 任意のタクソノミーの投稿"
+
+#~ msgid "Size of image to use"
+#~ msgstr "使用する画像のサイズ"
 
 #~ msgid "Slides to show"
 #~ msgstr "表示するスライド数"
