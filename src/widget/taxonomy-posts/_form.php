@@ -44,6 +44,7 @@
 			id="<?php echo esc_attr( $this->get_field_id( 'taxonomy' ) ); ?>"
 			class="widefat"
 		>
+			<option value=""></option>
 			<?php foreach ( $all_terms as $taxonomy_id => $terms ) : ?>
 				<optgroup label="<?php echo esc_attr( get_taxonomy( $taxonomy_id )->label ); ?>">
 					<?php
