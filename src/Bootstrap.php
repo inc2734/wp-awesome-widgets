@@ -13,7 +13,7 @@ class Bootstrap {
 		load_textdomain( 'inc2734-wp-awesome-widgets', __DIR__ . '/languages/' . get_locale() . '.mo' );
 
 		$includes = [
-			'/Helper',
+			'/deprecated',
 			'/widget',
 			'/widget/*',
 		];

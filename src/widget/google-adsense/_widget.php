@@ -31,18 +31,18 @@ wp_enqueue_script(
 			<?php if ( preg_match( '/-2$/', $instance['size'] ) ) : ?>
 				<div class="wpaw-google-adsense__col">
 					<div class="wpaw-google-adsense__ad wpaw-google-adsense__ad--<?php echo esc_attr( $instance['size'] ); ?>">
-						<?php Helper\display_adsense_code( $instance['code'], $instance['size'] ); ?>
+						<?php Helper::the_adsense_code( $instance['code'], $instance['size'] ); ?>
 					</div>
 				</div>
 				<div class="wpaw-google-adsense__col">
 					<div class="wpaw-google-adsense__ad wpaw-google-adsense__ad--<?php echo esc_attr( $instance['size'] ); ?>">
-						<?php Helper\display_adsense_code( $instance['code'], $instance['size'] ); ?>
+						<?php Helper::the_adsense_code( $instance['code'], $instance['size'] ); ?>
 					</div>
 				</div>
 			<?php else : ?>
 				<div class="wpaw-google-adsense__col">
 					<div class="wpaw-google-adsense__ad wpaw-google-adsense__ad--<?php echo esc_attr( $instance['size'] ); ?>">
-						<?php Helper\display_adsense_code( $instance['code'], $instance['size'] ); ?>
+						<?php Helper::the_adsense_code( $instance['code'], $instance['size'] ); ?>
 					</div>
 				</div>
 			<?php endif; ?>

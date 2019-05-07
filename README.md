@@ -28,8 +28,7 @@ $ composer require inc2734/wp-awesome-widgets
 ## How to use
 ```
 <?php
-// When Using composer auto loader
-new Inc2734\WP_Awesome_Widgets\Awesome_Widgets();
+new \Inc2734\WP_Awesome_Widgets\Bootstrap();
 ```
 
 ### How to overwite widget templates

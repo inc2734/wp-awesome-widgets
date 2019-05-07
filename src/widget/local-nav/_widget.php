@@ -47,7 +47,7 @@ if ( $instance['display-only-have-descendants'] ) {
 		>
 
 		<?php
-		Helper\the_local_nav(
+		Helper::the_local_nav(
 			$founder_id,
 			get_the_ID(),
 			[
