@@ -15,7 +15,7 @@ namespace Inc2734\WP_Awesome_Widgets\Helper;
  * @return void
  */
 function display_adsense_code( $code, $size = null ) {
-	\Inc2734\WP_Awesome_Widgets\Helper::display_adsense_code( $code, $size );
+	\Inc2734\WP_Awesome_Widgets\Helper::the_adsense_code( $code, $size );
 }
 
 /**
