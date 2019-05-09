@@ -42,7 +42,7 @@
 
 			<div class="wpaw-showcase__body">
 				<?php if ( ! empty( $instance['title'] ) ) : ?>
-					<h2 class="wpaw-showcase__title"><?php echo esc_html( $instance['title'] ); ?></h2>
+					<h2 class="wpaw-showcase__title"><?php echo wp_kses_post( $instance['title'] ); ?></h2>
 				<?php endif; ?>
 
 				<?php if ( ! empty( $instance['lead'] ) ) : ?>

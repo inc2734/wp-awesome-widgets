@@ -49,7 +49,7 @@ if ( ! $carousel_any_posts_query->have_posts() ) {
 
 			<?php if ( $instance['title'] ) : ?>
 				<?php echo wp_kses_post( $args['before_title'] ); ?>
-					<?php echo esc_html( $instance['title'] ); ?>
+					<?php echo wp_kses_post( $instance['title'] ); ?>
 				<?php echo wp_kses_post( $args['after_title'] ); ?>
 			<?php endif; ?>
 

@@ -28,7 +28,7 @@
 		<div class="wpaw-pr-box__inner">
 
 			<?php if ( ! empty( $instance['title'] ) ) : ?>
-				<h2 class="wpaw-pr-box__title"><?php echo esc_html( $instance['title'] ); ?></h2>
+				<h2 class="wpaw-pr-box__title"><?php echo wp_kses_post( $instance['title'] ); ?></h2>
 			<?php endif; ?>
 
 			<?php if ( ! empty( $instance['lead'] ) ) : ?>
@@ -59,7 +59,7 @@
 						<?php endif; ?>
 
 						<?php if ( ! empty( $item['title'] ) ) : ?>
-							<div class="wpaw-pr-box__item-title"><?php echo esc_html( $item['title'] ); ?></div>
+							<div class="wpaw-pr-box__item-title"><?php echo wp_kses_post( $item['title'] ); ?></div>
 						<?php endif; ?>
 
 						<?php if ( ! empty( $item['summary'] ) ) : ?>

@@ -67,7 +67,7 @@ if ( 'fade' === $instance['type'] ) {
 									<div class="wpaw-slider__item-content">
 										<?php if ( ! empty( $image['title'] ) ) : ?>
 											<div class="wpaw-slider__item-title">
-												<?php echo esc_html( $image['title'] ); ?>
+												<?php echo wp_kses_post( $image['title'] ); ?>
 											</div>
 										<?php endif; ?>
 
