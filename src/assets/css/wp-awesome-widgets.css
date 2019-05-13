@@ -328,11 +328,11 @@
 .wpaw-carousel__item {
   position: relative; }
 
-.wpaw-carousel__figure {
+.wpaw-carousel__item-figure {
   position: relative;
   overflow: hidden;
   background-color: #eee; }
-  .wpaw-carousel__figure > img {
+  .wpaw-carousel__item-figure > img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -342,7 +342,7 @@
     min-width: 100%;
     transform: translate(-50%, -50%); }
     @supports (object-fit: cover) {
-      .wpaw-carousel__figure > img {
+      .wpaw-carousel__item-figure > img {
         top: 0;
         left: 0;
         height: 100%;
@@ -350,12 +350,12 @@
         object-fit: cover;
         object-position: 50% 50%;
         transform: none; } }
-  .wpaw-carousel__figure::before {
+  .wpaw-carousel__item-figure::before {
     content: '';
     display: block;
     padding-top: 75%; }
 
-.wpaw-carousel__taxonomy {
+.wpaw-carousel__item-taxonomy {
   position: absolute;
   top: 0;
   left: 0;
