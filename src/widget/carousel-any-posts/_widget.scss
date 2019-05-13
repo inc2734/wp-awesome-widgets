@@ -11,7 +11,7 @@
     position: relative;
   }
 
-  &__figure {
+  &__item-figure {
     @include cover-img();
     background-color: #eee;
 
@@ -22,7 +22,7 @@
     }
   }
 
-  &__taxonomy {
+  &__item-taxonomy {
     position: absolute;
     top: 0;
     left: 0;

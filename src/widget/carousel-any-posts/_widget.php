@@ -63,7 +63,7 @@ if ( ! $carousel_any_posts_query->have_posts() ) {
 						class="wpaw-carousel__item"
 						href="<?php the_permalink(); ?>"
 						>
-						<div class="wpaw-carousel__figure">
+						<div class="wpaw-carousel__item-figure">
 							<?php the_post_thumbnail( $thumbnail_size ); ?>
 						</div>
 						<div class="wpaw-carousel__item-body">
@@ -73,9 +73,9 @@ if ( ! $carousel_any_posts_query->have_posts() ) {
 							$terms      = ( $_taxonomy ) ? get_the_terms( get_the_ID(), $_taxonomy ) : [];
 							?>
 							<?php if ( $terms ) : ?>
-								<div class="wpaw-carousel__taxonomy">
+								<div class="wpaw-carousel__item-taxonomy">
 									<?php foreach ( $terms as $_term ) : ?>
-										<span class="wpaw-term wpaw-term--<?php echo esc_attr( $_taxonomy ); ?>-<?php echo esc_attr( $_term->term_id ); ?> wpaw-carousel__term">
+										<span class="wpaw-term wpaw-term--<?php echo esc_attr( $_taxonomy ); ?>-<?php echo esc_attr( $_term->term_id ); ?> wpaw-carousel__item-term">
 											<?php echo esc_html( $_term->name ); ?>
 										</span>
 										<?php break; ?>
