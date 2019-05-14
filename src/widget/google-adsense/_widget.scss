@@ -1,6 +1,4 @@
 .wpaw-google-adsense {
-  overflow: hidden;
-
   &__row {
     margin: 0 -.5em -1em;
     display: flex;
@@ -17,7 +15,6 @@
   &__ad {
     margin: 0 auto;
     width: 100%;
-    overflow: hidden;
 
     &--auto {}
 
