@@ -283,42 +283,41 @@
 .wpaw-pickup-slider .slick-list {
   height: auto !important; }
 
-.wpaw-google-adsense {
-  overflow: hidden; }
-  .wpaw-google-adsense__row {
-    margin: 0 -.5em -1em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; }
-  .wpaw-google-adsense__col {
-    flex: 1 1 0%;
-    max-width: 100%;
-    padding: 0 .5em 1em; }
-  .wpaw-google-adsense__ad {
-    margin: 0 auto;
-    width: 100%;
-    overflow: hidden; }
-    .wpaw-google-adsense__ad--big-banner {
-      max-width: 728px;
-      max-height: 90px; }
-    .wpaw-google-adsense__ad--rectangle-big {
-      max-width: 336px;
-      max-height: 280px; }
-    .wpaw-google-adsense__ad--large-mobile {
-      max-width: 320px;
-      max-height: 100px; }
-    .wpaw-google-adsense__ad--large-sky-scraper {
-      max-width: 300px;
-      max-height: 600px; }
-    .wpaw-google-adsense__ad--rectangle {
-      max-width: 300px;
-      max-height: 250px; }
-    .wpaw-google-adsense__ad--rectangle-big-2 {
-      max-width: 336px;
-      max-height: 280px; }
-    .wpaw-google-adsense__ad--rectangle-2 {
-      max-width: 300px;
-      max-height: 250px; }
+.wpaw-google-adsense__row {
+  margin: 0 -.5em -1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.wpaw-google-adsense__col {
+  flex: 1 1 0%;
+  max-width: 100%;
+  padding: 0 .5em 1em; }
+
+.wpaw-google-adsense__ad {
+  margin: 0 auto;
+  width: 100%; }
+  .wpaw-google-adsense__ad--big-banner {
+    max-width: 728px;
+    max-height: 90px; }
+  .wpaw-google-adsense__ad--rectangle-big {
+    max-width: 336px;
+    max-height: 280px; }
+  .wpaw-google-adsense__ad--large-mobile {
+    max-width: 320px;
+    max-height: 100px; }
+  .wpaw-google-adsense__ad--large-sky-scraper {
+    max-width: 300px;
+    max-height: 600px; }
+  .wpaw-google-adsense__ad--rectangle {
+    max-width: 300px;
+    max-height: 250px; }
+  .wpaw-google-adsense__ad--rectangle-big-2 {
+    max-width: 336px;
+    max-height: 280px; }
+  .wpaw-google-adsense__ad--rectangle-2 {
+    max-width: 300px;
+    max-height: 250px; }
 
 .wpaw-carousel__canvas {
   visibility: hidden; }
