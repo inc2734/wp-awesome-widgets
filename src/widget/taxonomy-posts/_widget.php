@@ -23,9 +23,10 @@ $widget_id = explode( '-', $args['widget_id'] );
 $widget_id = end( $widget_id );
 
 $query_args = [
-	'post_type'      => $post_types,
-	'posts_per_page' => $instance['posts-per-page'],
-	'tax_query'      => [
+	'post_type'        => $post_types,
+	'posts_per_page'   => $instance['posts-per-page'],
+	'suppress_filters' => true,
+	'tax_query'        => [
 		[
 			'taxonomy' => $taxonomy_id,
 			'terms'    => $term_id,
@@ -41,7 +42,6 @@ $taxonomy_posts_query = new WP_Query(
 		[
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
-			'suppress_filters'    => true,
 		]
 	)
 );

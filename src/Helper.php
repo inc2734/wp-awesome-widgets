@@ -50,16 +50,23 @@ class Helper {
 			]
 		);
 
+		$query_args = [
+			'posts_per_page'   => 50,
+			'orderby'          => 'menu_order',
+			'suppress_filters' => true,
+		];
+		$query_args = apply_filters( 'inc2734_wp_awesome_widgets_child_nav_args', $query_args );
+
 		$children_query = new \WP_Query(
-			[
-				'post_type'           => get_post_type(),
-				'posts_per_page'      => 50,
-				'post_parent'         => $parent_id,
-				'orderby'             => 'menu_order',
-				'ignore_sticky_posts' => true,
-				'no_found_rows'       => true,
-				'suppress_filters'    => true,
-			]
+			array_merge(
+				$query_args,
+				[
+					'post_type'           => get_post_type(),
+					'post_parent'         => $parent_id,
+					'ignore_sticky_posts' => true,
+					'no_found_rows'       => true,
+				]
+			)
 		);
 		if ( ! $children_query->have_posts() ) {
 			return;

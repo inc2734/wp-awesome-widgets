@@ -11,10 +11,11 @@ $widget_id = explode( '-', $args['widget_id'] );
 $widget_id = end( $widget_id );
 
 $query_args = [
-	'post_type'      => 'any',
-	'posts_per_page' => count( $items ),
-	'post__in'       => $items,
-	'orderby'        => 'post__in',
+	'post_type'        => 'any',
+	'posts_per_page'   => count( $items ),
+	'post__in'         => $items,
+	'orderby'          => 'post__in',
+	'suppress_filters' => true,
 ];
 $query_args = apply_filters( 'inc2734_wp_awesome_widgets_ranking_widget_args', $query_args );
 $query_args = apply_filters( 'inc2734_wp_awesome_widgets_ranking_widget_args_' . $widget_id, $query_args );
@@ -30,7 +31,6 @@ $ranking_posts_query = new WP_Query(
 		[
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
-			'suppress_filters'    => true,
 		]
 	)
 );

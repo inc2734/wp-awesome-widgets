@@ -6,9 +6,10 @@
  */
 
 $query_args = [
-	'post_type'      => 'any',
-	'posts_per_page' => -1,
-	'tax_query'      => [
+	'post_type'        => 'any',
+	'posts_per_page'   => -1,
+	'suppress_filters' => true,
+	'tax_query'        => [
 		[
 			'taxonomy' => 'post_tag',
 			'terms'    => [ 'pickup' ],
@@ -38,7 +39,6 @@ $pickup_posts_query = new WP_Query(
 		[
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
-			'suppress_filters'    => true,
 		]
 	)
 );
