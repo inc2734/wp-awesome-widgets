@@ -9,7 +9,7 @@ $(() => {
     (event) => {
       event.preventDefault();
       const button  = $(event.currentTarget);
-      const widget  = button.closest('.wpaw-widget-form');
+      const form    = button.closest('.form, form');
       const wrapper = button.closest('.wpaw-thumbnail-field');
 
       const custom_uploader = wp.media(
@@ -35,8 +35,8 @@ $(() => {
           wrapper.find('.wpaw-thumbnail-field__thumbnail').empty().append(thumbnail);
           wrapper.find('.wpaw-thumbnail-field__input-image').val(attachment.id);
 
-          widget.find('.widget-control-save').css('display', 'inline-block');
-          widget.find('.widget-control-save').trigger('click');
+          form.find('.widget-control-save').css('display', 'inline-block');
+          form.find('.widget-control-save').trigger('click');
         }
       ).open();
     }
@@ -49,14 +49,14 @@ $(() => {
       event.preventDefault();
 
       const button  = $(event.currentTarget);
-      const widget  = button.closest('.wpaw-widget-form');
+      const form    = button.closest('.form, form');
       const wrapper = button.closest('.wpaw-thumbnail-field');
 
       wrapper.find('.wpaw-thumbnail-field__thumbnail').empty();
       wrapper.find('.wpaw-thumbnail-field__input-image').val('');
 
-      widget.find('.widget-control-save').css('display', 'inline-block');
-      widget.find('.widget-control-save').trigger('click');
+      form.find('.widget-control-save').css('display', 'inline-block');
+      form.find('.widget-control-save').trigger('click');
     }
   );
 });

@@ -13,6 +13,14 @@ $(() => {
       const widget = button.closest('.wpaw-widget-form');
       const clonedRepeater = widget.find('.wpaw-repeaters__item').first().clone(true);
 
+      clonedRepeater.find('input, select, textarea, button').each((i, e) => {
+        $(e).on('change', () => {
+          const form = clonedRepeater.closest('.form, form');
+          form.find('.widget-control-save').css('display', 'inline-block');
+          form.find('.widget-control-save').trigger('click');
+        });
+      });
+
       widget.find('.wpaw-repeaters__items').append(clonedRepeater);
 
       widget.find('.wpaw-repeaters__item').each((i, e) => {
@@ -59,13 +67,13 @@ $(() => {
       event.preventDefault();
 
       const button   = $(event.currentTarget);
-      const widget   = button.closest('.wpaw-widget-form');
+      const form     = button.closest('.form, form');
       const repeater = button.closest('.wpaw-repeaters__item');
 
       repeater.remove();
 
-      widget.find('.widget-control-save').css('display', 'inline-block');
-      widget.find('.widget-control-save').trigger('click');
+      form.find('.widget-control-save').css('display', 'inline-block');
+      form.find('.widget-control-save').trigger('click');
     }
   );
 
