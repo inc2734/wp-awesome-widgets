@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2019-03-05 01:40:39+00:00\n"
-"PO-Revision-Date: 2019-03-05 10:41+0900\n"
+"POT-Creation-Date: 2019-08-07 07:41:24+00:00\n"
+"PO-Revision-Date: 2019-08-07 16:41+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -28,17 +28,22 @@ msgstr "タイトル"
 msgid "Post type"
 msgstr "投稿タイプ"
 
-#: widget/any-posts/_form.php:68 widget/carousel-any-posts/_form.php:68
-#: widget/ranking/_form.php:68
+#: widget/any-posts/_form.php:49 widget/carousel-any-posts/_form.php:49
+#: widget/ranking/_form.php:49
+msgid "Search"
+msgstr "検索"
+
+#: widget/any-posts/_form.php:72 widget/carousel-any-posts/_form.php:72
+#: widget/ranking/_form.php:72
 msgid "Refresh"
 msgstr "更新"
 
-#: widget/any-posts/_form.php:90 widget/ranking/_form.php:90
-#: widget/recent-posts/_form.php:68 widget/taxonomy-posts/_form.php:97
+#: widget/any-posts/_form.php:94 widget/ranking/_form.php:94
+#: widget/recent-posts/_form.php:68 widget/taxonomy-posts/_form.php:98
 msgid "Show thumbnail"
 msgstr "サムネイルを表示"
 
-#: widget/any-posts/_form.php:102 widget/ranking/_form.php:102
+#: widget/any-posts/_form.php:106 widget/ranking/_form.php:106
 #: widget/recent-posts/_form.php:80
 msgid "Show taxonomy"
 msgstr "分類を表示"
@@ -268,7 +273,7 @@ msgstr "WPAW: プロフィールボックス"
 msgid "WPAW: Ranking (Manual update)"
 msgstr "WPAW: ランキング（手動更新）"
 
-#: widget/recent-posts/_form.php:48 widget/taxonomy-posts/_form.php:77
+#: widget/recent-posts/_form.php:48 widget/taxonomy-posts/_form.php:78
 msgid "Number of posts"
 msgstr "表示する投稿数"
 

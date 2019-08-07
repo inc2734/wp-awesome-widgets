@@ -124,19 +124,45 @@ $(() => {
       const wrapper      = $(event.currentTarget).closest('.wpaw-item-selector');
       const selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
       const area         = wrapper.find('.wpaw-item-selector__items');
+      const keywords     = wrapper.find('.wpaw-item-selector__search__input');
 
       area.attr('data-offset', 0);
+      area.attr('data-failed', 'false');
 
       // Reset selected items
       selectedArea.empty();
       _updateInput(selectedArea);
 
+      // Reset keywords
+      keywords.val('');
+
       // Reset area
       area.empty();
-
       _updateItems(wrapper);
     }
   );
+
+  /**
+   * Search
+   */
+   $(document).on(
+      'input',
+      '.wpaw-item-selector__search__input',
+      (event) => {
+        const wrapper = $(event.currentTarget).closest('.wpaw-item-selector');
+        const area    = wrapper.find('.wpaw-item-selector__items');
+
+        area.attr('data-offset', 0);
+        area.attr('data-failed', 'false');
+
+        // Reset area
+        area.empty();
+
+        setTimeout(() => {
+          _updateItems(wrapper);
+        }, 2000);
+     }
+   );
 
   /**
    * Infinit scroll with selected-items-area
@@ -194,37 +220,43 @@ $(() => {
     const selectedArea = wrapper.find('.wpaw-item-selector__selected-items');
     const area         = wrapper.find('.wpaw-item-selector__items');
     const postType     = wrapper.find('.wpaw-item-selector__post-type').val();
+    const keywords     = wrapper.find('.wpaw-item-selector__search__input').val();
 
     let param = '';
     param  = '?per_page=' + area.attr('data-per-page');
     param += '&offset=' + area.attr('data-offset');
 
-    var jqxhr = area.data('jqxhr');
-    if (jqxhr && typeof jqxhr !== 'undefined') {
-      jqxhr.abort();
-      area.attr('data-loading', 'false');
+    if (keywords) {
+      param += '&search=' + keywords;
     }
 
     if ('true' === area.attr('data-loading')) {
       return;
     }
 
+    if ('true' === area.attr('data-failed')) {
+      return;
+    }
+
     area.append('<span class="spinner"></span>');
     area.attr('data-loading', 'true');
 
-    jqxhr = _request(postType, param)
+    const jqxhr = _request(postType, param)
       .done((data) => {
-        _renderItems(area, data);
-        area.attr('data-offset', parseInt(area.attr('data-offset')) + parseInt(area.attr('data-per-page')));
+        if (0 < data.length) {
+          _renderItems(area, data);
+          area.attr('data-offset', parseInt(area.attr('data-offset')) + parseInt(area.attr('data-per-page')));
+        } else {
+          area.attr('data-failed', 'true');
+        }
       })
       .fail(() => {
         console.error('Read failed or canceled.');
+        area.attr('data-failed', 'true');
       })
       .always(() => {
         area.find('.spinner').remove();
         area.attr('data-loading', 'false');
       });
-
-    area.data('jqxhr', jqxhr);
   }
 });

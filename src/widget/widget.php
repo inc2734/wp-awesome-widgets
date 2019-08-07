@@ -20,6 +20,9 @@ class Inc2734_WP_Awesome_Widgets_Abstract_Widget extends WP_Widget {
 	 */
 	protected $_path;
 
+	/**
+	 * @SuppressWarnings(PHPMD.MissingImport)
+	 */
 	public function __construct( $id_base, $name, $widget_options = [] ) {
 		$reflection  = new \ReflectionClass( $this );
 		$this->_path = dirname( $reflection->getFileName() );

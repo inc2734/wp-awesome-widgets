@@ -44,6 +44,10 @@
 					</option>
 				<?php endforeach; ?>
 			</select>
+
+			<span class="wpaw-item-selector__search">
+				<input type="text" class="widefat wpaw-item-selector__search__input" placeholder="<?php esc_html_e( 'Search', 'inc2734-wp-awesome-widgets' ); ?>">
+			</span>
 		</p>
 
 		<ul class="wpaw-item-selector__selected-items">
@@ -63,7 +67,7 @@
 			<?php endforeach; ?>
 		</ul>
 
-		<ul class="wpaw-item-selector__items" data-offset="0" data-per-page="10" data-loading="false">
+		<ul class="wpaw-item-selector__items" data-offset="0" data-per-page="10" data-loading="false" data-failed="false">
 			<li class="wpaw-item-selector__refresh-btn-wrapper">
 				<button class="button wpaw-item-selector__refresh-btn"><?php esc_html_e( 'Refresh', 'inc2734-wp-awesome-widgets' ); ?></button>
 			</li>

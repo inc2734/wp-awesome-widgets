@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2019-03-05 01:40:39+00:00\n"
+"POT-Creation-Date: 2019-08-07 07:41:24+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,17 +25,22 @@ msgstr ""
 msgid "Post type"
 msgstr ""
 
-#: widget/any-posts/_form.php:68 widget/carousel-any-posts/_form.php:68
-#: widget/ranking/_form.php:68
+#: widget/any-posts/_form.php:49 widget/carousel-any-posts/_form.php:49
+#: widget/ranking/_form.php:49
+msgid "Search"
+msgstr ""
+
+#: widget/any-posts/_form.php:72 widget/carousel-any-posts/_form.php:72
+#: widget/ranking/_form.php:72
 msgid "Refresh"
 msgstr ""
 
-#: widget/any-posts/_form.php:90 widget/ranking/_form.php:90
-#: widget/recent-posts/_form.php:68 widget/taxonomy-posts/_form.php:97
+#: widget/any-posts/_form.php:94 widget/ranking/_form.php:94
+#: widget/recent-posts/_form.php:68 widget/taxonomy-posts/_form.php:98
 msgid "Show thumbnail"
 msgstr ""
 
-#: widget/any-posts/_form.php:102 widget/ranking/_form.php:102
+#: widget/any-posts/_form.php:106 widget/ranking/_form.php:106
 #: widget/recent-posts/_form.php:80
 msgid "Show taxonomy"
 msgstr ""
@@ -265,7 +270,7 @@ msgstr ""
 msgid "WPAW: Ranking (Manual update)"
 msgstr ""
 
-#: widget/recent-posts/_form.php:48 widget/taxonomy-posts/_form.php:77
+#: widget/recent-posts/_form.php:48 widget/taxonomy-posts/_form.php:78
 msgid "Number of posts"
 msgstr ""
 

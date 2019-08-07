@@ -8,6 +8,7 @@
 namespace Inc2734\WP_Awesome_Widgets;
 
 use Inc2734\WP_Adsense;
+use WP_Query;
 
 class Helper {
 
@@ -57,7 +58,7 @@ class Helper {
 		];
 		$query_args = apply_filters( 'inc2734_wp_awesome_widgets_child_nav_args', $query_args );
 
-		$children_query = new \WP_Query(
+		$children_query = new WP_Query(
 			array_merge(
 				$query_args,
 				[
