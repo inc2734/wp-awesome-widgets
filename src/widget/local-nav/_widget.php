@@ -28,6 +28,7 @@ if ( $instance['display-only-have-descendants'] ) {
 			'posts_per_page'      => 50,
 			'post_parent'         => $founder_id,
 			'orderby'             => 'menu_order',
+			'order'               => 'ASC',
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
 			'suppress_filters'    => true,
