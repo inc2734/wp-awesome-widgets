@@ -53,7 +53,7 @@ class Helper {
 
 		$query_args = [
 			'posts_per_page'   => 50,
-			'orderby'          => 'menu_order',
+			'orderby'          => [ 'menu_order' => 'ASC', 'ID' => 'DESC' ],
 			'suppress_filters' => true,
 		];
 		$query_args = apply_filters( 'inc2734_wp_awesome_widgets_child_nav_args', $query_args );
