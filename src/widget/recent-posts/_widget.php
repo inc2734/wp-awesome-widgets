@@ -52,7 +52,10 @@ if ( ! $recent_posts_query->have_posts() ) {
 
 						<?php if ( $instance['show-thumbnail'] ) : ?>
 							<div class="wpaw-recent-posts__figure wpaw-posts-list__figure">
-								<?php the_post_thumbnail( 'thumbnail' ); ?>
+								<?php
+								$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_posts_list_image_size', 'thumbnail', wp_is_mobile(), $args['widget_id'] );
+								the_post_thumbnail( $thumbnail_size );
+								?>
 							</div>
 						<?php endif; ?>
 
