@@ -19,8 +19,12 @@ $term_id     = $_taxonomy[1];
 $_taxonomy   = get_taxonomy( $taxonomy_id );
 $post_types  = empty( $_taxonomy->object_type ) ? 'post' : $_taxonomy->object_type;
 
-$widget_id = explode( '-', $args['widget_id'] );
-$widget_id = end( $widget_id );
+if ( 0 === strpos( $args['widget_id'], 'inc2734_wp_awesome_widgets_taxonomy_posts-' ) ) {
+	$widget_number = explode( '-', $args['widget_id'] );
+	$widget_number = end( $widget_number );
+} else {
+	$widget_number = $args['widget_id'];
+}
 
 $query_args = [
 	'post_type'        => $post_types,
@@ -34,7 +38,7 @@ $query_args = [
 	],
 ];
 $query_args = apply_filters( 'inc2734_wp_awesome_widgets_taxonomy_posts_widget_args', $query_args );
-$query_args = apply_filters( 'inc2734_wp_awesome_widgets_taxonomy_posts_widget_args_' . $widget_id, $query_args );
+$query_args = apply_filters( 'inc2734_wp_awesome_widgets_taxonomy_posts_widget_args_' . $widget_number, $query_args );
 
 $taxonomy_posts_query = new WP_Query(
 	array_merge(

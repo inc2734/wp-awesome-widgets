@@ -60,7 +60,7 @@ add_filter(
 );
 ```
 
-### inc2734_wp_awesome_widgets_recent_posts_widget_args_&lt;$widget_id&gt;
+### inc2734_wp_awesome_widgets_recent_posts_widget_args_&lt;$widget_number&gt;
 ```
 /**
  * Customize specific recent posts widget args
@@ -69,7 +69,7 @@ add_filter(
  * @return array
  */
 add_filter(
-	'inc2734_wp_awesome_widgets_recent_posts_widget_args_'. $widget_id,
+	'inc2734_wp_awesome_widgets_recent_posts_widget_args_'. $widget_number,
 	function( $query_args ) {
 		return $query_args;
 	}
@@ -92,7 +92,7 @@ add_filter(
 );
 ```
 
-### inc2734_wp_awesome_widgets_ranking_widget_args_&lt;$widget_id&gt;
+### inc2734_wp_awesome_widgets_ranking_widget_args_&lt;$widget_number&gt;
 ```
 /**
  * Customize specific ranking widget args
@@ -101,7 +101,7 @@ add_filter(
  * @return array
  */
 add_filter(
-	'inc2734_wp_awesome_widgets_ranking_widget_args_' . $widget_id,
+	'inc2734_wp_awesome_widgets_ranking_widget_args_' . $widget_number,
 	function( $query_args ) {
 		return $query_args;
 	}
@@ -125,7 +125,7 @@ add_filter(
 );
 ```
 
-### inc2734_wp_awesome_widgets_carousel_any_posts_widget_args_&lt;$widget_id&gt;
+### inc2734_wp_awesome_widgets_carousel_any_posts_widget_args_&lt;$widget_number&gt;
 ```
 /**
  * Customize specific carousel any posts widget args
@@ -134,7 +134,7 @@ add_filter(
  * @return array
  */
 add_filter(
-	'inc2734_wp_awesome_widgets_carousel_any_posts_widget_args_'. $widget_id,
+	'inc2734_wp_awesome_widgets_carousel_any_posts_widget_args_'. $widget_number,
 	function( $query_args ) {
 		return $query_args;
 	}
@@ -177,7 +177,7 @@ add_filter(
 );
 ```
 
-### inc2734_wp_awesome_widgets_any_posts_widget_args_&lt;$widget_id&gt;
+### inc2734_wp_awesome_widgets_any_posts_widget_args_&lt;$widget_number&gt;
 ```
 /**
  * Customize specific any posts widget args
@@ -186,7 +186,7 @@ add_filter(
  * @return array
  */
 add_filter(
-	'inc2734_wp_awesome_widgets_any_posts_widget_args_' . $widget_id,
+	'inc2734_wp_awesome_widgets_any_posts_widget_args_' . $widget_number,
 	function( $query_args ) {
 		return $query_args;
 	}
@@ -285,7 +285,7 @@ add_filter(
 );
 ```
 
-### inc2734_wp_awesome_widgets_taxonomy_posts_widget_args_&lt;$widget_id&gt;
+### inc2734_wp_awesome_widgets_taxonomy_posts_widget_args_&lt;$widget_number&gt;
 ```
 /**
  * Customize specific taxonomy posts widget args
@@ -294,7 +294,7 @@ add_filter(
  * @return array
  */
 add_filter(
-	'inc2734_wp_awesome_widgets_taxonomy_posts_widget_args_' . $widget_id,
+	'inc2734_wp_awesome_widgets_taxonomy_posts_widget_args_' . $widget_number,
 	function( $query_args ) {
 		return $query_args;
 	}
@@ -317,7 +317,7 @@ add_filter(
 );
 ```
 
-### inc2734_wp_awesome_widgets_pickup_slider_widget_args_&lt;$widget_id&gt;
+### inc2734_wp_awesome_widgets_pickup_slider_widget_args_&lt;$widget_number&gt;
 ```
 /**
  * Customize specific pickup slider widget args
@@ -326,7 +326,7 @@ add_filter(
  * @return array
  */
 add_filter(
-	'inc2734_wp_awesome_widgets_pickup_slider_widget_args_' . $widget_id,
+	'inc2734_wp_awesome_widgets_pickup_slider_widget_args_' . $widget_number,
 	function( $query_args ) {
 		return $query_args;
 	}

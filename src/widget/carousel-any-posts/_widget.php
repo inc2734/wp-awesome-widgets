@@ -7,8 +7,12 @@
 
 $items = explode( ',', $instance['items'] );
 
-$widget_id = explode( '-', $args['widget_id'] );
-$widget_id = end( $widget_id );
+if ( 0 === strpos( $args['widget_id'], 'inc2734_wp_awesome_widgets_carousel_any_posts-' ) ) {
+	$widget_number = explode( '-', $args['widget_id'] );
+	$widget_number = end( $widget_number );
+} else {
+	$widget_number = $args['widget_id'];
+}
 
 $query_args = [
 	'post_type'        => 'any',
@@ -18,7 +22,7 @@ $query_args = [
 	'suppress_filters' => true,
 ];
 $query_args = apply_filters( 'inc2734_wp_awesome_widgets_carousel_any_posts_widget_args', $query_args );
-$query_args = apply_filters( 'inc2734_wp_awesome_widgets_carousel_any_posts_widget_args_' . $widget_id, $query_args );
+$query_args = apply_filters( 'inc2734_wp_awesome_widgets_carousel_any_posts_widget_args_' . $widget_number, $query_args );
 
 if ( empty( $query_args['post__in'] ) ) {
 	return;
