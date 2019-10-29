@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\WP_Awesome_Widgets\App\View;
+
 if ( empty( $instance['taxonomy'] ) ) {
 	return;
 }
@@ -50,46 +52,12 @@ $taxonomy_posts_query = new WP_Query(
 	)
 );
 
-if ( ! $taxonomy_posts_query->have_posts() ) {
-	return;
-}
-?>
-
-<?php echo wp_kses_post( $args['before_widget'] ); ?>
-
-	<?php if ( $instance['title'] ) : ?>
-		<?php echo wp_kses_post( $args['before_title'] ); ?>
-			<?php echo wp_kses_post( $instance['title'] ); ?>
-		<?php echo wp_kses_post( $args['after_title'] ); ?>
-	<?php endif; ?>
-
-	<div
-		class="wpaw-taxonomy-posts wpaw-taxonomy-posts--<?php echo esc_attr( $args['widget_id'] ); ?>"
-		id="wpaw-taxonomy-posts-<?php echo esc_attr( $args['widget_id'] ); ?>"
-		>
-
-		<ul class="wpaw-taxonomy-posts__list wpaw-posts-list">
-			<?php while ( $taxonomy_posts_query->have_posts() ) : ?>
-				<?php $taxonomy_posts_query->the_post(); ?>
-				<li class="wpaw-taxonomy-posts__item wpaw-posts-list__item">
-					<a href="<?php the_permalink(); ?>">
-
-						<?php if ( $instance['show-thumbnail'] ) : ?>
-							<div class="wpaw-taxonomy-posts__figure wpaw-posts-list__figure">
-								<?php the_post_thumbnail( 'thumbnail' ); ?>
-							</div>
-						<?php endif; ?>
-
-						<div class="wpaw-taxonomy-posts__body wpaw-posts-list__body">
-							<div class="wpaw-taxonomy-posts__title wpaw-posts-list__title"><?php the_title(); ?></div>
-							<div class="wpaw-taxonomy-posts__date wpaw-posts-list__date"><?php the_time( get_option( 'date_format' ) ); ?></div>
-						</div>
-
-					</a>
-				</li>
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
-		</ul>
-	</div>
-
-<?php echo wp_kses_post( $args['after_widget'] ); ?>
+View::render(
+	'taxonomy-posts',
+	null,
+	[
+		'args'     => $args,
+		'instance' => $instance,
+		'query'    => $taxonomy_posts_query,
+	]
+);

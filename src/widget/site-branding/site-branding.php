@@ -5,10 +5,9 @@
  * @license GPL-2.0+
  */
 
-/**
- * Site branding widget
- */
-class Inc2734_WP_Awesome_Widgets_Site_Branding extends Inc2734_WP_Awesome_Widgets_Abstract_Widget {
+use Inc2734\WP_Awesome_Widgets\App\Contract;
+
+class Inc2734_WP_Awesome_Widgets_Site_Branding extends Contract\Widget {
 
 	/**
 	 * @var array

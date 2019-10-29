@@ -5,10 +5,9 @@
  * @license GPL-2.0+
  */
 
-/**
- * Carousel any Posts widget
- */
-class Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts extends Inc2734_WP_Awesome_Widgets_Abstract_Widget {
+use Inc2734\WP_Awesome_Widgets\App\Contract;
+
+class Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts extends Contract\Widget {
 
 	/**
 	 * @var array

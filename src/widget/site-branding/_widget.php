@@ -4,28 +4,14 @@
  * @author inc2734
  * @license GPL-2.0+
  */
-?>
 
-<?php echo wp_kses_post( $args['before_widget'] ); ?>
+use Inc2734\WP_Awesome_Widgets\App\View;
 
-	<div
-		class="wpaw-site-branding wpaw-site-branding--<?php echo esc_attr( $args['widget_id'] ); ?>"
-		id="wpaw-site-branding-<?php echo esc_attr( $args['widget_id'] ); ?>"
-		>
-
-		<div class="wpaw-site-branding__logo">
-			<?php if ( has_custom_logo() ) : ?>
-				<?php the_custom_logo(); ?>
-			<?php else : ?>
-				<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
-			<?php endif; ?>
-		</div>
-
-		<?php if ( ! empty( $instance['description'] ) ) : ?>
-			<div class="wpaw-site-branding__description">
-				<?php echo wp_kses_post( wpautop( $instance['description'] ) ); ?>
-			</div>
-		<?php endif; ?>
-	</div>
-
-<?php echo wp_kses_post( $args['after_widget'] ); ?>
+View::render(
+	'site-branding',
+	null,
+	[
+		'args'     => $args,
+		'instance' => $instance,
+	]
+);

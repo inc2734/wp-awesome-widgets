@@ -5,10 +5,9 @@
  * @license GPL-2.0+
  */
 
-/**
- * Profile box widget
- */
-class Inc2734_WP_Awesome_Widgets_Profile_Box extends Inc2734_WP_Awesome_Widgets_Abstract_Widget {
+use Inc2734\WP_Awesome_Widgets\App\Contract;
+
+class Inc2734_WP_Awesome_Widgets_Profile_Box extends Contract\Widget {
 
 	/**
 	 * @var array
