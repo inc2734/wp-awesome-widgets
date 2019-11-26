@@ -21,11 +21,12 @@ $term_id     = $_taxonomy[1];
 $_taxonomy   = get_taxonomy( $taxonomy_id );
 $post_types  = empty( $_taxonomy->object_type ) ? 'post' : $_taxonomy->object_type;
 
-if ( 0 === strpos( $args['widget_id'], 'inc2734_wp_awesome_widgets_taxonomy_posts-' ) ) {
-	$widget_number = explode( '-', $args['widget_id'] );
-	$widget_number = end( $widget_number );
+$widget_number = explode( '-', $args['widget_id'] );
+if ( 1 < count( $widget_number ) ) {
+	array_shift( $widget_number );
+	$widget_number = implode( '-', $widget_number );
 } else {
-	$widget_number = $args['widget_id'];
+	$widget_number = $widget_number[0];
 }
 
 $query_args = [

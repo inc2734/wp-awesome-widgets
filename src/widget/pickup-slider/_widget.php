@@ -29,11 +29,12 @@ if ( ! empty( $instance['random'] ) ) {
 	);
 }
 
-if ( 0 === strpos( $args['widget_id'], 'inc2734_wp_awesome_widgets_pickup_slider-' ) ) {
-	$widget_number = explode( '-', $args['widget_id'] );
-	$widget_number = end( $widget_number );
+$widget_number = explode( '-', $args['widget_id'] );
+if ( 1 < count( $widget_number ) ) {
+	array_shift( $widget_number );
+	$widget_number = implode( '-', $widget_number );
 } else {
-	$widget_number = $args['widget_id'];
+	$widget_number = $widget_number[0];
 }
 
 $query_args = apply_filters( 'inc2734_wp_awesome_widgets_pickup_slider_widget_args', $query_args );

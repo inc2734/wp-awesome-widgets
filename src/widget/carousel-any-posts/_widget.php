@@ -9,11 +9,12 @@ use Inc2734\WP_Awesome_Widgets\App\View;
 
 $items = explode( ',', $instance['items'] );
 
-if ( 0 === strpos( $args['widget_id'], 'inc2734_wp_awesome_widgets_carousel_any_posts-' ) ) {
-	$widget_number = explode( '-', $args['widget_id'] );
-	$widget_number = end( $widget_number );
+$widget_number = explode( '-', $args['widget_id'] );
+if ( 1 < count( $widget_number ) ) {
+	array_shift( $widget_number );
+	$widget_number = implode( '-', $widget_number );
 } else {
-	$widget_number = $args['widget_id'];
+	$widget_number = $widget_number[0];
 }
 
 $query_args = [
