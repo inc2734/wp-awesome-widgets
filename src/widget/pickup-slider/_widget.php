@@ -9,7 +9,7 @@ use Inc2734\WP_Awesome_Widgets\App\View;
 
 $query_args = [
 	'post_type'        => 'any',
-	'posts_per_page'   => -1,
+	'posts_per_page'   => empty( $instance['posts_per_page'] ) ? -1 : $instance['posts_per_page'],
 	'suppress_filters' => true,
 	'tax_query'        => [
 		[

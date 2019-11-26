@@ -13,8 +13,9 @@ class Inc2734_WP_Awesome_Widgets_Pickup_Slider extends Contract\Widget {
 	 * @var array
 	 */
 	protected $_defaults = [
-		'random'    => 0,
-		'link-type' => 'button',
+		'random'         => 0,
+		'link-type'      => 'button',
+		'posts_per_page' => -1,
 	];
 
 	public function __construct() {

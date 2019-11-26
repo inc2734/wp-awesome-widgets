@@ -4,13 +4,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2019-08-07 07:41:24+00:00\n"
+"POT-Creation-Date: 2019-11-26 11:39:36+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: templates/pickup-slider.php:59
+msgid "READ MORE"
+msgstr ""
 
 #: widget/any-posts/_form.php:11 widget/carousel-any-posts/_form.php:11
 #: widget/pr-box/_form.php:11 widget/pr-box/_form.php:69
@@ -45,11 +49,11 @@ msgstr ""
 msgid "Show taxonomy"
 msgstr ""
 
-#: widget/any-posts/any-posts.php:27
+#: widget/any-posts/any-posts.php:26
 msgid "WPAW: Any Posts"
 msgstr ""
 
-#: widget/carousel-any-posts/carousel-any-posts.php:25
+#: widget/carousel-any-posts/carousel-any-posts.php:24
 msgid "WPAW: Carousel ( Any Posts )"
 msgstr ""
 
@@ -61,7 +65,7 @@ msgstr ""
 msgid "Also show on mobile"
 msgstr ""
 
-#: widget/contents-outline/contents-outline.php:24
+#: widget/contents-outline/contents-outline.php:23
 msgid "WPAW: Contents outline"
 msgstr ""
 
@@ -117,7 +121,7 @@ msgstr ""
 msgid "Link unit"
 msgstr ""
 
-#: widget/google-adsense/google-adsense.php:22
+#: widget/google-adsense/google-adsense.php:21
 msgid "WPAW: Google Adsense"
 msgstr ""
 
@@ -141,7 +145,7 @@ msgstr ""
 msgid "Display only when you have descendants"
 msgstr ""
 
-#: widget/local-nav/local-nav.php:25
+#: widget/local-nav/local-nav.php:24
 msgid "WPAW: Local Navigation"
 msgstr ""
 
@@ -165,8 +169,12 @@ msgstr ""
 msgid "Overall link"
 msgstr ""
 
-#: widget/pickup-slider/_widget.php:97
-msgid "READ MORE"
+#: widget/pickup-slider/_form.php:46
+msgid "Maximum number of displays"
+msgstr ""
+
+#: widget/pickup-slider/_form.php:54
+msgid "If \"0\", all items are displayed."
 msgstr ""
 
 #: widget/pickup-slider/pickup-slider.php:24
@@ -258,15 +266,15 @@ msgstr ""
 msgid "Remove side padding"
 msgstr ""
 
-#: widget/pr-box/pr-box.php:41
+#: widget/pr-box/pr-box.php:40
 msgid "WPAW: PR Box"
 msgstr ""
 
-#: widget/profile-box/profile-box.php:21
+#: widget/profile-box/profile-box.php:20
 msgid "WPAW: Profile box"
 msgstr ""
 
-#: widget/ranking/ranking.php:27
+#: widget/ranking/ranking.php:26
 msgid "WPAW: Ranking (Manual update)"
 msgstr ""
 
@@ -274,7 +282,7 @@ msgstr ""
 msgid "Number of posts"
 msgstr ""
 
-#: widget/recent-posts/recent-posts.php:27
+#: widget/recent-posts/recent-posts.php:26
 msgid "WPAW: Recent posts"
 msgstr ""
 
@@ -302,7 +310,7 @@ msgstr ""
 msgid "Thumbnail"
 msgstr ""
 
-#: widget/showcase/showcase.php:32
+#: widget/showcase/showcase.php:31
 msgid "WPAW: Showcase"
 msgstr ""
 
@@ -314,7 +322,7 @@ msgstr ""
 msgid "HTML use allowed."
 msgstr ""
 
-#: widget/site-branding/site-branding.php:23
+#: widget/site-branding/site-branding.php:22
 msgid "WPAW: Site branding"
 msgstr ""
 
@@ -362,7 +370,7 @@ msgstr ""
 msgid "Number of slides to slide at once(PC)"
 msgstr ""
 
-#: widget/slider/slider.php:40
+#: widget/slider/slider.php:39
 msgid "WPAW: Slider"
 msgstr ""
 
@@ -370,6 +378,6 @@ msgstr ""
 msgid "Displayed term"
 msgstr ""
 
-#: widget/taxonomy-posts/taxonomy-posts.php:24
+#: widget/taxonomy-posts/taxonomy-posts.php:23
 msgid "WPAW: Taxonomy posts"
 msgstr ""

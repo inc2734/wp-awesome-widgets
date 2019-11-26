@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2019-08-07 07:41:24+00:00\n"
-"PO-Revision-Date: 2019-08-07 16:41+0900\n"
+"POT-Creation-Date: 2019-11-26 11:39:36+00:00\n"
+"PO-Revision-Date: 2019-11-26 20:40+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -14,6 +14,10 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: templates/pickup-slider.php:59
+msgid "READ MORE"
+msgstr "READ MORE"
 
 #: widget/any-posts/_form.php:11 widget/carousel-any-posts/_form.php:11
 #: widget/pr-box/_form.php:11 widget/pr-box/_form.php:69
@@ -48,11 +52,11 @@ msgstr "サムネイルを表示"
 msgid "Show taxonomy"
 msgstr "分類を表示"
 
-#: widget/any-posts/any-posts.php:27
+#: widget/any-posts/any-posts.php:26
 msgid "WPAW: Any Posts"
 msgstr "WPAW: 任意の投稿"
 
-#: widget/carousel-any-posts/carousel-any-posts.php:25
+#: widget/carousel-any-posts/carousel-any-posts.php:24
 msgid "WPAW: Carousel ( Any Posts )"
 msgstr "WPAW: カルーセル（任意の投稿）"
 
@@ -64,7 +68,7 @@ msgstr "見出しを表示"
 msgid "Also show on mobile"
 msgstr "モバイルでも表示"
 
-#: widget/contents-outline/contents-outline.php:24
+#: widget/contents-outline/contents-outline.php:23
 msgid "WPAW: Contents outline"
 msgstr "WPAW: 目次"
 
@@ -120,7 +124,7 @@ msgstr "レクタングル (300 x 250) 2個"
 msgid "Link unit"
 msgstr "リンクユニット"
 
-#: widget/google-adsense/google-adsense.php:22
+#: widget/google-adsense/google-adsense.php:21
 msgid "WPAW: Google Adsense"
 msgstr "WPAW: Google アドセンス"
 
@@ -144,7 +148,7 @@ msgstr "トップレベルのページのタイトルを表示"
 msgid "Display only when you have descendants"
 msgstr "子孫があるときだけ表示"
 
-#: widget/local-nav/local-nav.php:25
+#: widget/local-nav/local-nav.php:24
 msgid "WPAW: Local Navigation"
 msgstr "WPAW: ローカルナビゲーション"
 
@@ -168,9 +172,13 @@ msgstr "ボタンリンク"
 msgid "Overall link"
 msgstr "全体リンク"
 
-#: widget/pickup-slider/_widget.php:97
-msgid "READ MORE"
-msgstr "READ MORE"
+#: widget/pickup-slider/_form.php:46
+msgid "Maximum number of displays"
+msgstr "最大表示数"
+
+#: widget/pickup-slider/_form.php:54
+msgid "If \"0\", all items are displayed."
+msgstr "「0」の場合、すべての項目が表示されます。"
 
 #: widget/pickup-slider/pickup-slider.php:24
 msgid "WPAW: Pickup slider"
@@ -261,15 +269,15 @@ msgstr "PCのカラムサイズ"
 msgid "Remove side padding"
 msgstr "左右余白を削除"
 
-#: widget/pr-box/pr-box.php:41
+#: widget/pr-box/pr-box.php:40
 msgid "WPAW: PR Box"
 msgstr "WPAW: PR ボックス"
 
-#: widget/profile-box/profile-box.php:21
+#: widget/profile-box/profile-box.php:20
 msgid "WPAW: Profile box"
 msgstr "WPAW: プロフィールボックス"
 
-#: widget/ranking/ranking.php:27
+#: widget/ranking/ranking.php:26
 msgid "WPAW: Ranking (Manual update)"
 msgstr "WPAW: ランキング（手動更新）"
 
@@ -277,7 +285,7 @@ msgstr "WPAW: ランキング（手動更新）"
 msgid "Number of posts"
 msgstr "表示する投稿数"
 
-#: widget/recent-posts/recent-posts.php:27
+#: widget/recent-posts/recent-posts.php:26
 msgid "WPAW: Recent posts"
 msgstr "WPAW: 最近の投稿"
 
@@ -305,7 +313,7 @@ msgstr "文字色"
 msgid "Thumbnail"
 msgstr "サムネイル"
 
-#: widget/showcase/showcase.php:32
+#: widget/showcase/showcase.php:31
 msgid "WPAW: Showcase"
 msgstr "WPAW: ショーケース"
 
@@ -317,7 +325,7 @@ msgstr "サイトの説明"
 msgid "HTML use allowed."
 msgstr "HTML 使用可"
 
-#: widget/site-branding/site-branding.php:23
+#: widget/site-branding/site-branding.php:22
 msgid "WPAW: Site branding"
 msgstr "WPAW: サイトブランディング"
 
@@ -365,7 +373,7 @@ msgstr "1度に表示するスライド数（PC）"
 msgid "Number of slides to slide at once(PC)"
 msgstr "1度にスライドするスライド数（PC）"
 
-#: widget/slider/slider.php:40
+#: widget/slider/slider.php:39
 msgid "WPAW: Slider"
 msgstr "WPAW: スライダー"
 
@@ -373,7 +381,7 @@ msgstr "WPAW: スライダー"
 msgid "Displayed term"
 msgstr "表示するターム"
 
-#: widget/taxonomy-posts/taxonomy-posts.php:24
+#: widget/taxonomy-posts/taxonomy-posts.php:23
 msgid "WPAW: Taxonomy posts"
 msgstr "WPAW: 任意のタクソノミーの投稿"
 

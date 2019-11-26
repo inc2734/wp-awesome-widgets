@@ -41,4 +41,16 @@
 			<?php endforeach; ?>
 		</select>
 	</p>
+
+	<p>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'posts_per_page' ) ); ?>"><?php esc_html_e( 'Maximum number of displays', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+		<input
+			type="number"
+			name="<?php echo esc_attr( $this->get_field_name( 'posts_per_page' ) ); ?>"
+			id="<?php echo esc_attr( $this->get_field_id( 'posts_per_page' ) ); ?>"
+			value="<?php echo esc_attr( $instance['posts_per_page'] ); ?>"
+			min="0"
+		><br>
+		<small><?php esc_html_e( 'If "0", all items are displayed.', 'inc2734-wp-awesome-widgets' ); ?></small>
+	</p>
 </div>
