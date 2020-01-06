@@ -44,6 +44,6 @@ class Inc2734_WP_Awesome_Widgets_Showcase extends Contract\Widget {
 add_action(
 	'widgets_init',
 	function() {
-	register_widget( 'Inc2734_WP_Awesome_Widgets_Showcase' );
+		register_widget( 'Inc2734_WP_Awesome_Widgets_Showcase' );
 	}
 );

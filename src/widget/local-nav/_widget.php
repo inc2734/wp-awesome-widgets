@@ -27,10 +27,13 @@ if ( $instance['display-only-have-descendants'] ) {
 			'post_type'           => get_post_type(),
 			'posts_per_page'      => 50,
 			'post_parent'         => $founder_id,
-			'orderby'             => [ 'menu_order' => 'ASC', 'ID' => 'DESC' ],
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
 			'suppress_filters'    => true,
+			'orderby'             => [
+				'menu_order' => 'ASC',
+				'ID'         => 'DESC',
+			],
 		]
 	);
 
