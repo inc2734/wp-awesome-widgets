@@ -45,6 +45,7 @@ export const wpawSlider = (slider) => {
       dots: true,
       infinite: true,
       arrows: false,
+      rows: 0,
       responsive: [
         {
           breakpoint: 1024,

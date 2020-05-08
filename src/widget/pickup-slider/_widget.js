@@ -41,7 +41,8 @@ export const wpawPickupSlider = (slider) => {
       fade: true,
       autoplay: true,
       dots: false,
-      infinite: true
+      infinite: true,
+      rows: 0,
     }
   );
 };

@@ -13,6 +13,7 @@ export const wpawCarousel = (carousel) => {
       arrows: false,
       dots: true,
       infinite: true,
+      rows: 0,
       responsive: [
         {
           breakpoint: 768,
