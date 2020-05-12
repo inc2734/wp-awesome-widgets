@@ -58,7 +58,7 @@ class Bootstrap {
 		wp_enqueue_script(
 			'wp-awesome-widgets',
 			get_template_directory_uri() . $relative_path,
-			[ 'jquery' ],
+			[ 'jquery', 'slick-carousel' ],
 			filemtime( get_template_directory() . $relative_path ),
 			true
 		);

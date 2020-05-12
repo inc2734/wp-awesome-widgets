@@ -26,6 +26,8 @@ $ composer require inc2734/wp-awesome-widgets
 ```
 
 ## How to use
+Some widgets depend on slick-carousel. This library expects slick-carousel CSS and JavaScript to be enqueued with the handle `slick-carousel`.
+
 ```
 <?php
 new \Inc2734\WP_Awesome_Widgets\Bootstrap();

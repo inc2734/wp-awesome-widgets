@@ -1,7 +1,7 @@
 'use strict';
 
 import $ from 'jquery';
-import 'slick-carousel';
+//import 'slick-carousel';
 
 export const wpawCarousel = (carousel) => {
   $(carousel).slick(

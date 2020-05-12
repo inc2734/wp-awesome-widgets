@@ -1,7 +1,7 @@
 'use strict';
 
 import $ from 'jquery';
-import 'slick-carousel';
+//import 'slick-carousel';
 import {setItemsHeight} from '../../src/js/helper/slider.js';
 
 export const wpawPickupSlider = (slider) => {
