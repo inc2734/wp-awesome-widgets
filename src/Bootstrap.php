@@ -117,7 +117,10 @@ class Bootstrap {
 		wp_enqueue_script(
 			'wp-awesome-widgets-customize-preview',
 			get_template_directory_uri() . $relative_path,
-			[ 'customize-preview' ],
+			[
+				'customize-preview',
+				'customize-selective-refresh',
+			],
 			filemtime( get_template_directory() . $relative_path ),
 			true
 		);
