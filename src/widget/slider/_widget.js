@@ -1,8 +1,5 @@
-'use strict';
-
 import $ from 'jquery';
-//import 'slick-carousel';
-import {setItemsHeight} from '../../src/js/helper/slider.js';
+import { setItemsHeight } from '../../src/js/helper/slider.js';
 
 export const wpawSlider = (slider) => {
   let windowWidth = document.documentElement.clientWidth;

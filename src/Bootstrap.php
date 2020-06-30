@@ -53,15 +53,6 @@ class Bootstrap {
 			[],
 			filemtime( get_template_directory() . $relative_path )
 		);
-
-		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/js/wp-awesome-widgets.min.js';
-		wp_enqueue_script(
-			'wp-awesome-widgets',
-			get_template_directory_uri() . $relative_path,
-			[ 'jquery', 'slick-carousel' ],
-			filemtime( get_template_directory() . $relative_path ),
-			true
-		);
 	}
 
 	/**
