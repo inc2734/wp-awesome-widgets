@@ -13,6 +13,7 @@
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1",
     "rimraf": "^3.0.2",
+    "slick-carousel": "^1.8.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
   },
@@ -21,6 +22,7 @@
     "cleanup:css:admin": "rimraf src/assets/admin-css",
     "cleanup:js:front": "rimraf src/assets/js",
     "cleanup:js:admin": "rimraf src/assets/admin-js",
+    "cleanup:packages": "rimraf src/assets/packages",
     "css:front:sass": "node-sass src/src/admin-css/wp-awesome-widgets-admin.scss -o src/assets/admin-css",
     "css:front:postcss": "postcss src/assets/admin-css/wp-awesome-widgets-admin.css -o src/assets/admin-css/wp-awesome-widgets-admin.min.css -c=postcss.config.js",
     "css:front": "npm-run-all -s css:front:*",
@@ -36,8 +38,10 @@
     "js:customize-preview": "webpack src/src/admin-js/customize-preview.js -o src/assets/admin-js/customize-preview.min.js --config webpack.config.js",
     "js:elementor-preview": "webpack src/src/admin-js/elementor-preview.js -o src/assets/admin-js/elementor-preview.min.js --config webpack.config.js",
     "js": "npm-run-all -p cleanup:js:* && npm-run-all -p js:*",
+    "packages:slick-carousel": "cpy 'slick-carousel/**' '../src/assets/packages' --cwd=node_modules --parents",
+    "packages": "npm-run-all -p packages:*",
     "start": "npm run build",
-    "build": "npm-run-all -p css js",
+    "build": "npm-run-all -p css js packages",
     "postinstall": "npm run build"
   },
   "dependencies": {

@@ -46,12 +46,29 @@ class Bootstrap {
 	 * @return void
 	 */
 	public function _wp_enqueue_scripts() {
-		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/css/wp-awesome-widgets.min.css';
+		if ( ! wp_style_is( 'slick-carousel', 'registered' ) ) {
+			wp_register_style(
+				'slick-carousel',
+				get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.css',
+				[],
+				filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.css' )
+			);
+		}
+
+		if ( ! wp_style_is( 'slick-carousel-theme', 'registered' ) ) {
+			wp_register_style(
+				'slick-carousel-theme',
+				get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick-theme.css',
+				[ 'slick-carousel' ],
+				filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick-theme.css' )
+			);
+		}
+
 		wp_enqueue_style(
 			'wp-awesome-widgets',
-			get_template_directory_uri() . $relative_path,
-			[],
-			filemtime( get_template_directory() . $relative_path )
+			get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/css/wp-awesome-widgets.min.css',
+			[ 'slick-carousel-theme' ],
+			filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/css/wp-awesome-widgets.min.css' )
 		);
 	}
 
