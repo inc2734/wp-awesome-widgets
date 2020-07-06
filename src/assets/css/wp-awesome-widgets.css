@@ -283,6 +283,13 @@
 .wpaw-pickup-slider .slick-list {
   height: auto !important; }
 
+@media (max-width: 1023px) {
+  .wpaw-google-adsense--rectangle-big-2 .wpaw-google-adsense__row, .wpaw-google-adsense--rectangle-2 .wpaw-google-adsense__row {
+    flex-wrap: nowrap; }
+  .wpaw-google-adsense--rectangle-big-2 .wpaw-google-adsense__col, .wpaw-google-adsense--rectangle-2 .wpaw-google-adsense__col {
+    flex-basis: 50%;
+    max-width: 50%; } }
+
 .wpaw-google-adsense__row {
   margin: 0 -.5em -1em;
   display: flex;
@@ -296,7 +303,8 @@
 
 .wpaw-google-adsense__ad {
   margin: 0 auto;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
   .wpaw-google-adsense__ad--big-banner {
     max-width: 728px;
     max-height: 90px; }
