@@ -28,7 +28,7 @@ class Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts extends Contract\Widget {
 		);
 
 		if ( is_active_widget( false, false, $this->id_base ) || is_customize_preview() ) {
-			add_action( 'wp_enqueue_scripts', [ $this, '_wp_enqueue_scripts' ] );
+			add_action( 'wp_enqueue_scripts', [ __CLASS__, 'enqueue_scripts' ] );
 		}
 	}
 
@@ -47,7 +47,7 @@ class Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts extends Contract\Widget {
 		return $new_instance;
 	}
 
-	public function _wp_enqueue_scripts() {
+	public static function enqueue_scripts() {
 		if ( ! wp_script_is( 'slick-carousel', 'registered' ) ) {
 			wp_enqueue_script(
 				'slick-carousel',
