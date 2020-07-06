@@ -59,3 +59,27 @@ View::render(
 		'query'    => $pickup_posts_query,
 	]
 );
+
+// For Snow Monkey Blocks
+// @see https://github.com/inc2734/snow-monkey/issues/840
+if ( ! wp_script_is( 'slick-carousel', 'registered' ) ) {
+	wp_enqueue_script(
+		'slick-carousel',
+		get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.min.js',
+		[ 'jquery' ],
+		filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.min.js' ),
+		true
+	);
+}
+
+// For Snow Monkey Blocks
+// @see https://github.com/inc2734/snow-monkey/issues/840
+if ( ! wp_script_is( 'wp-awesome-widgets-pickup-slider', 'registered' ) ) {
+	wp_enqueue_script(
+		'wp-awesome-widgets-pickup-slider',
+		get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/widget/pickup-slider.js',
+		[ 'slick-carousel' ],
+		filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/widget/pickup-slider.js' ),
+		true
+	);
+}
