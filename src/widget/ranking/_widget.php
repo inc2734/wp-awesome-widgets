@@ -22,7 +22,7 @@ $query_args = [
 	'posts_per_page'   => count( $items ),
 	'post__in'         => $items,
 	'orderby'          => 'post__in',
-	'suppress_filters' => true,
+	'suppress_filters' => false,
 ];
 $query_args = apply_filters( 'inc2734_wp_awesome_widgets_ranking_widget_args', $query_args );
 $query_args = apply_filters( 'inc2734_wp_awesome_widgets_ranking_widget_args_' . $widget_number, $query_args );

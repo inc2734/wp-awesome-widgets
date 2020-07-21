@@ -18,7 +18,7 @@ if ( 1 < count( $widget_number ) ) {
 $query_args = [
 	'post_type'        => $instance['post-type'],
 	'posts_per_page'   => $instance['posts-per-page'],
-	'suppress_filters' => true,
+	'suppress_filters' => false,
 ];
 $query_args = apply_filters( 'inc2734_wp_awesome_widgets_recent_posts_widget_args', $query_args );
 $query_args = apply_filters( 'inc2734_wp_awesome_widgets_recent_posts_widget_args_' . $widget_number, $query_args );

@@ -32,7 +32,7 @@ if ( 1 < count( $widget_number ) ) {
 $query_args = [
 	'post_type'        => $post_types,
 	'posts_per_page'   => $instance['posts-per-page'],
-	'suppress_filters' => true,
+	'suppress_filters' => false,
 	'tax_query'        => [
 		[
 			'taxonomy' => $taxonomy_id,

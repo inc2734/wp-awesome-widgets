@@ -29,7 +29,7 @@ if ( $instance['display-only-have-descendants'] ) {
 			'post_parent'         => $founder_id,
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
-			'suppress_filters'    => true,
+			'suppress_filters'    => false,
 			'orderby'             => [
 				'menu_order' => 'ASC',
 				'ID'         => 'DESC',

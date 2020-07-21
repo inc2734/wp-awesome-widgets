@@ -53,7 +53,7 @@ class Helper {
 
 		$query_args = [
 			'posts_per_page'   => 50,
-			'suppress_filters' => true,
+			'suppress_filters' => false,
 			'orderby'          => [
 				'menu_order' => 'ASC',
 				'ID'         => 'DESC',
