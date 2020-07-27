@@ -31,6 +31,11 @@ class Widget extends WP_Widget {
 		$reflection  = new \ReflectionClass( $this );
 		$this->_path = dirname( $reflection->getFileName() );
 
+		$widget_options['widget_name'] = $name;
+		$widget_options = apply_filters( 'inc2734_wp_awesome_widgets_widget_options', $widget_options, $reflection->getName() );
+		$name = $widget_options['widget_name'];
+		unset( $widget_options['widget_name'] );
+
 		parent::__construct( false, $name, $widget_options );
 	}
 

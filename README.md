@@ -44,6 +44,25 @@ $ vi templates/widget/slider.php
 
 ## Filter hooks
 
+###
+```
+/**
+ * Customize widget options
+
+ * @param array $widget_options
+ * @param string The widget class name
+ * @return array
+ */
+add_filter(
+	'inc2734_wp_awesome_widgets_widget_options',
+	function( $widget_options, $classname ) {
+		return $widget_options;
+	},
+	10,
+	2
+);
+```
+
 ### inc2734_wp_awesome_widgets_recent_posts_widget_args
 ```
 /**
