@@ -6,21 +6,21 @@
  */
 ?>
 
-<?php echo wp_kses_post( $args['before_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<div
-		class="wpaw-contents-outline wpaw-contents-outline--<?php echo esc_attr( $args['widget_id'] ); ?>"
-		id="wpaw-contents-outline-<?php echo esc_attr( $args['widget_id'] ); ?>"
+		class="wpaw-contents-outline wpaw-contents-outline--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="wpaw-contents-outline-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
 		>
 
 		<?php if ( empty( $instance['show-mobile'] ) ) : ?>
 			<style>
-			.wpaw-contents-outline--<?php echo esc_attr( $args['widget_id'] ); ?> {
+			.wpaw-contents-outline--<?php echo esc_attr( $widget_args['widget_id'] ); ?> {
 				display: none;
 			}
 
 			@media (min-width: 64em) {
-				.wpaw-contents-outline--<?php echo esc_attr( $args['widget_id'] ); ?> {
+				.wpaw-contents-outline--<?php echo esc_attr( $widget_args['widget_id'] ); ?> {
 					display: block;
 				}
 			}
@@ -38,4 +38,4 @@
 		?>
 	</div>
 
-<?php echo wp_kses_post( $args['after_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['after_widget'] ); ?>

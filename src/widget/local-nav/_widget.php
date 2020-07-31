@@ -46,8 +46,8 @@ View::render(
 	'local-nav',
 	null,
 	[
-		'args'       => $args,
-		'instance'   => $instance,
-		'founder_id' => $founder_id,
+		'widget_args' => $widget_args,
+		'instance'    => $instance,
+		'founder_id'  => $founder_id,
 	]
 );

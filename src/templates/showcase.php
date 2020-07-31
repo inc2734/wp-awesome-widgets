@@ -6,16 +6,16 @@
  */
 ?>
 
-<?php echo wp_kses_post( $args['before_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 	<style>
-	.wpaw-showcase--<?php echo esc_html( $args['widget_id'] ); ?> .wpaw-showcase__lead,
-	.wpaw-showcase--<?php echo esc_html( $args['widget_id'] ); ?> .wpaw-showcase__title {
+	.wpaw-showcase--<?php echo esc_html( $widget_args['widget_id'] ); ?> .wpaw-showcase__lead,
+	.wpaw-showcase--<?php echo esc_html( $widget_args['widget_id'] ); ?> .wpaw-showcase__title {
 		color: <?php echo esc_attr( $instance['color'] ); ?>;
 	}
 	</style>
 
 	<?php
-	$bg_image_size = apply_filters( 'inc2734_wp_awesome_widgets_showcase_backgroud_image_size', 'large', wp_is_mobile(), $args['widget_id'] );
+	$bg_image_size = apply_filters( 'inc2734_wp_awesome_widgets_showcase_backgroud_image_size', 'large', wp_is_mobile(), $widget_args['widget_id'] );
 	$is_block_link = ! empty( $instance['link-url'] ) && empty( $instance['link-text'] );
 	$wrapper_tag   = $is_block_link ? 'a' : 'div';
 	?>
@@ -24,8 +24,8 @@
 		<?php if ( $is_block_link ) : ?>
 			href="<?php echo esc_url( $instance['link-url'] ); ?>"
 		<?php endif; ?>
-		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> wpaw-showcase--<?php echo esc_attr( $args['widget_id'] ); ?>"
-		id="wpaw-showcase-<?php echo esc_attr( $args['widget_id'] ); ?>"
+		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> wpaw-showcase--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="wpaw-showcase-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
 		>
 
 		<?php if ( $instance['bg-image'] ) : ?>
@@ -63,7 +63,7 @@
 			<?php if ( ! empty( $instance['thumbnail'] ) ) : ?>
 				<div class="wpaw-showcase__figure">
 					<?php
-					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_showcase_image_size', 'large', wp_is_mobile(), $args['widget_id'] );
+					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_showcase_image_size', 'large', wp_is_mobile(), $widget_args['widget_id'] );
 					?>
 					<?php if ( ! $is_block_link && $instance['link-url'] ) : ?>
 						<a href="<?php echo esc_url( $instance['link-url'] ); ?>">
@@ -79,4 +79,4 @@
 
 	</<?php echo esc_attr( $wrapper_tag ); ?>>
 
-<?php echo wp_kses_post( $args['after_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['after_widget'] ); ?>

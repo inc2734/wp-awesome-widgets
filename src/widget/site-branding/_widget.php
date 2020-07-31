@@ -11,7 +11,7 @@ View::render(
 	'site-branding',
 	null,
 	[
-		'args'     => $args,
-		'instance' => $instance,
+		'widget_args' => $widget_args,
+		'instance'    => $instance,
 	]
 );

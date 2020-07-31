@@ -29,7 +29,7 @@ if ( ! empty( $instance['random'] ) ) {
 	);
 }
 
-$widget_number = explode( '-', $args['widget_id'] );
+$widget_number = explode( '-', $widget_args['widget_id'] );
 if ( 1 < count( $widget_number ) ) {
 	array_shift( $widget_number );
 	$widget_number = implode( '-', $widget_number );
@@ -54,9 +54,9 @@ View::render(
 	'pickup-slider',
 	null,
 	[
-		'args'     => $args,
-		'instance' => $instance,
-		'query'    => $pickup_posts_query,
+		'widget_args' => $widget_args,
+		'instance'    => $instance,
+		'query'       => $pickup_posts_query,
 	]
 );
 

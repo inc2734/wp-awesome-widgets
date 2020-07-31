@@ -10,17 +10,17 @@ if ( ! $query->have_posts() ) {
 }
 ?>
 
-<?php echo wp_kses_post( $args['before_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<?php if ( $instance['title'] ) : ?>
-		<?php echo wp_kses_post( $args['before_title'] ); ?>
+		<?php echo wp_kses_post( $widget_args['before_title'] ); ?>
 			<?php echo wp_kses_post( $instance['title'] ); ?>
-		<?php echo wp_kses_post( $args['after_title'] ); ?>
+		<?php echo wp_kses_post( $widget_args['after_title'] ); ?>
 	<?php endif; ?>
 
 	<div
-		class="wpaw-any-posts wpaw-any-posts--<?php echo esc_attr( $args['widget_id'] ); ?>"
-		id="wpaw-any-posts-<?php echo esc_attr( $args['widget_id'] ); ?>"
+		class="wpaw-any-posts wpaw-any-posts--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="wpaw-any-posts-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
 		>
 
 		<ul class="wpaw-any-posts__list wpaw-posts-list">
@@ -32,7 +32,7 @@ if ( ! $query->have_posts() ) {
 						<?php if ( $instance['show-thumbnail'] ) : ?>
 							<div class="wpaw-any-posts__figure wpaw-posts-list__figure">
 								<?php
-								$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_posts_list_image_size', 'thumbnail', wp_is_mobile(), $args['widget_id'] );
+								$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_posts_list_image_size', 'thumbnail', wp_is_mobile(), $widget_args['widget_id'] );
 								the_post_thumbnail( $thumbnail_size );
 								?>
 							</div>
@@ -66,4 +66,4 @@ if ( ! $query->have_posts() ) {
 		</ul>
 	</div>
 
-<?php echo wp_kses_post( $args['after_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['after_widget'] ); ?>

@@ -6,12 +6,12 @@
  */
 ?>
 
-<?php echo wp_kses_post( $args['before_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<?php
 	$classes = [
 		'wpaw-pr-box',
-		'wpaw-pr-box--' . $args['widget_id'],
+		'wpaw-pr-box--' . $widget_args['widget_id'],
 	];
 
 	if ( $instance['chameleon'] ) {
@@ -21,7 +21,7 @@
 
 	<div
 		class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>"
-		id="wpaw-pr-box-<?php echo esc_attr( $args['widget_id'] ); ?>"
+		id="wpaw-pr-box-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
 		style="background-color: <?php echo esc_attr( $instance['bg-color'] ); ?>"
 		>
 
@@ -44,7 +44,7 @@
 							<?php if ( ! empty( $item['src'] ) ) : ?>
 								<?php
 								$aspect_ratio   = $instance['thumbnail-aspect-ratio'];
-								$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_pr_box_thumbnail_size', 'xlarge', wp_is_mobile(), $args['widget_id'] );
+								$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_pr_box_thumbnail_size', 'xlarge', wp_is_mobile(), $widget_args['widget_id'] );
 								?>
 								<?php if ( ! empty( $item['link-url'] ) ) : ?>
 									<a href="<?php echo esc_html( $item['link-url'] ); ?>">
@@ -92,4 +92,4 @@
 		</div>
 	</div>
 
-<?php echo wp_kses_post( $args['after_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['after_widget'] ); ?>

@@ -8,11 +8,11 @@
 use Inc2734\WP_Awesome_Widgets\Helper;
 ?>
 
-<?php echo wp_kses_post( $args['before_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<div
-		class="wpaw-google-adsense wpaw-google-adsense--<?php echo esc_attr( $args['widget_id'] ); ?> wpaw-google-adsense--<?php echo esc_attr( $instance['size'] ); ?>"
-		id="wpaw-google-adsense-<?php echo esc_attr( $args['widget_id'] ); ?>"
+		class="wpaw-google-adsense wpaw-google-adsense--<?php echo esc_attr( $widget_args['widget_id'] ); ?> wpaw-google-adsense--<?php echo esc_attr( $instance['size'] ); ?>"
+		id="wpaw-google-adsense-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
 		>
 
 		<div class="wpaw-google-adsense__row">
@@ -37,4 +37,4 @@ use Inc2734\WP_Awesome_Widgets\Helper;
 		</div>
 	</div>
 
-<?php echo wp_kses_post( $args['after_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['after_widget'] ); ?>

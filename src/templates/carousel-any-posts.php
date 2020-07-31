@@ -10,25 +10,25 @@ if ( ! $query->have_posts() ) {
 }
 ?>
 
-<?php echo wp_kses_post( $args['before_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<div
-		class="wpaw-carousel wpaw-carousel-any-posts wpaw-carousel-any-posts--<?php echo esc_attr( $args['widget_id'] ); ?>"
-		id="wpaw-carousel-any-posts-<?php echo esc_attr( $args['widget_id'] ); ?>"
+		class="wpaw-carousel wpaw-carousel-any-posts wpaw-carousel-any-posts--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="wpaw-carousel-any-posts-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
 		>
 		<div class="wpaw-carousel__inner">
 
 			<?php if ( $instance['title'] ) : ?>
-				<?php echo wp_kses_post( $args['before_title'] ); ?>
+				<?php echo wp_kses_post( $widget_args['before_title'] ); ?>
 					<?php echo wp_kses_post( $instance['title'] ); ?>
-				<?php echo wp_kses_post( $args['after_title'] ); ?>
+				<?php echo wp_kses_post( $widget_args['after_title'] ); ?>
 			<?php endif; ?>
 
 			<div class="wpaw-carousel__canvas">
 				<?php while ( $query->have_posts() ) : ?>
 					<?php
 					$query->the_post();
-					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_carousel_image_size', 'large', wp_is_mobile(), $args['widget_id'] );
+					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_carousel_image_size', 'large', wp_is_mobile(), $widget_args['widget_id'] );
 					?>
 					<a
 						class="wpaw-carousel__item"
@@ -79,4 +79,4 @@ if ( ! $query->have_posts() ) {
 		</div>
 	</div>
 
-<?php echo wp_kses_post( $args['after_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['after_widget'] ); ?>

@@ -274,13 +274,13 @@ add_filter(
  * Customzie widget html
  *
  * @param string $html
- * @param array $args
+ * @param array $widget_args
  * @param array $instance
  * @return string
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $html, $args, $instance ) {
+	function( $html, $widget_args, $instance ) {
 		return $html;
 	},
 	10,

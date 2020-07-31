@@ -21,7 +21,7 @@ $term_id     = $_taxonomy[1];
 $_taxonomy   = get_taxonomy( $taxonomy_id );
 $post_types  = empty( $_taxonomy->object_type ) ? 'post' : $_taxonomy->object_type;
 
-$widget_number = explode( '-', $args['widget_id'] );
+$widget_number = explode( '-', $widget_args['widget_id'] );
 if ( 1 < count( $widget_number ) ) {
 	array_shift( $widget_number );
 	$widget_number = implode( '-', $widget_number );
@@ -57,8 +57,8 @@ View::render(
 	'taxonomy-posts',
 	null,
 	[
-		'args'     => $args,
-		'instance' => $instance,
-		'query'    => $taxonomy_posts_query,
+		'widget_args' => $widget_args,
+		'instance'    => $instance,
+		'query'       => $taxonomy_posts_query,
 	]
 );

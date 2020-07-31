@@ -10,17 +10,17 @@ if ( ! $query->have_posts() ) {
 }
 ?>
 
-<?php echo wp_kses_post( $args['before_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<?php if ( $instance['title'] ) : ?>
-		<?php echo wp_kses_post( $args['before_title'] ); ?>
+		<?php echo wp_kses_post( $widget_args['before_title'] ); ?>
 			<?php echo wp_kses_post( $instance['title'] ); ?>
-		<?php echo wp_kses_post( $args['after_title'] ); ?>
+		<?php echo wp_kses_post( $widget_args['after_title'] ); ?>
 	<?php endif; ?>
 
 	<div
-		class="wpaw-taxonomy-posts wpaw-taxonomy-posts--<?php echo esc_attr( $args['widget_id'] ); ?>"
-		id="wpaw-taxonomy-posts-<?php echo esc_attr( $args['widget_id'] ); ?>"
+		class="wpaw-taxonomy-posts wpaw-taxonomy-posts--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="wpaw-taxonomy-posts-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
 		>
 
 		<ul class="wpaw-taxonomy-posts__list wpaw-posts-list">
@@ -47,4 +47,4 @@ if ( ! $query->have_posts() ) {
 		</ul>
 	</div>
 
-<?php echo wp_kses_post( $args['after_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['after_widget'] ); ?>

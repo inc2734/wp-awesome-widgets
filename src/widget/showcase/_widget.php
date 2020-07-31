@@ -11,7 +11,7 @@ View::render(
 	'showcase',
 	null,
 	[
-		'args'     => $args,
-		'instance' => $instance,
+		'widget_args' => $widget_args,
+		'instance'    => $instance,
 	]
 );

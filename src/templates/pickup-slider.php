@@ -10,7 +10,7 @@ if ( ! $query->have_posts() ) {
 }
 ?>
 
-<?php echo wp_kses_post( $args['before_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<?php
 	$is_block_link = 'overall' === $instance['link-type'];
@@ -19,8 +19,8 @@ if ( ! $query->have_posts() ) {
 	?>
 
 	<div
-		class="wpaw-pickup-slider wpaw-pickup-slider--<?php echo esc_attr( $args['widget_id'] ); ?>"
-		id="wpaw-pickup-slider-<?php echo esc_attr( $args['widget_id'] ); ?>"
+		class="wpaw-pickup-slider wpaw-pickup-slider--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="wpaw-pickup-slider-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
 		>
 		<div class="wpaw-pickup-slider__inner">
 			<div class="wpaw-pickup-slider__canvas">
@@ -28,7 +28,7 @@ if ( ! $query->have_posts() ) {
 					<?php
 					$query->the_post();
 					$thumbnail_size = wp_is_mobile() ? 'large' : 'full';
-					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_pickup_slider_image_size', $thumbnail_size, wp_is_mobile(), $args['widget_id'] );
+					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_pickup_slider_image_size', $thumbnail_size, wp_is_mobile(), $widget_args['widget_id'] );
 					?>
 					<div>
 						<<?php echo esc_attr( $wrapper_tag ); ?>
@@ -68,4 +68,4 @@ if ( ! $query->have_posts() ) {
 		</div>
 	</div>
 
-<?php echo wp_kses_post( $args['after_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['after_widget'] ); ?>

@@ -42,11 +42,11 @@ class Widget extends WP_Widget {
 	/**
 	 * Render widget
 	 *
-	 * @param array $args
+	 * @param array $widget_args
 	 * @param array $instance
 	 * @return void
 	 */
-	public function widget( $args, $instance ) {
+	public function widget( $widget_args, $instance ) {
 		$instance = shortcode_atts( $this->_defaults, $instance );
 		foreach ( $instance as $key => $value ) {
 			if ( is_array( $this->_defaults[ $key ] ) && isset( $this->_defaults[ $key ][0] ) && is_array( $this->_defaults[ $key ][0] ) ) {
@@ -55,7 +55,7 @@ class Widget extends WP_Widget {
 				}
 			}
 		}
-		$this->_render_widget( $args, $instance );
+		$this->_render_widget( $widget_args, $instance );
 	}
 
 	/**
@@ -80,11 +80,11 @@ class Widget extends WP_Widget {
 	/**
 	 * Render widget
 	 *
-	 * @param array $args
+	 * @param array $widget_args
 	 * @param array $instance
 	 * @return void
 	 */
-	protected function _render_widget( $args, $instance ) {
+	protected function _render_widget( $widget_args, $instance ) {
 		$widget_templates = apply_filters( 'inc2734_wp_awesome_widgets_widget_templates', 'templates/widget' );
 		$default_template = $this->_path . '/_widget.php';
 		$custom_template  = $widget_templates . '/' . basename( $this->_path );
@@ -104,7 +104,7 @@ class Widget extends WP_Widget {
 		}
 
 		// @codingStandardsIgnoreStart
-		echo apply_filters( 'inc2734_wp_awesome_widgets_render_widget', $widget, $args, $instance );
+		echo apply_filters( 'inc2734_wp_awesome_widgets_render_widget', $widget, $widget_args, $instance );
 		// @codingStandardsIgnoreEnd
 	}
 

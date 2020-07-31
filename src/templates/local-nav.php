@@ -8,11 +8,11 @@
 use Inc2734\WP_Awesome_Widgets\Helper;
 ?>
 
-<?php echo wp_kses_post( $args['before_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<div
-		class="wpaw-local-nav wpaw-local-nav--<?php echo esc_attr( $instance['direction'] ); ?> wpaw-local-nav--<?php echo esc_attr( $args['widget_id'] ); ?>"
-		id="wpaw-local-nav-<?php echo esc_attr( $args['widget_id'] ); ?>"
+		class="wpaw-local-nav wpaw-local-nav--<?php echo esc_attr( $instance['direction'] ); ?> wpaw-local-nav--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="wpaw-local-nav-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
 		>
 
 		<?php
@@ -31,4 +31,4 @@ use Inc2734\WP_Awesome_Widgets\Helper;
 		?>
 	</div>
 
-<?php echo wp_kses_post( $args['after_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['after_widget'] ); ?>

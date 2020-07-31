@@ -8,15 +8,15 @@
 $fade = 'fade' === $instance['type'] ? 1 : 0;
 ?>
 
-<?php echo wp_kses_post( $args['before_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 	<style>
 		<?php foreach ( $instance['images'] as $key => $image ) : ?>
-			.wpaw-slider--<?php echo esc_attr( $args['widget_id'] ); ?> .wpaw-slider__item--<?php echo esc_html( $key ); ?> .wpaw-slider__item-title,
-			.wpaw-slider--<?php echo esc_attr( $args['widget_id'] ); ?> .wpaw-slider__item--<?php echo esc_html( $key ); ?> .wpaw-slider__item-summary,
-			.wpaw-slider--<?php echo esc_attr( $args['widget_id'] ); ?> .wpaw-slider__item--<?php echo esc_html( $key ); ?> .wpaw-slider__item-summary a {
+			.wpaw-slider--<?php echo esc_attr( $widget_args['widget_id'] ); ?> .wpaw-slider__item--<?php echo esc_html( $key ); ?> .wpaw-slider__item-title,
+			.wpaw-slider--<?php echo esc_attr( $widget_args['widget_id'] ); ?> .wpaw-slider__item--<?php echo esc_html( $key ); ?> .wpaw-slider__item-summary,
+			.wpaw-slider--<?php echo esc_attr( $widget_args['widget_id'] ); ?> .wpaw-slider__item--<?php echo esc_html( $key ); ?> .wpaw-slider__item-summary a {
 				color: <?php echo esc_html( $image['text-color'] ); ?>;
 			}
-			.wpaw-slider--<?php echo esc_attr( $args['widget_id'] ); ?> .wpaw-slider__item--<?php echo esc_html( $key ); ?> .wpaw-slider__item-more--ghost {
+			.wpaw-slider--<?php echo esc_attr( $widget_args['widget_id'] ); ?> .wpaw-slider__item--<?php echo esc_html( $key ); ?> .wpaw-slider__item-more--ghost {
 				border-color: <?php echo esc_html( $image['text-color'] ); ?>;
 				color: <?php echo esc_html( $image['text-color'] ); ?>;
 			}
@@ -24,8 +24,8 @@ $fade = 'fade' === $instance['type'] ? 1 : 0;
 	</style>
 
 	<div
-		class="wpaw-slider wpaw-slider--<?php echo esc_attr( $args['widget_id'] ); ?>"
-		id="wpaw-slider-<?php echo esc_attr( $args['widget_id'] ); ?>"
+		class="wpaw-slider wpaw-slider--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="wpaw-slider-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
 		data-wpaw-slider-duration="<?php echo esc_attr( $instance['duration'] ); ?>"
 		data-wpaw-slider-interval="<?php echo esc_attr( $instance['interval'] ); ?>"
 		data-wpaw-slider-slides-to-show="<?php echo esc_attr( $instance['slides-to-show'] ); ?>"
@@ -37,7 +37,7 @@ $fade = 'fade' === $instance['type'] ? 1 : 0;
 			<div class="wpaw-slider__canvas">
 				<?php foreach ( $instance['images'] as $key => $image ) : ?>
 					<?php
-					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_slider_image_size', 'full', wp_is_mobile(), $args['widget_id'] );
+					$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_slider_image_size', 'full', wp_is_mobile(), $widget_args['widget_id'] );
 					$is_block_link  = ! empty( $image['link-url'] ) && empty( $image['link-text'] );
 					$wrapper_tag    = $is_block_link ? 'a' : 'div';
 					?>
@@ -95,4 +95,4 @@ $fade = 'fade' === $instance['type'] ? 1 : 0;
 		</div>
 	</div>
 
-<?php echo wp_kses_post( $args['after_widget'] ); ?>
+<?php echo wp_kses_post( $widget_args['after_widget'] ); ?>

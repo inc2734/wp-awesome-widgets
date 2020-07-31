@@ -9,7 +9,7 @@ use Inc2734\WP_Awesome_Widgets\App\View;
 
 $items = explode( ',', $instance['items'] );
 
-$widget_number = explode( '-', $args['widget_id'] );
+$widget_number = explode( '-', $widget_args['widget_id'] );
 if ( 1 < count( $widget_number ) ) {
 	array_shift( $widget_number );
 	$widget_number = implode( '-', $widget_number );
@@ -45,8 +45,8 @@ View::render(
 	'any-posts',
 	null,
 	[
-		'args'     => $args,
-		'instance' => $instance,
-		'query'    => $any_posts_query,
+		'widget_args' => $widget_args,
+		'instance'    => $instance,
+		'query'       => $any_posts_query,
 	]
 );

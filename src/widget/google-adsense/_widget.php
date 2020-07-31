@@ -23,7 +23,7 @@ View::render(
 	'google-adsense',
 	null,
 	[
-		'args'     => $args,
-		'instance' => $instance,
+		'widget_args' => $widget_args,
+		'instance'    => $instance,
 	]
 );

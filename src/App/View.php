@@ -10,7 +10,7 @@ namespace Inc2734\WP_Awesome_Widgets\App;
 use Inc2734\WP_Plugin_View_Controller\Bootstrap;
 
 class View {
-	public static function render( $slug, $name, $args ) {
+	public static function render( $slug, $name, $widget_args ) {
 		$bootstrap = new Bootstrap(
 			[
 				'prefix' => 'inc2734_wp_awesome_widgets_',
@@ -18,6 +18,6 @@ class View {
 			]
 		);
 
-		$bootstrap->render( $slug, $name, $args );
+		$bootstrap->render( $slug, $name, $widget_args );
 	}
 }
