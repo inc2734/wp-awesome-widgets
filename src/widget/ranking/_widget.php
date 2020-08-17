@@ -46,8 +46,8 @@ View::render(
 	'ranking',
 	null,
 	[
-		'$widget_args' => $widget_args,
-		'instance'     => $instance,
-		'query'        => $ranking_posts_query,
+		'widget_args' => $widget_args,
+		'instance'    => $instance,
+		'query'       => $ranking_posts_query,
 	]
 );
