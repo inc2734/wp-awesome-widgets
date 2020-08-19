@@ -30,9 +30,10 @@
 		<?php
 		echo do_shortcode(
 			sprintf(
-				'[wp_contents_outline post_id="%1$d" selector=".c-entry__content, .c-entry__content .wp-block-group__inner-container" display_before_first_heading="false" headings="%2$s"]',
+				'[wp_contents_outline post_id="%1$d" selector=".c-entry__content, .c-entry__content .wp-block-group__inner-container" display_before_first_heading="false" headings="%2$s" title="%3$s"]',
 				get_the_ID(),
-				implode( ',', array_filter( $instance['headings'] ) )
+				implode( ',', array_filter( $instance['headings'] ) ),
+				$instance['title']
 			)
 		);
 		?>

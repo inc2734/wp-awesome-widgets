@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2019-11-26 11:39:36+00:00\n"
-"PO-Revision-Date: 2019-11-26 20:40+0900\n"
+"POT-Creation-Date: 2020-08-19 02:11:30+00:00\n"
+"PO-Revision-Date: 2020-08-19 11:12+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -15,12 +15,18 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: templates/carousel-any-posts.php:61
+msgctxt "excerpt_length"
+msgid "55"
+msgstr "55"
+
 #: templates/pickup-slider.php:59
 msgid "READ MORE"
 msgstr "READ MORE"
 
 #: widget/any-posts/_form.php:11 widget/carousel-any-posts/_form.php:11
-#: widget/pr-box/_form.php:11 widget/pr-box/_form.php:69
+#: widget/contents-outline/_form.php:11 widget/pr-box/_form.php:11
+#: widget/pr-box/_form.php:69 widget/profile-box/_form.php:11
 #: widget/ranking/_form.php:11 widget/recent-posts/_form.php:11
 #: widget/showcase/_form.php:11 widget/slider/_form.php:37
 #: widget/taxonomy-posts/_form.php:11
@@ -60,17 +66,21 @@ msgstr "WPAW: 任意の投稿"
 msgid "WPAW: Carousel ( Any Posts )"
 msgstr "WPAW: カルーセル（任意の投稿）"
 
-#: widget/contents-outline/_form.php:11
+#: widget/contents-outline/_form.php:21
 msgid "Show headings"
 msgstr "見出しを表示"
 
-#: widget/contents-outline/_form.php:36
+#: widget/contents-outline/_form.php:46
 msgid "Also show on mobile"
 msgstr "モバイルでも表示"
 
-#: widget/contents-outline/contents-outline.php:23
+#: widget/contents-outline/contents-outline.php:24
 msgid "WPAW: Contents outline"
 msgstr "WPAW: 目次"
+
+#: widget/contents-outline/contents-outline.php:30
+msgid "Contents outline"
+msgstr "目次"
 
 #: widget/google-adsense/_form.php:11
 msgid "Adsense code"
@@ -273,9 +283,13 @@ msgstr "左右余白を削除"
 msgid "WPAW: PR Box"
 msgstr "WPAW: PR ボックス"
 
-#: widget/profile-box/profile-box.php:20
+#: widget/profile-box/profile-box.php:22
 msgid "WPAW: Profile box"
 msgstr "WPAW: プロフィールボックス"
+
+#: widget/profile-box/profile-box.php:28
+msgid "Bio"
+msgstr "この記事を書いた人"
 
 #: widget/ranking/ranking.php:26
 msgid "WPAW: Ranking (Manual update)"

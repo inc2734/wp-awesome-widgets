@@ -13,7 +13,7 @@
 		id="wpaw-profile-box-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
 		>
 
-		<?php echo do_shortcode( '[wp_profile_box]' ); ?>
+		<?php echo do_shortcode( '[wp_profile_box title="' . $instance['title'] . '"]' ); ?>
 	</div>
 
 <?php echo wp_kses_post( $widget_args['after_widget'] ); ?>

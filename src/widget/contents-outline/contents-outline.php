@@ -13,6 +13,7 @@ class Inc2734_WP_Awesome_Widgets_Contents_Outline extends Contract\Widget {
 	 * @var array
 	 */
 	protected $_defaults = [
+		'title'       => null,
 		'headings'    => [ 'h2' ],
 		'show-mobile' => 0,
 	];
@@ -25,6 +26,8 @@ class Inc2734_WP_Awesome_Widgets_Contents_Outline extends Contract\Widget {
 				'customize_selective_refresh' => true,
 			]
 		);
+
+		$this->_defaults['title'] = __( 'Contents outline', 'inc2734-wp-awesome-widgets' );
 	}
 
 	public function update( $new_instance, $old_instance ) {
