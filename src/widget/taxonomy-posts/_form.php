@@ -49,7 +49,20 @@
 				<optgroup label="<?php echo esc_attr( get_taxonomy( $taxonomy_id )->label ); ?>">
 					<?php
 					if ( ! function_exists( 'wpaw_taxonomy_posts_display_children' ) ) {
-						function wpaw_taxonomy_posts_display_children( $taxonomy_id, $term_id, $saved_term, $hierarchy = 0 ) {
+						/**
+						 * Display children.
+						 *
+						 * @param string $taxonomy_id The taxonomy name.
+						 * @param string $term_id     The term ID.
+						 * @param string $saved_term  <$taxonomy_id>@<$term->term_id>.
+						 * @param int    $hierarchy   Hierarchy level.
+						 */
+						function wpaw_taxonomy_posts_display_children(
+							$taxonomy_id,
+							$term_id,
+							$saved_term,
+							$hierarchy = 0
+						) {
 							$terms = get_terms(
 								$taxonomy_id,
 								[

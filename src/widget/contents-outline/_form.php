@@ -27,7 +27,7 @@
 					name="<?php echo esc_attr( $this->get_field_name( 'headings' ) ); ?>[]"
 					id="<?php echo esc_attr( $this->get_field_id( 'headings' ) ); ?>"
 					value="<?php echo esc_attr( $heading ); ?>"
-					<?php checked( true, in_array( $heading, $instance['headings'] ) ); ?>
+					<?php checked( true, in_array( $heading, $instance['headings'], true ) ); ?>
 				>
 				<?php echo esc_html( $heading ); ?>
 			</label><br>

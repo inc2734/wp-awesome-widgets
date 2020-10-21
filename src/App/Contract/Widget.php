@@ -25,25 +25,31 @@ class Widget extends WP_Widget {
 	protected $_path;
 
 	/**
-	 * @SuppressWarnings(PHPMD.MissingImport)
+	 * Constructor.
+	 *
+	 * @param string $id_base         Optional. Base ID for the widget, lowercase and unique.
+	 *                                If left empty, a portion of the widget's class name will be used.*                                Has to be unique.
+	 * @param string $name            Name for the widget displayed on the configuration page.
+	 * @param array  $widget_options  Optional. Widget options. See wp_register_sidebar_widget() for
+	 *                                information on accepted arguments. Default empty array.
 	 */
 	public function __construct( $id_base, $name, $widget_options = [] ) {
 		$reflection  = new \ReflectionClass( $this );
 		$this->_path = dirname( $reflection->getFileName() );
 
 		$widget_options['widget_name'] = $name;
-		$widget_options = apply_filters( 'inc2734_wp_awesome_widgets_widget_options', $widget_options, $reflection->getName() );
-		$name = $widget_options['widget_name'];
+		$widget_options                = apply_filters( 'inc2734_wp_awesome_widgets_widget_options', $widget_options, $reflection->getName() );
+		$name                          = $widget_options['widget_name'];
 		unset( $widget_options['widget_name'] );
 
 		parent::__construct( false, $name, $widget_options );
 	}
 
 	/**
-	 * Render widget
+	 * Render widget.
 	 *
-	 * @param array $widget_args
-	 * @param array $instance
+	 * @param array $widget_args The widget argments.
+	 * @param array $instance    The widget instance.
 	 * @return void
 	 */
 	public function widget( $widget_args, $instance ) {
@@ -59,10 +65,9 @@ class Widget extends WP_Widget {
 	}
 
 	/**
-	 * Render form
+	 * Render form.
 	 *
-	 * @param array $instance
-	 * @return void
+	 * @param array $instance The widget instance.
 	 */
 	public function form( $instance ) {
 		$instance = shortcode_atts( $this->_defaults, $instance );
@@ -78,11 +83,10 @@ class Widget extends WP_Widget {
 	}
 
 	/**
-	 * Render widget
+	 * Render widget.
 	 *
-	 * @param array $widget_args
-	 * @param array $instance
-	 * @return void
+	 * @param array $widget_args The widget argments.
+	 * @param array $instance    The widget instance.
 	 */
 	protected function _render_widget( $widget_args, $instance ) {
 		$widget_templates = apply_filters( 'inc2734_wp_awesome_widgets_widget_templates', 'templates/widget' );
@@ -103,18 +107,24 @@ class Widget extends WP_Widget {
 			return;
 		}
 
-		// @codingStandardsIgnoreStart
-		echo apply_filters( 'inc2734_wp_awesome_widgets_render_widget', $widget, $widget_args, $instance );
-		// @codingStandardsIgnoreEnd
+		echo apply_filters(
+			'inc2734_wp_awesome_widgets_render_widget',
+			$widget,
+			$widget_args,
+			$instance
+		); // xss ok.
 	}
 
 	/**
-	 * Render form
+	 * Render form.
 	 *
-	 * @param array $instance
-	 * @return void
+	 * @param array $instance The widget instance.
 	 */
-	protected function _render_form( $instance ) {
+	protected function _render_form(
+		// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+		$instance
+		// phpcs:enable
+	) {
 		$file = $this->_path . '/_form.php';
 		if ( ! file_exists( $file ) ) {
 			return;

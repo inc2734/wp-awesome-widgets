@@ -9,6 +9,9 @@ namespace Inc2734\WP_Awesome_Widgets;
 
 class Bootstrap {
 
+	/**
+	 * Constructor
+	 */
 	public function __construct() {
 		load_textdomain( 'inc2734-wp-awesome-widgets', __DIR__ . '/languages/' . get_locale() . '.mo' );
 
@@ -92,7 +95,7 @@ class Bootstrap {
 			filemtime( get_template_directory() . $relative_path )
 		);
 
-		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/admin-js/wp-awesome-widgets-admin.min.js';
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/admin-js/wp-awesome-widgets-admin.js';
 		wp_enqueue_script(
 			'wp-awesome-widgets-admin',
 			get_template_directory_uri() . $relative_path,
@@ -120,7 +123,7 @@ class Bootstrap {
 	 * @return void
 	 */
 	public function _customize_preview_init() {
-		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/admin-js/customize-preview.min.js';
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/admin-js/customize-preview.js';
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-customize-preview',
@@ -140,7 +143,7 @@ class Bootstrap {
 	 * @return void
 	 */
 	public function _preview_enqueue_scripts_for_elemener() {
-		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/admin-js/elementor-preview.min.js';
+		$relative_path = '/vendor/inc2734/wp-awesome-widgets/src/assets/admin-js/elementor-preview.js';
 		wp_enqueue_script(
 			'wp-awesome-widgets-elementor-preview',
 			get_template_directory_uri() . $relative_path,

@@ -10,6 +10,14 @@ namespace Inc2734\WP_Awesome_Widgets\App;
 use Inc2734\WP_Plugin_View_Controller\Bootstrap;
 
 class View {
+
+	/**
+	 * Render the template.
+	 *
+	 * @param string $slug        Slug of the template.
+	 * @param string $name        Name of the template.
+	 * @param array  $widget_args Argments of the teplate.
+	 */
 	public static function render( $slug, $name, $widget_args ) {
 		$widget_args = wp_parse_args(
 			$widget_args,

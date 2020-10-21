@@ -1,0 +1,9 @@
+{
+  "core": null,
+  "mappings": {
+    "wp-content/plugins/wp-awesome-widgets": "./"
+  },
+  "config": {
+    "WP_DEBUG": true
+  }
+}

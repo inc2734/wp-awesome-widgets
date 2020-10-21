@@ -32,7 +32,7 @@
 		>
 			<?php
 			$link_types = [
-				'button' => __( 'Button link', 'inc2734-wp-awesome-widgets' ),
+				'button'  => __( 'Button link', 'inc2734-wp-awesome-widgets' ),
 				'overall' => __( 'Overall link', 'inc2734-wp-awesome-widgets' ),
 			];
 			?>

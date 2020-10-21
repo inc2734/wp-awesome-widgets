@@ -1,10 +1,10 @@
 'use strict';
 
 import $ from 'jquery';
-import {wpContentsOutline} from '../../../vendor/inc2734/wp-contents-outline/src/src/js/module/wp-contents-outline.js';
-import {wpawPickupSlider} from '../../widget/pickup-slider/_widget.js';
-import {wpawSlider} from '../../widget/slider/_widget.js';
-import {wpawCarousel} from '../../widget/carousel-any-posts/_widget.js';
+import { wpContentsOutline } from '../../../vendor/inc2734/wp-contents-outline/src/src/js/module/wp-contents-outline.js';
+import { wpawPickupSlider } from '../../widget/pickup-slider/_widget.js';
+import { wpawSlider } from '../../widget/slider/_widget.js';
+import { wpawCarousel } from '../../widget/carousel-any-posts/_widget.js';
 
 $(() => {
   const api = wp.customize;

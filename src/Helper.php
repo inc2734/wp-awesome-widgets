@@ -13,23 +13,21 @@ use WP_Query;
 class Helper {
 
 	/**
-	 * Display google adsense
+	 * Display google adsense.
 	 *
-	 * @param $code
-	 * @param $size
-	 * @return void
+	 * @param string      $code The adsense code.
+	 * @param string|null $size Size of the adsense code.
 	 */
 	public static function the_adsense_code( $code, $size = null ) {
 		WP_Adsense\Helper::the_adsense_code( $code, $size );
 	}
 
 	/**
-	 * Display descendant pages of specified page
+	 * Display descendant pages of specified page.
 	 *
-	 * @param int $parent_id
-	 * @param int $current_page_id
-	 * @param array $args
-	 * @return void
+	 * @param int   $parent_id       Target page ID.
+	 * @param int   $current_page_id Current page ID.
+	 * @param array $args            Argments.
 	 */
 	public static function the_child_nav( $parent_id, $current_page_id, $args ) {
 		if ( wp_get_post_parent_id( get_the_ID() ) === $current_page_id ) {
@@ -37,8 +35,9 @@ class Helper {
 		}
 
 		if ( get_the_id() !== $current_page_id
-				 && ! in_array( $current_page_id, get_post_ancestors( get_the_id() ) )
-				 && ! in_array( get_the_ID(), get_post_ancestors( $current_page_id ) ) ) {
+				&& ! in_array( (int) $current_page_id, get_post_ancestors( get_the_id() ), true )
+				&& ! in_array( (int) get_the_ID(), get_post_ancestors( $current_page_id ), true )
+		) {
 			return;
 		}
 
@@ -98,10 +97,9 @@ class Helper {
 	 * Display local navigation.
 	 * It can stop with child's display.
 	 *
-	 * @param int $founder_id
-	 * @param int $current_page_id
-	 * @param array $args
-	 * @return void
+	 * @param int   $founder_id      Target page ID.
+	 * @param int   $current_page_id Current page ID.
+	 * @param array $args            Argments.
 	 */
 	public static function the_local_nav( $founder_id, $current_page_id, $args = [] ) {
 		$args = wp_parse_args(

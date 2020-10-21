@@ -62,6 +62,7 @@ View::render(
 
 /**
  * For Snow Monkey Blocks
+ *
  * @see https://github.com/inc2734/snow-monkey/issues/840
  */
 Inc2734_WP_Awesome_Widgets_Pickup_Slider::enqueue_scripts();

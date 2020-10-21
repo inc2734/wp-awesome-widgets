@@ -57,9 +57,9 @@ if ( ! $query->have_posts() ) {
 							<div class="wpaw-carousel__item-title">
 								<?php
 								// phpcs:disable WordPress.WP.I18n.MissingArgDomain
-								$num_words = 80;
+								$num_words            = 80;
 								$excerpt_length_ratio = 55 / _x( '55', 'excerpt_length' );
-								$num_words = $num_words * $excerpt_length_ratio;
+								$num_words            = $num_words * $excerpt_length_ratio;
 								// phpcs:enable
 								if ( $num_words ) {
 									ob_start();
