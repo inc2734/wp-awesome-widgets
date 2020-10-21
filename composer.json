@@ -7,7 +7,7 @@
     "inc2734/wp-contents-outline": "^5.1",
     "inc2734/wp-profile-box": "^2.3",
     "inc2734/wp-adsense": "^1.0",
-    "inc2734/wp-plugin-view-controller": "^1.0"
+    "inc2734/wp-plugin-view-controller": "^1.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
