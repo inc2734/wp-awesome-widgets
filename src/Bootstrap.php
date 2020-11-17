@@ -7,6 +7,10 @@
 
 namespace Inc2734\WP_Awesome_Widgets;
 
+use FilesystemIterator;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
+
 class Bootstrap {
 
 	/**
@@ -18,15 +22,25 @@ class Bootstrap {
 		$includes = [
 			'/deprecated',
 			'/widget',
-			'/widget/*',
 		];
 		foreach ( $includes as $include ) {
-			foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
-				if ( '_' === substr( basename( $file ), 0, 1 ) ) {
+			$iterator = new RecursiveDirectoryIterator( __DIR__ . $include, FilesystemIterator::SKIP_DOTS );
+			$iterator = new RecursiveIteratorIterator( $iterator );
+
+			foreach ( $iterator as $file ) {
+				if ( ! $file->isFile() ) {
 					continue;
 				}
 
-				require_once( $file );
+				if ( 'php' !== $file->getExtension() ) {
+					continue;
+				}
+
+				if ( 0 === strpos( $file->getBasename(), '_' ) ) {
+					continue;
+				}
+
+				include_once( realpath( $file->getPathname() ) );
 			}
 		}
 
