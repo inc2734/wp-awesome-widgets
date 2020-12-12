@@ -19,7 +19,8 @@ $(() => {
       const label        = postTitle || '&nbsp';
       const selectedItem = $('<li class="wpaw-item-selector__selected-item" />')
                             .attr('data-post-id', $(event.currentTarget).attr('data-post-id'))
-                            .html('<span class="dashicons dashicons-minus" />' + label);
+                            .append('<span class="dashicons dashicons-minus" />')
+                            .append(label)
 
       if (selectedArea.find('[data-post-id="' + $(event.currentTarget).attr('data-post-id') + '"]').length) {
         return;
@@ -196,11 +197,15 @@ $(() => {
   }
 
   function _request(restBase, param) {
+    const newParam = wp_awesome_widgets_item_selector_wp_api.root.match(/\?/)
+      ? param.replace( '?', '&' )
+      : param;
+
     return $.ajax(
       {
         dataType: 'json',
         type    : 'GET',
-        url     : wp_awesome_widgets_item_selector_wp_api.root + 'wp/v2/' + restBase + param
+        url     : wp_awesome_widgets_item_selector_wp_api.root + 'wp/v2/' + restBase + newParam
       }
     );
   }
@@ -211,7 +216,8 @@ $(() => {
       const item  = $('<li class="wpaw-item-selector__item" />')
                     .attr('data-post-id', post.id)
                     .attr('data-post-title', post.title.rendered)
-                    .html('<span class="dashicons dashicons-plus" />' + label);
+                    .append('<span class="dashicons dashicons-plus" />')
+                    .append(label);
       item.appendTo(area);
     });
   }

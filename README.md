@@ -1,6 +1,6 @@
 # WP Awesome Widgets
 
-[![Build Status](https://travis-ci.com/inc2734/wp-awesome-widgets.svg?branch=master)](https://travis-ci.org/inc2734/wp-awesome-widgets)
+![CI](https://github.com/inc2734/wp-awesome-widgets/workflows/CI/badge.svg)
 [![Latest Stable Version](https://poser.pugx.org/inc2734/wp-awesome-widgets/v/stable)](https://packagist.org/packages/inc2734/wp-awesome-widgets)
 [![License](https://poser.pugx.org/inc2734/wp-awesome-widgets/license)](https://packagist.org/packages/inc2734/wp-awesome-widgets)
 
