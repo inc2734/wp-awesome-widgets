@@ -7,10 +7,6 @@
 
 namespace Inc2734\WP_Awesome_Widgets;
 
-use FilesystemIterator;
-use RecursiveDirectoryIterator;
-use RecursiveIteratorIterator;
-
 class Bootstrap {
 
 	/**
@@ -19,30 +15,22 @@ class Bootstrap {
 	public function __construct() {
 		load_textdomain( 'inc2734-wp-awesome-widgets', __DIR__ . '/languages/' . get_locale() . '.mo' );
 
-		$includes = [
-			'/deprecated',
-			'/widget',
-		];
-		foreach ( $includes as $include ) {
-			$iterator = new RecursiveDirectoryIterator( __DIR__ . $include, FilesystemIterator::SKIP_DOTS );
-			$iterator = new RecursiveIteratorIterator( $iterator );
+		include_once( __DIR__ . '/deprecated/Helper.php' );
 
-			foreach ( $iterator as $file ) {
-				if ( ! $file->isFile() ) {
-					continue;
-				}
-
-				if ( 'php' !== $file->getExtension() ) {
-					continue;
-				}
-
-				if ( 0 === strpos( $file->getBasename(), '_' ) ) {
-					continue;
-				}
-
-				include_once( realpath( $file->getPathname() ) );
-			}
-		}
+		include_once( __DIR__ . '/widget/any-posts/any-posts.php' );
+		include_once( __DIR__ . '/widget/carousel-any-posts/carousel-any-posts.php' );
+		include_once( __DIR__ . '/widget/contents-outline/contents-outline.php' );
+		include_once( __DIR__ . '/widget/google-adsense/google-adsense.php' );
+		include_once( __DIR__ . '/widget/local-nav/local-nav.php' );
+		include_once( __DIR__ . '/widget/pickup-slider/pickup-slider.php' );
+		include_once( __DIR__ . '/widget/pr-box/pr-box.php' );
+		include_once( __DIR__ . '/widget/profile-box/profile-box.php' );
+		include_once( __DIR__ . '/widget/ranking/ranking.php' );
+		include_once( __DIR__ . '/widget/recent-posts/recent-posts.php' );
+		include_once( __DIR__ . '/widget/showcase/showcase.php' );
+		include_once( __DIR__ . '/widget/site-branding/site-branding.php' );
+		include_once( __DIR__ . '/widget/slider/slider.php' );
+		include_once( __DIR__ . '/widget/taxonomy-posts/taxonomy-posts.php' );
 
 		add_action( 'wp_enqueue_scripts', [ $this, '_wp_enqueue_scripts' ] );
 		add_action( 'load-widgets.php', [ $this, '_admin_enqueue_scripts' ], 9 );
