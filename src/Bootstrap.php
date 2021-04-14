@@ -17,6 +17,7 @@ class Bootstrap {
 
 		include_once( __DIR__ . '/deprecated/Helper.php' );
 
+		include_once( __DIR__ . '/widget/widget.php' );
 		include_once( __DIR__ . '/widget/any-posts/any-posts.php' );
 		include_once( __DIR__ . '/widget/carousel-any-posts/carousel-any-posts.php' );
 		include_once( __DIR__ . '/widget/contents-outline/contents-outline.php' );
