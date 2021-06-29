@@ -61,6 +61,15 @@ class Widget extends WP_Widget {
 				}
 			}
 		}
+
+		if ( ! isset( $widget_args['widget_id'] ) ) {
+			$widget_args['widget_id'] = $this->id_base . '-0';
+		}
+
+		if ( ! isset( $widget_args['id'] ) ) {
+			$widget_args['id'] = false;
+		}
+
 		$this->_render_widget( $widget_args, $instance );
 	}
 
@@ -70,6 +79,19 @@ class Widget extends WP_Widget {
 	 * @param array $instance The widget instance.
 	 */
 	public function form( $instance ) {
+		if ( wp_use_widgets_block_editor() ) {
+			echo sprintf(
+				// translators: %1$s: The start tag of the a element, %2$s: The end tag of the a element
+				esc_html(
+					'This can only be edited if the %1$sClassic Widgets%2$s plugin is enabled.',
+					'inc2734-wp-awesome-widgets'
+				),
+				'<a href="https://ja.wordpress.org/plugins/classic-widgets/" target="_blank" rel="noopener">',
+				'</a>'
+			);
+			return;
+		}
+
 		$instance = shortcode_atts( $this->_defaults, $instance );
 		foreach ( $instance as $key => $value ) {
 			if ( is_array( $this->_defaults[ $key ] ) && isset( $this->_defaults[ $key ][0] ) && is_array( $this->_defaults[ $key ][0] ) ) {

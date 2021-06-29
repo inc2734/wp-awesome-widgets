@@ -4,8 +4,6 @@
  * @author inc2734
  * @license GPL-2.0+
  */
-
-$fade = 'fade' === $instance['type'] ? 1 : 0;
 ?>
 
 <?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
