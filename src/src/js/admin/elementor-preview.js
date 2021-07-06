@@ -1,9 +1,7 @@
-'use strict';
-
 import $ from 'jquery';
-import { wpawPickupSlider } from '../../widget/pickup-slider/_widget.js';
-import { wpawSlider } from '../../widget/slider/_widget.js';
-import { wpawCarousel } from '../../widget/carousel-any-posts/_widget.js';
+import { wpawPickupSlider } from '../../../widget/pickup-slider/_widget.js';
+import { wpawSlider } from '../../../widget/slider/_widget.js';
+import { wpawCarousel } from '../../../widget/carousel-any-posts/_widget.js';
 
 $(() => {
   $(window).on(
