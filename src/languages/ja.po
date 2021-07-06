@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2021-07-05 15:10+0900\n"
-"PO-Revision-Date: 2021-07-05 15:11+0900\n"
+"POT-Creation-Date: 2021-07-06 10:58+0900\n"
+"PO-Revision-Date: 2021-07-06 10:59+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -19,18 +19,23 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: assets\n"
 "X-Poedit-SearchPathExcluded-1: languages\n"
 
-#: block/recent-posts/edit.js:76
+#: block/profile-box/edit.js:27 block/recent-posts/edit.js:76
 msgid "Block Settings"
 msgstr "ブロック設定"
 
-#: block/recent-posts/edit.js:81 widget/any-posts/_form.php:11
-#: widget/carousel-any-posts/_form.php:11 widget/contents-outline/_form.php:11
-#: widget/pr-box/_form.php:11 widget/pr-box/_form.php:69
-#: widget/profile-box/_form.php:11 widget/ranking/_form.php:11
-#: widget/recent-posts/_form.php:11 widget/showcase/_form.php:11
-#: widget/slider/_form.php:37 widget/taxonomy-posts/_form.php:11
+#: block/profile-box/edit.js:32 block/recent-posts/edit.js:81
+#: widget/any-posts/_form.php:11 widget/carousel-any-posts/_form.php:11
+#: widget/contents-outline/_form.php:11 widget/pr-box/_form.php:11
+#: widget/pr-box/_form.php:69 widget/profile-box/_form.php:11
+#: widget/ranking/_form.php:11 widget/recent-posts/_form.php:11
+#: widget/showcase/_form.php:11 widget/slider/_form.php:37
+#: widget/taxonomy-posts/_form.php:11
 msgid "Title"
 msgstr "タイトル"
+
+#: block/profile-box/edit.js:35
+msgid "Profile"
+msgstr "プロフィール"
 
 #: block/recent-posts/edit.js:84 block/recent-posts/edit.js:137
 msgid "Recent posts"
@@ -54,6 +59,10 @@ msgid "Display taxonomy"
 msgstr "タクソノミーを表示"
 
 #: .translation/translation.php:2
+msgid "[WPAW] Profile box"
+msgstr "[WPAW] プロフィールボックス"
+
+#: .translation/translation.php:3
 msgid "[WPAW] Recent posts"
 msgstr "[WPAW] 最近の投稿"
 

@@ -1,0 +1,17 @@
+{
+  "name": "wp-awesome-widgets/profile-box",
+	"title": "[WPAW] Profile box",
+	"description": "",
+  "category": "widgets",
+  "textDomain": "inc2734-wp-awesome-widgets",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Profile"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "customClassName": false
+  }
+}

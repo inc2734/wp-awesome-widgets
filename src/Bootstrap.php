@@ -37,6 +37,7 @@ class Bootstrap {
 			'init',
 			function() {
 				include_once( __DIR__ . '/block/recent-posts/index.php' );
+				include_once( __DIR__ . '/block/profile-box/index.php' );
 			}
 		);
 
