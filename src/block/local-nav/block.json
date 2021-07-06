@@ -1,0 +1,25 @@
+{
+  "name": "wp-awesome-widgets/local-nav",
+	"title": "[WPAW] Local navigation",
+	"description": "",
+  "category": "widgets",
+  "textDomain": "inc2734-wp-awesome-widgets",
+  "attributes": {
+    "direction": {
+      "type": "string",
+      "default": "vertical"
+    },
+    "displayTopLevelPageTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "displayOnlyHaveDescendants": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "customClassName": false
+  }
+}

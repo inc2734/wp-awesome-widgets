@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2021-07-06 10:58+0900\n"
-"PO-Revision-Date: 2021-07-06 10:59+0900\n"
+"POT-Creation-Date: 2021-07-06 13:17+0900\n"
+"PO-Revision-Date: 2021-07-06 13:22+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -19,11 +19,32 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: assets\n"
 "X-Poedit-SearchPathExcluded-1: languages\n"
 
-#: block/profile-box/edit.js:27 block/recent-posts/edit.js:76
+#: block/local-nav/edit.js:40 block/profile-box/edit.js:21
+#: block/recent-posts/edit.js:76
 msgid "Block Settings"
 msgstr "ブロック設定"
 
-#: block/profile-box/edit.js:32 block/recent-posts/edit.js:81
+#: block/local-nav/edit.js:46 widget/local-nav/_form.php:11
+msgid "Direction"
+msgstr "方向"
+
+#: block/local-nav/edit.js:53 widget/local-nav/_form.php:19
+msgid "Vertical"
+msgstr "垂直方向"
+
+#: block/local-nav/edit.js:57 widget/local-nav/_form.php:20
+msgid "Horizontal"
+msgstr "水平方向"
+
+#: block/local-nav/edit.js:65 widget/local-nav/_form.php:40
+msgid "Display the page title of the top-level"
+msgstr "トップレベルのページのタイトルを表示"
+
+#: block/local-nav/edit.js:74 widget/local-nav/_form.php:52
+msgid "Display only when you have descendants"
+msgstr "子孫があるときだけ表示"
+
+#: block/profile-box/edit.js:26 block/recent-posts/edit.js:81
 #: widget/any-posts/_form.php:11 widget/carousel-any-posts/_form.php:11
 #: widget/contents-outline/_form.php:11 widget/pr-box/_form.php:11
 #: widget/pr-box/_form.php:69 widget/profile-box/_form.php:11
@@ -33,7 +54,7 @@ msgstr "ブロック設定"
 msgid "Title"
 msgstr "タイトル"
 
-#: block/profile-box/edit.js:35
+#: block/profile-box/edit.js:29
 msgid "Profile"
 msgstr "プロフィール"
 
@@ -59,10 +80,14 @@ msgid "Display taxonomy"
 msgstr "タクソノミーを表示"
 
 #: .translation/translation.php:2
+msgid "[WPAW] Local navigation"
+msgstr "[WPAW] ローカルナビゲーション"
+
+#: .translation/translation.php:3
 msgid "[WPAW] Profile box"
 msgstr "[WPAW] プロフィールボックス"
 
-#: .translation/translation.php:3
+#: .translation/translation.php:4
 msgid "[WPAW] Recent posts"
 msgstr "[WPAW] 最近の投稿"
 
@@ -178,26 +203,6 @@ msgstr "リンクユニット"
 #: widget/google-adsense/google-adsense.php:24
 msgid "WPAW: Google Adsense"
 msgstr "WPAW: Google アドセンス"
-
-#: widget/local-nav/_form.php:11
-msgid "Direction"
-msgstr "方向"
-
-#: widget/local-nav/_form.php:19
-msgid "Vertical"
-msgstr "垂直方向"
-
-#: widget/local-nav/_form.php:20
-msgid "Horizontal"
-msgstr "水平方向"
-
-#: widget/local-nav/_form.php:40
-msgid "Display the page title of the top-level"
-msgstr "トップレベルのページのタイトルを表示"
-
-#: widget/local-nav/_form.php:52
-msgid "Display only when you have descendants"
-msgstr "子孫があるときだけ表示"
 
 #: widget/local-nav/local-nav.php:27
 msgid "WPAW: Local Navigation"
@@ -435,6 +440,9 @@ msgstr "表示するターム"
 #: widget/taxonomy-posts/taxonomy-posts.php:26
 msgid "WPAW: Taxonomy posts"
 msgstr "WPAW: 任意のタクソノミーの投稿"
+
+#~ msgid "[WPAW] Local nav"
+#~ msgstr "[WPAW] ローカルナビゲーション"
 
 #~ msgid "Size of image to use"
 #~ msgstr "使用する画像のサイズ"
