@@ -18,12 +18,7 @@ import { InspectorControls } from '@wordpress/block-editor';
 import { toNumber } from '@wpaw/helper';
 
 export default function ( { attributes, setAttributes } ) {
-	const {
-		postType,
-		postsPerPage,
-		showThumbnail,
-		showTaxonomy,
-	} = attributes;
+	const { postType, postsPerPage, showThumbnail, showTaxonomy } = attributes;
 
 	const allPostTypes = useSelect( ( select ) => {
 		const { getPostTypes } = select( 'core' );
