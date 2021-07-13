@@ -23,7 +23,7 @@ register_block_type_from_metadata(
 	__DIR__,
 	[
 		'editor_script'   => 'wp-awesome-widgets/profile-box/editor',
-		'render_callback' => function( $attributes ) {
+		'render_callback' => function() {
 			$widget_args = [
 				'widget_id'     => null,
 				'before_widget' => '',
