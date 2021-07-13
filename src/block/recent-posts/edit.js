@@ -10,7 +10,6 @@ import {
 	RangeControl,
 	SelectControl,
 	Spinner,
-	TextControl,
 	ToggleControl,
 } from '@wordpress/components';
 
@@ -20,7 +19,6 @@ import { toNumber } from '@wpaw/helper';
 
 export default function ( { attributes, setAttributes } ) {
 	const {
-		title,
 		postType,
 		postsPerPage,
 		showThumbnail,
@@ -42,11 +40,6 @@ export default function ( { attributes, setAttributes } ) {
 			),
 		[ allPostTypes ]
 	);
-
-	const onChangeTitle = ( value ) =>
-		setAttributes( {
-			title: value,
-		} );
 
 	const onChangePostType = ( value ) =>
 		setAttributes( {
@@ -77,16 +70,6 @@ export default function ( { attributes, setAttributes } ) {
 						'inc2734-wp-awesome-widgets'
 					) }
 				>
-					<TextControl
-						label={ __( 'Title', 'inc2734-wp-awesome-widgets' ) }
-						value={ title }
-						placeholder={ __(
-							'Recent posts',
-							'inc2734-wp-awesome-widgets'
-						) }
-						onChange={ onChangeTitle }
-					/>
-
 					<SelectControl
 						label={ __(
 							'Post Type',

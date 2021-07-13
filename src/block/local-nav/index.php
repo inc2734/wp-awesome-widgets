@@ -28,10 +28,11 @@ register_block_type_from_metadata(
 				'widget_id'     => null,
 				'before_widget' => '',
 				'after_widget'  => '',
-				'before_title'  => '<h3 class="c-widget__title">',
-				'after_title'   => '</h3>',
+				'before_title'  => '',
+				'after_title'   => '',
 			];
-			$instance    = [
+
+			$instance = [
 				'direction'                     => $attributes['direction'],
 				'display-top-level-page-title'  => $attributes['displayTopLevelPageTitle'],
 				'display-only-have-descendants' => $attributes['displayOnlyHaveDescendants'],

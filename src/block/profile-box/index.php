@@ -28,11 +28,12 @@ register_block_type_from_metadata(
 				'widget_id'     => null,
 				'before_widget' => '',
 				'after_widget'  => '',
-				'before_title'  => '<h3 class="c-widget__title">',
-				'after_title'   => '</h3>',
+				'before_title'  => '',
+				'after_title'   => '',
 			];
-			$instance    = [
-				'title' => $attributes['title'],
+
+			$instance = [
+				'title' => '',
 			];
 
 			ob_start();

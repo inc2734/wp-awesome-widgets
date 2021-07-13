@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
-"Report-Msgid-Bugs-To: https://make.wordpress.org/polyglots/\n"
-"POT-Creation-Date: 2021-07-06 13:17+0900\n"
-"PO-Revision-Date: 2021-07-06 13:22+0900\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-07T06:22:15+00:00\n"
+"PO-Revision-Date: 2021-07-07 15:24+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -15,89 +15,26 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_x;esc_html__;esc_html_e\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPath-1: ./.translation\n"
 "X-Poedit-SearchPathExcluded-0: assets\n"
 "X-Poedit-SearchPathExcluded-1: languages\n"
 
-#: block/local-nav/edit.js:40 block/profile-box/edit.js:21
-#: block/recent-posts/edit.js:76
-msgid "Block Settings"
-msgstr "ブロック設定"
+#: templates/pickup-slider.php:59
+msgid "READ MORE"
+msgstr "READ MORE"
 
-#: block/local-nav/edit.js:46 widget/local-nav/_form.php:11
-msgid "Direction"
-msgstr "方向"
+#: widget/any-posts/any-posts.php:29
+msgid "WPAW: Any Posts"
+msgstr "WPAW: 任意の投稿"
 
-#: block/local-nav/edit.js:53 widget/local-nav/_form.php:19
-msgid "Vertical"
-msgstr "垂直方向"
-
-#: block/local-nav/edit.js:57 widget/local-nav/_form.php:20
-msgid "Horizontal"
-msgstr "水平方向"
-
-#: block/local-nav/edit.js:65 widget/local-nav/_form.php:40
-msgid "Display the page title of the top-level"
-msgstr "トップレベルのページのタイトルを表示"
-
-#: block/local-nav/edit.js:74 widget/local-nav/_form.php:52
-msgid "Display only when you have descendants"
-msgstr "子孫があるときだけ表示"
-
-#: block/profile-box/edit.js:26 block/recent-posts/edit.js:81
 #: widget/any-posts/_form.php:11 widget/carousel-any-posts/_form.php:11
 #: widget/contents-outline/_form.php:11 widget/pr-box/_form.php:11
 #: widget/pr-box/_form.php:69 widget/profile-box/_form.php:11
 #: widget/ranking/_form.php:11 widget/recent-posts/_form.php:11
 #: widget/showcase/_form.php:11 widget/slider/_form.php:37
-#: widget/taxonomy-posts/_form.php:11
+#: widget/taxonomy-posts/_form.php:11 assets/block/profile-box/editor.js:1
+#: assets/block/recent-posts/editor.js:1
 msgid "Title"
 msgstr "タイトル"
-
-#: block/profile-box/edit.js:29
-msgid "Profile"
-msgstr "プロフィール"
-
-#: block/recent-posts/edit.js:84 block/recent-posts/edit.js:137
-msgid "Recent posts"
-msgstr "最近の投稿"
-
-#: block/recent-posts/edit.js:92
-msgid "Post Type"
-msgstr "投稿タイプ"
-
-#: block/recent-posts/edit.js:105 widget/recent-posts/_form.php:48
-#: widget/taxonomy-posts/_form.php:91
-msgid "Number of posts"
-msgstr "表示する投稿数"
-
-#: block/recent-posts/edit.js:116
-msgid "Display thumbnail"
-msgstr "サムネイルを表示"
-
-#: block/recent-posts/edit.js:125
-msgid "Display taxonomy"
-msgstr "タクソノミーを表示"
-
-#: .translation/translation.php:2
-msgid "[WPAW] Local navigation"
-msgstr "[WPAW] ローカルナビゲーション"
-
-#: .translation/translation.php:3
-msgid "[WPAW] Profile box"
-msgstr "[WPAW] プロフィールボックス"
-
-#: .translation/translation.php:4
-msgid "[WPAW] Recent posts"
-msgstr "[WPAW] 最近の投稿"
-
-#: templates/carousel-any-posts.php:61
-msgid "55"
-msgstr "55"
-
-#: templates/pickup-slider.php:59
-msgid "READ MORE"
-msgstr "READ MORE"
 
 #: widget/any-posts/_form.php:23 widget/carousel-any-posts/_form.php:23
 #: widget/ranking/_form.php:23 widget/recent-posts/_form.php:22
@@ -124,13 +61,17 @@ msgstr "サムネイルを表示"
 msgid "Show taxonomy"
 msgstr "分類を表示"
 
-#: widget/any-posts/any-posts.php:29
-msgid "WPAW: Any Posts"
-msgstr "WPAW: 任意の投稿"
-
 #: widget/carousel-any-posts/carousel-any-posts.php:27
 msgid "WPAW: Carousel ( Any Posts )"
 msgstr "WPAW: カルーセル（任意の投稿）"
+
+#: widget/contents-outline/contents-outline.php:27
+msgid "WPAW: Contents outline"
+msgstr "WPAW: 目次"
+
+#: widget/contents-outline/contents-outline.php:33
+msgid "Contents outline"
+msgstr "目次"
 
 #: widget/contents-outline/_form.php:21
 msgid "Show headings"
@@ -140,13 +81,9 @@ msgstr "見出しを表示"
 msgid "Also show on mobile"
 msgstr "モバイルでも表示"
 
-#: widget/contents-outline/contents-outline.php:27
-msgid "WPAW: Contents outline"
-msgstr "WPAW: 目次"
-
-#: widget/contents-outline/contents-outline.php:33
-msgid "Contents outline"
-msgstr "目次"
+#: widget/google-adsense/google-adsense.php:24
+msgid "WPAW: Google Adsense"
+msgstr "WPAW: Google アドセンス"
 
 #: widget/google-adsense/_form.php:11
 msgid "Adsense code"
@@ -200,13 +137,38 @@ msgstr "レクタングル (300 x 250) 2個"
 msgid "Link unit"
 msgstr "リンクユニット"
 
-#: widget/google-adsense/google-adsense.php:24
-msgid "WPAW: Google Adsense"
-msgstr "WPAW: Google アドセンス"
-
 #: widget/local-nav/local-nav.php:27
 msgid "WPAW: Local Navigation"
 msgstr "WPAW: ローカルナビゲーション"
+
+#: widget/local-nav/_form.php:11 assets/block/local-nav/editor.js:1
+#: block/local-nav/edit.js:45
+msgid "Direction"
+msgstr "方向"
+
+#: widget/local-nav/_form.php:19 assets/block/local-nav/editor.js:1
+#: block/local-nav/edit.js:53
+msgid "Vertical"
+msgstr "垂直方向"
+
+#: widget/local-nav/_form.php:20 assets/block/local-nav/editor.js:1
+#: block/local-nav/edit.js:60
+msgid "Horizontal"
+msgstr "水平方向"
+
+#: widget/local-nav/_form.php:40 assets/block/local-nav/editor.js:1
+#: block/local-nav/edit.js:70
+msgid "Display the page title of the top-level"
+msgstr "トップレベルのページのタイトルを表示"
+
+#: widget/local-nav/_form.php:52 assets/block/local-nav/editor.js:1
+#: block/local-nav/edit.js:79
+msgid "Display only when you have descendants"
+msgstr "子孫があるときだけ表示"
+
+#: widget/pickup-slider/pickup-slider.php:27
+msgid "WPAW: Pickup slider"
+msgstr "WPAW: ピックアップスライダー"
 
 #: widget/pickup-slider/_form.php:11
 msgid "Posts tagged as \"pickup\" are displayed as slider."
@@ -236,9 +198,9 @@ msgstr "最大表示数"
 msgid "If \"0\", all items are displayed."
 msgstr "「0」の場合、すべての項目が表示されます。"
 
-#: widget/pickup-slider/pickup-slider.php:27
-msgid "WPAW: Pickup slider"
-msgstr "WPAW: ピックアップスライダー"
+#: widget/pr-box/pr-box.php:43
+msgid "WPAW: PR Box"
+msgstr "WPAW: PR ボックス"
 
 #: widget/pr-box/_form.php:22 widget/showcase/_form.php:22
 msgid "Lead"
@@ -325,10 +287,6 @@ msgstr "PCのカラムサイズ"
 msgid "Remove side padding"
 msgstr "左右余白を削除"
 
-#: widget/pr-box/pr-box.php:43
-msgid "WPAW: PR Box"
-msgstr "WPAW: PR ボックス"
-
 #: widget/profile-box/profile-box.php:25
 msgid "WPAW: Profile box"
 msgstr "WPAW: プロフィールボックス"
@@ -344,6 +302,15 @@ msgstr "WPAW: ランキング（手動更新）"
 #: widget/recent-posts/recent-posts.php:29
 msgid "WPAW: Recent posts"
 msgstr "WPAW: 最近の投稿"
+
+#: widget/recent-posts/_form.php:48 widget/taxonomy-posts/_form.php:91
+#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:87
+msgid "Number of posts"
+msgstr "表示する投稿数"
+
+#: widget/showcase/showcase.php:34
+msgid "WPAW: Showcase"
+msgstr "WPAW: ショーケース"
 
 #: widget/showcase/_form.php:32
 msgid "Format"
@@ -369,9 +336,9 @@ msgstr "文字色"
 msgid "Thumbnail"
 msgstr "サムネイル"
 
-#: widget/showcase/showcase.php:34
-msgid "WPAW: Showcase"
-msgstr "WPAW: ショーケース"
+#: widget/site-branding/site-branding.php:25
+msgid "WPAW: Site branding"
+msgstr "WPAW: サイトブランディング"
 
 #: widget/site-branding/_form.php:11
 msgid "Site description"
@@ -381,9 +348,9 @@ msgstr "サイトの説明"
 msgid "HTML use allowed."
 msgstr "HTML 使用可"
 
-#: widget/site-branding/site-branding.php:25
-msgid "WPAW: Site branding"
-msgstr "WPAW: サイトブランディング"
+#: widget/slider/slider.php:42
+msgid "WPAW: Slider"
+msgstr "WPAW: スライダー"
 
 #: widget/slider/_form.php:116
 msgid "Button type"
@@ -429,17 +396,63 @@ msgstr "1度に表示するスライド数（PC）"
 msgid "Number of slides to slide at once(PC)"
 msgstr "1度にスライドするスライド数（PC）"
 
-#: widget/slider/slider.php:42
-msgid "WPAW: Slider"
-msgstr "WPAW: スライダー"
+#: widget/taxonomy-posts/taxonomy-posts.php:26
+msgid "WPAW: Taxonomy posts"
+msgstr "WPAW: 任意のタクソノミーの投稿"
 
 #: widget/taxonomy-posts/_form.php:41
 msgid "Displayed term"
 msgstr "表示するターム"
 
-#: widget/taxonomy-posts/taxonomy-posts.php:26
-msgid "WPAW: Taxonomy posts"
-msgstr "WPAW: 任意のタクソノミーの投稿"
+#: assets/block/local-nav/editor.js:1 assets/block/profile-box/editor.js:1
+#: assets/block/recent-posts/editor.js:1 block/local-nav/edit.js:39
+#: block/recent-posts/edit.js:68
+msgid "Block Settings"
+msgstr "ブロック設定"
+
+#: assets/block/profile-box/editor.js:1
+msgid "Profile"
+msgstr "プロフィール"
+
+#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:120
+msgid "Recent posts"
+msgstr "最近の投稿"
+
+#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:74
+msgid "Post Type"
+msgstr "投稿タイプ"
+
+#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:98
+msgid "Display thumbnail"
+msgstr "サムネイルを表示"
+
+#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:107
+msgid "Display taxonomy"
+msgstr "タクソノミーを表示"
+
+#: block/local-nav/block.json
+msgctxt "block title"
+msgid "[WPAW] Local navigation"
+msgstr "[WPAW] ローカルナビゲーション"
+
+#: block/local-nav/block.json block/profile-box/block.json
+#: block/recent-posts/block.json
+msgctxt "block description"
+msgid ""
+msgstr ""
+
+#: block/profile-box/block.json
+msgctxt "block title"
+msgid "[WPAW] Profile box"
+msgstr "[WPAW] プロフィールボックス"
+
+#: block/recent-posts/block.json
+msgctxt "block title"
+msgid "[WPAW] Recent posts"
+msgstr "[WPAW] 最近の投稿"
+
+#~ msgid "55"
+#~ msgstr "55"
 
 #~ msgid "[WPAW] Local nav"
 #~ msgstr "[WPAW] ローカルナビゲーション"

@@ -3,12 +3,8 @@
 	"title": "[WPAW] Recent posts",
 	"description": "",
   "category": "widgets",
-  "textDomain": "inc2734-wp-awesome-widgets",
+  "textdomain": "inc2734-wp-awesome-widgets",
   "attributes": {
-    "title": {
-      "type": "string",
-      "default": "Recent posts"
-    },
     "postType": {
       "type": "string",
       "default": "post"

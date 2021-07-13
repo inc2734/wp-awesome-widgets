@@ -3,12 +3,8 @@
 	"title": "[WPAW] Profile box",
 	"description": "",
   "category": "widgets",
-  "textDomain": "inc2734-wp-awesome-widgets",
+  "textdomain": "inc2734-wp-awesome-widgets",
   "attributes": {
-    "title": {
-      "type": "string",
-      "default": "Profile"
-    }
   },
   "supports": {
     "anchor": true,

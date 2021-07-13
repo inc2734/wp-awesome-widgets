@@ -3,7 +3,7 @@
 	"title": "[WPAW] Local navigation",
 	"description": "",
   "category": "widgets",
-  "textDomain": "inc2734-wp-awesome-widgets",
+  "textdomain": "inc2734-wp-awesome-widgets",
   "attributes": {
     "direction": {
       "type": "string",
