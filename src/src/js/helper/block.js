@@ -13,14 +13,14 @@ export const registerBlock = ( block ) => {
 	if ( metadata ) {
 		if ( !! metadata.title ) {
 			/* eslint @wordpress/i18n-no-variables: 0 */
-			metadata.title = __( metadata.title, 'inc2734-wp-awesome-widgets' );
+			metadata.title = __( metadata.title, 'snow-monkey-blocks' );
 			settings.title = metadata.title;
 		}
 		if ( !! metadata.description ) {
 			/* eslint @wordpress/i18n-no-variables: 0 */
 			metadata.description = __(
 				metadata.description,
-				'inc2734-wp-awesome-widgets'
+				'snow-monkey-blocks'
 			);
 			settings.description = metadata.description;
 		}
@@ -29,9 +29,8 @@ export const registerBlock = ( block ) => {
 			metadata.keywords = __( metadata.keywords, 'inc2734-wp-awesome-widgets' );
 			settings.keywords = metadata.keywords;
 		}
-		unstable__bootstrapServerSideBlockDefinitions( { [ name ]: metadata } );
 	}
-	registerBlockType( name, settings );
+	registerBlockType( { name, ...metadata }, settings );
 };
 
 export const toNumber = ( value, min = 0, max = null ) => {
