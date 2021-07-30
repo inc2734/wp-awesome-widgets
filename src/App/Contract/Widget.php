@@ -83,7 +83,7 @@ class Widget extends WP_Widget {
 		if ( wp_use_widgets_block_editor() ) {
 			echo sprintf(
 				// translators: %1$s: The start tag of the a element, %2$s: The end tag of the a element
-				esc_html(
+				__(
 					'This can only be edited if the %1$sClassic Widgets%2$s plugin is enabled.',
 					'inc2734-wp-awesome-widgets'
 				),

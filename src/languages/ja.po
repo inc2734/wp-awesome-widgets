@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-30T06:39:15+00:00\n"
-"PO-Revision-Date: 2021-07-30 15:39+0900\n"
+"POT-Creation-Date: 2021-07-30T06:44:59+00:00\n"
+"PO-Revision-Date: 2021-07-30 15:47+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -29,6 +29,11 @@ msgstr "[WPAW] プロフィールボックス"
 #: .translation/translation.php:4
 msgid "[WPAW] Recent posts"
 msgstr "[WPAW] 最近の投稿"
+
+#. translators: %1$s: The start tag of the a element, %2$s: The end tag of the a element
+#: App/Contract/Widget.php:86
+msgid "This can only be edited if the %1$sClassic Widgets%2$s plugin is enabled."
+msgstr "%1$sクラシックウィジェット%2$sプラグインが有効になっている場合にのみ編集できます。"
 
 #: templates/pickup-slider.php:59
 msgid "READ MORE"
