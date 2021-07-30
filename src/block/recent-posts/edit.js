@@ -1,6 +1,8 @@
 import ServerSideRender from '@wordpress/server-side-render';
+
+import { InspectorControls } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
-import { useMemo } from '@wordpress/element';
+import { useMemo, useEffect } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 
 import {
@@ -13,12 +15,16 @@ import {
 	ToggleControl,
 } from '@wordpress/components';
 
-import { InspectorControls } from '@wordpress/block-editor';
-
 import { toNumber } from '@wpaw/helper';
 
-export default function ( { attributes, setAttributes } ) {
+export default function ( { attributes, setAttributes, clientId } ) {
 	const { postType, postsPerPage, showThumbnail, showTaxonomy } = attributes;
+
+	useEffect( () => {
+		if ( ! attributes.clientId ) {
+			setAttributes( { clientId } );
+		}
+	}, [ clientId ] );
 
 	const allPostTypes = useSelect( ( select ) => {
 		const { getPostTypes } = select( 'core' );

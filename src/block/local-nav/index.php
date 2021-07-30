@@ -6,6 +6,7 @@
  */
 
 use Inc2734\WP_Awesome_Widgets\App\View;
+use Inc2734\WP_Awesome_Widgets\Helper;
 
 /**
  * editor_script
@@ -19,13 +20,28 @@ wp_register_script(
 	true
 );
 
+add_action(
+	'init',
+	function() {
+		$block = \WP_Block_Type_Registry::get_instance()->get_registered( 'wp-awesome-widgets/local-nav' );
+		if ( $block ) {
+			$block->attributes['anchor'] = '';
+		}
+	},
+	11
+);
+
 register_block_type(
 	__DIR__,
 	[
 		'editor_script'   => 'wp-awesome-widgets/local-nav/editor',
 		'render_callback' => function( $attributes ) {
+			$widget_id = ! empty( $attributes['clientId'] )
+				? 'inc2734_wp_awesome_widgets_local_nav-' . $attributes['clientId']
+				: null;
+
 			$widget_args = [
-				'widget_id'     => null,
+				'widget_id'     => $widget_id,
 				'before_widget' => '',
 				'after_widget'  => '',
 				'before_title'  => '',
@@ -38,9 +54,7 @@ register_block_type(
 				'display-only-have-descendants' => $attributes['displayOnlyHaveDescendants'],
 			];
 
-			ob_start();
-			include( __DIR__ . '/../../widget/local-nav/_widget.php' );
-			return ob_get_clean();
+			return Helper::render_widget( __DIR__ . '/../../widget/local-nav', $widget_args, $instance );
 		},
 	]
 );

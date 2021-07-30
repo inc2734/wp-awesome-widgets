@@ -127,4 +127,39 @@ class Helper {
 		</ul>
 		<?php
 	}
+
+	/**
+	 * Render widget.
+	 *
+	 * @param string $path        Full path to widget.php.
+	 * @param array  $widget_args The widget argments.
+	 * @param array  $instance    The widget instance.
+	 * @return string
+	 */
+	public static function render_widget( $path, $widget_args, $instance ) {
+		$widget_templates = apply_filters( 'inc2734_wp_awesome_widgets_widget_templates', 'templates/widget' );
+		$default_template = $path . '/_widget.php';
+		$custom_template  = $widget_templates . '/' . basename( $path );
+
+		ob_start();
+
+		if ( file_exists( get_theme_file_path( $custom_template . '.php' ) ) ) {
+			include( get_theme_file_path( $custom_template . '.php' ) );
+		} elseif ( file_exists( $default_template ) ) {
+			include( $default_template );
+		}
+
+		$widget = ob_get_clean();
+
+		if ( empty( $widget ) ) {
+			return;
+		}
+
+		return apply_filters(
+			'inc2734_wp_awesome_widgets_render_widget',
+			$widget,
+			$widget_args,
+			$instance
+		); // xss ok.
+	}
 }

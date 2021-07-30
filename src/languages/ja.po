@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-07T06:22:15+00:00\n"
-"PO-Revision-Date: 2021-07-07 15:24+0900\n"
+"POT-Creation-Date: 2021-07-30T06:39:15+00:00\n"
+"PO-Revision-Date: 2021-07-30 15:39+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -18,6 +18,18 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: assets\n"
 "X-Poedit-SearchPathExcluded-1: languages\n"
 
+#: .translation/translation.php:2
+msgid "[WPAW] Local navigation"
+msgstr "[WPAW] ローカルナビゲーション"
+
+#: .translation/translation.php:3
+msgid "[WPAW] Profile box"
+msgstr "[WPAW] プロフィールボックス"
+
+#: .translation/translation.php:4
+msgid "[WPAW] Recent posts"
+msgstr "[WPAW] 最近の投稿"
+
 #: templates/pickup-slider.php:59
 msgid "READ MORE"
 msgstr "READ MORE"
@@ -31,8 +43,7 @@ msgstr "WPAW: 任意の投稿"
 #: widget/pr-box/_form.php:69 widget/profile-box/_form.php:11
 #: widget/ranking/_form.php:11 widget/recent-posts/_form.php:11
 #: widget/showcase/_form.php:11 widget/slider/_form.php:37
-#: widget/taxonomy-posts/_form.php:11 assets/block/profile-box/editor.js:1
-#: assets/block/recent-posts/editor.js:1
+#: widget/taxonomy-posts/_form.php:11
 msgid "Title"
 msgstr "タイトル"
 
@@ -142,27 +153,27 @@ msgid "WPAW: Local Navigation"
 msgstr "WPAW: ローカルナビゲーション"
 
 #: widget/local-nav/_form.php:11 assets/block/local-nav/editor.js:1
-#: block/local-nav/edit.js:45
+#: block/local-nav/edit.js:52
 msgid "Direction"
 msgstr "方向"
 
 #: widget/local-nav/_form.php:19 assets/block/local-nav/editor.js:1
-#: block/local-nav/edit.js:53
+#: block/local-nav/edit.js:60
 msgid "Vertical"
 msgstr "垂直方向"
 
 #: widget/local-nav/_form.php:20 assets/block/local-nav/editor.js:1
-#: block/local-nav/edit.js:60
+#: block/local-nav/edit.js:67
 msgid "Horizontal"
 msgstr "水平方向"
 
 #: widget/local-nav/_form.php:40 assets/block/local-nav/editor.js:1
-#: block/local-nav/edit.js:70
+#: block/local-nav/edit.js:77
 msgid "Display the page title of the top-level"
 msgstr "トップレベルのページのタイトルを表示"
 
 #: widget/local-nav/_form.php:52 assets/block/local-nav/editor.js:1
-#: block/local-nav/edit.js:79
+#: block/local-nav/edit.js:86
 msgid "Display only when you have descendants"
 msgstr "子孫があるときだけ表示"
 
@@ -304,7 +315,7 @@ msgid "WPAW: Recent posts"
 msgstr "WPAW: 最近の投稿"
 
 #: widget/recent-posts/_form.php:48 widget/taxonomy-posts/_form.php:91
-#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:87
+#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:88
 msgid "Number of posts"
 msgstr "表示する投稿数"
 
@@ -404,31 +415,26 @@ msgstr "WPAW: 任意のタクソノミーの投稿"
 msgid "Displayed term"
 msgstr "表示するターム"
 
-#: assets/block/local-nav/editor.js:1 assets/block/profile-box/editor.js:1
-#: assets/block/recent-posts/editor.js:1 block/local-nav/edit.js:39
-#: block/recent-posts/edit.js:68
+#: assets/block/local-nav/editor.js:1 assets/block/recent-posts/editor.js:1
+#: block/local-nav/edit.js:46 block/recent-posts/edit.js:69
 msgid "Block Settings"
 msgstr "ブロック設定"
 
-#: assets/block/profile-box/editor.js:1
-msgid "Profile"
-msgstr "プロフィール"
-
-#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:120
-msgid "Recent posts"
-msgstr "最近の投稿"
-
-#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:74
+#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:75
 msgid "Post Type"
 msgstr "投稿タイプ"
 
-#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:98
+#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:99
 msgid "Display thumbnail"
 msgstr "サムネイルを表示"
 
-#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:107
+#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:108
 msgid "Display taxonomy"
 msgstr "タクソノミーを表示"
+
+#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:121
+msgid "Recent posts"
+msgstr "最近の投稿"
 
 #: block/local-nav/block.json
 msgctxt "block title"
@@ -450,6 +456,9 @@ msgstr "[WPAW] プロフィールボックス"
 msgctxt "block title"
 msgid "[WPAW] Recent posts"
 msgstr "[WPAW] 最近の投稿"
+
+#~ msgid "Profile"
+#~ msgstr "プロフィール"
 
 #~ msgid "55"
 #~ msgstr "55"

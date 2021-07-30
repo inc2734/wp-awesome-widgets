@@ -13,14 +13,14 @@ export const registerBlock = ( block ) => {
 	if ( metadata ) {
 		if ( !! metadata.title ) {
 			/* eslint @wordpress/i18n-no-variables: 0 */
-			metadata.title = __( metadata.title, 'snow-monkey-blocks' );
+			metadata.title = __( metadata.title, 'inc2734-wp-awesome-widgets' );
 			settings.title = metadata.title;
 		}
 		if ( !! metadata.description ) {
 			/* eslint @wordpress/i18n-no-variables: 0 */
 			metadata.description = __(
 				metadata.description,
-				'snow-monkey-blocks'
+				'inc2734-wp-awesome-widgets'
 			);
 			settings.description = metadata.description;
 		}

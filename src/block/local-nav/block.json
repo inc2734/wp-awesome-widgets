@@ -16,6 +16,9 @@
     "displayOnlyHaveDescendants": {
       "type": "boolean",
       "default": false
+    },
+    "clientId": {
+      "type": "string"
     }
   },
   "supports": {

@@ -6,6 +6,7 @@
  */
 
 use Inc2734\WP_Awesome_Widgets\App\View;
+use Inc2734\WP_Awesome_Widgets\Helper;
 
 /**
  * editor_script
@@ -19,13 +20,28 @@ wp_register_script(
 	true
 );
 
+add_action(
+	'init',
+	function() {
+		$block = \WP_Block_Type_Registry::get_instance()->get_registered( 'wp-awesome-widgets/recent-posts' );
+		if ( $block ) {
+			$block->attributes['anchor'] = '';
+		}
+	},
+	11
+);
+
 register_block_type(
 	__DIR__,
 	[
 		'editor_script'   => 'wp-awesome-widgets/recent-posts/editor',
 		'render_callback' => function( $attributes ) {
+			$widget_id = ! empty( $attributes['clientId'] )
+				? 'inc2734_wp_awesome_widgets_recent_posts-' . $attributes['clientId']
+				: null;
+
 			$widget_args = [
-				'widget_id'     => null,
+				'widget_id'     => $widget_id,
 				'before_widget' => '',
 				'after_widget'  => '',
 				'before_title'  => '',
@@ -40,9 +56,7 @@ register_block_type(
 				'show-taxonomy'  => $attributes['showTaxonomy'],
 			];
 
-			ob_start();
-			include( __DIR__ . '/../../widget/recent-posts/_widget.php' );
-			return ob_get_clean();
+			return Helper::render_widget( __DIR__ . '/../../widget/recent-posts', $widget_args, $instance );
 		},
 	]
 );

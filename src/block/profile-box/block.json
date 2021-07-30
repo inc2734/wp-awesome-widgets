@@ -5,6 +5,9 @@
   "category": "widgets",
   "textdomain": "inc2734-wp-awesome-widgets",
   "attributes": {
+    "clientId": {
+      "type": "string"
+    }
   },
   "supports": {
     "anchor": true,

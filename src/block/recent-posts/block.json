@@ -20,6 +20,9 @@
     "showTaxonomy": {
       "type": "boolean",
       "default": true
+    },
+    "clientId": {
+      "type": "string"
     }
   },
   "supports": {

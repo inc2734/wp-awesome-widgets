@@ -33,7 +33,7 @@
     "clean:css": "rimraf src/assets/css",
     "clean:js": "rimraf src/assets/js",
     "clean:packages": "rimraf src/assets/packages",
-    "clean:translation": "rimraf .translation && mkdir -p .translation",
+    "clean:translation": "rimraf src/.translation && mkdir -p src/.translation",
     "css:front": "node-sass src/src/css/app.scss src/assets/css/app.css && postcss -r src/assets/css/app.css -c=postcss.config.js",
     "css:admin": "node-sass src/src/css/admin.scss src/assets/css/admin.css && postcss -r src/assets/css/admin.css -c=postcss.config.js",
     "css:editor": "node-sass src/src/css/editor.scss src/assets/css/editor.css && postcss -r src/assets/css/editor.css -c=postcss.config.js",
@@ -58,8 +58,10 @@
     "format": "run-p format:*",
     "po2json:wp-awesome-widgets-editor": "po2json -f jed src/languages/ja.po src/languages/inc2734-wp-awesome-widgets-ja-wp-awesome-widgets-editor.json",
     "po2json": "run-p po2json:*",
+    "translation:metadata": "php bin/translation.php",
+    "translation": "npm run clean:translation && run-p translation:*",
     "makepot": "npm run wp 'i18n make-pot ./wp-content/plugins/wp-awesome-widgets/src ./wp-content/plugins/wp-awesome-widgets/src/languages/generic.pot --exclude=./wp-content/plugins/wp-awesome-widgets/src/assets --domain=inc2734-wp-awesome-widgets'",
-    "build": "npm-run-all -p css js packages block makepot po2json"
+    "build": "npm-run-all -p css js packages translation block makepot po2json"
   },
   "dependencies": {
     "@inc2734/for-each-html-nodes": "^0.4.0"

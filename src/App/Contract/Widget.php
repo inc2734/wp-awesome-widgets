@@ -8,6 +8,7 @@
 namespace Inc2734\WP_Awesome_Widgets\App\Contract;
 
 use WP_Widget;
+use Inc2734\WP_Awesome_Widgets\Helper;
 
 /**
  * @SuppressWarnings(PHPMD.NumberOfChildren)
@@ -111,30 +112,7 @@ class Widget extends WP_Widget {
 	 * @param array $instance    The widget instance.
 	 */
 	protected function _render_widget( $widget_args, $instance ) {
-		$widget_templates = apply_filters( 'inc2734_wp_awesome_widgets_widget_templates', 'templates/widget' );
-		$default_template = $this->_path . '/_widget.php';
-		$custom_template  = $widget_templates . '/' . basename( $this->_path );
-
-		ob_start();
-
-		if ( file_exists( get_theme_file_path( $custom_template . '.php' ) ) ) {
-			include( get_theme_file_path( $custom_template . '.php' ) );
-		} elseif ( file_exists( $default_template ) ) {
-			include( $default_template );
-		}
-
-		$widget = ob_get_clean();
-
-		if ( empty( $widget ) ) {
-			return;
-		}
-
-		echo apply_filters(
-			'inc2734_wp_awesome_widgets_render_widget',
-			$widget,
-			$widget_args,
-			$instance
-		); // xss ok.
+		echo Helper::render_widget( $this->_path, $widget_args, $instance ); // xss ok.
 	}
 
 	/**
