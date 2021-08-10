@@ -101,7 +101,7 @@ class Bootstrap {
 		wp_enqueue_style(
 			'wp-awesome-widgets',
 			get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/css/editor.css',
-			[ 'slick-carousel-theme' ],
+			[],
 			filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/css/editor.css' )
 		);
 
