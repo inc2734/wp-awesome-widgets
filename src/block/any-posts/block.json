@@ -1,0 +1,32 @@
+{
+  "name": "wp-awesome-widgets/any-posts",
+	"title": "[WPAW] Any posts",
+	"description": "",
+  "category": "widgets",
+  "textdomain": "inc2734-wp-awesome-widgets",
+  "attributes": {
+    "showThumbnail": {
+      "type": "boolean",
+      "default": true
+    },
+    "showTaxonomy": {
+      "type": "boolean",
+      "default": true
+    },
+    "items": {
+      "type": "string",
+      "default": "[{\"id\":0,\"title\":\"\",\"url\":\"\"}]"
+    },
+    "clientId": {
+      "type": "string"
+    }
+  },
+  "providesContext": {
+    "wp-awesome-widgets/showThumbnail": "showThumbnail",
+    "wp-awesome-widgets/showTaxonomy": "showTaxonomy"
+  },
+  "supports": {
+    "anchor": true,
+    "customClassName": false
+  }
+}

@@ -3,6 +3,7 @@ import ServerSideRender from '@wordpress/server-side-render';
 import { InspectorControls } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
 import { useMemo, useEffect } from '@wordpress/element';
+import { postList as icon } from '@wordpress/icons';
 import { __ } from '@wordpress/i18n';
 
 import {
@@ -117,7 +118,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 
 			{ ! allPostTypes ? (
 				<Placeholder
-					icon="editor-ul"
+					icon={ icon }
 					label={ __( 'Recent posts', 'inc2734-wp-awesome-widgets' ) }
 				>
 					<Spinner />

@@ -4,3 +4,63 @@
 .customize-control-sidebar_block_editor {
   @import 'app';
 }
+
+.wp-awesome-widgests-posts-list-linkcontrols {
+  .wp-awesome-widgests-posts-list-linkcontrols__item + .wp-awesome-widgests-posts-list-linkcontrols__item {
+    margin-top: 1rem;
+  }
+
+  &__action {
+    margin-top: 1rem;
+  }
+}
+
+.wp-awesome-widgests-posts-list-linkcontrol {
+  position: relative;
+  padding: 24px 0 0;
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__remove-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .block-editor-link-control {
+    min-width: auto;
+
+    &__search-results-wrapper {
+      margin-top: 0;
+    }
+
+    .block-editor-url-input {
+      margin-bottom: 0;
+    }
+
+    .block-editor-url-input__input {
+      margin: 0 !important;
+      width: 100% !important;
+    }
+
+    .block-editor-link-control__search-actions {
+      top: 2px;
+    }
+
+    .block-editor-link-control__search-item.is-current {
+      padding: 0;
+
+      & + .block-editor-link-control__search-item-action {
+        margin: 0 0 0 1rem;
+      }
+    }
+
+    .is-url {
+      display: none !important;
+    }
+  }
+}
