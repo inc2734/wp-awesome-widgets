@@ -41,6 +41,7 @@ class Bootstrap {
 				include_once( __DIR__ . '/block/profile-box/index.php' );
 				include_once( __DIR__ . '/block/any-posts/index.php' );
 				include_once( __DIR__ . '/block/ranking/index.php' );
+				include_once( __DIR__ . '/block/site-branding/index.php' );
 			}
 		);
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-11T07:33:07+00:00\n"
-"PO-Revision-Date: 2021-08-11 16:41+0900\n"
+"POT-Creation-Date: 2021-08-11T07:55:21+00:00\n"
+"PO-Revision-Date: 2021-08-11 16:55+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -37,6 +37,10 @@ msgstr "[WPAW] ランキング"
 #: .translation/translation.php:6
 msgid "[WPAW] Recent posts"
 msgstr "[WPAW] 最近の投稿"
+
+#: .translation/translation.php:7
+msgid "[WPAW] Site branding"
+msgstr "[WPAW] サイトブランディング"
 
 #. translators: %1$s: The start tag of the a element, %2$s: The end tag of the a element
 #: App/Contract/Widget.php:86
@@ -331,7 +335,7 @@ msgid "WPAW: Recent posts"
 msgstr "WPAW: 最近の投稿"
 
 #: widget/recent-posts/_form.php:48 widget/taxonomy-posts/_form.php:91
-#: block/recent-posts/edit.js:89
+#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:89
 msgid "Number of posts"
 msgstr "表示する投稿数"
 
@@ -367,11 +371,13 @@ msgstr "サムネイル"
 msgid "WPAW: Site branding"
 msgstr "WPAW: サイトブランディング"
 
-#: widget/site-branding/_form.php:11
+#: widget/site-branding/_form.php:11 assets/block/site-branding/editor.js:1
+#: block/site-branding/edit.js:29
 msgid "Site description"
 msgstr "サイトの説明"
 
-#: widget/site-branding/_form.php:19
+#: widget/site-branding/_form.php:19 assets/block/site-branding/editor.js:1
+#: block/site-branding/edit.js:33
 msgid "HTML use allowed."
 msgstr "HTML 使用可"
 
@@ -432,21 +438,22 @@ msgid "Displayed term"
 msgstr "表示するターム"
 
 #: assets/block/any-posts/editor.js:1 assets/block/local-nav/editor.js:1
-#: assets/block/ranking/editor.js:1 block/any-posts/edit.js:57
+#: assets/block/ranking/editor.js:1 assets/block/recent-posts/editor.js:1
+#: assets/block/site-branding/editor.js:1 block/any-posts/edit.js:57
 #: block/local-nav/edit.js:46 block/ranking/edit.js:57
-#: block/recent-posts/edit.js:70
+#: block/recent-posts/edit.js:70 block/site-branding/edit.js:23
 msgid "Block Settings"
 msgstr "ブロック設定"
 
 #: assets/block/any-posts/editor.js:1 assets/block/ranking/editor.js:1
-#: block/any-posts/edit.js:63 block/ranking/edit.js:63
-#: block/recent-posts/edit.js:100
+#: assets/block/recent-posts/editor.js:1 block/any-posts/edit.js:63
+#: block/ranking/edit.js:63 block/recent-posts/edit.js:100
 msgid "Display thumbnail"
 msgstr "サムネイルを表示"
 
 #: assets/block/any-posts/editor.js:1 assets/block/ranking/editor.js:1
-#: block/any-posts/edit.js:72 block/ranking/edit.js:72
-#: block/recent-posts/edit.js:109
+#: assets/block/recent-posts/editor.js:1 block/any-posts/edit.js:72
+#: block/ranking/edit.js:72 block/recent-posts/edit.js:109
 msgid "Display taxonomy"
 msgstr "タクソノミーを表示"
 
@@ -473,11 +480,11 @@ msgstr "任意の投稿"
 msgid "Ranking"
 msgstr "ランキング"
 
-#: block/recent-posts/edit.js:76
+#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:76
 msgid "Post Type"
 msgstr "投稿タイプ"
 
-#: block/recent-posts/edit.js:122
+#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:122
 msgid "Recent posts"
 msgstr "最近の投稿"
 
@@ -488,7 +495,7 @@ msgstr "[WPAW] 任意の投稿"
 
 #: block/any-posts/block.json block/local-nav/block.json
 #: block/profile-box/block.json block/ranking/block.json
-#: block/recent-posts/block.json
+#: block/recent-posts/block.json block/site-branding/block.json
 msgctxt "block description"
 msgid ""
 msgstr ""
@@ -512,6 +519,11 @@ msgstr "[WPAW] ランキング"
 msgctxt "block title"
 msgid "[WPAW] Recent posts"
 msgstr "[WPAW] 最近の投稿"
+
+#: block/site-branding/block.json
+msgctxt "block title"
+msgid "[WPAW] Site branding"
+msgstr "[WPAW] サイトブランディング"
 
 #~ msgid "No posts found."
 #~ msgstr "投稿が見つかりません。"

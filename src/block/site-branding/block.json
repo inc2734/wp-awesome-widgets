@@ -1,0 +1,19 @@
+{
+  "name": "wp-awesome-widgets/site-branding",
+	"title": "[WPAW] Site branding",
+	"description": "",
+  "category": "widgets",
+  "textdomain": "inc2734-wp-awesome-widgets",
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "clientId": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "customClassName": false
+  }
+}
