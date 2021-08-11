@@ -7,20 +7,28 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-08-10T23:48:22+00:00\n"
+"POT-Creation-Date: 2021-08-11T07:33:07+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: inc2734-wp-awesome-widgets\n"
 
 #: .translation/translation.php:2
-msgid "[WPAW] Local navigation"
+msgid "[WPAW] Any posts"
 msgstr ""
 
 #: .translation/translation.php:3
-msgid "[WPAW] Profile box"
+msgid "[WPAW] Local navigation"
 msgstr ""
 
 #: .translation/translation.php:4
+msgid "[WPAW] Profile box"
+msgstr ""
+
+#: .translation/translation.php:5
+msgid "[WPAW] Ranking"
+msgstr ""
+
+#: .translation/translation.php:6
 msgid "[WPAW] Recent posts"
 msgstr ""
 
@@ -348,7 +356,7 @@ msgstr ""
 
 #: widget/recent-posts/_form.php:48
 #: widget/taxonomy-posts/_form.php:91
-#: block/recent-posts/edit.js:88
+#: block/recent-posts/edit.js:89
 msgid "Number of posts"
 msgstr ""
 
@@ -451,26 +459,83 @@ msgstr ""
 msgid "Displayed term"
 msgstr ""
 
+#: assets/block/any-posts/editor.js:1
 #: assets/block/local-nav/editor.js:1
+#: assets/block/ranking/editor.js:1
+#: block/any-posts/edit.js:57
 #: block/local-nav/edit.js:46
-#: block/recent-posts/edit.js:69
+#: block/ranking/edit.js:57
+#: block/recent-posts/edit.js:70
 msgid "Block Settings"
 msgstr ""
 
-#: block/recent-posts/edit.js:75
-msgid "Post Type"
-msgstr ""
-
-#: block/recent-posts/edit.js:99
+#: assets/block/any-posts/editor.js:1
+#: assets/block/ranking/editor.js:1
+#: block/any-posts/edit.js:63
+#: block/ranking/edit.js:63
+#: block/recent-posts/edit.js:100
 msgid "Display thumbnail"
 msgstr ""
 
-#: block/recent-posts/edit.js:108
+#: assets/block/any-posts/editor.js:1
+#: assets/block/ranking/editor.js:1
+#: block/any-posts/edit.js:72
+#: block/ranking/edit.js:72
+#: block/recent-posts/edit.js:109
 msgid "Display taxonomy"
 msgstr ""
 
-#: block/recent-posts/edit.js:121
+#: assets/block/any-posts/editor.js:1
+#: assets/block/ranking/editor.js:1
+#: block/any-posts/edit.js:81
+#: block/ranking/edit.js:81
+msgid "Search post"
+msgstr ""
+
+#: assets/block/any-posts/editor.js:1
+#: assets/block/ranking/editor.js:1
+#: block/any-posts/edit.js:120
+#: block/ranking/edit.js:120
+msgid "Remove this item"
+msgstr ""
+
+#: assets/block/any-posts/editor.js:1
+#: assets/block/ranking/editor.js:1
+#: block/any-posts/edit.js:144
+#: block/ranking/edit.js:144
+msgid "Add new item"
+msgstr ""
+
+#: assets/block/any-posts/editor.js:1
+#: block/any-posts/edit.js:157
+msgid "Any posts"
+msgstr ""
+
+#: assets/block/ranking/editor.js:1
+#: block/ranking/edit.js:157
+msgid "Ranking"
+msgstr ""
+
+#: block/recent-posts/edit.js:76
+msgid "Post Type"
+msgstr ""
+
+#: block/recent-posts/edit.js:122
 msgid "Recent posts"
+msgstr ""
+
+#: block/any-posts/block.json
+msgctxt "block title"
+msgid "[WPAW] Any posts"
+msgstr ""
+
+#: block/any-posts/block.json
+#: block/local-nav/block.json
+#: block/profile-box/block.json
+#: block/ranking/block.json
+#: block/recent-posts/block.json
+msgctxt "block description"
+msgid ""
 msgstr ""
 
 #: block/local-nav/block.json
@@ -478,16 +543,14 @@ msgctxt "block title"
 msgid "[WPAW] Local navigation"
 msgstr ""
 
-#: block/local-nav/block.json
-#: block/profile-box/block.json
-#: block/recent-posts/block.json
-msgctxt "block description"
-msgid ""
-msgstr ""
-
 #: block/profile-box/block.json
 msgctxt "block title"
 msgid "[WPAW] Profile box"
+msgstr ""
+
+#: block/ranking/block.json
+msgctxt "block title"
+msgid "[WPAW] Ranking"
 msgstr ""
 
 #: block/recent-posts/block.json

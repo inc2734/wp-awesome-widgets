@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inc2734-wp-awesome-widgets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-30T06:44:59+00:00\n"
-"PO-Revision-Date: 2021-07-30 15:47+0900\n"
+"POT-Creation-Date: 2021-08-11T07:33:07+00:00\n"
+"PO-Revision-Date: 2021-08-11 16:41+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: Takashi Kitajima <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -19,21 +19,32 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: languages\n"
 
 #: .translation/translation.php:2
+msgid "[WPAW] Any posts"
+msgstr "[WPAW] 任意の投稿"
+
+#: .translation/translation.php:3
 msgid "[WPAW] Local navigation"
 msgstr "[WPAW] ローカルナビゲーション"
 
-#: .translation/translation.php:3
+#: .translation/translation.php:4
 msgid "[WPAW] Profile box"
 msgstr "[WPAW] プロフィールボックス"
 
-#: .translation/translation.php:4
+#: .translation/translation.php:5
+msgid "[WPAW] Ranking"
+msgstr "[WPAW] ランキング"
+
+#: .translation/translation.php:6
 msgid "[WPAW] Recent posts"
 msgstr "[WPAW] 最近の投稿"
 
 #. translators: %1$s: The start tag of the a element, %2$s: The end tag of the a element
 #: App/Contract/Widget.php:86
-msgid "This can only be edited if the %1$sClassic Widgets%2$s plugin is enabled."
-msgstr "%1$sクラシックウィジェット%2$sプラグインが有効になっている場合にのみ編集できます。"
+msgid ""
+"This can only be edited if the %1$sClassic Widgets%2$s plugin is enabled."
+msgstr ""
+"%1$sクラシックウィジェット%2$sプラグインが有効になっている場合にのみ編集"
+"できます。"
 
 #: templates/pickup-slider.php:59
 msgid "READ MORE"
@@ -320,7 +331,7 @@ msgid "WPAW: Recent posts"
 msgstr "WPAW: 最近の投稿"
 
 #: widget/recent-posts/_form.php:48 widget/taxonomy-posts/_form.php:91
-#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:88
+#: block/recent-posts/edit.js:89
 msgid "Number of posts"
 msgstr "表示する投稿数"
 
@@ -420,53 +431,96 @@ msgstr "WPAW: 任意のタクソノミーの投稿"
 msgid "Displayed term"
 msgstr "表示するターム"
 
-#: assets/block/local-nav/editor.js:1 assets/block/recent-posts/editor.js:1
-#: block/local-nav/edit.js:46 block/recent-posts/edit.js:69
+#: assets/block/any-posts/editor.js:1 assets/block/local-nav/editor.js:1
+#: assets/block/ranking/editor.js:1 block/any-posts/edit.js:57
+#: block/local-nav/edit.js:46 block/ranking/edit.js:57
+#: block/recent-posts/edit.js:70
 msgid "Block Settings"
 msgstr "ブロック設定"
 
-#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:75
-msgid "Post Type"
-msgstr "投稿タイプ"
-
-#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:99
+#: assets/block/any-posts/editor.js:1 assets/block/ranking/editor.js:1
+#: block/any-posts/edit.js:63 block/ranking/edit.js:63
+#: block/recent-posts/edit.js:100
 msgid "Display thumbnail"
 msgstr "サムネイルを表示"
 
-#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:108
+#: assets/block/any-posts/editor.js:1 assets/block/ranking/editor.js:1
+#: block/any-posts/edit.js:72 block/ranking/edit.js:72
+#: block/recent-posts/edit.js:109
 msgid "Display taxonomy"
 msgstr "タクソノミーを表示"
 
-#: assets/block/recent-posts/editor.js:1 block/recent-posts/edit.js:121
+#: assets/block/any-posts/editor.js:1 assets/block/ranking/editor.js:1
+#: block/any-posts/edit.js:81 block/ranking/edit.js:81
+msgid "Search post"
+msgstr "投稿を検索"
+
+#: assets/block/any-posts/editor.js:1 assets/block/ranking/editor.js:1
+#: block/any-posts/edit.js:120 block/ranking/edit.js:120
+msgid "Remove this item"
+msgstr "このアイテムを削除"
+
+#: assets/block/any-posts/editor.js:1 assets/block/ranking/editor.js:1
+#: block/any-posts/edit.js:144 block/ranking/edit.js:144
+msgid "Add new item"
+msgstr "アイテムを追加"
+
+#: assets/block/any-posts/editor.js:1 block/any-posts/edit.js:157
+msgid "Any posts"
+msgstr "任意の投稿"
+
+#: assets/block/ranking/editor.js:1 block/ranking/edit.js:157
+msgid "Ranking"
+msgstr "ランキング"
+
+#: block/recent-posts/edit.js:76
+msgid "Post Type"
+msgstr "投稿タイプ"
+
+#: block/recent-posts/edit.js:122
 msgid "Recent posts"
 msgstr "最近の投稿"
+
+#: block/any-posts/block.json
+msgctxt "block title"
+msgid "[WPAW] Any posts"
+msgstr "[WPAW] 任意の投稿"
+
+#: block/any-posts/block.json block/local-nav/block.json
+#: block/profile-box/block.json block/ranking/block.json
+#: block/recent-posts/block.json
+msgctxt "block description"
+msgid ""
+msgstr ""
 
 #: block/local-nav/block.json
 msgctxt "block title"
 msgid "[WPAW] Local navigation"
 msgstr "[WPAW] ローカルナビゲーション"
 
-#: block/local-nav/block.json block/profile-box/block.json
-#: block/recent-posts/block.json
-msgctxt "block description"
-msgid ""
-msgstr ""
-
 #: block/profile-box/block.json
 msgctxt "block title"
 msgid "[WPAW] Profile box"
 msgstr "[WPAW] プロフィールボックス"
+
+#: block/ranking/block.json
+msgctxt "block title"
+msgid "[WPAW] Ranking"
+msgstr "[WPAW] ランキング"
 
 #: block/recent-posts/block.json
 msgctxt "block title"
 msgid "[WPAW] Recent posts"
 msgstr "[WPAW] 最近の投稿"
 
-#~ msgid "Profile"
-#~ msgstr "プロフィール"
+#~ msgid "No posts found."
+#~ msgstr "投稿が見つかりません。"
 
 #~ msgid "55"
-#~ msgstr "55"
+#~ msgstr "110"
+
+#~ msgid "Profile"
+#~ msgstr "プロフィール"
 
 #~ msgid "[WPAW] Local nav"
 #~ msgstr "[WPAW] ローカルナビゲーション"

@@ -51,11 +51,12 @@
     "block:profile-box:clean": "rimraf src/assets/block/profile-box && mkdir -p src/assets/block/profile-box",
     "block:profile-box:js": "wp-scripts build src/block/profile-box/editor --output-path=src/assets/block/profile-box",
     "block:profile-box": "run-s block:profile-box:*",
-
     "block:any-posts:clean": "rimraf src/assets/block/any-posts && mkdir -p src/assets/block/any-posts",
     "block:any-posts:js": "wp-scripts build src/block/any-posts/editor --output-path=src/assets/block/any-posts",
     "block:any-posts": "run-s block:any-posts:*",
-
+    "block:ranking:clean": "rimraf src/assets/block/ranking && mkdir -p src/assets/block/ranking",
+    "block:ranking:js": "wp-scripts build src/block/ranking/editor --output-path=src/assets/block/ranking",
+    "block:ranking": "run-s block:ranking:*",
     "block": "run-s block:*",
     "packages:slick-carousel": "cpy 'slick-carousel/**' '../src/assets/packages' --cwd=node_modules --parents",
     "packages": "npm-run-all -p packages:*",

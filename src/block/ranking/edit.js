@@ -82,7 +82,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 							'Search post',
 							'inc2734-wp-awesome-widgets'
 						) }
-						id={ `wp-awesome-widgets/any-posts/linkcontrol` }
+						id={ `wp-awesome-widgets/ranking/linkcontrol` }
 						className="wp-awesome-widgests-posts-list-linkcontrols"
 					>
 						{ items.map( ( item, index ) => {
@@ -154,14 +154,14 @@ export default function ( { attributes, setAttributes, clientId } ) {
 			{ 1 > realItems.length ? (
 				<Placeholder
 					icon={ icon }
-					label={ __( 'Any posts', 'inc2734-wp-awesome-widgets' ) }
+					label={ __( 'Ranking', 'inc2734-wp-awesome-widgets' ) }
 				>
 					{ __( 'No posts found.', 'inc2734-wp-awesome-widgts' ) }
 				</Placeholder>
 			) : (
 				<Disabled>
 					<ServerSideRender
-						block="wp-awesome-widgets/any-posts"
+						block="wp-awesome-widgets/ranking"
 						attributes={ attributes }
 					/>
 				</Disabled>
