@@ -46,10 +46,10 @@ class Bootstrap {
 		);
 
 		// @todo I want to use enqueue_block_assets, but it is not reflected in the block widget area management screen.
-		add_action( 'wp_enqueue_scripts', [ $this, '_enqueue_block_assets' ] );
+		add_action( 'wp_enqueue_scripts', [ $this, '_enqueue_block_assets' ], 9 );
 
-		add_action( 'wp_enqueue_scripts', [ $this, '_wp_enqueue_scripts' ] );
-		add_action( 'enqueue_block_editor_assets', [ $this, '_enqueue_block_editor_assets' ] );
+		add_action( 'wp_enqueue_scripts', [ $this, '_wp_enqueue_scripts' ], 9 );
+		add_action( 'enqueue_block_editor_assets', [ $this, '_enqueue_block_editor_assets' ], 9 );
 		add_action( 'load-widgets.php', [ $this, '_admin_enqueue_scripts' ], 9 );
 		add_action( 'load-customize.php', [ $this, '_admin_enqueue_scripts' ], 9 );
 		add_action( 'customize_preview_init', [ $this, '_customize_preview_init' ], 9 );

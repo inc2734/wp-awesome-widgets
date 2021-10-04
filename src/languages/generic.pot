@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-08-11T07:55:21+00:00\n"
+"POT-Creation-Date: 2021-10-04T02:23:55+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: inc2734-wp-awesome-widgets\n"
@@ -402,13 +402,13 @@ msgstr ""
 
 #: widget/site-branding/_form.php:11
 #: assets/block/site-branding/editor.js:1
-#: block/site-branding/edit.js:29
+#: block/site-branding/edit.js:32
 msgid "Site description"
 msgstr ""
 
 #: widget/site-branding/_form.php:19
 #: assets/block/site-branding/editor.js:1
-#: block/site-branding/edit.js:33
+#: block/site-branding/edit.js:36
 msgid "HTML use allowed."
 msgstr ""
 
@@ -477,7 +477,7 @@ msgstr ""
 #: block/local-nav/edit.js:46
 #: block/ranking/edit.js:57
 #: block/recent-posts/edit.js:70
-#: block/site-branding/edit.js:23
+#: block/site-branding/edit.js:26
 msgid "Block Settings"
 msgstr ""
 
