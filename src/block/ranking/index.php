@@ -39,6 +39,9 @@ register_block_type(
 			$items  = [];
 			$_items = json_decode( $attributes['items'], true );
 			foreach ( $_items as $_item ) {
+				if ( empty( $_item['id'] ) ) {
+					continue;
+				}
 				$items[] = $_item['id'];
 			}
 

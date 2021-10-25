@@ -128,6 +128,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 
 										<LinkControl
 											settings={ [] }
+											searchInputPlaceholder={ __( 'Search', 'inc2734-wp-awesome-widgets' ) }
 											value={ {
 												url: item.url,
 												title: item.title,
