@@ -5,40 +5,37 @@ import { Disabled, PanelBody, TextareaControl } from '@wordpress/components';
 import { useEffect } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 
-export default function ( { setAttributes, attributes, clientId } ) {
+export default function ({ setAttributes, attributes, clientId }) {
 	const { description } = attributes;
 
-	useEffect( () => {
-		if ( ! attributes.clientId ) {
-			setAttributes( { clientId } );
+	useEffect(() => {
+		if (!attributes.clientId) {
+			setAttributes({ clientId });
 		}
-	}, [ clientId ] );
+	}, [clientId]);
 
-	const onChangeDescription = ( value ) =>
-		setAttributes( {
+	const onChangeDescription = (value) =>
+		setAttributes({
 			description: value,
-		} );
+		});
 
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody
-					title={ __(
-						'Block Settings',
-						'inc2734-wp-awesome-widgets'
-					) }
+					title={__('Block Settings', 'inc2734-wp-awesome-widgets')}
 				>
 					<TextareaControl
-						label={ __(
+						label={__(
 							'Site description',
 							'inc2734-wp-awesome-widgets'
-						) }
-						help={ __(
+						)}
+						help={__(
 							'HTML use allowed.',
 							'inc2734-wp-awesome-widgets'
-						) }
-						value={ description }
-						onChange={ onChangeDescription }
+						)}
+						value={description}
+						onChange={onChangeDescription}
 					/>
 				</PanelBody>
 			</InspectorControls>
@@ -46,7 +43,7 @@ export default function ( { setAttributes, attributes, clientId } ) {
 			<Disabled>
 				<ServerSideRender
 					block="wp-awesome-widgets/site-branding"
-					attributes={ attributes }
+					attributes={attributes}
 				/>
 			</Disabled>
 		</>

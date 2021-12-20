@@ -24,12 +24,12 @@
   &__figure {
     @include cover-img();
     display: block;
-    background-color: #111;
+    background-color: _var-color-black();
   }
 
   &__item-content {
     position: relative;
-    color: #fff;
+    color: _var-color-white();
   }
 
   .slick-list {

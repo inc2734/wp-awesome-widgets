@@ -18,108 +18,102 @@ import {
 
 import { toNumber } from '@wpaw/helper';
 
-export default function ( { attributes, setAttributes, clientId } ) {
+export default function ({ attributes, setAttributes, clientId }) {
 	const { postType, postsPerPage, showThumbnail, showTaxonomy } = attributes;
 
-	useEffect( () => {
-		if ( ! attributes.clientId ) {
-			setAttributes( { clientId } );
+	useEffect(() => {
+		if (!attributes.clientId) {
+			setAttributes({ clientId });
 		}
-	}, [ clientId ] );
+	}, [clientId]);
 
-	const allPostTypes = useSelect( ( select ) => {
-		const { getPostTypes } = select( 'core' );
-		return getPostTypes( { per_page: -1 } ) || [];
-	}, [] );
+	const allPostTypes = useSelect((select) => {
+		const { getPostTypes } = select('core');
+		return getPostTypes({ per_page: -1 }) || [];
+	}, []);
 
 	const postTypes = useMemo(
 		() =>
 			allPostTypes.filter(
-				( type ) =>
+				(type) =>
 					type.viewable &&
-					! type.hierarchical &&
+					!type.hierarchical &&
 					'media' !== type.rest_base
 			),
-		[ allPostTypes ]
+		[allPostTypes]
 	);
 
-	const onChangePostType = ( value ) =>
-		setAttributes( {
+	const onChangePostType = (value) =>
+		setAttributes({
 			postType: value,
-		} );
+		});
 
-	const onChangePostsPerPage = ( value ) =>
-		setAttributes( {
-			postsPerPage: toNumber( value, 1, 12 ),
-		} );
+	const onChangePostsPerPage = (value) =>
+		setAttributes({
+			postsPerPage: toNumber(value, 1, 12),
+		});
 
-	const onChangeShowThumbnail = ( value ) =>
-		setAttributes( {
+	const onChangeShowThumbnail = (value) =>
+		setAttributes({
 			showThumbnail: value,
-		} );
+		});
 
-	const onChangeShowTaxonomy = ( value ) =>
-		setAttributes( {
+	const onChangeShowTaxonomy = (value) =>
+		setAttributes({
 			showTasonomy: value,
-		} );
+		});
 
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody
-					title={ __(
-						'Block Settings',
-						'inc2734-wp-awesome-widgets'
-					) }
+					title={__('Block Settings', 'inc2734-wp-awesome-widgets')}
 				>
 					<SelectControl
-						label={ __(
-							'Post Type',
-							'inc2734-wp-awesome-widgets'
-						) }
-						value={ postType }
-						onChange={ onChangePostType }
-						options={ postTypes.map( ( _postType ) => ( {
+						label={__('Post Type', 'inc2734-wp-awesome-widgets')}
+						value={postType}
+						onChange={onChangePostType}
+						options={postTypes.map((_postType) => ({
 							label: _postType.name,
 							value: _postType.slug,
-						} ) ) }
+						}))}
 					/>
 
 					<RangeControl
-						label={ __(
+						label={__(
 							'Number of posts',
 							'inc2734-wp-awesome-widgets'
-						) }
-						value={ postsPerPage }
-						onChange={ onChangePostsPerPage }
+						)}
+						value={postsPerPage}
+						onChange={onChangePostsPerPage}
 						min="1"
 						max="12"
 					/>
 
 					<ToggleControl
-						label={ __(
+						label={__(
 							'Display thumbnail',
 							'inc2734-wp-awesome-widgets'
-						) }
-						checked={ showThumbnail }
-						onChange={ onChangeShowThumbnail }
+						)}
+						checked={showThumbnail}
+						onChange={onChangeShowThumbnail}
 					/>
 
 					<ToggleControl
-						label={ __(
+						label={__(
 							'Display taxonomy',
 							'inc2734-wp-awesome-widgets'
-						) }
-						checked={ showTaxonomy }
-						onChange={ onChangeShowTaxonomy }
+						)}
+						checked={showTaxonomy}
+						onChange={onChangeShowTaxonomy}
 					/>
 				</PanelBody>
 			</InspectorControls>
 
-			{ ! allPostTypes ? (
+			{!allPostTypes ? (
 				<Placeholder
-					icon={ icon }
-					label={ __( 'Recent posts', 'inc2734-wp-awesome-widgets' ) }
+					icon={icon}
+					label={__('Recent posts', 'inc2734-wp-awesome-widgets')}
 				>
 					<Spinner />
 				</Placeholder>
@@ -127,10 +121,10 @@ export default function ( { attributes, setAttributes, clientId } ) {
 				<Disabled>
 					<ServerSideRender
 						block="wp-awesome-widgets/recent-posts"
-						attributes={ attributes }
+						attributes={attributes}
 					/>
 				</Disabled>
-			) }
+			)}
 		</>
 	);
 }

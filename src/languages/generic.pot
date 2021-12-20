@@ -7,34 +7,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-10-04T02:23:55+00:00\n"
+"POT-Creation-Date: 2021-12-20T07:05:41+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: inc2734-wp-awesome-widgets\n"
-
-#: .translation/translation.php:2
-msgid "[WPAW] Any posts"
-msgstr ""
-
-#: .translation/translation.php:3
-msgid "[WPAW] Local navigation"
-msgstr ""
-
-#: .translation/translation.php:4
-msgid "[WPAW] Profile box"
-msgstr ""
-
-#: .translation/translation.php:5
-msgid "[WPAW] Ranking"
-msgstr ""
-
-#: .translation/translation.php:6
-msgid "[WPAW] Recent posts"
-msgstr ""
-
-#: .translation/translation.php:7
-msgid "[WPAW] Site branding"
-msgstr ""
 
 #. translators: %1$s: The start tag of the a element, %2$s: The end tag of the a element
 #: App/Contract/Widget.php:86
@@ -73,6 +49,8 @@ msgstr ""
 #: widget/any-posts/_form.php:49
 #: widget/carousel-any-posts/_form.php:49
 #: widget/ranking/_form.php:49
+#: assets/block/ranking/editor.js:1
+#: block/ranking/edit.js:131
 msgid "Search"
 msgstr ""
 
@@ -176,31 +154,26 @@ msgid "WPAW: Local Navigation"
 msgstr ""
 
 #: widget/local-nav/_form.php:11
-#: assets/block/local-nav/editor.js:1
 #: block/local-nav/edit.js:52
 msgid "Direction"
 msgstr ""
 
 #: widget/local-nav/_form.php:19
-#: assets/block/local-nav/editor.js:1
 #: block/local-nav/edit.js:60
 msgid "Vertical"
 msgstr ""
 
 #: widget/local-nav/_form.php:20
-#: assets/block/local-nav/editor.js:1
 #: block/local-nav/edit.js:67
 msgid "Horizontal"
 msgstr ""
 
 #: widget/local-nav/_form.php:40
-#: assets/block/local-nav/editor.js:1
 #: block/local-nav/edit.js:77
 msgid "Display the page title of the top-level"
 msgstr ""
 
 #: widget/local-nav/_form.php:52
-#: assets/block/local-nav/editor.js:1
 #: block/local-nav/edit.js:86
 msgid "Display only when you have descendants"
 msgstr ""
@@ -469,7 +442,6 @@ msgid "Displayed term"
 msgstr ""
 
 #: assets/block/any-posts/editor.js:1
-#: assets/block/local-nav/editor.js:1
 #: assets/block/ranking/editor.js:1
 #: assets/block/recent-posts/editor.js:1
 #: assets/block/site-branding/editor.js:1
@@ -516,7 +488,7 @@ msgstr ""
 #: assets/block/any-posts/editor.js:1
 #: assets/block/ranking/editor.js:1
 #: block/any-posts/edit.js:144
-#: block/ranking/edit.js:144
+#: block/ranking/edit.js:148
 msgid "Add new item"
 msgstr ""
 
@@ -526,7 +498,7 @@ msgid "Any posts"
 msgstr ""
 
 #: assets/block/ranking/editor.js:1
-#: block/ranking/edit.js:157
+#: block/ranking/edit.js:161
 msgid "Ranking"
 msgstr ""
 

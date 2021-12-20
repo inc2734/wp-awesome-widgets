@@ -45,6 +45,7 @@
 	<exclude-pattern>/vendor/</exclude-pattern>
 	<exclude-pattern>/node_modules/</exclude-pattern>
 	<exclude-pattern>/src/assets/</exclude-pattern>
+	<exclude-pattern>/src/src/</exclude-pattern>
   <exclude-pattern>*/tests/*</exclude-pattern>
   <exclude-pattern>*/languages/*</exclude-pattern>
   <exclude-pattern>*/.translation/*</exclude-pattern>

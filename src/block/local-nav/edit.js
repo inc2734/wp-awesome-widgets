@@ -11,51 +11,42 @@ import {
 	ToggleControl,
 } from '@wordpress/components';
 
-export default function ( { attributes, setAttributes, clientId } ) {
-	const {
-		direction,
-		displayTopLevelPageTitle,
-		displayOnlyHaveDescendants,
-	} = attributes;
+export default function ({ attributes, setAttributes, clientId }) {
+	const { direction, displayTopLevelPageTitle, displayOnlyHaveDescendants } =
+		attributes;
 
-	useEffect( () => {
-		if ( ! attributes.clientId ) {
-			setAttributes( { clientId } );
+	useEffect(() => {
+		if (!attributes.clientId) {
+			setAttributes({ clientId });
 		}
-	}, [ clientId ] );
+	}, [clientId]);
 
-	const onChangeDirection = ( value ) =>
-		setAttributes( {
+	const onChangeDirection = (value) =>
+		setAttributes({
 			direction: value,
-		} );
+		});
 
-	const onChangeDisplayTopLevelPageTitle = ( value ) =>
-		setAttributes( {
+	const onChangeDisplayTopLevelPageTitle = (value) =>
+		setAttributes({
 			displayTopLevelPageTitle: value,
-		} );
+		});
 
-	const onChangeDisplayOnlyHaveDescendants = ( value ) =>
-		setAttributes( {
+	const onChangeDisplayOnlyHaveDescendants = (value) =>
+		setAttributes({
 			displayOnlyHaveDescendants: value,
-		} );
+		});
 
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody
-					title={ __(
-						'Block Settings',
-						'inc2734-wp-awesome-widgets'
-					) }
+					title={__('Block Settings', 'inc2734-wp-awesome-widgets')}
 				>
 					<SelectControl
-						label={ __(
-							'Direction',
-							'inc2734-wp-awesome-widgets'
-						) }
-						value={ direction }
-						onChange={ onChangeDirection }
-						options={ [
+						label={__('Direction', 'inc2734-wp-awesome-widgets')}
+						value={direction}
+						onChange={onChangeDirection}
+						options={[
 							{
 								label: __(
 									'Vertical',
@@ -70,25 +61,25 @@ export default function ( { attributes, setAttributes, clientId } ) {
 								),
 								value: 'horizontal',
 							},
-						] }
+						]}
 					/>
 
 					<ToggleControl
-						label={ __(
+						label={__(
 							'Display the page title of the top-level',
 							'inc2734-wp-awesome-widgets'
-						) }
-						checked={ displayTopLevelPageTitle }
-						onChange={ onChangeDisplayTopLevelPageTitle }
+						)}
+						checked={displayTopLevelPageTitle}
+						onChange={onChangeDisplayTopLevelPageTitle}
 					/>
 
 					<ToggleControl
-						label={ __(
+						label={__(
 							'Display only when you have descendants',
 							'inc2734-wp-awesome-widgets'
-						) }
-						checked={ displayOnlyHaveDescendants }
-						onChange={ onChangeDisplayOnlyHaveDescendants }
+						)}
+						checked={displayOnlyHaveDescendants}
+						onChange={onChangeDisplayOnlyHaveDescendants}
 					/>
 				</PanelBody>
 			</InspectorControls>
@@ -96,7 +87,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 			<Disabled>
 				<ServerSideRender
 					block="wp-awesome-widgets/local-nav"
-					attributes={ attributes }
+					attributes={attributes}
 				/>
 			</Disabled>
 		</>

@@ -1,11 +1,13 @@
 @charset 'UTF-8';
 
+@import '../../../node_modules/sass-basis/src/css/basis-core';
+
 .wpaw-term {
   display: inline-block;
-  background-color: #000;
-  color: #fff;
-  line-height: 1;
+  background-color: _var-color-black();
+  color: _var-color-white();
   font-size: 12px;
+  line-height: 1;
   padding: 3px 6px 2px;
 }
 
@@ -15,23 +17,10 @@
 
   > img {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    height: auto;
-    min-height: 100%;
-    min-width: 100%;
-    transform: translate(-50%, -50%);
-
-    @supports(object-fit: cover) {
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      object-position: 50% 50%;
-      transform: none;
-    }
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
   }
 }
 
@@ -58,7 +47,7 @@
     flex: none;
     height: 90px;
     width: 90px;
-    background-color: #eee;
+    background-color: _var-lighter-color-gray();
   }
 
   &__body {

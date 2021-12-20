@@ -13,7 +13,7 @@
 
   &__item-figure {
     @include cover-img();
-    background-color: #eee;
+    background-color: _var-lighter-color-gray();
 
     &::before {
       content: '';

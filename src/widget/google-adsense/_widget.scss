@@ -1,7 +1,7 @@
 .wpaw-google-adsense {
   &--rectangle-big-2,
   &--rectangle-2 {
-    @media (max-width: 1023px) {
+    @include _media-max(md) {
       .wpaw-google-adsense__row {
         flex-wrap: nowrap;
       }

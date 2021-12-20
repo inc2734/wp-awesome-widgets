@@ -32,18 +32,18 @@
   &__figure {
     @include cover-img();
     display: block;
-    background-color: #111;
+    background-color: _var-color-black();
   }
 
   &__item-content {
     position: relative;
-    color: #fff;
+    color: _var-color-white();
   }
 
   &__item-more {
     &--ghost {
-      border: 1px solid #fff;
-      color: #fff;
+      border: 1px solid _var-color-white();
+      color: _var-color-white();
     }
   }
 

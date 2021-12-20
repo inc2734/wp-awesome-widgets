@@ -18,158 +18,152 @@ import { useEffect } from '@wordpress/element';
 import { postList as icon } from '@wordpress/icons';
 import { __ } from '@wordpress/i18n';
 
-export default function ( { attributes, setAttributes, clientId } ) {
+export default function ({ attributes, setAttributes, clientId }) {
 	const { showThumbnail, showTaxonomy, items: oldItems } = attributes;
 	let items = oldItems;
-	items = JSON.parse( items );
+	items = JSON.parse(items);
 
-	useEffect( () => {
-		if ( ! attributes.clientId ) {
-			setAttributes( { clientId } );
+	useEffect(() => {
+		if (!attributes.clientId) {
+			setAttributes({ clientId });
 		}
-	}, [ clientId ] );
+	}, [clientId]);
 
-	const onChangeShowThumbnail = ( value ) =>
-		setAttributes( {
+	const onChangeShowThumbnail = (value) =>
+		setAttributes({
 			showThumbnail: value,
-		} );
+		});
 
-	const onChangeShowTaxonomy = ( value ) =>
-		setAttributes( {
+	const onChangeShowTaxonomy = (value) =>
+		setAttributes({
 			showTasonomy: value,
-		} );
+		});
 
 	const onclickNewItemButton = () => {
-		items.push( {
+		items.push({
 			id: 0,
 			title: '',
 			url: '',
-		} );
-		setAttributes( { items: JSON.stringify( items ) } );
+		});
+		setAttributes({ items: JSON.stringify(items) });
 	};
 
-	const realItems = items.filter( ( item ) => !! item.id && 0 < item.id );
+	const realItems = items.filter((item) => !!item.id && 0 < item.id);
 
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody
-					title={ __(
-						'Block Settings',
-						'inc2734-wp-awesome-widgets'
-					) }
+					title={__('Block Settings', 'inc2734-wp-awesome-widgets')}
 				>
 					<ToggleControl
-						label={ __(
+						label={__(
 							'Display thumbnail',
 							'inc2734-wp-awesome-widgets'
-						) }
-						checked={ showThumbnail }
-						onChange={ onChangeShowThumbnail }
+						)}
+						checked={showThumbnail}
+						onChange={onChangeShowThumbnail}
 					/>
 
 					<ToggleControl
-						label={ __(
+						label={__(
 							'Display taxonomy',
 							'inc2734-wp-awesome-widgets'
-						) }
-						checked={ showTaxonomy }
-						onChange={ onChangeShowTaxonomy }
+						)}
+						checked={showTaxonomy}
+						onChange={onChangeShowTaxonomy}
 					/>
 
 					<BaseControl
-						label={ __(
-							'Search post',
-							'inc2734-wp-awesome-widgets'
-						) }
-						id={ `wp-awesome-widgets/ranking/linkcontrol` }
+						label={__('Search post', 'inc2734-wp-awesome-widgets')}
+						id={`wp-awesome-widgets/ranking/linkcontrol`}
 						className="wp-awesome-widgests-posts-list-linkcontrols"
 					>
-						{ items.map( ( item, index ) => {
+						{items.map((item, index) => {
 							const onClickRemoveButton = () => {
-								items.splice( index, 1 );
-								setAttributes( {
-									items: JSON.stringify( items ),
-								} );
+								items.splice(index, 1);
+								setAttributes({
+									items: JSON.stringify(items),
+								});
 							};
 
-							const onChangeLinkControl = ( nextValue ) => {
-								items[ index ] = {
+							const onChangeLinkControl = (nextValue) => {
+								items[index] = {
 									id: nextValue.id,
 									title: nextValue.title,
 									url: nextValue.url,
 								};
-								setAttributes( {
-									items: JSON.stringify( items ),
-								} );
+								setAttributes({
+									items: JSON.stringify(items),
+								});
 							};
 
 							return (
 								<div
 									className="wp-awesome-widgests-posts-list-linkcontrols__item"
-									key={ `item-${ index }` }
+									key={`item-${index}`}
 								>
 									<div className="wp-awesome-widgests-posts-list-linkcontrol">
 										<span className="wp-awesome-widgests-posts-list-linkcontrol__label">
-											{ index + 1 }
+											{index + 1}
 										</span>
 										<Button
 											isSecondary
 											isSmall
-											onClick={ onClickRemoveButton }
-											aria-label={ __(
+											onClick={onClickRemoveButton}
+											aria-label={__(
 												'Remove this item',
 												'inc2734-wp-awesome-widgets'
-											) }
+											)}
 											className="wp-awesome-widgests-posts-list-linkcontrol__remove-button"
 										>
 											-
 										</Button>
 
 										<LinkControl
-											settings={ [] }
-											searchInputPlaceholder={ __(
+											settings={[]}
+											searchInputPlaceholder={__(
 												'Search',
 												'inc2734-wp-awesome-widgets'
-											) }
-											value={ {
+											)}
+											value={{
 												url: item.url,
 												title: item.title,
-											} }
-											onChange={ onChangeLinkControl }
+											}}
+											onChange={onChangeLinkControl}
 										/>
 									</div>
 								</div>
 							);
-						} ) }
+						})}
 
 						<div className="wp-awesome-widgests-posts-list-linkcontrols__action">
-							<Button isPrimary onClick={ onclickNewItemButton }>
-								{ __(
+							<Button isPrimary onClick={onclickNewItemButton}>
+								{__(
 									'Add new item',
 									'inc2734-wp-awesome-widgets'
-								) }
+								)}
 							</Button>
 						</div>
 					</BaseControl>
 				</PanelBody>
 			</InspectorControls>
 
-			{ 1 > realItems.length ? (
+			{1 > realItems.length ? (
 				<Placeholder
-					icon={ icon }
-					label={ __( 'Ranking', 'inc2734-wp-awesome-widgets' ) }
+					icon={icon}
+					label={__('Ranking', 'inc2734-wp-awesome-widgets')}
 				>
-					{ __( 'No posts found.', 'inc2734-wp-awesome-widgts' ) }
+					{__('No posts found.', 'inc2734-wp-awesome-widgts')}
 				</Placeholder>
 			) : (
 				<Disabled>
 					<ServerSideRender
 						block="wp-awesome-widgets/ranking"
-						attributes={ attributes }
+						attributes={attributes}
 					/>
 				</Disabled>
-			) }
+			)}
 		</>
 	);
 }
