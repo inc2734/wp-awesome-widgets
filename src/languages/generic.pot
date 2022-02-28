@@ -7,24 +7,38 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-12-20T07:05:41+00:00\n"
+"POT-Creation-Date: 2022-02-28T01:58:37+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.5.0\n"
+"X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: inc2734-wp-awesome-widgets\n"
 
 #. translators: %1$s: The start tag of the a element, %2$s: The end tag of the a element
 #: App/Contract/Widget.php:86
+#: assets/js/editor/App/Contract/Widget.php:86
 msgid "This can only be edited if the %1$sClassic Widgets%2$s plugin is enabled."
 msgstr ""
 
+#: assets/js/editor/templates/pickup-slider.php:59
 #: templates/pickup-slider.php:59
 msgid "READ MORE"
 msgstr ""
 
+#: assets/js/editor/widget/any-posts/any-posts.php:29
 #: widget/any-posts/any-posts.php:29
 msgid "WPAW: Any Posts"
 msgstr ""
 
+#: assets/js/editor/widget/any-posts/_form.php:11
+#: assets/js/editor/widget/carousel-any-posts/_form.php:11
+#: assets/js/editor/widget/contents-outline/_form.php:11
+#: assets/js/editor/widget/pr-box/_form.php:11
+#: assets/js/editor/widget/pr-box/_form.php:69
+#: assets/js/editor/widget/profile-box/_form.php:11
+#: assets/js/editor/widget/ranking/_form.php:11
+#: assets/js/editor/widget/recent-posts/_form.php:11
+#: assets/js/editor/widget/showcase/_form.php:11
+#: assets/js/editor/widget/slider/_form.php:37
+#: assets/js/editor/widget/taxonomy-posts/_form.php:11
 #: widget/any-posts/_form.php:11
 #: widget/carousel-any-posts/_form.php:11
 #: widget/contents-outline/_form.php:11
@@ -39,6 +53,10 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
+#: assets/js/editor/widget/any-posts/_form.php:23
+#: assets/js/editor/widget/carousel-any-posts/_form.php:23
+#: assets/js/editor/widget/ranking/_form.php:23
+#: assets/js/editor/widget/recent-posts/_form.php:22
 #: widget/any-posts/_form.php:23
 #: widget/carousel-any-posts/_form.php:23
 #: widget/ranking/_form.php:23
@@ -46,20 +64,30 @@ msgstr ""
 msgid "Post type"
 msgstr ""
 
+#: assets/js/editor/widget/any-posts/_form.php:49
+#: assets/js/editor/widget/carousel-any-posts/_form.php:49
+#: assets/js/editor/widget/ranking/_form.php:49
 #: widget/any-posts/_form.php:49
 #: widget/carousel-any-posts/_form.php:49
 #: widget/ranking/_form.php:49
 #: assets/block/ranking/editor.js:1
-#: block/ranking/edit.js:131
+#: block/ranking/edit.js:125
 msgid "Search"
 msgstr ""
 
+#: assets/js/editor/widget/any-posts/_form.php:72
+#: assets/js/editor/widget/carousel-any-posts/_form.php:72
+#: assets/js/editor/widget/ranking/_form.php:72
 #: widget/any-posts/_form.php:72
 #: widget/carousel-any-posts/_form.php:72
 #: widget/ranking/_form.php:72
 msgid "Refresh"
 msgstr ""
 
+#: assets/js/editor/widget/any-posts/_form.php:94
+#: assets/js/editor/widget/ranking/_form.php:94
+#: assets/js/editor/widget/recent-posts/_form.php:68
+#: assets/js/editor/widget/taxonomy-posts/_form.php:111
 #: widget/any-posts/_form.php:94
 #: widget/ranking/_form.php:94
 #: widget/recent-posts/_form.php:68
@@ -67,162 +95,206 @@ msgstr ""
 msgid "Show thumbnail"
 msgstr ""
 
+#: assets/js/editor/widget/any-posts/_form.php:106
+#: assets/js/editor/widget/ranking/_form.php:106
+#: assets/js/editor/widget/recent-posts/_form.php:80
 #: widget/any-posts/_form.php:106
 #: widget/ranking/_form.php:106
 #: widget/recent-posts/_form.php:80
 msgid "Show taxonomy"
 msgstr ""
 
+#: assets/js/editor/widget/carousel-any-posts/carousel-any-posts.php:27
 #: widget/carousel-any-posts/carousel-any-posts.php:27
 msgid "WPAW: Carousel ( Any Posts )"
 msgstr ""
 
+#: assets/js/editor/widget/contents-outline/contents-outline.php:27
 #: widget/contents-outline/contents-outline.php:27
 msgid "WPAW: Contents outline"
 msgstr ""
 
+#: assets/js/editor/widget/contents-outline/contents-outline.php:33
 #: widget/contents-outline/contents-outline.php:33
 msgid "Contents outline"
 msgstr ""
 
+#: assets/js/editor/widget/contents-outline/_form.php:21
 #: widget/contents-outline/_form.php:21
 msgid "Show headings"
 msgstr ""
 
+#: assets/js/editor/widget/contents-outline/_form.php:46
 #: widget/contents-outline/_form.php:46
 msgid "Also show on mobile"
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/google-adsense.php:24
 #: widget/google-adsense/google-adsense.php:24
 msgid "WPAW: Google Adsense"
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/_form.php:11
 #: widget/google-adsense/_form.php:11
 msgid "Adsense code"
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/_form.php:19
 #: widget/google-adsense/_form.php:19
 msgid "Past the code of the responsive ad unit."
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/_form.php:20
 #: widget/google-adsense/_form.php:20
 msgid "Paste only the ins tag."
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/_form.php:25
 #: widget/google-adsense/_form.php:25
 msgid "Size"
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/_form.php:33
 #: widget/google-adsense/_form.php:33
 msgid "Auto"
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/_form.php:34
 #: widget/google-adsense/_form.php:34
 msgid "Big banner (728 x 90)"
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/_form.php:35
 #: widget/google-adsense/_form.php:35
 msgid "Rectangle big (336 x 280)"
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/_form.php:36
 #: widget/google-adsense/_form.php:36
 msgid "Large mobile banner (320 x 100)"
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/_form.php:37
 #: widget/google-adsense/_form.php:37
 msgid "Large skyscraper (300 x 600)"
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/_form.php:38
 #: widget/google-adsense/_form.php:38
 msgid "Rectangle (300 x 250)"
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/_form.php:39
 #: widget/google-adsense/_form.php:39
 msgid "Rectangle big (336 x 280) two"
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/_form.php:40
 #: widget/google-adsense/_form.php:40
 msgid "Rectangle (300 x 250) two"
 msgstr ""
 
+#: assets/js/editor/widget/google-adsense/_form.php:41
 #: widget/google-adsense/_form.php:41
 msgid "Link unit"
 msgstr ""
 
+#: assets/js/editor/widget/local-nav/local-nav.php:27
 #: widget/local-nav/local-nav.php:27
 msgid "WPAW: Local Navigation"
 msgstr ""
 
+#: assets/js/editor/widget/local-nav/_form.php:11
 #: widget/local-nav/_form.php:11
-#: block/local-nav/edit.js:52
+#: block/local-nav/edit.js:46
 msgid "Direction"
 msgstr ""
 
+#: assets/js/editor/widget/local-nav/_form.php:19
 #: widget/local-nav/_form.php:19
-#: block/local-nav/edit.js:60
+#: block/local-nav/edit.js:51
 msgid "Vertical"
 msgstr ""
 
+#: assets/js/editor/widget/local-nav/_form.php:20
 #: widget/local-nav/_form.php:20
-#: block/local-nav/edit.js:67
+#: block/local-nav/edit.js:58
 msgid "Horizontal"
 msgstr ""
 
+#: assets/js/editor/widget/local-nav/_form.php:40
 #: widget/local-nav/_form.php:40
-#: block/local-nav/edit.js:77
+#: block/local-nav/edit.js:68
 msgid "Display the page title of the top-level"
 msgstr ""
 
+#: assets/js/editor/widget/local-nav/_form.php:52
 #: widget/local-nav/_form.php:52
-#: block/local-nav/edit.js:86
+#: block/local-nav/edit.js:77
 msgid "Display only when you have descendants"
 msgstr ""
 
+#: assets/js/editor/widget/pickup-slider/pickup-slider.php:27
 #: widget/pickup-slider/pickup-slider.php:27
 msgid "WPAW: Pickup slider"
 msgstr ""
 
+#: assets/js/editor/widget/pickup-slider/_form.php:11
 #: widget/pickup-slider/_form.php:11
 msgid "Posts tagged as \"pickup\" are displayed as slider."
 msgstr ""
 
+#: assets/js/editor/widget/pickup-slider/_form.php:23
 #: widget/pickup-slider/_form.php:23
 msgid "Display in random order"
 msgstr ""
 
+#: assets/js/editor/widget/pickup-slider/_form.php:27
 #: widget/pickup-slider/_form.php:27
 msgid "Link type"
 msgstr ""
 
+#: assets/js/editor/widget/pickup-slider/_form.php:35
 #: widget/pickup-slider/_form.php:35
 msgid "Button link"
 msgstr ""
 
+#: assets/js/editor/widget/pickup-slider/_form.php:36
 #: widget/pickup-slider/_form.php:36
 msgid "Overall link"
 msgstr ""
 
+#: assets/js/editor/widget/pickup-slider/_form.php:46
 #: widget/pickup-slider/_form.php:46
 msgid "Maximum number of displays"
 msgstr ""
 
+#: assets/js/editor/widget/pickup-slider/_form.php:54
 #: widget/pickup-slider/_form.php:54
 msgid "If \"0\", all items are displayed."
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/pr-box.php:43
 #: widget/pr-box/pr-box.php:43
 msgid "WPAW: PR Box"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:22
+#: assets/js/editor/widget/showcase/_form.php:22
 #: widget/pr-box/_form.php:22
 #: widget/showcase/_form.php:22
 msgid "Lead"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:32
 #: widget/pr-box/_form.php:32
 msgid "Background color"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:52
+#: assets/js/editor/widget/showcase/_form.php:58
+#: assets/js/editor/widget/showcase/_form.php:113
+#: assets/js/editor/widget/slider/_form.php:20
 #: widget/pr-box/_form.php:52
 #: widget/showcase/_form.php:58
 #: widget/showcase/_form.php:113
@@ -230,6 +302,10 @@ msgstr ""
 msgid "Set image"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:55
+#: assets/js/editor/widget/showcase/_form.php:61
+#: assets/js/editor/widget/showcase/_form.php:116
+#: assets/js/editor/widget/slider/_form.php:23
 #: widget/pr-box/_form.php:55
 #: widget/showcase/_form.php:61
 #: widget/showcase/_form.php:116
@@ -237,11 +313,17 @@ msgstr ""
 msgid "Unset"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:80
+#: assets/js/editor/widget/slider/_form.php:48
 #: widget/pr-box/_form.php:80
 #: widget/slider/_form.php:48
 msgid "Summary"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:90
+#: assets/js/editor/widget/pr-box/_form.php:209
+#: assets/js/editor/widget/showcase/_form.php:130
+#: assets/js/editor/widget/slider/_form.php:58
 #: widget/pr-box/_form.php:90
 #: widget/pr-box/_form.php:209
 #: widget/showcase/_form.php:130
@@ -249,6 +331,10 @@ msgstr ""
 msgid "Link URL"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:101
+#: assets/js/editor/widget/pr-box/_form.php:220
+#: assets/js/editor/widget/showcase/_form.php:141
+#: assets/js/editor/widget/slider/_form.php:69
 #: widget/pr-box/_form.php:101
 #: widget/pr-box/_form.php:220
 #: widget/showcase/_form.php:141
@@ -256,187 +342,243 @@ msgstr ""
 msgid "Link text"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:112
+#: assets/js/editor/widget/slider/_form.php:135
 #: widget/pr-box/_form.php:112
 #: widget/slider/_form.php:135
 msgid "Delete"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:119
 #: widget/pr-box/_form.php:119
 msgid "Add Item"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:124
 #: widget/pr-box/_form.php:124
 msgid "Thumbnail aspect ratio"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:143
 #: widget/pr-box/_form.php:143
 msgid "Column size for mobile"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:151
+#: assets/js/editor/widget/pr-box/_form.php:173
+#: assets/js/editor/widget/pr-box/_form.php:195
 #: widget/pr-box/_form.php:151
 #: widget/pr-box/_form.php:173
 #: widget/pr-box/_form.php:195
 msgid "1 column"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:152
+#: assets/js/editor/widget/pr-box/_form.php:174
+#: assets/js/editor/widget/pr-box/_form.php:196
 #: widget/pr-box/_form.php:152
 #: widget/pr-box/_form.php:174
 #: widget/pr-box/_form.php:196
 msgid "2 columns"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:153
+#: assets/js/editor/widget/pr-box/_form.php:175
+#: assets/js/editor/widget/pr-box/_form.php:197
 #: widget/pr-box/_form.php:153
 #: widget/pr-box/_form.php:175
 #: widget/pr-box/_form.php:197
 msgid "3 columns"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:154
+#: assets/js/editor/widget/pr-box/_form.php:176
+#: assets/js/editor/widget/pr-box/_form.php:198
 #: widget/pr-box/_form.php:154
 #: widget/pr-box/_form.php:176
 #: widget/pr-box/_form.php:198
 msgid "4 columns"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:155
+#: assets/js/editor/widget/pr-box/_form.php:177
+#: assets/js/editor/widget/pr-box/_form.php:199
 #: widget/pr-box/_form.php:155
 #: widget/pr-box/_form.php:177
 #: widget/pr-box/_form.php:199
 msgid "5 columns"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:165
 #: widget/pr-box/_form.php:165
 msgid "Column size for tablet"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:187
 #: widget/pr-box/_form.php:187
 msgid "Column size for PC"
 msgstr ""
 
+#: assets/js/editor/widget/pr-box/_form.php:239
 #: widget/pr-box/_form.php:239
 msgid "Remove side padding"
 msgstr ""
 
+#: assets/js/editor/widget/profile-box/profile-box.php:25
 #: widget/profile-box/profile-box.php:25
 msgid "WPAW: Profile box"
 msgstr ""
 
+#: assets/js/editor/widget/profile-box/profile-box.php:31
 #: widget/profile-box/profile-box.php:31
 msgid "Bio"
 msgstr ""
 
+#: assets/js/editor/widget/ranking/ranking.php:29
 #: widget/ranking/ranking.php:29
 msgid "WPAW: Ranking (Manual update)"
 msgstr ""
 
+#: assets/js/editor/widget/recent-posts/recent-posts.php:29
 #: widget/recent-posts/recent-posts.php:29
 msgid "WPAW: Recent posts"
 msgstr ""
 
+#: assets/js/editor/widget/recent-posts/_form.php:48
+#: assets/js/editor/widget/taxonomy-posts/_form.php:91
 #: widget/recent-posts/_form.php:48
 #: widget/taxonomy-posts/_form.php:91
 #: assets/block/recent-posts/editor.js:1
-#: block/recent-posts/edit.js:89
+#: block/recent-posts/edit.js:83
 msgid "Number of posts"
 msgstr ""
 
+#: assets/js/editor/widget/showcase/showcase.php:34
 #: widget/showcase/showcase.php:34
 msgid "WPAW: Showcase"
 msgstr ""
 
+#: assets/js/editor/widget/showcase/_form.php:32
 #: widget/showcase/_form.php:32
 msgid "Format"
 msgstr ""
 
+#: assets/js/editor/widget/showcase/_form.php:52
 #: widget/showcase/_form.php:52
 msgid "Background image"
 msgstr ""
 
+#: assets/js/editor/widget/showcase/_form.php:75
+#: assets/js/editor/widget/slider/_form.php:80
 #: widget/showcase/_form.php:75
 #: widget/slider/_form.php:80
 msgid "Background mask color"
 msgstr ""
 
+#: assets/js/editor/widget/showcase/_form.php:86
+#: assets/js/editor/widget/slider/_form.php:91
 #: widget/showcase/_form.php:86
 #: widget/slider/_form.php:91
 msgid "Background mask transparency"
 msgstr ""
 
+#: assets/js/editor/widget/showcase/_form.php:96
+#: assets/js/editor/widget/slider/_form.php:105
 #: widget/showcase/_form.php:96
 #: widget/slider/_form.php:105
 msgid "Text color"
 msgstr ""
 
+#: assets/js/editor/widget/showcase/_form.php:107
 #: widget/showcase/_form.php:107
 msgid "Thumbnail"
 msgstr ""
 
+#: assets/js/editor/widget/site-branding/site-branding.php:25
 #: widget/site-branding/site-branding.php:25
 msgid "WPAW: Site branding"
 msgstr ""
 
+#: assets/js/editor/widget/site-branding/_form.php:11
 #: widget/site-branding/_form.php:11
 #: assets/block/site-branding/editor.js:1
-#: block/site-branding/edit.js:32
+#: block/site-branding/edit.js:29
 msgid "Site description"
 msgstr ""
 
+#: assets/js/editor/widget/site-branding/_form.php:19
 #: widget/site-branding/_form.php:19
 #: assets/block/site-branding/editor.js:1
-#: block/site-branding/edit.js:36
+#: block/site-branding/edit.js:33
 msgid "HTML use allowed."
 msgstr ""
 
+#: assets/js/editor/widget/slider/slider.php:42
 #: widget/slider/slider.php:42
 msgid "WPAW: Slider"
 msgstr ""
 
+#: assets/js/editor/widget/slider/_form.php:116
 #: widget/slider/_form.php:116
 msgid "Button type"
 msgstr ""
 
+#: assets/js/editor/widget/slider/_form.php:124
 #: widget/slider/_form.php:124
 msgid "Normal button"
 msgstr ""
 
+#: assets/js/editor/widget/slider/_form.php:125
 #: widget/slider/_form.php:125
 msgid "Ghost button"
 msgstr ""
 
+#: assets/js/editor/widget/slider/_form.php:142
 #: widget/slider/_form.php:142
 msgid "Add slider"
 msgstr ""
 
+#: assets/js/editor/widget/slider/_form.php:147
 #: widget/slider/_form.php:147
 msgid "Slider type"
 msgstr ""
 
+#: assets/js/editor/widget/slider/_form.php:155
 #: widget/slider/_form.php:155
 msgid "Fade"
 msgstr ""
 
+#: assets/js/editor/widget/slider/_form.php:156
 #: widget/slider/_form.php:156
 msgid "Slide"
 msgstr ""
 
+#: assets/js/editor/widget/slider/_form.php:166
 #: widget/slider/_form.php:166
 msgid "Animation time"
 msgstr ""
 
+#: assets/js/editor/widget/slider/_form.php:179
 #: widget/slider/_form.php:179
 msgid "Interval time"
 msgstr ""
 
+#: assets/js/editor/widget/slider/_form.php:192
 #: widget/slider/_form.php:192
 msgid "Number of slides to display at once(PC)"
 msgstr ""
 
+#: assets/js/editor/widget/slider/_form.php:205
 #: widget/slider/_form.php:205
 msgid "Number of slides to slide at once(PC)"
 msgstr ""
 
+#: assets/js/editor/widget/taxonomy-posts/taxonomy-posts.php:26
 #: widget/taxonomy-posts/taxonomy-posts.php:26
 msgid "WPAW: Taxonomy posts"
 msgstr ""
 
+#: assets/js/editor/widget/taxonomy-posts/_form.php:41
 #: widget/taxonomy-posts/_form.php:41
 msgid "Displayed term"
 msgstr ""
@@ -446,7 +588,7 @@ msgstr ""
 #: assets/block/recent-posts/editor.js:1
 #: assets/block/site-branding/editor.js:1
 #: block/any-posts/edit.js:57
-#: block/local-nav/edit.js:46
+#: block/local-nav/edit.js:43
 #: block/ranking/edit.js:57
 #: block/recent-posts/edit.js:70
 #: block/site-branding/edit.js:26
@@ -456,67 +598,116 @@ msgstr ""
 #: assets/block/any-posts/editor.js:1
 #: assets/block/ranking/editor.js:1
 #: assets/block/recent-posts/editor.js:1
-#: block/any-posts/edit.js:63
-#: block/ranking/edit.js:63
-#: block/recent-posts/edit.js:100
+#: block/any-posts/edit.js:60
+#: block/ranking/edit.js:60
+#: block/recent-posts/edit.js:94
 msgid "Display thumbnail"
 msgstr ""
 
 #: assets/block/any-posts/editor.js:1
 #: assets/block/ranking/editor.js:1
 #: assets/block/recent-posts/editor.js:1
-#: block/any-posts/edit.js:72
-#: block/ranking/edit.js:72
-#: block/recent-posts/edit.js:109
+#: block/any-posts/edit.js:69
+#: block/ranking/edit.js:69
+#: block/recent-posts/edit.js:103
 msgid "Display taxonomy"
 msgstr ""
 
 #: assets/block/any-posts/editor.js:1
 #: assets/block/ranking/editor.js:1
-#: block/any-posts/edit.js:81
-#: block/ranking/edit.js:81
+#: block/any-posts/edit.js:78
+#: block/ranking/edit.js:78
 msgid "Search post"
 msgstr ""
 
 #: assets/block/any-posts/editor.js:1
 #: assets/block/ranking/editor.js:1
-#: block/any-posts/edit.js:120
-#: block/ranking/edit.js:120
+#: block/any-posts/edit.js:114
+#: block/ranking/edit.js:114
 msgid "Remove this item"
 msgstr ""
 
 #: assets/block/any-posts/editor.js:1
 #: assets/block/ranking/editor.js:1
-#: block/any-posts/edit.js:144
-#: block/ranking/edit.js:148
+#: block/any-posts/edit.js:138
+#: block/ranking/edit.js:142
 msgid "Add new item"
 msgstr ""
 
 #: assets/block/any-posts/editor.js:1
-#: block/any-posts/edit.js:157
+#: block/any-posts/edit.js:151
 msgid "Any posts"
 msgstr ""
 
 #: assets/block/ranking/editor.js:1
-#: block/ranking/edit.js:161
+#: block/ranking/edit.js:155
 msgid "Ranking"
 msgstr ""
 
 #: assets/block/recent-posts/editor.js:1
-#: block/recent-posts/edit.js:76
+#: block/recent-posts/edit.js:73
 msgid "Post Type"
 msgstr ""
 
 #: assets/block/recent-posts/editor.js:1
-#: block/recent-posts/edit.js:122
+#: block/recent-posts/edit.js:116
 msgid "Recent posts"
 msgstr ""
 
+#: assets/block/local-nav/assets/js/admin/block/any-posts/block.json
+#: assets/block/local-nav/assets/js/editor/block/any-posts/block.json
+#: assets/block/local-nav/assets/js/widget/block/any-posts/block.json
+#: assets/block/local-nav/block/any-posts/block.json
+#: assets/js/admin/block/any-posts/block.json
+#: assets/js/editor/block/any-posts/block.json
+#: assets/js/widget/block/any-posts/block.json
 #: block/any-posts/block.json
 msgctxt "block title"
 msgid "[WPAW] Any posts"
 msgstr ""
 
+#: assets/block/local-nav/assets/js/admin/block/any-posts/block.json
+#: assets/block/local-nav/assets/js/admin/block/local-nav/block.json
+#: assets/block/local-nav/assets/js/admin/block/profile-box/block.json
+#: assets/block/local-nav/assets/js/admin/block/ranking/block.json
+#: assets/block/local-nav/assets/js/admin/block/recent-posts/block.json
+#: assets/block/local-nav/assets/js/admin/block/site-branding/block.json
+#: assets/block/local-nav/assets/js/editor/block/any-posts/block.json
+#: assets/block/local-nav/assets/js/editor/block/local-nav/block.json
+#: assets/block/local-nav/assets/js/editor/block/profile-box/block.json
+#: assets/block/local-nav/assets/js/editor/block/ranking/block.json
+#: assets/block/local-nav/assets/js/editor/block/recent-posts/block.json
+#: assets/block/local-nav/assets/js/editor/block/site-branding/block.json
+#: assets/block/local-nav/assets/js/widget/block/any-posts/block.json
+#: assets/block/local-nav/assets/js/widget/block/local-nav/block.json
+#: assets/block/local-nav/assets/js/widget/block/profile-box/block.json
+#: assets/block/local-nav/assets/js/widget/block/ranking/block.json
+#: assets/block/local-nav/assets/js/widget/block/recent-posts/block.json
+#: assets/block/local-nav/assets/js/widget/block/site-branding/block.json
+#: assets/block/local-nav/block/any-posts/block.json
+#: assets/block/local-nav/block/local-nav/block.json
+#: assets/block/local-nav/block/profile-box/block.json
+#: assets/block/local-nav/block/ranking/block.json
+#: assets/block/local-nav/block/recent-posts/block.json
+#: assets/block/local-nav/block/site-branding/block.json
+#: assets/js/admin/block/any-posts/block.json
+#: assets/js/admin/block/local-nav/block.json
+#: assets/js/admin/block/profile-box/block.json
+#: assets/js/admin/block/ranking/block.json
+#: assets/js/admin/block/recent-posts/block.json
+#: assets/js/admin/block/site-branding/block.json
+#: assets/js/editor/block/any-posts/block.json
+#: assets/js/editor/block/local-nav/block.json
+#: assets/js/editor/block/profile-box/block.json
+#: assets/js/editor/block/ranking/block.json
+#: assets/js/editor/block/recent-posts/block.json
+#: assets/js/editor/block/site-branding/block.json
+#: assets/js/widget/block/any-posts/block.json
+#: assets/js/widget/block/local-nav/block.json
+#: assets/js/widget/block/profile-box/block.json
+#: assets/js/widget/block/ranking/block.json
+#: assets/js/widget/block/recent-posts/block.json
+#: assets/js/widget/block/site-branding/block.json
 #: block/any-posts/block.json
 #: block/local-nav/block.json
 #: block/profile-box/block.json
@@ -527,26 +718,61 @@ msgctxt "block description"
 msgid ""
 msgstr ""
 
+#: assets/block/local-nav/assets/js/admin/block/local-nav/block.json
+#: assets/block/local-nav/assets/js/editor/block/local-nav/block.json
+#: assets/block/local-nav/assets/js/widget/block/local-nav/block.json
+#: assets/block/local-nav/block/local-nav/block.json
+#: assets/js/admin/block/local-nav/block.json
+#: assets/js/editor/block/local-nav/block.json
+#: assets/js/widget/block/local-nav/block.json
 #: block/local-nav/block.json
 msgctxt "block title"
 msgid "[WPAW] Local navigation"
 msgstr ""
 
+#: assets/block/local-nav/assets/js/admin/block/profile-box/block.json
+#: assets/block/local-nav/assets/js/editor/block/profile-box/block.json
+#: assets/block/local-nav/assets/js/widget/block/profile-box/block.json
+#: assets/block/local-nav/block/profile-box/block.json
+#: assets/js/admin/block/profile-box/block.json
+#: assets/js/editor/block/profile-box/block.json
+#: assets/js/widget/block/profile-box/block.json
 #: block/profile-box/block.json
 msgctxt "block title"
 msgid "[WPAW] Profile box"
 msgstr ""
 
+#: assets/block/local-nav/assets/js/admin/block/ranking/block.json
+#: assets/block/local-nav/assets/js/editor/block/ranking/block.json
+#: assets/block/local-nav/assets/js/widget/block/ranking/block.json
+#: assets/block/local-nav/block/ranking/block.json
+#: assets/js/admin/block/ranking/block.json
+#: assets/js/editor/block/ranking/block.json
+#: assets/js/widget/block/ranking/block.json
 #: block/ranking/block.json
 msgctxt "block title"
 msgid "[WPAW] Ranking"
 msgstr ""
 
+#: assets/block/local-nav/assets/js/admin/block/recent-posts/block.json
+#: assets/block/local-nav/assets/js/editor/block/recent-posts/block.json
+#: assets/block/local-nav/assets/js/widget/block/recent-posts/block.json
+#: assets/block/local-nav/block/recent-posts/block.json
+#: assets/js/admin/block/recent-posts/block.json
+#: assets/js/editor/block/recent-posts/block.json
+#: assets/js/widget/block/recent-posts/block.json
 #: block/recent-posts/block.json
 msgctxt "block title"
 msgid "[WPAW] Recent posts"
 msgstr ""
 
+#: assets/block/local-nav/assets/js/admin/block/site-branding/block.json
+#: assets/block/local-nav/assets/js/editor/block/site-branding/block.json
+#: assets/block/local-nav/assets/js/widget/block/site-branding/block.json
+#: assets/block/local-nav/block/site-branding/block.json
+#: assets/js/admin/block/site-branding/block.json
+#: assets/js/editor/block/site-branding/block.json
+#: assets/js/widget/block/site-branding/block.json
 #: block/site-branding/block.json
 msgctxt "block title"
 msgid "[WPAW] Site branding"
