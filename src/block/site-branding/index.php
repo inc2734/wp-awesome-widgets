@@ -49,7 +49,7 @@ register_block_type(
 			];
 
 			$instance = [
-				'description' => $attributes['description'],
+				'description' => ! empty( $attributes['description'] ) ? $attributes['description'] : null,
 			];
 
 			return Helper::render_widget( __DIR__ . '/../../widget/site-branding', $widget_args, $instance );
