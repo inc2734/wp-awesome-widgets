@@ -8,13 +8,17 @@
 if ( ! $query->have_posts() ) {
 	return;
 }
+
+$id = $instance['anchor']
+	? $instance['anchor']
+	: 'wpaw-carousel-any-posts-' . $widget_args['widget_id'];
 ?>
 
 <?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<div
 		class="wpaw-carousel wpaw-carousel-any-posts wpaw-carousel-any-posts--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="wpaw-carousel-any-posts-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="<?php echo esc_attr( $id ); ?>"
 		>
 		<div class="wpaw-carousel__inner">
 

@@ -6,13 +6,17 @@
  */
 
 use Inc2734\WP_Awesome_Widgets\Helper;
+
+$id = $instance['anchor']
+	? $instance['anchor']
+	: 'wpaw-local-nav-' . $widget_args['widget_id'];
 ?>
 
 <?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<div
 		class="wpaw-local-nav wpaw-local-nav--<?php echo esc_attr( $instance['direction'] ); ?> wpaw-local-nav--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="wpaw-local-nav-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="<?php echo esc_attr( $id ); ?>"
 		>
 
 		<?php

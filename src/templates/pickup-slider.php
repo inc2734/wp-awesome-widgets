@@ -8,6 +8,10 @@
 if ( ! $query->have_posts() ) {
 	return;
 }
+
+$id = $instance['anchor']
+	? $instance['anchor']
+	: 'wpaw-pickup-slider-' . $widget_args['widget_id'];
 ?>
 
 <?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
@@ -20,7 +24,7 @@ if ( ! $query->have_posts() ) {
 
 	<div
 		class="wpaw-pickup-slider wpaw-pickup-slider--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="wpaw-pickup-slider-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="<?php echo esc_attr( $id ); ?>"
 		>
 		<div class="wpaw-pickup-slider__inner">
 			<div class="wpaw-pickup-slider__canvas">

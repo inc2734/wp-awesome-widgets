@@ -25,7 +25,9 @@ add_action(
 	function() {
 		$block = \WP_Block_Type_Registry::get_instance()->get_registered( 'wp-awesome-widgets/site-branding' );
 		if ( $block ) {
-			$block->attributes['anchor'] = '';
+			$block->attributes['anchor'] = [
+				'type' => 'string',
+			];
 		}
 	},
 	11
@@ -50,6 +52,7 @@ register_block_type(
 
 			$instance = [
 				'description' => ! empty( $attributes['description'] ) ? $attributes['description'] : null,
+				'anchor'      => ! empty( $attributes['anchor'] ) ? $attributes['anchor'] : null,
 			];
 
 			return Helper::render_widget( __DIR__ . '/../../widget/site-branding', $widget_args, $instance );

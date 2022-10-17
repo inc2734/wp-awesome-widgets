@@ -4,13 +4,17 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+$id = $instance['anchor']
+	? $instance['anchor']
+	: 'wpaw-contents-outline-' . $widget_args['widget_id'];
 ?>
 
 <?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<div
 		class="wpaw-contents-outline wpaw-contents-outline--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="wpaw-contents-outline-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="<?php echo esc_attr( $id ); ?>"
 		>
 
 		<?php if ( empty( $instance['show-mobile'] ) ) : ?>

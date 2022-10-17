@@ -4,6 +4,10 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+$id = $instance['anchor']
+	? $instance['anchor']
+	: 'wpaw-slider-' . $widget_args['widget_id'];
 ?>
 
 <?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
@@ -23,7 +27,7 @@
 
 	<div
 		class="wpaw-slider wpaw-slider--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="wpaw-slider-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="<?php echo esc_attr( $id ); ?>"
 		data-wpaw-slider-duration="<?php echo esc_attr( $instance['duration'] ); ?>"
 		data-wpaw-slider-interval="<?php echo esc_attr( $instance['interval'] ); ?>"
 		data-wpaw-slider-slides-to-show="<?php echo esc_attr( $instance['slides-to-show'] ); ?>"

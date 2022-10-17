@@ -25,7 +25,9 @@ add_action(
 	function() {
 		$block = \WP_Block_Type_Registry::get_instance()->get_registered( 'wp-awesome-widgets/any-posts' );
 		if ( $block ) {
-			$block->attributes['anchor'] = '';
+			$block->attributes['anchor'] = [
+				'type' => 'string',
+			];
 		}
 	},
 	11
@@ -64,6 +66,7 @@ register_block_type(
 				'items'          => implode( ',', $items ),
 				'show-thumbnail' => $attributes['showThumbnail'],
 				'show-taxonomy'  => $attributes['showTaxonomy'],
+				'anchor'         => ! empty( $attributes['anchor'] ) ? $attributes['anchor'] : null,
 			];
 
 			return Helper::render_widget( __DIR__ . '/../../widget/any-posts', $widget_args, $instance );

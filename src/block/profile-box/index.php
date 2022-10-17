@@ -25,7 +25,9 @@ add_action(
 	function() {
 		$block = \WP_Block_Type_Registry::get_instance()->get_registered( 'wp-awesome-widgets/profile-box' );
 		if ( $block ) {
-			$block->attributes['anchor'] = '';
+			$block->attributes['anchor'] = [
+				'type' => 'string',
+			];
 		}
 	},
 	11
@@ -49,7 +51,8 @@ register_block_type(
 			];
 
 			$instance = [
-				'title' => '',
+				'title'  => '',
+				'anchor' => ! empty( $attributes['anchor'] ) ? $attributes['anchor'] : null,
 			];
 
 			return Helper::render_widget( __DIR__ . '/../../widget/profile-box', $widget_args, $instance );

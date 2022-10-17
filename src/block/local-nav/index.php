@@ -25,7 +25,9 @@ add_action(
 	function() {
 		$block = \WP_Block_Type_Registry::get_instance()->get_registered( 'wp-awesome-widgets/local-nav' );
 		if ( $block ) {
-			$block->attributes['anchor'] = '';
+			$block->attributes['anchor'] = [
+				'type' => 'string',
+			];
 		}
 	},
 	11
@@ -52,6 +54,7 @@ register_block_type(
 				'direction'                     => $attributes['direction'],
 				'display-top-level-page-title'  => $attributes['displayTopLevelPageTitle'],
 				'display-only-have-descendants' => $attributes['displayOnlyHaveDescendants'],
+				'anchor'                        => ! empty( $attributes['anchor'] ) ? $attributes['anchor'] : null,
 			];
 
 			return Helper::render_widget( __DIR__ . '/../../widget/local-nav', $widget_args, $instance );

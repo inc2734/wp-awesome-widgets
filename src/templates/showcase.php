@@ -4,6 +4,10 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+$id = $instance['anchor']
+	? $instance['anchor']
+	: 'wpaw-showcase-' . $widget_args['widget_id'];
 ?>
 
 <?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
@@ -25,7 +29,7 @@
 			href="<?php echo esc_url( $instance['link-url'] ); ?>"
 		<?php endif; ?>
 		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> wpaw-showcase--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="wpaw-showcase-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="<?php echo esc_attr( $id ); ?>"
 		>
 
 		<?php if ( $instance['bg-image'] ) : ?>

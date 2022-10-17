@@ -4,13 +4,17 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+$id = $instance['anchor']
+	? $instance['anchor']
+	: 'wpaw-site-branding-' . $widget_args['widget_id'];
 ?>
 
 <?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<div
 		class="wpaw-site-branding wpaw-site-branding--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="wpaw-site-branding-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="<?php echo esc_attr( $id ); ?>"
 		>
 
 		<div class="wpaw-site-branding__logo">

@@ -6,13 +6,17 @@
  */
 
 use Inc2734\WP_Awesome_Widgets\Helper;
+
+$id = $instance['anchor']
+	? $instance['anchor']
+	: 'wpaw-google-adsense-' . $widget_args['widget_id'];
 ?>
 
 <?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<div
 		class="wpaw-google-adsense wpaw-google-adsense--<?php echo esc_attr( $widget_args['widget_id'] ); ?> wpaw-google-adsense--<?php echo esc_attr( $instance['size'] ); ?>"
-		id="wpaw-google-adsense-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="<?php echo esc_attr( $id ); ?>"
 		>
 
 		<div class="wpaw-google-adsense__row">

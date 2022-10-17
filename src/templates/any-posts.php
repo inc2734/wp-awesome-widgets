@@ -8,6 +8,10 @@
 if ( ! $query->have_posts() ) {
 	return;
 }
+
+$id = $instance['anchor']
+	? $instance['anchor']
+	: 'wpaw-any-posts-' . $widget_args['widget_id'];
 ?>
 
 <?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
@@ -20,7 +24,7 @@ if ( ! $query->have_posts() ) {
 
 	<div
 		class="wpaw-any-posts wpaw-any-posts--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="wpaw-any-posts-<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
+		id="<?php echo esc_attr( $id ); ?>"
 		>
 
 		<ul class="wpaw-any-posts__list wpaw-posts-list">

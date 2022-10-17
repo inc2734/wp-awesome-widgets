@@ -1,16 +1,16 @@
 {
-  "name": "wp-awesome-widgets/profile-box",
+	"name": "wp-awesome-widgets/profile-box",
 	"title": "[WPAW] Profile box",
 	"description": "",
-  "category": "widgets",
-  "textdomain": "inc2734-wp-awesome-widgets",
-  "attributes": {
-    "clientId": {
-      "type": "string"
-    }
-  },
-  "supports": {
-    "anchor": true,
-    "customClassName": false
-  }
+	"category": "widgets",
+	"textdomain": "inc2734-wp-awesome-widgets",
+	"attributes": {
+		"clientId": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"customClassName": false
+	}
 }
