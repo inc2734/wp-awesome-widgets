@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-$id = $instance['anchor']
+$id = ! empty( $instance['anchor'] )
 	? $instance['anchor']
 	: 'wpaw-site-branding-' . $widget_args['widget_id'];
 ?>

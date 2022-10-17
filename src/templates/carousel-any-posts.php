@@ -9,7 +9,7 @@ if ( ! $query->have_posts() ) {
 	return;
 }
 
-$id = $instance['anchor']
+$id = ! empty( $instance['anchor'] )
 	? $instance['anchor']
 	: 'wpaw-carousel-any-posts-' . $widget_args['widget_id'];
 ?>

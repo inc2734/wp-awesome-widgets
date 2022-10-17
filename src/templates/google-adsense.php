@@ -7,7 +7,7 @@
 
 use Inc2734\WP_Awesome_Widgets\Helper;
 
-$id = $instance['anchor']
+$id = ! empty( $instance['anchor'] )
 	? $instance['anchor']
 	: 'wpaw-google-adsense-' . $widget_args['widget_id'];
 ?>
