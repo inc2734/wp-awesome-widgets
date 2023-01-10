@@ -16,7 +16,7 @@
     "postcss-cli": "^10.0.0",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
-    "sass-basis": "^17.0.1",
+    "sass-basis": "^18.0.0-beta5",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {

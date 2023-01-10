@@ -1,7 +1,4 @@
-@charset 'UTF-8';
-
-.editor-styles-wrapper,
-.customize-control-sidebar_block_editor {
+:where(.editor-styles-wrapper) {
   @import 'app';
 }
 
