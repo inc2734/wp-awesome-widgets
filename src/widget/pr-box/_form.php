@@ -128,10 +128,10 @@
 			class="widefat"
 		>
 			<?php
-			$aspect_ratios = [
+			$aspect_ratios = array(
 				'4to3'  => '4:3',
 				'16to9' => '16:9',
-			];
+			);
 			?>
 			<?php foreach ( $aspect_ratios as $value => $label ) : ?>
 				<option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $instance['thumbnail-aspect-ratio'], true ); ?>><?php echo esc_html( $label ); ?></option>
@@ -147,13 +147,13 @@
 			class="widefat"
 		>
 			<?php
-			$types = [
+			$types = array(
 				'1' => __( '1 column', 'inc2734-wp-awesome-widgets' ),
 				'2' => __( '2 columns', 'inc2734-wp-awesome-widgets' ),
 				'3' => __( '3 columns', 'inc2734-wp-awesome-widgets' ),
 				'4' => __( '4 columns', 'inc2734-wp-awesome-widgets' ),
 				'5' => __( '5 columns', 'inc2734-wp-awesome-widgets' ),
-			];
+			);
 			?>
 			<?php foreach ( $types as $value => $label ) : ?>
 				<option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $instance['sm-columns'], true ); ?>><?php echo esc_html( $label ); ?></option>
@@ -169,13 +169,13 @@
 			class="widefat"
 		>
 			<?php
-			$types = [
+			$types = array(
 				'1' => __( '1 column', 'inc2734-wp-awesome-widgets' ),
 				'2' => __( '2 columns', 'inc2734-wp-awesome-widgets' ),
 				'3' => __( '3 columns', 'inc2734-wp-awesome-widgets' ),
 				'4' => __( '4 columns', 'inc2734-wp-awesome-widgets' ),
 				'5' => __( '5 columns', 'inc2734-wp-awesome-widgets' ),
-			]
+			)
 			?>
 			<?php foreach ( $types as $value => $label ) : ?>
 				<option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $instance['md-columns'], true ); ?>><?php echo esc_html( $label ); ?></option>
@@ -191,13 +191,13 @@
 			class="widefat"
 		>
 			<?php
-			$types = [
+			$types = array(
 				'1' => __( '1 column', 'inc2734-wp-awesome-widgets' ),
 				'2' => __( '2 columns', 'inc2734-wp-awesome-widgets' ),
 				'3' => __( '3 columns', 'inc2734-wp-awesome-widgets' ),
 				'4' => __( '4 columns', 'inc2734-wp-awesome-widgets' ),
 				'5' => __( '5 columns', 'inc2734-wp-awesome-widgets' ),
-			]
+			)
 			?>
 			<?php foreach ( $types as $value => $label ) : ?>
 				<option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $instance['lg-columns'], true ); ?>><?php echo esc_html( $label ); ?></option>

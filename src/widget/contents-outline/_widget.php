@@ -14,8 +14,8 @@ if ( ! is_singular() ) {
 View::render(
 	'contents-outline',
 	null,
-	[
+	array(
 		'widget_args' => $widget_args,
 		'instance'    => $instance,
-	]
+	)
 );

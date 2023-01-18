@@ -12,7 +12,7 @@ class Inc2734_WP_Awesome_Widgets_Showcase extends Contract\Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
+	protected $_defaults = array(
 		'title'        => null,
 		'lead'         => null,
 		'bg-image'     => null,
@@ -23,7 +23,7 @@ class Inc2734_WP_Awesome_Widgets_Showcase extends Contract\Widget {
 		'link-url'     => null,
 		'link-text'    => null,
 		'format'       => 'format-1',
-	];
+	);
 
 	/**
 	 * Constructor.
@@ -32,9 +32,9 @@ class Inc2734_WP_Awesome_Widgets_Showcase extends Contract\Widget {
 		parent::__construct(
 			false,
 			__( 'WPAW: Showcase', 'inc2734-wp-awesome-widgets' ),
-			[
+			array(
 				'customize_selective_refresh' => true,
-			]
+			)
 		);
 	}
 

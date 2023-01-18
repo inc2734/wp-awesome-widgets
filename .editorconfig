@@ -17,5 +17,5 @@ indent_size = 2
 [*.php]
 indent_style = tab
 
-[src/block/**.js]
+[src/src/blocks/**.js]
 indent_style = tab

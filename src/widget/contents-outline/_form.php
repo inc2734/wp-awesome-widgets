@@ -20,7 +20,7 @@
 	<p>
 		<?php esc_html_e( 'Show headings', 'inc2734-wp-awesome-widgets' ); ?><br>
 		<input type="hidden" name="<?php echo esc_attr( $this->get_field_name( 'headings' ) ); ?>[]" value="">
-		<?php foreach ( [ 'h2', 'h3', 'h4', 'h5', 'h6' ] as $heading ) : ?>
+		<?php foreach ( array( 'h2', 'h3', 'h4', 'h5', 'h6' ) as $heading ) : ?>
 			<label>
 				<input
 					type="checkbox"

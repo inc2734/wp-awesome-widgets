@@ -13,10 +13,10 @@ $id = ! empty( $instance['anchor'] )
 <?php echo wp_kses_post( $widget_args['before_widget'] ); ?>
 
 	<?php
-	$classes = [
+	$classes = array(
 		'wpaw-pr-box',
 		'wpaw-pr-box--' . $widget_args['widget_id'],
-	];
+	);
 
 	if ( $instance['chameleon'] ) {
 		$classes[] = 'wpaw-pr-box--chameleon';

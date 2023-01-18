@@ -23,14 +23,14 @@ $id = ! empty( $instance['anchor'] )
 		Helper::the_local_nav(
 			$founder_id,
 			get_the_ID(),
-			[
+			array(
 				'list-class'                   => 'wpaw-local-nav__list',
 				'item-class'                   => 'wpaw-local-nav__item',
 				'sublist-class'                => 'wpaw-local-nav__sublist',
 				'subitem-class'                => 'wpaw-local-nav__subitem',
 				'limit'                        => 'horizontal' === $instance['direction'] ? 1 : -1,
 				'display-top-level-page-title' => $instance['display-top-level-page-title'],
-			]
+			)
 		);
 		?>
 	</div>

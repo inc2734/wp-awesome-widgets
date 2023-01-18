@@ -12,13 +12,13 @@ class Inc2734_WP_Awesome_Widgets_Any_Posts extends Contract\Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
+	protected $_defaults = array(
 		'title'          => null,
 		'post-type'      => 'post',
 		'items'          => null,
 		'show-thumbnail' => 1,
 		'show-taxonomy'  => 1,
-	];
+	);
 
 	/**
 	 * Constructor.
@@ -27,9 +27,9 @@ class Inc2734_WP_Awesome_Widgets_Any_Posts extends Contract\Widget {
 		parent::__construct(
 			false,
 			__( 'WPAW: Any Posts', 'inc2734-wp-awesome-widgets' ),
-			[
+			array(
 				'customize_selective_refresh' => true,
-			]
+			)
 		);
 	}
 
@@ -50,7 +50,7 @@ class Inc2734_WP_Awesome_Widgets_Any_Posts extends Contract\Widget {
 		$new_instance = shortcode_atts( $this->_defaults, $new_instance );
 
 		$items     = explode( ',', $new_instance['items'] );
-		$new_items = [];
+		$new_items = array();
 		foreach ( $items as $post_id ) {
 			if ( get_post( $post_id ) ) {
 				$new_items[] = $post_id;

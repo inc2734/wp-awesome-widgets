@@ -12,10 +12,10 @@ class Inc2734_WP_Awesome_Widgets_Google_Adsense extends Contract\Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
+	protected $_defaults = array(
 		'code' => '',
 		'size' => 'auto',
-	];
+	);
 
 	/**
 	 * Constructor.

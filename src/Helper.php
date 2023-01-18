@@ -43,32 +43,32 @@ class Helper {
 
 		$args = wp_parse_args(
 			$args,
-			[
+			array(
 				'sublist-class' => '',
 				'subitem-class' => '',
 				'limit'         => -1,
-			]
+			)
 		);
 
-		$query_args = [
+		$query_args = array(
 			'posts_per_page'   => 50,
 			'suppress_filters' => false,
-			'orderby'          => [
+			'orderby'          => array(
 				'menu_order' => 'ASC',
 				'ID'         => 'DESC',
-			],
-		];
+			),
+		);
 		$query_args = apply_filters( 'inc2734_wp_awesome_widgets_child_nav_args', $query_args );
 
 		$children_query = new WP_Query(
 			array_merge(
 				$query_args,
-				[
+				array(
 					'post_type'           => get_post_type(),
 					'post_parent'         => $parent_id,
 					'ignore_sticky_posts' => true,
 					'no_found_rows'       => true,
-				]
+				)
 			)
 		);
 		if ( ! $children_query->have_posts() ) {
@@ -101,17 +101,17 @@ class Helper {
 	 * @param int   $current_page_id Current page ID.
 	 * @param array $args            Argments.
 	 */
-	public static function the_local_nav( $founder_id, $current_page_id, $args = [] ) {
+	public static function the_local_nav( $founder_id, $current_page_id, $args = array() ) {
 		$args = wp_parse_args(
 			$args,
-			[
+			array(
 				'list-class'                   => '',
 				'item-class'                   => '',
 				'sublist-class'                => '',
 				'subitem-class'                => '',
 				'limit'                        => -1,
 				'display-top-level-page-title' => 1,
-			]
+			)
 		);
 		?>
 		<ul class="<?php echo esc_attr( $args['list-class'] ); ?>">

@@ -7,25 +7,25 @@
 
 use Inc2734\WP_Awesome_Widgets\App\View;
 
-$query_args = [
+$query_args = array(
 	'post_type'        => 'any',
 	'posts_per_page'   => empty( $instance['posts_per_page'] ) ? -1 : $instance['posts_per_page'],
 	'suppress_filters' => false,
-	'tax_query'        => [
-		[
+	'tax_query'        => array(
+		array(
 			'taxonomy' => 'post_tag',
-			'terms'    => [ 'pickup' ],
+			'terms'    => array( 'pickup' ),
 			'field'    => 'slug',
-		],
-	],
-];
+		),
+	),
+);
 
 if ( ! empty( $instance['random'] ) ) {
 	$query_args = array_merge(
 		$query_args,
-		[
+		array(
 			'orderby' => 'rand',
-		]
+		)
 	);
 }
 
@@ -43,21 +43,21 @@ $query_args = apply_filters( 'inc2734_wp_awesome_widgets_pickup_slider_widget_ar
 $pickup_posts_query = new WP_Query(
 	array_merge(
 		$query_args,
-		[
+		array(
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
-		]
+		)
 	)
 );
 
 View::render(
 	'pickup-slider',
 	null,
-	[
+	array(
 		'widget_args' => $widget_args,
 		'instance'    => $instance,
 		'query'       => $pickup_posts_query,
-	]
+	)
 );
 
 /**

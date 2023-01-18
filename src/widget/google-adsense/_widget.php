@@ -14,7 +14,7 @@ if ( empty( $instance['code'] ) ) {
 wp_enqueue_script(
 	'google-adsense',
 	'//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-	[],
+	array(),
 	1,
 	true
 );
@@ -22,8 +22,8 @@ wp_enqueue_script(
 View::render(
 	'google-adsense',
 	null,
-	[
+	array(
 		'widget_args' => $widget_args,
 		'instance'    => $instance,
-	]
+	)
 );

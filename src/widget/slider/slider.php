@@ -12,9 +12,9 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Contract\Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
-		'images'           => [
-			[
+	protected $_defaults = array(
+		'images'           => array(
+			array(
 				'src'          => '',
 				'title'        => '',
 				'summary'      => '',
@@ -24,14 +24,14 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Contract\Widget {
 				'mask-opacity' => 0,
 				'text-color'   => '#fff',
 				'btn-type'     => 'ghost',
-			],
-		],
+			),
+		),
 		'type'             => 'slide',
 		'duration'         => 500,
 		'interval'         => 3000,
 		'slides-to-show'   => 1,
 		'slides-to-scroll' => 1,
-	];
+	);
 
 	/**
 	 * Constructor.
@@ -40,13 +40,13 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Contract\Widget {
 		parent::__construct(
 			false,
 			__( 'WPAW: Slider', 'inc2734-wp-awesome-widgets' ),
-			[
+			array(
 				'customize_selective_refresh' => true,
-			]
+			)
 		);
 
 		if ( is_active_widget( false, false, $this->id_base ) || is_customize_preview() ) {
-			add_action( 'wp_enqueue_scripts', [ __CLASS__, 'enqueue_scripts' ] );
+			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 		}
 	}
 
@@ -104,7 +104,7 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Contract\Widget {
 			wp_enqueue_script(
 				'slick-carousel',
 				get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.min.js',
-				[ 'jquery' ],
+				array( 'jquery' ),
 				filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.min.js' ),
 				true
 			);
@@ -114,7 +114,7 @@ class Inc2734_WP_Awesome_Widgets_Slider extends Contract\Widget {
 			wp_enqueue_script(
 				'wp-awesome-widgets-slider',
 				get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/widget/slider.js',
-				[ 'slick-carousel' ],
+				array( 'slick-carousel' ),
 				filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/widget/slider.js' ),
 				true
 			);

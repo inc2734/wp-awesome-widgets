@@ -18,7 +18,7 @@ class Widget extends WP_Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [];
+	protected $_defaults = array();
 
 	/**
 	 * @var string
@@ -34,7 +34,7 @@ class Widget extends WP_Widget {
 	 * @param array  $widget_options  Optional. Widget options. See wp_register_sidebar_widget() for
 	 *                                information on accepted arguments. Default empty array.
 	 */
-	public function __construct( $id_base, $name, $widget_options = [] ) {
+	public function __construct( $id_base, $name, $widget_options = array() ) {
 		$reflection  = new \ReflectionClass( $this );
 		$this->_path = dirname( $reflection->getFileName() );
 

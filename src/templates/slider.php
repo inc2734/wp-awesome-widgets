@@ -79,7 +79,7 @@ $id = ! empty( $instance['anchor'] )
 										<?php if ( ! empty( $image['link-url'] ) && ! empty( $image['link-text'] ) ) : ?>
 											<div class="wpaw-slider__item-action">
 												<?php
-												$classes = [ 'wpaw-slider__item-more' ];
+												$classes = array( 'wpaw-slider__item-more' );
 												if ( 'ghost' === $image['btn-type'] ) {
 													$classes[] = 'wpaw-slider__item-more--ghost';
 												}

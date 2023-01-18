@@ -28,11 +28,11 @@
 			>
 				<?php
 				$post_types = get_post_types(
-					[
+					array(
 						'public'       => true,
 						'show_ui'      => true,
 						'show_in_rest' => true,
-					],
+					),
 					'objects'
 				);
 				unset( $post_types['attachment'] );
@@ -54,7 +54,7 @@
 			<?php
 			$items = $instance['items'];
 			if ( empty( $items ) ) {
-				$items = [];
+				$items = array();
 			} elseif ( ! is_array( $items ) ) {
 				$items = explode( ',', $items );
 			}

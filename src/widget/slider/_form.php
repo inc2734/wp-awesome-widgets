@@ -120,10 +120,10 @@
 							id="<?php echo esc_attr( $this->get_field_id( 'images' ) ); ?>[<?php echo esc_attr( (int) $key ); ?>][btn-type]"
 						>
 							<?php
-							$btn_types = [
+							$btn_types = array(
 								'normal' => __( 'Normal button', 'inc2734-wp-awesome-widgets' ),
 								'ghost'  => __( 'Ghost button', 'inc2734-wp-awesome-widgets' ),
-							]
+							)
 							?>
 							<?php foreach ( $btn_types as $value => $label ) : ?>
 								<option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $image['btn-type'], true ); ?>><?php echo esc_html( $label ); ?></option>
@@ -151,10 +151,10 @@
 			class="widefat js-wpaw-slider-widget-type"
 		>
 			<?php
-			$types = [
+			$types = array(
 				'fade'  => __( 'Fade', 'inc2734-wp-awesome-widgets' ),
 				'slide' => __( 'Slide', 'inc2734-wp-awesome-widgets' ),
-			]
+			)
 			?>
 			<?php foreach ( $types as $value => $label ) : ?>
 				<option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $instance['type'], true ); ?>><?php echo esc_html( $label ); ?></option>

@@ -46,7 +46,7 @@ $id = ! empty( $instance['anchor'] )
 							<?php
 							$taxonomies = get_post_taxonomies( get_the_ID() );
 							$_taxonomy  = ! empty( $taxonomies[0] ) ? $taxonomies[0] : false;
-							$terms      = ( $_taxonomy ) ? get_the_terms( get_the_ID(), $_taxonomy ) : [];
+							$terms      = ( $_taxonomy ) ? get_the_terms( get_the_ID(), $_taxonomy ) : array();
 							?>
 							<?php if ( $instance['show-taxonomy'] && $terms ) : ?>
 								<div class="wpaw-recent-posts__taxonomy wpaw-posts-list__taxonomy">

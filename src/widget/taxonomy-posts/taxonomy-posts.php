@@ -12,12 +12,12 @@ class Inc2734_WP_Awesome_Widgets_Taxonomy_Posts extends Contract\Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
+	protected $_defaults = array(
 		'title'          => null,
 		'taxonomy'       => null,
 		'posts-per-page' => 5,
 		'show-thumbnail' => 1,
-	];
+	);
 
 	/**
 	 * Constructor.

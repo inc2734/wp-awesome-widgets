@@ -10,8 +10,8 @@ use Inc2734\WP_Awesome_Widgets\App\View;
 View::render(
 	'pr-box',
 	null,
-	[
+	array(
 		'widget_args' => $widget_args,
 		'instance'    => $instance,
-	]
+	)
 );

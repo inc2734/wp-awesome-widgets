@@ -12,11 +12,11 @@ class Inc2734_WP_Awesome_Widgets_Local_Nav extends Contract\Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
+	protected $_defaults = array(
 		'direction'                     => 'vertical',
 		'display-top-level-page-title'  => 1,
 		'display-only-have-descendants' => 0,
-	];
+	);
 
 	/**
 	 * Constructor.
@@ -25,9 +25,9 @@ class Inc2734_WP_Awesome_Widgets_Local_Nav extends Contract\Widget {
 		parent::__construct(
 			false,
 			__( 'WPAW: Local Navigation', 'inc2734-wp-awesome-widgets' ),
-			[
+			array(
 				'customize_selective_refresh' => true,
-			]
+			)
 		);
 	}
 

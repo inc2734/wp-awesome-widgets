@@ -21,20 +21,20 @@
 	<p>
 		<?php
 		$taxonomies = get_taxonomies(
-			[
+			array(
 				'public'  => true,
 				'show_ui' => true,
-			],
+			),
 			'names'
 		);
 
-		$all_terms = [];
+		$all_terms = array();
 		foreach ( $taxonomies as $_taxonomy ) {
 			$all_terms[ $_taxonomy ] = get_terms(
 				$_taxonomy,
-				[
+				array(
 					'parent' => 0,
-				]
+				)
 			);
 		}
 		?>
@@ -65,9 +65,9 @@
 						) {
 							$terms = get_terms(
 								$taxonomy_id,
-								[
+								array(
 									'parent' => $term_id,
-								]
+								)
 							);
 							?>
 							<?php foreach ( $terms as $term ) : ?>

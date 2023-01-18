@@ -12,11 +12,11 @@ class Inc2734_WP_Awesome_Widgets_Contents_Outline extends Contract\Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
+	protected $_defaults = array(
 		'title'       => null,
-		'headings'    => [ 'h2' ],
+		'headings'    => array( 'h2' ),
 		'show-mobile' => 0,
-	];
+	);
 
 	/**
 	 * Constructor.
@@ -25,9 +25,9 @@ class Inc2734_WP_Awesome_Widgets_Contents_Outline extends Contract\Widget {
 		parent::__construct(
 			false,
 			__( 'WPAW: Contents outline', 'inc2734-wp-awesome-widgets' ),
-			[
+			array(
 				'customize_selective_refresh' => true,
-			]
+			)
 		);
 
 		$this->_defaults['title'] = __( 'Contents outline', 'inc2734-wp-awesome-widgets' );

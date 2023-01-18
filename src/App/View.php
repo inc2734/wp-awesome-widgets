@@ -21,17 +21,17 @@ class View {
 	public static function render( $slug, $name, $widget_args ) {
 		$widget_args = wp_parse_args(
 			$widget_args,
-			[
-				'widget_args' => [],
-				'instance'    => [],
-			]
+			array(
+				'widget_args' => array(),
+				'instance'    => array(),
+			)
 		);
 
 		$bootstrap = new Bootstrap(
-			[
+			array(
 				'prefix' => 'inc2734_wp_awesome_widgets_',
 				'path'   => __DIR__ . '/../templates/',
-			]
+			)
 		);
 
 		$bootstrap->render( $slug, $name, $widget_args );

@@ -27,11 +27,11 @@
 		>
 			<?php
 			$post_types = get_post_types(
-				[
+				array(
 					'public'       => true,
 					'show_ui'      => true,
 					'hierarchical' => false,
-				],
+				),
 				'objects'
 			);
 			unset( $post_types['attachment'] );

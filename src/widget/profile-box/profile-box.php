@@ -12,9 +12,9 @@ class Inc2734_WP_Awesome_Widgets_Profile_Box extends Contract\Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
+	protected $_defaults = array(
 		'title' => null,
-	];
+	);
 
 	/**
 	 * Constructor.
@@ -23,9 +23,9 @@ class Inc2734_WP_Awesome_Widgets_Profile_Box extends Contract\Widget {
 		parent::__construct(
 			false,
 			__( 'WPAW: Profile box', 'inc2734-wp-awesome-widgets' ),
-			[
+			array(
 				'customize_selective_refresh' => true,
-			]
+			)
 		);
 
 		$this->_defaults['title'] = __( 'Bio', 'inc2734-wp-awesome-widgets' );

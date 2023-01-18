@@ -23,18 +23,18 @@ if ( $ancestors ) {
 
 if ( $instance['display-only-have-descendants'] ) {
 	$descendants_query = new \WP_Query(
-		[
+		array(
 			'post_type'           => get_post_type(),
 			'posts_per_page'      => 50,
 			'post_parent'         => $founder_id,
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
 			'suppress_filters'    => false,
-			'orderby'             => [
+			'orderby'             => array(
 				'menu_order' => 'ASC',
 				'ID'         => 'DESC',
-			],
-		]
+			),
+		)
 	);
 
 	if ( ! $descendants_query->have_posts() ) {
@@ -45,9 +45,9 @@ if ( $instance['display-only-have-descendants'] ) {
 View::render(
 	'local-nav',
 	null,
-	[
+	array(
 		'widget_args' => $widget_args,
 		'instance'    => $instance,
 		'founder_id'  => $founder_id,
-	]
+	)
 );

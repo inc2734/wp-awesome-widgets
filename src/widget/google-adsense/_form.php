@@ -29,7 +29,7 @@
 			class="widefat"
 		>
 			<?php
-			$sizes = [
+			$sizes = array(
 				'auto'              => __( 'Auto', 'inc2734-wp-awesome-widgets' ),
 				'big-banner'        => __( 'Big banner (728 x 90)', 'inc2734-wp-awesome-widgets' ),
 				'rectangle-big'     => __( 'Rectangle big (336 x 280)', 'inc2734-wp-awesome-widgets' ),
@@ -39,7 +39,7 @@
 				'rectangle-big-2'   => __( 'Rectangle big (336 x 280) two', 'inc2734-wp-awesome-widgets' ),
 				'rectangle-2'       => __( 'Rectangle (300 x 250) two', 'inc2734-wp-awesome-widgets' ),
 				'link'              => __( 'Link unit', 'inc2734-wp-awesome-widgets' ),
-			];
+			);
 			?>
 			<?php foreach ( $sizes as $key => $label ) : ?>
 				<option value="<?php echo esc_attr( $key ); ?>" <?php selected( $instance['size'], $key ); ?>><?php echo esc_html( $label ); ?></option>

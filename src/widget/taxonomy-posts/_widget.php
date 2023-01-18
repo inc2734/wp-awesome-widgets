@@ -29,36 +29,36 @@ if ( 1 < count( $widget_number ) ) {
 	$widget_number = $widget_number[0];
 }
 
-$query_args = [
+$query_args = array(
 	'post_type'        => $post_types,
 	'posts_per_page'   => $instance['posts-per-page'],
 	'suppress_filters' => false,
-	'tax_query'        => [
-		[
+	'tax_query'        => array(
+		array(
 			'taxonomy' => $taxonomy_id,
 			'terms'    => $term_id,
-		],
-	],
-];
+		),
+	),
+);
 $query_args = apply_filters( 'inc2734_wp_awesome_widgets_taxonomy_posts_widget_args', $query_args );
 $query_args = apply_filters( 'inc2734_wp_awesome_widgets_taxonomy_posts_widget_args_' . $widget_number, $query_args );
 
 $taxonomy_posts_query = new WP_Query(
 	array_merge(
 		$query_args,
-		[
+		array(
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
-		]
+		)
 	)
 );
 
 View::render(
 	'taxonomy-posts',
 	null,
-	[
+	array(
 		'widget_args' => $widget_args,
 		'instance'    => $instance,
 		'query'       => $taxonomy_posts_query,
-	]
+	)
 );

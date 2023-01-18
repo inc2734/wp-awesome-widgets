@@ -13,7 +13,7 @@ class Bootstrap {
 	 * Constructor.
 	 */
 	public function __construct() {
-		load_textdomain( 'inc2734-wp-awesome-widgets', __DIR__ . '/languages/' . get_locale() . '.mo' );
+		load_textdomain( 'inc2734-wp-awesome-widgets', __DIR__ . '/languages/inc2734-wp-awesome-widgets-' . get_locale() . '.mo' );
 
 		include_once( __DIR__ . '/deprecated/Helper.php' );
 
@@ -36,30 +36,31 @@ class Bootstrap {
 		add_action(
 			'init',
 			function() {
-				include_once( __DIR__ . '/block/local-nav/index.php' );
-				include_once( __DIR__ . '/block/recent-posts/index.php' );
-				include_once( __DIR__ . '/block/profile-box/index.php' );
-				include_once( __DIR__ . '/block/any-posts/index.php' );
-				include_once( __DIR__ . '/block/ranking/index.php' );
-				include_once( __DIR__ . '/block/site-branding/index.php' );
+				include_once( __DIR__ . '/assets/blocks/local-nav/index.php' );
+				include_once( __DIR__ . '/assets/blocks/recent-posts/index.php' );
+				include_once( __DIR__ . '/assets/blocks/profile-box/index.php' );
+				include_once( __DIR__ . '/assets/blocks/any-posts/index.php' );
+				include_once( __DIR__ . '/assets/blocks/ranking/index.php' );
+				include_once( __DIR__ . '/assets/blocks/site-branding/index.php' );
 			}
 		);
 
 		// @todo I want to use enqueue_block_assets, but it is not reflected in the block widget area management screen.
-		add_action( 'wp_enqueue_scripts', [ $this, '_enqueue_block_assets' ], 9 );
+		add_action( 'wp_enqueue_scripts', array( $this, '_enqueue_block_assets' ), 9 );
 
-		add_action( 'wp_enqueue_scripts', [ $this, '_wp_enqueue_scripts' ], 9 );
-		add_action( 'enqueue_block_editor_assets', [ $this, '_enqueue_block_editor_assets' ], 9 );
-		add_action( 'load-widgets.php', [ $this, '_admin_enqueue_scripts' ], 9 );
-		add_action( 'load-customize.php', [ $this, '_admin_enqueue_scripts' ], 9 );
-		add_action( 'customize_preview_init', [ $this, '_customize_preview_init' ], 9 );
+		add_action( 'wp_enqueue_scripts', array( $this, '_wp_enqueue_scripts' ), 9 );
+		add_action( 'load_script_textdomain_relative_path', array( $this, '_load_script_textdomain_relative_path' ) );
+		add_action( 'enqueue_block_editor_assets', array( $this, '_enqueue_block_editor_assets' ), 9 );
+		add_action( 'load-widgets.php', array( $this, '_admin_enqueue_scripts' ), 9 );
+		add_action( 'load-customize.php', array( $this, '_admin_enqueue_scripts' ), 9 );
+		add_action( 'customize_preview_init', array( $this, '_customize_preview_init' ), 9 );
 
-		add_action( 'elementor/editor/before_enqueue_scripts', [ $this, '_admin_enqueue_scripts' ] );
-		add_action( 'elementor/preview/init', [ $this, '_preview_enqueue_scripts_for_elemener' ] );
-		add_action( 'elementor/frontend/after_register_scripts', [ $this, '_deregister_elementor_slick' ] );
+		add_action( 'elementor/editor/before_enqueue_scripts', array( $this, '_admin_enqueue_scripts' ) );
+		add_action( 'elementor/preview/init', array( $this, '_preview_enqueue_scripts_for_elemener' ) );
+		add_action( 'elementor/frontend/after_register_scripts', array( $this, '_deregister_elementor_slick' ) );
 
-		add_action( 'load-post-new.php', [ $this, '_admin_enqueue_scripts_for_siteorigin_panels' ] );
-		add_action( 'load-post.php', [ $this, '_admin_enqueue_scripts_for_siteorigin_panels' ] );
+		add_action( 'load-post-new.php', array( $this, '_admin_enqueue_scripts_for_siteorigin_panels' ) );
+		add_action( 'load-post.php', array( $this, '_admin_enqueue_scripts_for_siteorigin_panels' ) );
 	}
 
 	/**
@@ -70,7 +71,7 @@ class Bootstrap {
 			wp_register_style(
 				'slick-carousel',
 				get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.css',
-				[],
+				array(),
 				filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.css' )
 			);
 		}
@@ -79,7 +80,7 @@ class Bootstrap {
 			wp_register_style(
 				'slick-carousel-theme',
 				get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick-theme.css',
-				[ 'slick-carousel' ],
+				array( 'slick-carousel' ),
 				filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick-theme.css' )
 			);
 		}
@@ -92,9 +93,19 @@ class Bootstrap {
 		wp_enqueue_style(
 			'wp-awesome-widgets',
 			get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/css/app.css',
-			[ 'slick-carousel-theme' ],
+			array( 'slick-carousel-theme' ),
 			filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/css/app.css' )
 		);
+	}
+
+	/**
+	 * Apply wp i18n make-json translations.
+	 */
+	public function _load_script_textdomain_relative_path( $relative ) {
+		if ( 0 === strpos( $relative, 'vendor/inc2734/wp-awesome-widgets/' ) ) {
+			return str_replace( 'vendor/inc2734/wp-awesome-widgets/src/', '', $relative );
+		}
+		return $relative;
 	}
 
 	/**
@@ -104,23 +115,16 @@ class Bootstrap {
 		wp_enqueue_style(
 			'wp-awesome-widgets',
 			get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/css/editor.css',
-			[],
+			array(),
 			filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/css/editor.css' )
 		);
 
-		wp_enqueue_script(
-			'wp-awesome-widgets-editor',
-			get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/editor/editor.js',
-			[],
-			filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/editor/editor.js' ),
-			true
-		);
-
-		wp_set_script_translations(
-			'wp-awesome-widgets-editor',
-			'inc2734-wp-awesome-widgets',
-			__DIR__ . '/languages/'
-		);
+		foreach ( \WP_Block_Type_Registry::get_instance()->get_all_registered() as $block_type => $block ) {
+			if ( 0 === strpos( $block_type, 'wp-awesome-widgets/' ) ) {
+				$handle = str_replace( '/', '-', $block_type ) . '-editor-script';
+				wp_set_script_translations( $handle, 'inc2734-wp-awesome-widgets', __DIR__ . '/languages' );
+			}
+		}
 	}
 
 	/**
@@ -136,14 +140,14 @@ class Bootstrap {
 		wp_enqueue_style(
 			'wp-awesome-widgets-admin',
 			get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/css/admin.css',
-			[],
+			array(),
 			filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/css/admin.css' )
 		);
 
 		wp_enqueue_script(
 			'wp-awesome-widgets-admin',
 			get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/admin/admin.js',
-			[ 'jquery', 'jquery-ui-sortable', 'wp-color-picker' ],
+			array( 'jquery', 'jquery-ui-sortable', 'wp-color-picker' ),
 			filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/admin/admin.js' ),
 			true
 		);
@@ -151,9 +155,9 @@ class Bootstrap {
 		wp_localize_script(
 			'wp-awesome-widgets-admin',
 			'wp_awesome_widgets_item_selector_wp_api',
-			[
+			array(
 				'root' => esc_url_raw( rest_url() ),
-			]
+			)
 		);
 
 		wp_enqueue_style( 'wp-color-picker' );
@@ -168,10 +172,10 @@ class Bootstrap {
 		wp_enqueue_script(
 			'wp-awesome-widgets-customize-preview',
 			get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/admin/customize-preview.js',
-			[
+			array(
 				'customize-preview',
 				'customize-selective-refresh',
-			],
+			),
 			filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/admin/customize-preview.js' ),
 			true
 		);
@@ -184,7 +188,7 @@ class Bootstrap {
 		wp_enqueue_script(
 			'wp-awesome-widgets-elementor-preview',
 			get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/admin/elementor-preview.js',
-			[],
+			array(),
 			filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/admin/elementor-preview.js' ),
 			true
 		);
@@ -205,6 +209,6 @@ class Bootstrap {
 			return;
 		}
 
-		add_action( 'admin_enqueue_scripts', [ $this, '_admin_enqueue_scripts' ] );
+		add_action( 'admin_enqueue_scripts', array( $this, '_admin_enqueue_scripts' ) );
 	}
 }

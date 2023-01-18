@@ -12,19 +12,19 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Contract\Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
+	protected $_defaults = array(
 		'title'                  => null,
 		'lead'                   => null,
 		'bg-color'               => '#fff',
-		'items'                  => [
-			[
+		'items'                  => array(
+			array(
 				'src'       => '',
 				'title'     => '',
 				'summary'   => '',
 				'link-text' => '',
 				'link-url'  => '',
-			],
-		],
+			),
+		),
 		'thumbnail-aspect-ratio' => '16to9',
 		'sm-columns'             => 1,
 		'md-columns'             => 1,
@@ -32,7 +32,7 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Contract\Widget {
 		'link-text'              => null,
 		'link-url'               => null,
 		'chameleon'              => 0,
-	];
+	);
 
 	/**
 	 * Constructor.
@@ -41,9 +41,9 @@ class Inc2734_WP_Awesome_Widgets_PR_Box extends Contract\Widget {
 		parent::__construct(
 			false,
 			__( 'WPAW: PR Box', 'inc2734-wp-awesome-widgets' ),
-			[
+			array(
 				'customize_selective_refresh' => true,
-			]
+			)
 		);
 	}
 

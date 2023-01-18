@@ -36,11 +36,11 @@
 			class="widefat"
 		>
 			<?php
-			$formats = [
+			$formats = array(
 				'format-1',
 				'format-2',
 				'format-3',
-			];
+			);
 			?>
 			<?php foreach ( $formats as $format ) : ?>
 				<option value="<?php echo esc_attr( $format ); ?>" <?php selected( $format, $instance['format'], true ); ?>><?php echo esc_html( $format ); ?></option>

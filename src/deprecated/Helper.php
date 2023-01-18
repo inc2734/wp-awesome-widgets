@@ -36,6 +36,6 @@ function the_child_nav( $parent_id, $current_page_id, $args ) {
  * @param int   $current_page_id Current page ID.
  * @param array $args            Argments.
  */
-function the_local_nav( $founder_id, $current_page_id, $args = [] ) {
+function the_local_nav( $founder_id, $current_page_id, $args = array() ) {
 	\Inc2734\WP_Awesome_Widgets\Helper::the_local_nav( $founder_id, $current_page_id, $args );
 }

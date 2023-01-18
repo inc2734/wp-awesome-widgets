@@ -12,9 +12,9 @@ class Inc2734_WP_Awesome_Widgets_Site_Branding extends Contract\Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
+	protected $_defaults = array(
 		'description' => '',
-	];
+	);
 
 	/**
 	 * Constructor.
@@ -23,9 +23,9 @@ class Inc2734_WP_Awesome_Widgets_Site_Branding extends Contract\Widget {
 		parent::__construct(
 			false,
 			__( 'WPAW: Site branding', 'inc2734-wp-awesome-widgets' ),
-			[
+			array(
 				'customize_selective_refresh' => true,
-			]
+			)
 		);
 	}
 

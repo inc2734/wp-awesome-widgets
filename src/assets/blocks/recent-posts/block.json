@@ -1,0 +1,33 @@
+{
+  "name": "wp-awesome-widgets/recent-posts",
+  "title": "[WPAW] Recent posts",
+  "description": "",
+  "category": "widgets",
+  "textdomain": "inc2734-wp-awesome-widgets",
+  "attributes": {
+    "postType": {
+      "type": "string",
+      "default": "post"
+    },
+    "postsPerPage": {
+      "type": "number",
+      "default": 6
+    },
+    "showThumbnail": {
+      "type": "boolean",
+      "default": true
+    },
+    "showTaxonomy": {
+      "type": "boolean",
+      "default": true
+    },
+    "clientId": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "customClassName": false
+  },
+  "editorScript": "file:./index.js"
+}

@@ -31,10 +31,10 @@
 			class="widefat"
 		>
 			<?php
-			$link_types = [
+			$link_types = array(
 				'button'  => __( 'Button link', 'inc2734-wp-awesome-widgets' ),
 				'overall' => __( 'Overall link', 'inc2734-wp-awesome-widgets' ),
-			];
+			);
 			?>
 			<?php foreach ( $link_types as $link_type => $label ) : ?>
 				<option value="<?php echo esc_attr( $link_type ); ?>" <?php selected( $link_type, $instance['link-type'], true ); ?>><?php echo esc_html( $label ); ?></option>

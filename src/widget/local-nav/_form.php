@@ -15,10 +15,10 @@
 			class="widefat"
 		>
 			<?php
-			$directions = [
+			$directions = array(
 				'vertical'   => __( 'Vertical', 'inc2734-wp-awesome-widgets' ),
 				'horizontal' => __( 'Horizontal', 'inc2734-wp-awesome-widgets' ),
-			];
+			);
 			?>
 			<?php foreach ( $directions as $key => $label ) : ?>
 				<option value="<?php echo esc_attr( $key ); ?>" <?php selected( $instance['direction'], $key ); ?>>

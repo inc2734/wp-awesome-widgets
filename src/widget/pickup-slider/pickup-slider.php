@@ -12,11 +12,11 @@ class Inc2734_WP_Awesome_Widgets_Pickup_Slider extends Contract\Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
+	protected $_defaults = array(
 		'random'         => 0,
 		'link-type'      => 'button',
 		'posts_per_page' => -1,
-	];
+	);
 
 	/**
 	 * Constructor.
@@ -25,13 +25,13 @@ class Inc2734_WP_Awesome_Widgets_Pickup_Slider extends Contract\Widget {
 		parent::__construct(
 			false,
 			__( 'WPAW: Pickup slider', 'inc2734-wp-awesome-widgets' ),
-			[
+			array(
 				'customize_selective_refresh' => true,
-			]
+			)
 		);
 
 		if ( is_active_widget( false, false, $this->id_base ) || is_customize_preview() ) {
-			add_action( 'wp_enqueue_scripts', [ __CLASS__, 'enqueue_scripts' ] );
+			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 		}
 	}
 
@@ -61,7 +61,7 @@ class Inc2734_WP_Awesome_Widgets_Pickup_Slider extends Contract\Widget {
 			wp_enqueue_script(
 				'slick-carousel',
 				get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.min.js',
-				[ 'jquery' ],
+				array( 'jquery' ),
 				filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.min.js' ),
 				true
 			);
@@ -71,7 +71,7 @@ class Inc2734_WP_Awesome_Widgets_Pickup_Slider extends Contract\Widget {
 			wp_enqueue_script(
 				'wp-awesome-widgets-pickup-slider',
 				get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/widget/pickup-slider.js',
-				[ 'slick-carousel' ],
+				array( 'slick-carousel' ),
 				filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/widget/pickup-slider.js' ),
 				true
 			);

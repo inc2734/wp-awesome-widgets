@@ -12,11 +12,11 @@ class Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts extends Contract\Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
+	protected $_defaults = array(
 		'title'     => null,
 		'post-type' => 'post',
 		'items'     => null,
-	];
+	);
 
 	/**
 	 * Constructor.
@@ -25,13 +25,13 @@ class Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts extends Contract\Widget {
 		parent::__construct(
 			false,
 			__( 'WPAW: Carousel ( Any Posts )', 'inc2734-wp-awesome-widgets' ),
-			[
+			array(
 				'customize_selective_refresh' => true,
-			]
+			)
 		);
 
 		if ( is_active_widget( false, false, $this->id_base ) || is_customize_preview() ) {
-			add_action( 'wp_enqueue_scripts', [ __CLASS__, 'enqueue_scripts' ] );
+			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 		}
 	}
 
@@ -52,7 +52,7 @@ class Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts extends Contract\Widget {
 		$new_instance = shortcode_atts( $this->_defaults, $new_instance );
 
 		$items     = explode( ',', $new_instance['items'] );
-		$new_items = [];
+		$new_items = array();
 		foreach ( $items as $post_id ) {
 			if ( get_post( $post_id ) ) {
 				$new_items[] = $post_id;
@@ -71,7 +71,7 @@ class Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts extends Contract\Widget {
 			wp_enqueue_script(
 				'slick-carousel',
 				get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.min.js',
-				[ 'jquery' ],
+				array( 'jquery' ),
 				filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.min.js' ),
 				true
 			);
@@ -81,7 +81,7 @@ class Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts extends Contract\Widget {
 			wp_enqueue_script(
 				'wp-awesome-widgets-carousel-any-posts',
 				get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/widget/carousel-any-posts.js',
-				[ 'slick-carousel' ],
+				array( 'slick-carousel' ),
 				filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/widget/carousel-any-posts.js' ),
 				true
 			);

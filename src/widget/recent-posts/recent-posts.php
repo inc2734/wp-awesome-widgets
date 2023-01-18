@@ -12,13 +12,13 @@ class Inc2734_WP_Awesome_Widgets_Recent_Posts extends Contract\Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
+	protected $_defaults = array(
 		'title'          => null,
 		'post-type'      => 'post',
 		'posts-per-page' => 5,
 		'show-thumbnail' => 1,
 		'show-taxonomy'  => 1,
-	];
+	);
 
 	/**
 	 * Constructor.
@@ -27,9 +27,9 @@ class Inc2734_WP_Awesome_Widgets_Recent_Posts extends Contract\Widget {
 		parent::__construct(
 			false,
 			__( 'WPAW: Recent posts', 'inc2734-wp-awesome-widgets' ),
-			[
+			array(
 				'customize_selective_refresh' => true,
-			]
+			)
 		);
 	}
 
