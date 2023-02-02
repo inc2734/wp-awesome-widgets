@@ -56,7 +56,7 @@ register_block_type(
 				'anchor'         => ! empty( $attributes['anchor'] ) ? $attributes['anchor'] : null,
 			);
 
-			return Helper::render_widget( __DIR__ . '/../../widget/any-posts', $widget_args, $instance );
+			return Helper::render_widget( __DIR__ . '/../../../widget/any-posts', $widget_args, $instance );
 		},
 	)
 );
