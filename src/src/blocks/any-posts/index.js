@@ -5,8 +5,8 @@ import metadata from './block.json';
 import edit from './edit';
 import save from './save';
 
-registerBlockType(metadata.name, {
+registerBlockType( metadata.name, {
 	icon,
 	edit,
 	save,
-});
+} );

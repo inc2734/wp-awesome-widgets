@@ -3,7 +3,7 @@
   "description": "A library to add some awesome widgets for WordPress.",
   "license": "GPL-2.0-or-later",
   "require": {
-    "php": ">=5.6",
+    "php": ">=7.4",
     "inc2734/wp-contents-outline": "^5.1",
     "inc2734/wp-profile-box": "^2.3",
     "inc2734/wp-adsense": "^1.0",
