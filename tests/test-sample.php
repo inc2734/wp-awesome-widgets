@@ -6,7 +6,7 @@ class Sample_Test extends WP_UnitTestCase {
 		parent::set_up();
 	}
 
-	public function tea_down() {
+	public function tear_down() {
 		parent::tear_down();
 	}
 

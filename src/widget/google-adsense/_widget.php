@@ -16,7 +16,10 @@ wp_enqueue_script(
 	'//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
 	array(),
 	1,
-	true
+	array(
+		'in_footer' => false,
+		'strategy'  => 'async',
+	)
 );
 
 View::render(

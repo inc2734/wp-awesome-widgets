@@ -149,7 +149,10 @@ class Bootstrap {
 			get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/admin/admin.js',
 			array( 'jquery', 'jquery-ui-sortable', 'wp-color-picker' ),
 			filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/admin/admin.js' ),
-			true
+			array(
+				'in_footer' => false,
+				'strategy'  => 'defer',
+			)
 		);
 
 		wp_localize_script(
@@ -177,7 +180,10 @@ class Bootstrap {
 				'customize-selective-refresh',
 			),
 			filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/admin/customize-preview.js' ),
-			true
+			array(
+				'in_footer' => false,
+				'strategy'  => 'defer',
+			)
 		);
 	}
 
@@ -190,7 +196,10 @@ class Bootstrap {
 			get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/admin/elementor-preview.js',
 			array(),
 			filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/admin/elementor-preview.js' ),
-			true
+			array(
+				'in_footer' => false,
+				'strategy'  => 'defer',
+			)
 		);
 	}
 

@@ -73,7 +73,10 @@ class Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts extends Contract\Widget {
 				get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.min.js',
 				array( 'jquery' ),
 				filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/packages/slick-carousel/slick/slick.min.js' ),
-				true
+				array(
+					'in_footer' => false,
+					'strategy'  => 'defer',
+				)
 			);
 		}
 
@@ -83,7 +86,10 @@ class Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts extends Contract\Widget {
 				get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/widget/carousel-any-posts.js',
 				array( 'slick-carousel' ),
 				filemtime( get_template_directory() . '/vendor/inc2734/wp-awesome-widgets/src/assets/js/widget/carousel-any-posts.js' ),
-				true
+				array(
+					'in_footer' => false,
+					'strategy'  => 'defer',
+				)
 			);
 		}
 	}

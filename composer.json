@@ -26,8 +26,8 @@
     }
   },
   "scripts": {
-    "lint": "phpcs --standard=.phpcs.xml.dist",
-    "format": "phpcbf --standard=.phpcs.xml.dist --report-summary --report-source"
+    "lint": "./vendor/squizlabs/php_codesniffer/bin/phpcs",
+    "format": "./vendor/squizlabs/php_codesniffer/bin/phpcbf"
   },
   "config": {
     "allow-plugins": {
