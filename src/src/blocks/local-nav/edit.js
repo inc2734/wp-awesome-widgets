@@ -1,6 +1,6 @@
 import ServerSideRender from '@wordpress/server-side-render';
 
-import { InspectorControls } from '@wordpress/block-editor';
+import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 import { useEffect } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 
@@ -90,12 +90,14 @@ export default function ( { attributes, setAttributes, clientId } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<Disabled>
-				<ServerSideRender
-					block="wp-awesome-widgets/local-nav"
-					attributes={ attributes }
-				/>
-			</Disabled>
+			<div { ...useBlockProps() }>
+				<Disabled>
+					<ServerSideRender
+						block="wp-awesome-widgets/local-nav"
+						attributes={ attributes }
+					/>
+				</Disabled>
+			</div>
 		</>
 	);
 }

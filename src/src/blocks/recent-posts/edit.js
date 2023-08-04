@@ -1,6 +1,6 @@
 import ServerSideRender from '@wordpress/server-side-render';
 
-import { InspectorControls } from '@wordpress/block-editor';
+import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
 import { useMemo, useEffect } from '@wordpress/element';
 import { postList as icon } from '@wordpress/icons';
@@ -116,21 +116,26 @@ export default function ( { attributes, setAttributes, clientId } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			{ ! allPostTypes ? (
-				<Placeholder
-					icon={ icon }
-					label={ __( 'Recent posts', 'inc2734-wp-awesome-widgets' ) }
-				>
-					<Spinner />
-				</Placeholder>
-			) : (
-				<Disabled>
-					<ServerSideRender
-						block="wp-awesome-widgets/recent-posts"
-						attributes={ attributes }
-					/>
-				</Disabled>
-			) }
+			<div { ...useBlockProps() }>
+				{ ! allPostTypes ? (
+					<Placeholder
+						icon={ icon }
+						label={ __(
+							'Recent posts',
+							'inc2734-wp-awesome-widgets'
+						) }
+					>
+						<Spinner />
+					</Placeholder>
+				) : (
+					<Disabled>
+						<ServerSideRender
+							block="wp-awesome-widgets/recent-posts"
+							attributes={ attributes }
+						/>
+					</Disabled>
+				) }
+			</div>
 		</>
 	);
 }

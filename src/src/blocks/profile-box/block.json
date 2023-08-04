@@ -13,6 +13,7 @@
 	},
 	"supports": {
 		"anchor": true,
+		"className": false,
 		"customClassName": false
 	},
 	"editorScript": "file:./index.js"

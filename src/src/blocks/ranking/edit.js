@@ -2,6 +2,7 @@ import ServerSideRender from '@wordpress/server-side-render';
 
 import {
 	InspectorControls,
+	useBlockProps,
 	__experimentalLinkControl as LinkControl,
 } from '@wordpress/block-editor';
 
@@ -155,21 +156,26 @@ export default function ( { attributes, setAttributes, clientId } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			{ 1 > realItems.length ? (
-				<Placeholder
-					icon={ icon }
-					label={ __( 'Ranking', 'inc2734-wp-awesome-widgets' ) }
-				>
-					{ __( 'No posts found.', 'inc2734-wp-awesome-widgets' ) }
-				</Placeholder>
-			) : (
-				<Disabled>
-					<ServerSideRender
-						block="wp-awesome-widgets/ranking"
-						attributes={ attributes }
-					/>
-				</Disabled>
-			) }
+			<div { ...useBlockProps() }>
+				{ 1 > realItems.length ? (
+					<Placeholder
+						icon={ icon }
+						label={ __( 'Ranking', 'inc2734-wp-awesome-widgets' ) }
+					>
+						{ __(
+							'No posts found.',
+							'inc2734-wp-awesome-widgets'
+						) }
+					</Placeholder>
+				) : (
+					<Disabled>
+						<ServerSideRender
+							block="wp-awesome-widgets/ranking"
+							attributes={ attributes }
+						/>
+					</Disabled>
+				) }
+			</div>
 		</>
 	);
 }
