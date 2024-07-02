@@ -1,37 +1,38 @@
 {
-  "name": "inc2734/wp-awesome-widgets",
-  "description": "A library to add some awesome widgets for WordPress.",
-  "license": "GPL-2.0-or-later",
-  "require": {
-    "php": ">=7.4",
-    "inc2734/wp-contents-outline": "^5.1",
-    "inc2734/wp-profile-box": "^2.3",
-    "inc2734/wp-adsense": "^1.0",
-    "inc2734/wp-plugin-view-controller": "^1.1"
-  },
-  "require-dev": {
-    "wp-coding-standards/wpcs": "^2.3",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-    "yoast/phpunit-polyfills": "^1.0"
-  },
-  "authors": [
-    {
-      "name": "Takashi Kitajima",
-      "email": "inc@2inc.org"
-    }
-  ],
-  "autoload": {
-    "psr-4" : {
-      "Inc2734\\WP_Awesome_Widgets\\" : "src"
-    }
-  },
-  "scripts": {
-    "lint": "./vendor/squizlabs/php_codesniffer/bin/phpcs",
-    "format": "./vendor/squizlabs/php_codesniffer/bin/phpcbf"
-  },
-  "config": {
-    "allow-plugins": {
-      "dealerdirect/phpcodesniffer-composer-installer": true
-    }
-  }
+	"name": "inc2734/wp-awesome-widgets",
+	"description": "A library to add some awesome widgets for WordPress.",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": ">=7.4",
+		"inc2734/wp-contents-outline": "^5.1",
+		"inc2734/wp-profile-box": "^2.3",
+		"inc2734/wp-adsense": "^1.0",
+		"inc2734/wp-plugin-view-controller": "^1.1"
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^3.1",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"yoast/phpunit-polyfills": "^1.0",
+		"phpcompatibility/phpcompatibility-wp": "*"
+	},
+	"authors": [
+		{
+			"name": "Takashi Kitajima",
+			"email": "inc@2inc.org"
+		}
+	],
+	"autoload": {
+		"psr-4" : {
+			"Inc2734\\WP_Awesome_Widgets\\" : "src"
+		}
+	},
+	"scripts": {
+		"lint": "phpcs --standard=.phpcs.xml.dist",
+		"format": "phpcbf --standard=.phpcs.xml.dist --report-summary --report-source"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
 }

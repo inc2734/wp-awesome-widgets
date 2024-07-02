@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-$id = ! empty( $instance['anchor'] )
+$anchor = ! empty( $instance['anchor'] )
 	? $instance['anchor']
 	: 'wpaw-slider-' . $widget_args['widget_id'];
 ?>
@@ -27,7 +27,7 @@ $id = ! empty( $instance['anchor'] )
 
 	<div
 		class="wpaw-slider wpaw-slider--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="<?php echo esc_attr( $id ); ?>"
+		id="<?php echo esc_attr( $anchor ); ?>"
 		data-wpaw-slider-duration="<?php echo esc_attr( $instance['duration'] ); ?>"
 		data-wpaw-slider-interval="<?php echo esc_attr( $instance['interval'] ); ?>"
 		data-wpaw-slider-slides-to-show="<?php echo esc_attr( $instance['slides-to-show'] ); ?>"
@@ -61,7 +61,7 @@ $id = ! empty( $instance['anchor'] )
 								></div>
 							<?php endif; ?>
 
-							<?php if ( ! empty( $image['title'] ) || ! empty( $image['summary'] ) || ! empty( $image['link-url'] ) && ! empty( $image['link-text'] ) ) : ?>
+							<?php if ( ! empty( $image['title'] ) || ! empty( $image['summary'] ) || ( ! empty( $image['link-url'] ) && ! empty( $image['link-text'] ) ) ) : ?>
 								<div class="wpaw-slider__item-body">
 									<div class="wpaw-slider__item-content">
 										<?php if ( ! empty( $image['title'] ) ) : ?>

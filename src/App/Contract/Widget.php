@@ -81,9 +81,9 @@ class Widget extends WP_Widget {
 	 */
 	public function form( $instance ) {
 		if ( wp_use_widgets_block_editor() ) {
-			echo sprintf(
-				// translators: %1$s: The start tag of the a element, %2$s: The end tag of the a element
-				__(
+			printf(
+				// translators: %1$s: The start tag of the a element, %2$s: The end tag of the a element.
+				esc_html__(
 					'This can only be edited if the %1$sClassic Widgets%2$s plugin is enabled.',
 					'inc2734-wp-awesome-widgets'
 				),
@@ -112,7 +112,9 @@ class Widget extends WP_Widget {
 	 * @param array $instance    The widget instance.
 	 */
 	protected function _render_widget( $widget_args, $instance ) {
-		echo Helper::render_widget( $this->_path, $widget_args, $instance ); // xss ok.
+		// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo Helper::render_widget( $this->_path, $widget_args, $instance );
+		// phpcs:enable
 	}
 
 	/**
@@ -130,6 +132,6 @@ class Widget extends WP_Widget {
 			return;
 		}
 
-		include( $file );
+		include $file;
 	}
 }

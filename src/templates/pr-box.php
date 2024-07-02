@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-$id = ! empty( $instance['anchor'] )
+$anchor = ! empty( $instance['anchor'] )
 	? $instance['anchor']
 	: 'wpaw-pr-box-' . $widget_args['widget_id'];
 ?>
@@ -25,7 +25,7 @@ $id = ! empty( $instance['anchor'] )
 
 	<div
 		class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>"
-		id="<?php echo esc_attr( $id ); ?>"
+		id="<?php echo esc_attr( $anchor ); ?>"
 		style="background-color: <?php echo esc_attr( $instance['bg-color'] ); ?>"
 		>
 

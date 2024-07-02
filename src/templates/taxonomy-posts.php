@@ -9,7 +9,7 @@ if ( ! $query->have_posts() ) {
 	return;
 }
 
-$id = ! empty( $instance['anchor'] )
+$anchor = ! empty( $instance['anchor'] )
 	? $instance['anchor']
 	: 'wpaw-taxonomy-posts-' . $widget_args['widget_id'];
 ?>
@@ -24,7 +24,7 @@ $id = ! empty( $instance['anchor'] )
 
 	<div
 		class="wpaw-taxonomy-posts wpaw-taxonomy-posts--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="<?php echo esc_attr( $id ); ?>"
+		id="<?php echo esc_attr( $anchor ); ?>"
 		>
 
 		<ul class="wpaw-taxonomy-posts__list wpaw-posts-list">

@@ -31,9 +31,9 @@
 		$all_terms = array();
 		foreach ( $taxonomies as $_taxonomy ) {
 			$all_terms[ $_taxonomy ] = get_terms(
-				$_taxonomy,
 				array(
-					'parent' => 0,
+					'taxonomy' => $_taxonomy,
+					'parent'   => 0,
 				)
 			);
 		}
@@ -45,42 +45,42 @@
 			class="widefat"
 		>
 			<option value=""></option>
-			<?php foreach ( $all_terms as $taxonomy_id => $terms ) : ?>
-				<optgroup label="<?php echo esc_attr( get_taxonomy( $taxonomy_id )->label ); ?>">
+			<?php foreach ( $all_terms as $_taxonomy => $terms ) : ?>
+				<optgroup label="<?php echo esc_attr( get_taxonomy( $_taxonomy )->label ); ?>">
 					<?php
 					if ( ! function_exists( 'wpaw_taxonomy_posts_display_children' ) ) {
 						/**
 						 * Display children.
 						 *
-						 * @param string $taxonomy_id The taxonomy name.
+						 * @param string $taxonomy_name The taxonomy name.
 						 * @param string $term_id     The term ID.
-						 * @param string $saved_term  <$taxonomy_id>@<$term->term_id>.
+						 * @param string $saved_term  <$taxonomy_name>@<$term->term_id>.
 						 * @param int    $hierarchy   Hierarchy level.
 						 */
 						function wpaw_taxonomy_posts_display_children(
-							$taxonomy_id,
+							$taxonomy_name,
 							$term_id,
 							$saved_term,
 							$hierarchy = 0
 						) {
 							$terms = get_terms(
-								$taxonomy_id,
 								array(
-									'parent' => $term_id,
+									'taxonomy' => $taxonomy_name,
+									'parent'   => $term_id,
 								)
 							);
 							?>
 							<?php foreach ( $terms as $term ) : ?>
-								<?php $value = $taxonomy_id . '@' . $term->term_id; ?>
+								<?php $value = $taxonomy_name . '@' . $term->term_id; ?>
 								<option value="<?php echo esc_attr( $value ); ?>" <?php selected( $saved_term, $value ); ?>>
 									<?php echo esc_html( str_repeat( '—', $hierarchy ) ); ?> <?php echo esc_html( $term->name ); ?>
 								</option>
-								<?php wpaw_taxonomy_posts_display_children( $taxonomy_id, $term->term_id, $saved_term, $hierarchy + 1 ); ?>
+								<?php wpaw_taxonomy_posts_display_children( $taxonomy_name, $term->term_id, $saved_term, $hierarchy + 1 ); ?>
 							<?php endforeach; ?>
 							<?php
 						}
 					}
-					wpaw_taxonomy_posts_display_children( $taxonomy_id, 0, $instance['taxonomy'] );
+					wpaw_taxonomy_posts_display_children( $_taxonomy, 0, $instance['taxonomy'] );
 					?>
 				</optgroup>
 			<?php endforeach; ?>

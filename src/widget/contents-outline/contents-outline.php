@@ -57,7 +57,7 @@ class Inc2734_WP_Awesome_Widgets_Contents_Outline extends Contract\Widget {
 
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_widget( 'Inc2734_WP_Awesome_Widgets_Contents_Outline' );
 	}
 );

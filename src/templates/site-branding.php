@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-$id = ! empty( $instance['anchor'] )
+$anchor = ! empty( $instance['anchor'] )
 	? $instance['anchor']
 	: 'wpaw-site-branding-' . $widget_args['widget_id'];
 ?>
@@ -14,7 +14,7 @@ $id = ! empty( $instance['anchor'] )
 
 	<div
 		class="wpaw-site-branding wpaw-site-branding--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="<?php echo esc_attr( $id ); ?>"
+		id="<?php echo esc_attr( $anchor ); ?>"
 		>
 
 		<div class="wpaw-site-branding__logo">

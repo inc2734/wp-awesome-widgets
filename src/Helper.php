@@ -82,7 +82,7 @@ class Helper {
 					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					<?php
 					if ( -1 >= $args['limit'] || 0 < $args['limit'] ) {
-						$args['limit'] --;
+						--$args['limit'];
 						static::the_child_nav( get_the_ID(), $current_page_id, $args );
 					}
 					?>
@@ -144,9 +144,9 @@ class Helper {
 		ob_start();
 
 		if ( file_exists( get_theme_file_path( $custom_template . '.php' ) ) ) {
-			include( get_theme_file_path( $custom_template . '.php' ) );
+			include get_theme_file_path( $custom_template . '.php' );
 		} elseif ( file_exists( $default_template ) ) {
-			include( $default_template );
+			include $default_template;
 		}
 
 		$widget = ob_get_clean();

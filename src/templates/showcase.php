@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-$id = ! empty( $instance['anchor'] )
+$anchor = ! empty( $instance['anchor'] )
 	? $instance['anchor']
 	: 'wpaw-showcase-' . $widget_args['widget_id'];
 ?>
@@ -29,7 +29,7 @@ $id = ! empty( $instance['anchor'] )
 			href="<?php echo esc_url( $instance['link-url'] ); ?>"
 		<?php endif; ?>
 		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> wpaw-showcase--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="<?php echo esc_attr( $id ); ?>"
+		id="<?php echo esc_attr( $anchor ); ?>"
 		>
 
 		<?php if ( $instance['bg-image'] ) : ?>

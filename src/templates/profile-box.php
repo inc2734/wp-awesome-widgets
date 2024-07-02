@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-$id = ! empty( $instance['anchor'] )
+$anchor = ! empty( $instance['anchor'] )
 	? $instance['anchor']
 	: 'wpaw-profile-box-' . $widget_args['widget_id'];
 ?>
@@ -14,7 +14,7 @@ $id = ! empty( $instance['anchor'] )
 
 	<div
 		class="wpaw-profile-box wpaw-profile-box--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="<?php echo esc_attr( $id ); ?>"
+		id="<?php echo esc_attr( $anchor ); ?>"
 		>
 
 		<?php echo do_shortcode( '[wp_profile_box title="' . $instance['title'] . '"]' ); ?>

@@ -7,7 +7,7 @@
 
 use Inc2734\WP_Awesome_Widgets\Helper;
 
-$id = ! empty( $instance['anchor'] )
+$anchor = ! empty( $instance['anchor'] )
 	? $instance['anchor']
 	: 'wpaw-google-adsense-' . $widget_args['widget_id'];
 ?>
@@ -16,7 +16,7 @@ $id = ! empty( $instance['anchor'] )
 
 	<div
 		class="wpaw-google-adsense wpaw-google-adsense--<?php echo esc_attr( $widget_args['widget_id'] ); ?> wpaw-google-adsense--<?php echo esc_attr( $instance['size'] ); ?>"
-		id="<?php echo esc_attr( $id ); ?>"
+		id="<?php echo esc_attr( $anchor ); ?>"
 		>
 
 		<div class="wpaw-google-adsense__row">

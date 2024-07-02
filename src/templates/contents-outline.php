@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-$id = ! empty( $instance['anchor'] )
+$anchor = ! empty( $instance['anchor'] )
 	? $instance['anchor']
 	: 'wpaw-contents-outline-' . $widget_args['widget_id'];
 ?>
@@ -14,7 +14,7 @@ $id = ! empty( $instance['anchor'] )
 
 	<div
 		class="wpaw-contents-outline wpaw-contents-outline--<?php echo esc_attr( $widget_args['widget_id'] ); ?>"
-		id="<?php echo esc_attr( $id ); ?>"
+		id="<?php echo esc_attr( $anchor ); ?>"
 		>
 
 		<?php if ( empty( $instance['show-mobile'] ) ) : ?>

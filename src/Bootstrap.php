@@ -15,33 +15,33 @@ class Bootstrap {
 	public function __construct() {
 		load_textdomain( 'inc2734-wp-awesome-widgets', __DIR__ . '/languages/inc2734-wp-awesome-widgets-' . get_locale() . '.mo' );
 
-		include_once( __DIR__ . '/deprecated/Helper.php' );
+		include_once __DIR__ . '/deprecated/Helper.php';
 
-		include_once( __DIR__ . '/widget/widget.php' );
-		include_once( __DIR__ . '/widget/any-posts/any-posts.php' );
-		include_once( __DIR__ . '/widget/carousel-any-posts/carousel-any-posts.php' );
-		include_once( __DIR__ . '/widget/contents-outline/contents-outline.php' );
-		include_once( __DIR__ . '/widget/google-adsense/google-adsense.php' );
-		include_once( __DIR__ . '/widget/local-nav/local-nav.php' );
-		include_once( __DIR__ . '/widget/pickup-slider/pickup-slider.php' );
-		include_once( __DIR__ . '/widget/pr-box/pr-box.php' );
-		include_once( __DIR__ . '/widget/profile-box/profile-box.php' );
-		include_once( __DIR__ . '/widget/ranking/ranking.php' );
-		include_once( __DIR__ . '/widget/recent-posts/recent-posts.php' );
-		include_once( __DIR__ . '/widget/showcase/showcase.php' );
-		include_once( __DIR__ . '/widget/site-branding/site-branding.php' );
-		include_once( __DIR__ . '/widget/slider/slider.php' );
-		include_once( __DIR__ . '/widget/taxonomy-posts/taxonomy-posts.php' );
+		include_once __DIR__ . '/widget/widget.php';
+		include_once __DIR__ . '/widget/any-posts/any-posts.php';
+		include_once __DIR__ . '/widget/carousel-any-posts/carousel-any-posts.php';
+		include_once __DIR__ . '/widget/contents-outline/contents-outline.php';
+		include_once __DIR__ . '/widget/google-adsense/google-adsense.php';
+		include_once __DIR__ . '/widget/local-nav/local-nav.php';
+		include_once __DIR__ . '/widget/pickup-slider/pickup-slider.php';
+		include_once __DIR__ . '/widget/pr-box/pr-box.php';
+		include_once __DIR__ . '/widget/profile-box/profile-box.php';
+		include_once __DIR__ . '/widget/ranking/ranking.php';
+		include_once __DIR__ . '/widget/recent-posts/recent-posts.php';
+		include_once __DIR__ . '/widget/showcase/showcase.php';
+		include_once __DIR__ . '/widget/site-branding/site-branding.php';
+		include_once __DIR__ . '/widget/slider/slider.php';
+		include_once __DIR__ . '/widget/taxonomy-posts/taxonomy-posts.php';
 
 		add_action(
 			'init',
-			function() {
-				include_once( __DIR__ . '/assets/blocks/local-nav/index.php' );
-				include_once( __DIR__ . '/assets/blocks/recent-posts/index.php' );
-				include_once( __DIR__ . '/assets/blocks/profile-box/index.php' );
-				include_once( __DIR__ . '/assets/blocks/any-posts/index.php' );
-				include_once( __DIR__ . '/assets/blocks/ranking/index.php' );
-				include_once( __DIR__ . '/assets/blocks/site-branding/index.php' );
+			function () {
+				include_once __DIR__ . '/assets/blocks/local-nav/index.php';
+				include_once __DIR__ . '/assets/blocks/recent-posts/index.php';
+				include_once __DIR__ . '/assets/blocks/profile-box/index.php';
+				include_once __DIR__ . '/assets/blocks/any-posts/index.php';
+				include_once __DIR__ . '/assets/blocks/ranking/index.php';
+				include_once __DIR__ . '/assets/blocks/site-branding/index.php';
 			}
 		);
 
@@ -100,6 +100,9 @@ class Bootstrap {
 
 	/**
 	 * Apply wp i18n make-json translations.
+	 *
+	 * @param string|false $relative The relative path of the script. False if it could not be determined.
+	 * @return string
 	 */
 	public function _load_script_textdomain_relative_path( $relative ) {
 		if ( 0 === strpos( $relative, 'vendor/inc2734/wp-awesome-widgets/' ) ) {
