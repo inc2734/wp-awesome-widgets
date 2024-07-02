@@ -1,7 +1,10 @@
 {
 	"engines": {
-		"node": ">=14.0.0 < 15",
-		"npm": ">=6.9.0 <7"
+		"node": ">=20.10.0",
+		"npm": ">=10.2.3"
+	},
+	"volta": {
+		"node": "20.11.1"
 	},
 	"author": "inc2734",
 	"license": "GPL-2.0+",
@@ -17,10 +20,10 @@
 		"npm-run-all": "^4.1.5",
 		"postcss": "^8.4.39",
 		"postcss-cli": "^11.0.0",
+		"prettier": "npm:wp-prettier@3.0.3",
 		"rimraf": "^5.0.7",
 		"sass-basis": "^18.2.2",
-		"slick-carousel": "^1.8.1",
-		"prettier": "npm:wp-prettier@3.0.3"
+		"slick-carousel": "^1.8.1"
 	},
 	"scripts": {
 		"wp-env": "wp-env",
@@ -56,8 +59,5 @@
 		"make-pot": "npm run wp i18n -- make-pot ./src/ ./src/languages/inc2734-wp-awesome-widgets-ja.pot --exclude=src/blocks",
 		"make-json": "rimraf src/languages/*.json && npm run wp i18n -- make-json ./src/languages/inc2734-wp-awesome-widgets-ja.po --no-purge",
 		"build": "npm-run-all -p css js packages blocks"
-	},
-	"dependencies": {
-		"@inc2734/for-each-html-nodes": "^0.4.0"
 	}
 }
