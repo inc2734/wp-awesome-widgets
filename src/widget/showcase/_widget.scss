@@ -7,19 +7,19 @@
   overflow: hidden;
 
   &__bgimage {
-    position: absolute;
-		inset: 0;
     @include cover-img();
+
+		& {
+	    position: absolute;
+			inset: 0;
+		}
   }
 
   &__mask {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+		inset: 0;
     content: '';
-    background-color: rgba(#000, .2);
+    background-color: rgba(#000, .7);
   }
 
   &__inner {

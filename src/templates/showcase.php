@@ -38,9 +38,11 @@ $anchor = ! empty( $instance['anchor'] )
 			</div>
 		<?php endif; ?>
 
-		<div class="wpaw-showcase__mask"
-			style="background-color: <?php echo esc_attr( sanitize_hex_color( $instance['mask-color'] ) ); ?>; opacity: <?php echo esc_attr( $instance['mask-opacity'] ); ?>"
-		></div>
+		<?php if ( $instance['mask-color'] ) : ?>
+			<div class="wpaw-showcase__mask"
+				style="background-color: <?php echo esc_attr( sanitize_hex_color( $instance['mask-color'] ) ); ?>; opacity: <?php echo esc_attr( $instance['mask-opacity'] ); ?>"
+			></div>
+		<?php endif; ?>
 
 		<div class="wpaw-showcase__inner">
 
