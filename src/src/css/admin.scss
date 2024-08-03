@@ -1,7 +1,7 @@
-@import 'admin/item-selector';
-@import 'admin/repeater';
-@import 'admin/thumbnail-field';
+@use 'admin/item-selector' as *;
+@use 'admin/repeater' as *;
+@use 'admin/thumbnail-field';
 
-@import '../../widget/pr-box/admin';
-@import '../../widget/showcase/admin';
-@import '../../widget/slider/admin';
+@use '../../widget/pr-box/admin' as *;
+@use '../../widget/showcase/admin' as *;
+@use '../../widget/slider/admin' as *;

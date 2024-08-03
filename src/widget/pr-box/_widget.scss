@@ -1,3 +1,5 @@
+@use '../../src/css/mixin/cover-img' as *;
+
 .wpaw-pr-box {
   /**
    * Overwrite with theme css
@@ -30,8 +32,8 @@
   }
 
   &__item-figure {
+    background-color: var(--_lighter-color-gray);
     @include cover-img();
-    background-color: _var-lighter-color-gray();
 
     &::before {
       content: '';

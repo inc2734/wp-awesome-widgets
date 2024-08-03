@@ -1,5 +1,7 @@
+@use 'sass:meta';
+
 :where(.editor-styles-wrapper) {
-  @import 'app';
+  @include meta.load-css('app');
 }
 
 .wp-awesome-widgests-posts-list-linkcontrols {

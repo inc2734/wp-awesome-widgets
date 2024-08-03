@@ -1,0 +1,13 @@
+@mixin cover-img() {
+  position: relative;
+  overflow: hidden;
+
+  > img {
+    position: absolute;
+		inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}

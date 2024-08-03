@@ -1,7 +1,9 @@
+@use '../../../node_modules/sass-basis/src/css/core';
+
 .wpaw-google-adsense {
   &--rectangle-big-2,
   &--rectangle-2 {
-    @include _media-max(md) {
+    @include core.media-max(md) {
       .wpaw-google-adsense__row {
         flex-wrap: nowrap;
       }

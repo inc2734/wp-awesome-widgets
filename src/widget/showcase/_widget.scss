@@ -1,3 +1,5 @@
+@use '../../src/css/mixin/cover-img' as *;
+
 .wpaw-showcase {
   position: relative;
   display: block;
@@ -5,12 +7,9 @@
   overflow: hidden;
 
   &__bgimage {
-    @include cover-img();
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+		inset: 0;
+    @include cover-img();
   }
 
   &__mask {
@@ -32,11 +31,11 @@
   }
 
   &__title {
-    color: _var-color-white();
+    color: var(--_color-white);
   }
 
   &__lead {
-    color: _var-color-white();
+    color: var(--_color-white);
   }
 
   &__action {
@@ -45,7 +44,7 @@
 
   &__more {
     display: inline-block;
-    background-color: _var-color-white();
+    background-color: var(--_color-white);
     line-height: 1;
     text-decoration: none;
     text-align: center;

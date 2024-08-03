@@ -1,3 +1,5 @@
+@use '../../src/css/mixin/cover-img' as *;
+
 .wpaw-pickup-slider {
   &__canvas {
     visibility: hidden;
@@ -22,14 +24,14 @@
   }
 
   &__figure {
-    @include cover-img();
     display: block;
-    background-color: _var-color-black();
+    background-color: var(--_color-black);
+    @include cover-img();
   }
 
   &__item-content {
     position: relative;
-    color: _var-color-white();
+    color: var(--_color-white);
   }
 
   .slick-list {

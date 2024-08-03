@@ -1,29 +1,19 @@
-@import '../../../node_modules/sass-basis/src/css/basis-core';
+@use '../../widget/slider/widget' as *;
+@use '../../widget/pr-box/widget' as *;
+@use '../../widget/showcase/widget' as *;
+@use '../../widget/pickup-slider/widget' as *;
+@use '../../widget/google-adsense/widget' as *;
+@use '../../widget/carousel-any-posts/widget' as *;
+@use '../../widget/local-nav/widget' as *;
+@use './mixin/cover-img' as *;
 
 .wpaw-term {
   display: inline-block;
-  background-color: _var-color-black();
-  color: _var-color-white();
+  background-color: var(--_color-black);
+  color: var(--_color-white);
   font-size: 12px;
   line-height: 1;
   padding: 3px 6px 2px;
-}
-
-@mixin cover-img() {
-  position: relative;
-  overflow: hidden;
-
-  > img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
 }
 
 .wpaw-posts-list {
@@ -44,12 +34,12 @@
   }
 
   &__figure {
-    @include cover-img();
     margin-right: 1em;
     flex: none;
     height: 90px;
     width: 90px;
-    background-color: _var-lighter-color-gray();
+    background-color: var(--_color-gray);
+    @include cover-img();
   }
 
   &__body {
@@ -67,11 +57,3 @@
     margin-top: auto;
   }
 }
-
-@import '../../widget/slider/widget';
-@import '../../widget/pr-box/widget';
-@import '../../widget/showcase/widget';
-@import '../../widget/pickup-slider/widget';
-@import '../../widget/google-adsense/widget';
-@import '../../widget/carousel-any-posts/widget';
-@import '../../widget/local-nav/widget';
