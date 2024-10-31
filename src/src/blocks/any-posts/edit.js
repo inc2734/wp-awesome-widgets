@@ -61,6 +61,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					) }
 				>
 					<ToggleControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Display thumbnail',
 							'inc2734-wp-awesome-widgets'
@@ -70,6 +71,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<ToggleControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Display taxonomy',
 							'inc2734-wp-awesome-widgets'
@@ -79,6 +81,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<BaseControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Search post',
 							'inc2734-wp-awesome-widgets'

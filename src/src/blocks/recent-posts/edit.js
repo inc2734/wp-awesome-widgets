@@ -73,6 +73,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					) }
 				>
 					<SelectControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Post Type',
 							'inc2734-wp-awesome-widgets'
@@ -86,6 +87,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<RangeControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Number of posts',
 							'inc2734-wp-awesome-widgets'
@@ -97,6 +99,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<ToggleControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Display thumbnail',
 							'inc2734-wp-awesome-widgets'
@@ -106,6 +109,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<ToggleControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Display taxonomy',
 							'inc2734-wp-awesome-widgets'

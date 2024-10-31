@@ -46,6 +46,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					) }
 				>
 					<SelectControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Direction',
 							'inc2734-wp-awesome-widgets'
@@ -71,6 +72,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<ToggleControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Display the page title of the top-level',
 							'inc2734-wp-awesome-widgets'
@@ -80,6 +82,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<ToggleControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Display only when you have descendants',
 							'inc2734-wp-awesome-widgets'

@@ -29,6 +29,7 @@ export default function ( { setAttributes, attributes, clientId } ) {
 					) }
 				>
 					<TextareaControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Site description',
 							'inc2734-wp-awesome-widgets'
