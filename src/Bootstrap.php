@@ -13,8 +13,6 @@ class Bootstrap {
 	 * Constructor.
 	 */
 	public function __construct() {
-		load_textdomain( 'inc2734-wp-awesome-widgets', __DIR__ . '/languages/inc2734-wp-awesome-widgets-' . get_locale() . '.mo' );
-
 		include_once __DIR__ . '/deprecated/Helper.php';
 
 		include_once __DIR__ . '/widget/widget.php';
@@ -36,6 +34,8 @@ class Bootstrap {
 		add_action(
 			'init',
 			function () {
+				load_textdomain( 'inc2734-wp-awesome-widgets', __DIR__ . '/languages/inc2734-wp-awesome-widgets-' . get_locale() . '.mo' );
+
 				include_once __DIR__ . '/assets/blocks/local-nav/index.php';
 				include_once __DIR__ . '/assets/blocks/recent-posts/index.php';
 				include_once __DIR__ . '/assets/blocks/profile-box/index.php';
