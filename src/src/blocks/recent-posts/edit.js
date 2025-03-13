@@ -16,7 +16,7 @@ import {
 	ToggleControl,
 } from '@wordpress/components';
 
-import { toNumber } from '@wpaw/helper';
+import { toNumber } from '../../js/helper/block';
 
 export default function ( { attributes, setAttributes, clientId } ) {
 	const { postType, postsPerPage, showThumbnail, showTaxonomy } = attributes;
@@ -60,7 +60,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 
 	const onChangeShowTaxonomy = ( value ) =>
 		setAttributes( {
-			showTasonomy: value,
+			showTaxonomy: value,
 		} );
 
 	return (

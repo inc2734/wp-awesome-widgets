@@ -37,7 +37,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 
 	const onChangeShowTaxonomy = ( value ) =>
 		setAttributes( {
-			showTasonomy: value,
+			showTaxonomy: value,
 		} );
 
 	const onclickNewItemButton = () => {
