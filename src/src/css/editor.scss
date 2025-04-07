@@ -45,9 +45,11 @@
       margin-bottom: 0;
     }
 
-    .block-editor-url-input__input {
+    .block-editor-url-input__input,
+    .block-editor-url-input {
       margin: 0 !important;
       width: 100% !important;
+      min-width: 0 !important;
     }
 
     .block-editor-link-control__search-actions {

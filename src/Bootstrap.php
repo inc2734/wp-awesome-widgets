@@ -55,7 +55,7 @@ class Bootstrap {
 
 		add_action( 'wp_enqueue_scripts', array( $this, '_wp_enqueue_scripts' ), 9 );
 		add_action( 'load_script_textdomain_relative_path', array( $this, '_load_script_textdomain_relative_path' ) );
-		add_action( 'enqueue_block_editor_assets', array( $this, '_enqueue_block_editor_assets' ), 9 );
+		add_action( 'enqueue_block_assets', array( $this, '_enqueue_block_editor_assets' ), 9 );
 		add_action( 'load-widgets.php', array( $this, '_admin_enqueue_scripts' ), 9 );
 		add_action( 'load-customize.php', array( $this, '_admin_enqueue_scripts' ), 9 );
 		add_action( 'customize_preview_init', array( $this, '_customize_preview_init' ), 9 );
@@ -120,6 +120,10 @@ class Bootstrap {
 	 * Enqueue assets for block editor.
 	 */
 	public function _enqueue_block_editor_assets() {
+		if ( ! is_admin() ) {
+			return;
+		}
+
 		wp_enqueue_style(
 			'wp-awesome-widgets',
 			get_template_directory_uri() . '/vendor/inc2734/wp-awesome-widgets/src/assets/css/editor.css',
