@@ -3,7 +3,7 @@ import ServerSideRender from '@wordpress/server-side-render';
 import {
 	InspectorControls,
 	useBlockProps,
-	__experimentalLinkControl as LinkControl,
+	LinkControl,
 } from '@wordpress/block-editor';
 
 import {
