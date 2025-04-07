@@ -73,6 +73,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					) }
 				>
 					<SelectControl
+						__next40pxDefaultSize
 						__nextHasNoMarginBottom
 						label={ __(
 							'Post Type',
@@ -87,6 +88,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<RangeControl
+						__next40pxDefaultSize
 						__nextHasNoMarginBottom
 						label={ __(
 							'Number of posts',

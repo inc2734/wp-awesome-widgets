@@ -9,10 +9,10 @@
 	"author": "inc2734",
 	"license": "GPL-2.0+",
 	"devDependencies": {
-		"@wordpress/browserslist-config": "^6.19.0",
-		"@wordpress/env": "^10.19.0",
-		"@wordpress/icons": "^10.19.0",
-		"@wordpress/scripts": "^30.12.0",
+		"@wordpress/browserslist-config": "^6.21.0",
+		"@wordpress/env": "^10.21.0",
+		"@wordpress/icons": "^10.21.0",
+		"@wordpress/scripts": "^30.14.1",
 		"autoprefixer": "^10.4.21",
 		"cpy-cli": "^5.0.0",
 		"cssnano": "^7.0.6",
@@ -23,7 +23,7 @@
 		"rimraf": "^6.0.1",
 		"sass-basis": "^20.0.0",
 		"slick-carousel": "^1.8.1",
-		"sass": "^1.85.1"
+		"sass": "^1.86.3"
 	},
 	"scripts": {
 		"wp-env": "wp-env",
