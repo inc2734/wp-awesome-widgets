@@ -1,18 +1,18 @@
 {
 	"engines": {
-		"node": ">=20.10.0",
+		"node": ">=20.19.0",
 		"npm": ">=10.2.3"
 	},
 	"volta": {
-		"node": "20.11.1"
+		"node": "24.18.1"
 	},
 	"author": "inc2734",
 	"license": "GPL-2.0+",
 	"devDependencies": {
-		"@wordpress/browserslist-config": "^6.21.0",
+		"@wordpress/browserslist-config": "^6.53.0",
 		"@wordpress/env": "^11.13.0",
-		"@wordpress/icons": "^10.21.0",
-		"@wordpress/scripts": "^30.14.1",
+		"@wordpress/icons": "^15.4.0",
+		"@wordpress/scripts": "^34.1.0",
 		"autoprefixer": "^10.4.21",
 		"cpy-cli": "^5.0.0",
 		"cssnano": "^7.0.6",

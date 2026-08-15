@@ -1,16 +1,18 @@
 const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
 
-if ( defaultConfig?.plugins ) {
-	const plugins = [ ...defaultConfig.plugins ];
-
-	plugins.splice(1, 1); //delete plugins.CleanWebpackPlugin
-	plugins.splice(2, 1); //delete plugins.CopyWebpackPlugin
+if ( ! Array.isArray( defaultConfig ) && defaultConfig?.plugins ) {
+	const plugins = defaultConfig.plugins.filter(
+		( plugin ) => 'CopyPlugin' !== plugin.constructor.name
+	);
 
 	module.exports = {
 		...defaultConfig,
+		output: {
+			...defaultConfig.output,
+			clean: false,
+		},
 		plugins,
 	};
 } else {
 	module.exports = defaultConfig;
 }
-
