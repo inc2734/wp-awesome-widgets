@@ -7,6 +7,7 @@ bin export-ignore
 .phpcs.xml.dist export-ignore
 .phpunit.xml.dist export-ignore
 .wp-env.json export-ignore
+.wp-env.tests.json export-ignore
 tests export-ignore
 webpack.config.js export-ignore
 postcss.config.js export-ignore
